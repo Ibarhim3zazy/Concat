@@ -1,0 +1,164 @@
+body {
+    background-color: #eee;
+}
+
+
+.reset_pass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100wh;
+    height: 100vh;
+    background-image: url(../images/undraw_newsletter.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 40% 50%;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px 4px rgb(0 0 0 / 12%) , -3px -3px 3px 4px rgba(0, 0, 0, 0.12);
+    padding: 30px;
+    border-radius: 10px 40px ;
+}
+
+.form h3 {
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: var(--main-font-weight);
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form h3::after {
+    content: '';
+    position: absolute;
+    background-color: #eee;
+    height: 2px;
+    width: 90%;
+    left: 16px;
+    bottom: -15px;
+}
+
+
+.form .enter {
+    max-width: 400px;
+    width: 100%;
+    height: 55px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 .4rem;
+    transition: var(--main-transition) ease-in-out;
+    position: relative;
+}
+
+
+.form #email , .form #password , .form #co_password {
+    border: none;
+    outline: none;
+    height: 50px;
+    line-height: 1;
+    font-weight: var(--main-font-weight);
+    font-size: 1.1rem;
+    color: #333;
+    caret-color: var(--main-color);
+    background-color: transparent;
+    caret-color: var(--main-color-hover);
+}
+
+.form .enter:hover {
+    box-shadow: 3px 3px 4px 2px rgb(0 0 0 /12%);
+}
+
+.form i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    font-size: 1;
+}
+.form #email::placeholder , .form #password::placeholder , .form #co_password::placeholder  {
+    color: #aaa;
+    font-weight: 500;
+}
+
+.form #submit {
+    width: 120px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px; 
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: var(--main-font-weight);
+    margin: 10px 0;
+    transition: var(--main-transition);
+}
+
+.form #submit:hover {
+    background-color: var(--main-color-hover);
+}
+
+@media(max-width:767px) {
+    .reset_pass {
+        background-image: none;
+    }
+}
+
+@media(max-width:991px) {
+    .reset_pass {  
+    background-size: 29% 29%;
+    }
+}
+
+
+.form .enter .any-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form .enter .any-name i {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.form .enter.success {
+    border: 1px solid var(--main-color-success);
+}
+
+.form .enter.error {
+    border: 2px var(--main-color-error) solid;
+}
+
+.form .enter.success i.fa-check-circle {
+    color: var(--main-color-success);
+    visibility: visible;
+}
+
+.form .enter.error i.fa-exclamation-circle {
+    color: var(--main-color-error);
+    visibility: visible;
+}
+
+.form .enter.error .any-name small {
+    color: var(--main-color-error);
+    visibility: visible;
+}
+
+.form .enter .any-name small {
+    visibility: hidden;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
