@@ -31,7 +31,11 @@
                         </div>
                     </div>
                     <div class="check">
+<<<<<<< HEAD
                         <a href="forgetPass.php">Forgetten Password?</a>
+=======
+                        <a href="forgetPass1.php">Forgetten Password?</a>
+>>>>>>> fb5d13063679760fd0e60ec62bfa2b4d6ce3ed7c
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
