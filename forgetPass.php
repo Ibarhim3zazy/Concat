@@ -19,7 +19,7 @@
             <h3>Enter your user account's verified email address and we will send you a password reset link.</h3>
 
             <input type="email" name="" id="email" placeholder="Enter Your Email">
-            <a href="resetNewPass.htm">Check</a>
+            <a href="resetNewPass.php">Check</a>
         </div>
     </div>
 </body>

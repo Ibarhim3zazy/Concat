@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/login-signup.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="images/bear.svg">
     <title> Concat | Welcome In </title>
 </head>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="check">
-                        <a href="forgetPass.html">Forgetten Password?</a>
+                        <a href="forgetPass.php">Forgetten Password?</a>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
 
-                    <a href="FirstPage.html"><input type="submit" value="Sign In" class="btn solid"></a>
+                    <input type="button" onclick="checkInput()" value="Sign In" class="btn solid">
 
                     <div class="links">
                         <a href="">Terms</a>
@@ -54,7 +54,7 @@
                 </form>
 
 
-                <form action="" class="sign-up-form form" id="signIn">
+                <form class="sign-up-form form" id="signIn" method="post">
                     <img src="images/welcome.svg" alt="" width="90px"
                         style="border-radius: 50px 20px; padding: 5px; border: 2px solid #dee9fc;">
                     <h2 class="tittle">Sign Up</h2>
@@ -62,7 +62,7 @@
                         <div class="right">
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Name" id="name">
+                                <input type="text" placeholder="Name" id="name" name="name">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" id="pass">
+                                <input type="password" placeholder="Password" id="pass" name="pass">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-phone"></i>
-                                <input type="tel" placeholder="Phone Number" id="phone">
+                                <input type="tel" placeholder="Phone Number" id="phone" name="phone">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-address-card"></i>
-                                <input type="number" placeholder="Age" id="age">
+                                <input type="number" placeholder="Age" id="age" name="age">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -100,7 +100,7 @@
                         <div class="left">
                             <div class="input-field">
                                 <i class="fa-solid fa-envelope"></i>
-                                <input type="email" placeholder="Email Address" id="email">
+                                <input type="email" placeholder="Email Address" id="email" name="email">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -118,7 +118,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-venus-mars"></i>
-                                <input type="text" placeholder="Gender" id=" gender">
+                                <input type="text" placeholder="Gender" id="gender" name="gender">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -126,8 +126,8 @@
                                 </div>
                             </div>
                             <div class="input-field">
-                                <i class="fa-solid fa-venus-mars"></i>
-                                <input type="text" placeholder="Career" id="career">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <input type="text" placeholder="Career" id="career" name="career">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -140,7 +140,7 @@
                         <input type="checkbox" id="check">
                         <label for="check"> I agrey to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
                     </div>
-                    <input type="submit" value="Sign Up" class="btn solid">
+                    <input type="button" onclick="checkInputs(); submit_sign_up()" value="Sign Up" class="btn solid">
                 </form>
 
             </div>
