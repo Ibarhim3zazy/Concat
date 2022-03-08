@@ -1,0 +1,118 @@
+
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100wh;
+    height: 100vh;
+    background-image: url(../images/people_search.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 30% 40%;
+    
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px 4px rgb(0 0 0 / 12%) , -3px -3px 3px 4px rgba(0, 0, 0, 0.12);
+    padding: 30px 30px 0 30px;
+    border-radius: 10px 40px ;
+}
+
+.container .right img {
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .min-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 ;
+}
+
+.container h3 {
+    margin-bottom: 15px;
+    color: #333;
+    margin-top: 0;
+    font-weight: var(--main-font-weight);
+    font-size: 24px;
+}
+
+.container .min-container .right h4:first-of-type {
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.container .min-container .right h4:last-of-type {
+    font-weight: normal;
+    color: #999;
+    margin-top: 5px;
+}
+
+.container .left p {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+hr:last-of-type {
+    margin-top: 15px;
+}
+
+.links {
+    padding: 30px 10px;
+    text-align: right;
+}
+
+.links .containue {
+    background-color: var(--main-color-alt);
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.links .Not_you {
+    background-color: #eee;
+    color: #999;
+    border-radius: 4px;
+    padding: 8px;
+    transition: var(--main-transition);
+}
+
+.links .containue:hover  {
+    background-color: var(--main-color-hover);
+}
+
+.links .Not_you:hover {
+    background-color: rgb(214, 208, 208);
+    color: #fff;
+}
+
+.reset .p {
+    max-width: 600px;
+    margin-top: 25px;
+    text-align: center;
+    color: rgb(107, 105, 105);
+}
+
+
+
+@media (max-width : 800px) {
+    .p {
+        font-size: 14px;
+    }
+
+    .reset {
+        background-image: none;
+    }
+}

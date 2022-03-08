@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/login-signup.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="images/bear.svg">
     <title> Concat | Welcome In </title>
 </head>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="check">
-                        <a href="forgetPass.html">Forgetten Password?</a>
+                        <a href="forgetPass1.php">Forgetten Password?</a>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>

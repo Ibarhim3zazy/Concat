@@ -1,0 +1,96 @@
+.code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100wh;
+    height: 100vh;
+    background-image: url(../images/_alert.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 40% 50%;
+}
+
+.container {
+    width: 550px;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px 4px rgb(0 0 0 / 12%) , -3px -3px 3px 4px rgba(0, 0, 0, 0.12);
+    padding: 20px 20px 0 20px;
+    border-radius: 10px 40px ;
+}
+
+.container h3 {
+    margin-bottom: 8px;
+    color: #333;
+    margin-top: 0;
+    font-weight: var(--main-font-weight);
+    font-size: 24px;
+}
+
+.container p {
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.container input {
+    border: 1px solid #eee;
+    padding:  10px 20px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+
+
+.container .links  {
+    padding: 30px 10px;
+    text-align: right;
+}
+
+.container .links .cancel {
+    background-color: #eee;
+    color: #999;
+    border-radius: 4px;
+    padding: 8px;
+    margin-right: 8px;
+    transition: var(--main-transition);
+}
+
+.container .links .containue {
+    background-color: var(--main-color-alt);
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+
+}
+
+.container .links .containue:hover  {
+    background-color: var(--main-color-hover);
+}
+.container .links .cancel:hover {
+    background-color: rgb(214, 208, 208);
+    color: #fff;
+}
+
+.any-name small {
+    color: var(--main-color-error);
+    visibility: visible;
+}
+
+.any-name small {
+    visibility: hidden;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+@media (max-width : 800px) {
+    .container {
+        width: 480px;
+    }
+
+    .code {
+        background-image: none;
+    }
+}
