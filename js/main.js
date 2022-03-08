@@ -13,16 +13,14 @@ sign_in_btn.addEventListener('click', () => {
 
 // validate-sign-in-form '
 
-const form = document.getElementById('form')
-
-const user = document.getElementById('user')
+// const form = document.getElementById('form');
+//
+const user = document.getElementById('user');
 const pass = document.getElementById("password");
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    checkInput();
-    
-})  
+// input.addEventListener('click', (e) => {
+//     checkInput();
+// })
 
 function checkInput() {
     // get the values from the inputs
@@ -38,7 +36,7 @@ function checkInput() {
         setSuccessFor(user);
     }
 
-    if (passValue.length < 6  || passValue.length > 10) {
+    if (passValue.length < 6  || passValue.length > 20) {
         setErrorFor(pass , 'Your pass sould be between 6 and 20 char')
     } else {
         setSuccessFor(pass)
@@ -49,7 +47,7 @@ function setErrorFor(input, message) {
     const input_field = input.parentElement; // .input-field
     const small = input_field.querySelector('small')
 
-    // add error message inside small 
+    // add error message inside small
     small.innerText = message
 
     //add error class
@@ -60,29 +58,28 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
     const input_field = input.parentElement;
     input_field.className = 'input-field success'
-
 }
 
 
 // form sign up
 
-const form2 = document.getElementById("signIn");
+// const form2 = document.getElementById("signIn");
 const nameuser = document.getElementById("name");
 const password = document.getElementById("pass")
 const phone = document.getElementById("phone");
-const age = document.getElementById("age")
-const email = document.getElementById("email")
+const age = document.getElementById("age");
+const email = document.getElementById("email");
 const confirmPass = document.getElementById("confirmPass");
-const gender = document.getElementById("gender")
-const career = document.getElementById("career")
+const gender = document.getElementById("gender");
+const career = document.getElementById("career");
 
 
 
 
-form2.addEventListener('submit', (e) => {
-    e.preventDefault();
-    checkInputs();
-}) 
+// form2.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     checkInputs();
+// })
 
 
 function checkInputs() {
@@ -142,7 +139,7 @@ function checkInputs() {
     let at = emailValue.indexOf("@");
     let dot = emailValue.lastIndexOf(".")
 
-    if (at < 1 || dot < at + 2 ||dot+2 >= emailValue.lenght ) {
+    if (at < 1 || dot < at + 2 ||dot+2 >= emailValue.length ) {
         setErrorFor(email,'Your Email is invalid')
     } else {
         setSuccessFor(email);
@@ -163,6 +160,25 @@ function checkInputs() {
     // }
 }
 
+// sign_up >>>>>>> ajax
 
-
-
+function GetXmlHttpObject(){
+	if (window.XMLHttpRequest)
+		return new XMLHttpRequest();
+	if (window.ActiveXObject)
+		return new ActiveXObject("Microsoft.XMLHTTP");
+	return null;
+};
+function submit_sign_up(){
+  let user=document.getElementById("name").value;
+  let email=document.getElementById("email").value;
+  let pass=document.getElementById("pass").value;
+  let phone=document.getElementById("phone").value;
+  let gender=document.getElementById("gender").value;
+  let age=document.getElementById("age").value;
+  let career=document.getElementById("career").value; url="sign_up_ajax.php?name="+user+"&email="+email+"&pass="+pass+"&phone="+phone+"&gender="+gender+"&age="+age+"&career="+career;
+	let xmlhttp = GetXmlHttpObject();
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
+  
+};
