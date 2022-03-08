@@ -50,7 +50,7 @@ input {
     transition: 1s 0.7s ease-in-out;
 }
 
-form {
+div.form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,26 +62,26 @@ form {
     transition: 0.2s 0.7s ease-in-out;
 }
 
-form.sign-in-form {
+div.sign-in-form {
     z-index: 2;
 }
-form.sign-up-form {
+div.sign-up-form {
     z-index: 1;
     opacity: 0;
 }
 
-form.sign-in-form .links {
+div.sign-in-form .links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 20px;
     margin-top: 30px;
 }
-form.sign-in-form  .links a {
+div.sign-in-form  .links a {
     text-decoration: none;
     color: var(--main-color);
 }
-form.sign-in-form  .links a:hover {
+div.sign-in-form  .links a:hover {
     color: var(--main-color-hover);
 }
 
@@ -222,7 +222,7 @@ form.sign-in-form  .links a:hover {
     background-color: var(--main-color-hover);
 }
 
-.container .signin-signup form.check{
+.container .signin-signup div.check{
     display: flex;
     align-items: flex-end;
     justify-content: right;
@@ -351,12 +351,12 @@ form.sign-in-form  .links a:hover {
     left: 25%;
 }
 
-.container.sign-up-mode form.sign-in-form {
+.container.sign-up-mode div.sign-in-form {
     z-index: 1;
     opacity: 0;
 }
 
-.container.sign-up-mode form.sign-up-form {
+.container.sign-up-mode div.sign-up-form {
     z-index: 2;
     opacity: 1;
 }
@@ -452,7 +452,7 @@ form.sign-in-form  .links a:hover {
 }
 
 @media ( max-width : 572px) {
-    form {
+    div.form {
         padding: 0 1.5rem;
     }
     .image {

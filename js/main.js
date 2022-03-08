@@ -90,8 +90,8 @@ function checkInputs() {
     const ageValue = age.value.trim()
     const emailValue = email.value.trim()
     const confirmPassValue = confirmPass.value.trim()
-    // const genderValue = gender.value.trim();
-    // const careerValue = career.value.trim();
+    const genderValue = gender.value.trim();
+    const careerValue = career.value.trim();
 
 
     if (nameValue === "") {
@@ -147,17 +147,17 @@ function checkInputs() {
 
 
 
-    // if (genderValue === "") {
-    //     setErrorFor(gender,'this field can not be empty')
-    // } else {
-    //     setSuccessFor(gender)
-    // }
+    if (genderValue === "") {
+        setErrorFor(gender,'this field can not be empty')
+    } else {
+        setSuccessFor(gender)
+    }
 
-    // if (careerValue === "") {
-    //     setErrorFor(career,'this field can not be empty')
-    // } else {
-    //     setSuccessFor(career)
-    // }
+    if (careerValue === "") {
+        setErrorFor(career,'this field can not be empty')
+    } else {
+        setSuccessFor(career)
+    }
 }
 
 // sign_up >>>>>>> ajax
@@ -176,9 +176,17 @@ function submit_sign_up(){
   let phone=document.getElementById("phone").value;
   let gender=document.getElementById("gender").value;
   let age=document.getElementById("age").value;
-  let career=document.getElementById("career").value; url="sign_up_ajax.php?name="+user+"&email="+email+"&pass="+pass+"&phone="+phone+"&gender="+gender+"&age="+age+"&career="+career;
+  let career=document.getElementById("career").value; url="sign_up_ajax.php";
 	let xmlhttp = GetXmlHttpObject();
-	xmlhttp.open("GET",url,true);
-	xmlhttp.send();
-  
+  // xmlhttp.onreadystatechange=function()
+	// {
+	// 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	// 	{
+	// 		document.getElementById("result").innerHTML=xmlhttp.responseText;
+	// 	}
+	// }
+	xmlhttp.open("POST",url,true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.setRequestHeader("Connection", "close");
+	xmlhttp.send("name="+user+"&email="+email+"&pass="+pass+"&phone="+phone+"&gender="+gender+"&age="+age+"&career="+career);
 };

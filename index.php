@@ -17,7 +17,7 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form class="sign-in-form form" id="form">
+                <div class="sign-in-form form" id="form">
                     <img src="images/begin-chat.svg" alt="" width="90px"
                         style="border-radius: 50px 20px; padding: 5px; border: 2px solid #dee9fc;">
                     <h2 class="tittle">Sign In</h2>
@@ -31,11 +31,7 @@
                         </div>
                     </div>
                     <div class="check">
-<<<<<<< HEAD
-                        <a href="forgetPass.php">Forgetten Password?</a>
-=======
                         <a href="forgetPass1.php">Forgetten Password?</a>
->>>>>>> fb5d13063679760fd0e60ec62bfa2b4d6ce3ed7c
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
@@ -55,10 +51,10 @@
                         <a href=""> Help</a>
                         <a href="">Security</a>
                     </div>
-                </form>
+                </div>
 
 
-                <form class="sign-up-form form" id="signIn" method="post">
+                <div class="sign-up-form form" id="signIn">
                     <img src="images/welcome.svg" alt="" width="90px"
                         style="border-radius: 50px 20px; padding: 5px; border: 2px solid #dee9fc;">
                     <h2 class="tittle">Sign Up</h2>
@@ -145,7 +141,7 @@
                         <label for="check"> I agrey to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
                     </div>
                     <input type="button" onclick="checkInputs(); submit_sign_up()" value="Sign Up" class="btn solid">
-                </form>
+                </div>
 
             </div>
         </div>
