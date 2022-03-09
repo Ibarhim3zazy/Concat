@@ -116,9 +116,10 @@
                                     <small>Error Message</small>
                                 </div>
                             </div>
+
                             <div class="input-field">
-                                <i class="fa-solid fa-venus-mars"></i>
-                                <input type="text" placeholder="Gender" id="gender" name="gender">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <input type="text" placeholder="Career" id="career" name="career">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -126,8 +127,12 @@
                                 </div>
                             </div>
                             <div class="input-field">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <input type="text" placeholder="Career" id="career" name="career">
+                                <i class="fa-solid fa-venus-mars"></i>
+                                <label for="gender"> Gender</label>
+                                <select name=" Gender" id="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
