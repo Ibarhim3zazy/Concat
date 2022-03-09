@@ -1,0 +1,138 @@
+.header {
+    height: 70px;
+    overflow: hidden;
+    width: 100vw;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: var(--main-box-shadow);
+}
+
+.header .container {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .container .left,
+.header .container .middle,
+.header .container .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .container .left  .search {
+    width: 250px;
+    max-width: 100%;
+    border: 1px #eee solid;
+    border-radius: 13px;
+    padding: 10px;
+}
+
+.header .container .left #search  {
+    outline: none;
+    border: none;
+}
+
+.header .container .left  .search i {
+    color: #acacac;
+    font-size: 19px;
+}
+
+
+.header .container .left #search::placeholder {
+    color: #acacac;;
+}
+
+.header .container .left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+.header .container .middle {
+    display: flex;
+    gap: 100px;
+}
+
+.header .container .middle .home,
+.header .container .middle .group,
+.header .container .middle .courses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header .container .middle .home i ,
+.header .container .middle .group i,
+.header .container .middle .courses i,
+.header .container .right .message i,
+.header .container .right .notification i,
+.header .container .right .more {
+    font-size: 30px;
+    color: #333;
+    transition: var(--main-transition);
+}
+
+.header .container .middle .home span a ,
+.header .container .middle .group span a,
+.header .container .middle .courses span a{
+    font-size: 17px;
+    color: #333;
+}
+
+.header .container .middle .home i {
+    color: var(--main-color);
+}
+
+.header .container .middle .group i:hover,
+.header .container .middle .courses i:hover,
+.header .container .right .message i:hover,
+.header .container .right .notification i:hover,
+.header .container .right .more i:hover {
+    color: var(--main-color); 
+}
+
+.header .container .right {
+    display: flex;
+    gap: 40px;
+}
+
+.header .container .right .account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .container .right .account img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header .container .right .account span a {
+    color: #333;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.header .container .right .message i {
+    font-size: 30px;
+    color: #333;
+    transition: var(--main-transition);
+}
+
