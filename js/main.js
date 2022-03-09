@@ -37,18 +37,18 @@ function checkInput() {
     }
 
     if (passValue.length < 6  || passValue.length > 20) {
-        setErrorFor(pass , 'Your pass sould be between 6 and 20 char')
+        setErrorFor(pass , 'Your pass must be between 6 and 20 char')
     } else {
-        setSuccessFor(pass)
+        setSuccessFor(pass);
     }
 }
 
 function setErrorFor(input, message) {
     const input_field = input.parentElement; // .input-field
-    const small = input_field.querySelector('small')
+    const small = input_field.querySelector('small');
 
     // add error message inside small
-    small.innerText = message
+    small.innerText = message;
 
     //add error class
 
@@ -184,16 +184,54 @@ function submit_sign_up(){
       let age=document.getElementById("age").value;
       let career=document.getElementById("career").value; url="sign_up_ajax.php";
       let xmlhttp = GetXmlHttpObject();
-      // xmlhttp.onreadystatechange=function()
-      // {
-      // 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-      // 	{
-      // 		document.getElementById("result").innerHTML=xmlhttp.responseText;
-      // 	}
-      // }
+      xmlhttp.onreadystatechange=function()
+      {
+      	if (xmlhttp.readyState==4 && xmlhttp.status==200){
+          // alert(xmlhttp.responseText.trim());
+          if (xmlhttp.responseText.trim() != "Faild") {
+            location.reload();
+          }else {
+            alert("This email is used Please change it or press forgot password");
+          }
+        }
+      }
       xmlhttp.open("POST",url,true);
       xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlhttp.setRequestHeader("Connection", "close");
       xmlhttp.send("name="+user+"&email="+email+"&pass="+pass+"&phone="+phone+"&gender="+gender+"&age="+age+"&career="+career);
+  };
+};
+
+// log_in >>>>>>> ajax
+
+function GetXmlHttpObject(){
+	if (window.XMLHttpRequest)
+		return new XMLHttpRequest();
+	if (window.ActiveXObject)
+		return new ActiveXObject("Microsoft.XMLHTTP");
+	return null;
+};
+function submit_sign_in(){
+  if (user.parentElement.classList.contains('success') == true &&
+    pass.parentElement.classList.contains('success') == true) {
+      let user=document.getElementById("user").value;
+      let pass=document.getElementById("password").value;
+      url="sign_in_ajax.php";
+      let xmlhttp = GetXmlHttpObject();
+      xmlhttp.onreadystatechange=function()
+      {
+      	if (xmlhttp.readyState==4 && xmlhttp.status==200){
+          // alert(xmlhttp.responseText.trim());
+          if (xmlhttp.responseText.trim() == "first_login") {
+            window.location.href = "../Concat/FirstPage.php";
+          }else if (xmlhttp.responseText.trim() == "index") {
+            window.location.href = "../Concat/home.php";
+          }
+        }
+      }
+      xmlhttp.open("POST",url,true);
+      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xmlhttp.setRequestHeader("Connection", "close");
+      xmlhttp.send("name="+user+"&pass="+pass);
   };
 };

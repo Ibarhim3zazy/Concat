@@ -43,7 +43,7 @@
                         </div>
                     </div>
 
-                    <input type="button" onclick="checkInput()" value="Sign In" class="btn solid">
+                    <input type="button" onclick="checkInput(); submit_sign_in()" value="Sign In" class="btn solid">
 
                     <div class="links">
                         <a href="">Terms</a>

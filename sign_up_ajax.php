@@ -13,6 +13,14 @@
     $email= $_POST['email'];
     $gender= $_POST['gender'];
     $career= $_POST['career'];
-    $result = $con->query("INSERT INTO sign_up VALUES(NULL, '$user', '$email', '$password', '$phone', '$gender', '$age', '$career');");
+    // check email
+    $result= $con->query("SELECT * FROM sign_up WHERE email='$email';");
+      $num = $con->affected_rows;
+      if($num != 0 && $result == true){
+        echo 'Faild';
+        }else {
+          echo 'success';
+          $result = $con->query("INSERT INTO sign_up VALUES(NULL, '$user', '$email', '$password', '$phone', '$gender', '$age', '$career', 0);");
+        }
   }
  ?>
