@@ -116,7 +116,6 @@
                                     <small>Error Message</small>
                                 </div>
                             </div>
-
                             <div class="input-field">
                                 <i class="fas fa-chalkboard-teacher"></i>
                                 <input type="text" placeholder="Career" id="career" name="career">
