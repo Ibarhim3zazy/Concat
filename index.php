@@ -178,6 +178,16 @@
             </div>
         </div>
     </div>
+    <div class="pop_up">
+        <div class="contan">
+            <p>
+                This email is used, Please Change it or press <a href="forgetPass1.php">Forget Password!</a>
+            </p>
+            <div class="ok">
+                <a href="index.php">OK!</a>
+            </div>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 

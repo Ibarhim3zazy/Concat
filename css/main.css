@@ -501,3 +501,63 @@ div.sign-in-form  .links a:hover {
     color: var(--main-color-alt);
     font-weight: var(--main-font-weight);
 }
+
+
+/* pop_up  */
+
+.pop_up {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2000;
+}
+
+
+
+.pop_up .contan {
+    background-color: #fff;
+    box-shadow: var(--main-box-shadow);
+    width: 500px;
+    max-width: 490px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.3;
+    gap: 20px;
+}
+
+.pop_up .contan p {
+    color: #444;
+    font-size: 18px;
+}
+
+.pop_up .contan p  a {
+    color: #3d6ec2;
+    transition: var(--main-transition);
+}
+
+.pop_up .contan p  a:hover {
+    color: #04befe;
+}
+
+
+
+.pop_up .contan .ok a {
+    color: rgb(0, 104, 173);
+    padding: 6px 30px;
+    background-color: rgba(209, 208, 208, 0.342);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+
+.pop_up .contan .ok a:hover {
+    color: var(--main-color-hover);
+}
