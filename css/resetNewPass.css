@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 30% 40%;
-    
+
 }
 
 .container {
@@ -79,6 +79,8 @@ hr:last-of-type {
     color: white;
     border-radius: 4px;
     padding: 8px;
+    border-style: none;
+    cursor: pointer;
 }
 
 .links .Not_you {

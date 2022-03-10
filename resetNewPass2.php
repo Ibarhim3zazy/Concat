@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="icon" href="images/bear.svg">
     <link rel="stylesheet" href="css/resetNewPass.css">
+    <script type="text/javascript" src="js/send_verificationCode.js"></script>
     <title>Forget Password | Is that you</title>
 </head>
 
@@ -32,7 +33,7 @@
             <div class="min-container">
                 <div class="left">
                     <p>Send Code via email</p>
-                    <p><?php echo $usermail; ?></p>
+                    <p id="email"><?php echo $usermail; ?></p>
                 </div>
                 <div class="right">
                     <img src="images/cat-1.jpg" alt="">
@@ -44,7 +45,8 @@
             <hr color="#eee" width="100%" size="1">
             <div class="links">
                 <a href="forgetPass1.php" class="Not_you">Not you?</a>
-                <a href="entercode3.php" class="containue">Continue</a>
+                <input type="button" onclick="sending_verificationCode()" class="containue" value="Containue">
+                <!-- <a href="entercode3.php" class="containue">Continue</a> -->
             </div>
         </div>
         <p class="p">
