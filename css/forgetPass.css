@@ -25,7 +25,7 @@ body {
     margin-top: 0;
     font-weight: var(--main-font-weight);
     font-size: 24px;
-    
+
 
 }
 
@@ -92,11 +92,12 @@ body {
     color: white;
     border-radius: 4px;
     padding: 12px;
-
+    border-style: none;
 }
 
 .contain .links .search:hover  {
     background-color: var(--main-color-hover);
+    cursor: pointer;
 }
 .contain .links .cancel:hover {
     background-color: rgb(214, 208, 208);

@@ -46,7 +46,7 @@
                     <small>Error Message</small>
                 </div>
             </div>
-            <input type="submit" value="Next Page" id="submit">
+            <input type="button" value="Next Page" id="submit">
         </div>
     </div>
     <script src="js/firstPage.js"></script>

@@ -156,6 +156,9 @@ function checkInputs() {
     } else {
         setSuccessFor(career)
     }
+    if (document.getElementById('check').checked != true) {
+      alert("Please check agree to the Terms & Privacy Policy")
+    }
 }
 
 // sign_up >>>>>>> ajax
@@ -175,6 +178,7 @@ function submit_sign_up(){
     email.parentElement.classList.contains('success') == true &&
     gender.parentElement.classList.contains('success') == true &&
     career.parentElement.classList.contains('success') == true &&
+    document.getElementById('check').checked == true &&
     password.value === confirmPass.value) {
       let user=document.getElementById("name").value;
       let email=document.getElementById("email").value;

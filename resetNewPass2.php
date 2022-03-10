@@ -14,6 +14,17 @@
 </head>
 
 <body>
+  <?php require("connection.php");
+  if (isset($_GET['email']) == true) {
+    $usermail = $_GET['email'];
+    $result= $con->query("SELECT * FROM sign_up WHERE email='$usermail';");
+      $num = $con->affected_rows;
+      if($num != 0 && $result == true){
+        $row = $result-> fetch_assoc();
+        $userName = $row['name'];
+      }
+  }
+  ?>
     <div class="reset">
         <div class="container">
             <h3>Reset Your Password</h3>
@@ -21,19 +32,18 @@
             <div class="min-container">
                 <div class="left">
                     <p>Send Code via email</p>
-                    <p>nini556765@gmail.com</p>
+                    <p><?php echo $usermail; ?></p>
                 </div>
-
                 <div class="right">
                     <img src="images/cat-1.jpg" alt="">
-                    <h4>User Name </h4>
+                    <h4><?php echo $userName; ?></h4>
                     <h4>Concat User</h4>
                 </div>
             </div>
 
             <hr color="#eee" width="100%" size="1">
             <div class="links">
-                <a href="index.php" class="Not_you">Not you?</a>
+                <a href="forgetPass1.php" class="Not_you">Not you?</a>
                 <a href="entercode3.php" class="containue">Continue</a>
             </div>
         </div>
@@ -41,8 +51,6 @@
             You can see your name and profile picture because you're using a browser that you've logged in on before.
         </p>
     </div>
-
-
 </body>
 
 </html>
