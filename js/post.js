@@ -20,12 +20,9 @@
 // }
 
 
-<<<<<<< HEAD
 // edit
 
-=======
 // edit  
->>>>>>> f909711d22531c9a9e8efacae502d1b0f3d8219f
 const container = document.querySelector(".wrapper")
 const privacy = container.querySelector(".privacy")
 
@@ -48,13 +45,10 @@ arrowBack.addEventListener("click", () => {
 
 // }
 
-<<<<<<< HEAD
 // change pop up  start
-=======
 
 
 // change pop up 
->>>>>>> f909711d22531c9a9e8efacae502d1b0f3d8219f
 const openPost = document.getElementById("openPost");
 const createPost = document.getElementById("createPost");
 const close = document.getElementById("close");
@@ -87,12 +81,3 @@ const textarea = document.getElementById("textarea")
 sharepost.addEventListener('click', () => {
     boxTwo.appendChild(textarea);
 });
-<<<<<<< HEAD
-=======
-
-
-sharepost.addEventListener('click', () => {
-    boxTwo.appendChild(textarea);
-});
-
->>>>>>> f909711d22531c9a9e8efacae502d1b0f3d8219f
