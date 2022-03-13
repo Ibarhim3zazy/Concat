@@ -20,7 +20,7 @@
 // }
 
 
-// edit 
+// edit
 
 const container = document.querySelector(".wrapper")
 const privacy = container.querySelector(".privacy")
@@ -29,13 +29,13 @@ const  arrowBack = container.querySelector(".arrow-back");
 
 privacy.addEventListener("click", () => {
     container.classList.add("active")
-}); 
+});
 arrowBack.addEventListener("click", () => {
         container.classList.remove("active")
-    }); 
+    });
 
 
-// change pop up  start 
+// change pop up  start
 const openPost = document.getElementById("openPost");
 const createPost = document.getElementById("createPost");
 const close = document.getElementById("close");
@@ -68,4 +68,3 @@ const textarea = document.getElementById("textarea")
 sharepost.addEventListener('click', () => {
     boxTwo.appendChild(textarea);
 });
-
