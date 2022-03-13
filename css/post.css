@@ -53,17 +53,44 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    transition: var(--main-transition);
+    transition: opacity .8s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 30000;
+    background-color: rgba(211, 255, 248, 0.562);
+    width: 100vw;
 
 }
-.pop_post {
-    display: none;
+.pop_post.show {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .pop_post .container  {
     overflow: hidden;
     width: 480px;
 }
+
+/* change add */
+.pop_post .container .post .box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf;
+    justify-content: space-evenly;
+}
+
+.pop_post .container .post .box .arrow i {
+    font-size: 22px;
+    text-align: right;
+    padding: 6px 10px;
+    background-color: #b9b9b970;
+    border-radius: 50%;
+    color: #595959;
+    cursor: pointer;
+}
+
+/* e change */
+
 
 .pop_post .container .wrapper{
     border-radius: 10px;
@@ -103,7 +130,7 @@
     font-weight: var(--main-font-weight);
     text-align: center;
     padding: 17px 0;
-    border-bottom: 1px solid #bfbfbf;
+    /* border-bottom: 1px solid #bfbfbf; */
     color: #333;
 }
 
@@ -357,3 +384,140 @@
 .pop_post .wrapper.active .audience {
     opacity: 1;
 }
+
+/* change designPost  */
+
+.designPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.designPost .contain {
+    /* background-color: rgba(153, 153, 153, 0.37); */
+    box-shadow: var(--main-box-shadow);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 45%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.designPost .contain .box_1 {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.designPost .contain .box_1 .image  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.designPost .contain .box_1 .image img {
+    cursor: pointer;
+}
+
+.designPost .contain .box_1 .image .infoProfile  {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.designPost .contain .box_1 .image .infoProfile .userName a {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    transition: 1s;
+    cursor: pointer;
+}
+.designPost .contain .box_1 .image .infoProfile .userName a:hover {
+    color: var(--main-color-hover);
+}
+.designPost .contain .box_1 .image .infoProfile .data a {
+    font-size: 13px;
+    color: rgba(51, 51, 51, 0.788);
+    padding: 10px;
+    transition: 1s;
+}
+
+.designPost .contain .box_1 .image .infoProfile .data a:hover {
+    color: #333;
+}
+
+.designPost .contain .box_1 .image .infoProfile .data > i {
+    color: rgba(51, 51, 51, 0.664);
+    transition: 1s;
+}
+
+.designPost .contain .box_1 .image .infoProfile .data > i:hover {
+    color: #333;
+}
+
+.designPost .contain .box_1 span {
+    color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(51, 51, 51, 0.199);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+.designPost .contain .box_1 span:hover {
+    color: #4599ff;
+    background-color: rgba(153, 153, 153, 0.342);
+}
+
+
+.designPost .contain .box_3 {
+    padding: 10px 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.designPost .contain .box_3 .box_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+}
+.designPost .contain .box_3 i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #595959a8;
+    transition: .6s;
+    /* animation:  up-and-downn 5s linear infinite; */
+}
+
+.designPost .contain .box_3 i:hover {
+    color: var(--main-color-hover);
+    
+}
+
+/* @keyframes  up-and-down {
+    0% , 100% {
+        top: 0;
+    }
+    50% {
+        top: 40px;
+    }
+} */
+
+
+
+/* .designPost .contain .box_3 .box_container .like.active {
+    color: var(--main-color-hover);
+} */
+
+
+

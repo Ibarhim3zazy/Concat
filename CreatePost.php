@@ -32,7 +32,16 @@
         <div class="container">
             <div class="wrapper">
                 <section class="post">
-                    <header>Create A Post</header>
+                    <!-- change create box to contain header and close -->
+                    <div class="box">
+                        <header>Create A Post</header>
+                        <!--s change add close and id -->
+                        <div class="arrow" id="close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <!--e change -->
+                    </div>
+                    <!--e change -->
                     <form action="#">
                         <div class="contant">
                             <img src="images/cat-1.jpg" alt="" width="66px" style="border-radius: 50%;" height="66px">
@@ -45,7 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                        <textarea placeholder="What's on your mind, User Name?" required></textarea>
+                        <textarea placeholder="What's on your mind, User Name?" required id="textarea"></textarea>
                         <div class="theme-emoji">
                             <a href=""><i class="fa-solid fa-face-smile"></i></a>
                             <a href=""><i class="fa-solid fa-face-smile"></i></a>
@@ -67,7 +76,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <button>Post</button>
+                        <button id="sharepost">Post</button>
                     </form>
                 </section>
 
@@ -137,6 +146,51 @@
                         </li>
                     </ul>
                 </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- change design post -->
+    <div class="designPost" id="designPost">
+        <div class="contain">
+            <div class="box_1">
+                <div class="image">
+                    <a href="profile.php"><img src="images/cat-1.jpg" alt="" width="66px" style="border-radius: 50%;"
+                            height="66px"></a>
+                    <div class="infoProfile">
+                        <div class="userName">
+                            <a href="profile.php">
+                                User Name
+                            </a>
+                        </div>
+                        <div class="data">
+                            <!-- date must be changed -->
+                            <a href="">13m <i class="fa-solid fa-clock"></i></a>
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                    </div>
+                </div>
+                <span class="more">
+                    <i class="fa-solid fa-angle-down"></i>
+                </span>
+            </div>
+            <div class="box_2" id="boxTwo">
+            </div>
+            <div class="box_3">
+                <div class="box_container">
+                    <div id="like">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
+                    <div class="com" id="com">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="share" id="share">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+                <div class="save" id="save">
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
             </div>
         </div>
     </div>
