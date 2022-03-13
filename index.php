@@ -128,7 +128,7 @@
                             <div class="input-field">
                                 <i class="fa-solid fa-venus-mars"></i>
                                 <label for="gender"> Gender</label>
-                                <select name=" Gender" id="gender">
+                                <select name="Gender" id="gender">
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="accept">
                         <input type="checkbox" id="check">
-                        <label for="check"> I agrey to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
+                        <label for="check"> I agree to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
                     </div>
                     <input type="button" onclick="checkInputs(); submit_sign_up()" value="Sign Up" class="btn solid">
                 </div>
@@ -180,11 +180,10 @@
     </div>
     <div class="pop_up">
         <div class="contan">
-            <p>
-                This email is used, Please Change it or press <a href="forgetPass1.php">Forget Password!</a>
-            </p>
+            <p></p>
             <div class="ok">
-                <a href="index.php">OK!</a>
+                <a href="javascript:" onclick="            document.getElementsByClassName('pop_up')[0].style.display = 'none';
+">OK!</a>
             </div>
         </div>
     </div>

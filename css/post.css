@@ -12,7 +12,7 @@
     justify-content: space-between;
     gap: 10px;
     padding: 20px 10px;
-    
+
 }
 
 .create_post .container img {
@@ -47,14 +47,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: fit-content;
     background-color: rgba(238, 238, 238, 0.26);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: var(--main-transition);
-    
+
 }
 .pop_post {
     display: none;
@@ -166,7 +166,7 @@
     font-size: 18px;
 }
 
-.pop_post .container .post form :where(.theme-emoji , .options) , 
+.pop_post .container .post form :where(.theme-emoji , .options) ,
 .pop_post .container  .audience .list li {
     display: flex;
     align-items: center;

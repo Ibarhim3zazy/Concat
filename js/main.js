@@ -138,7 +138,7 @@ function checkInputs() {
     let dot = emailValue.lastIndexOf(".")
 
     if (at < 1 || dot < at + 2 ||dot+2 >= emailValue.length ) {
-        setErrorFor(email,'Your Email is invalid')
+        setErrorFor(email,'Your Email is invalid');
     } else {
         setSuccessFor(email);
     }
@@ -157,10 +157,10 @@ function checkInputs() {
         setSuccessFor(career)
     }
     if (document.getElementById('check').checked != true) {
-      alert("Please check agree to the Terms & Privacy Policy")
+      document.querySelector('.pop_up .contan p').innerHTML = "Please check agree to the Terms & Privacy Policy";
+      document.getElementsByClassName('pop_up')[0].style.display = 'block';
     }
 }
-
 // sign_up >>>>>>> ajax
 
 function GetXmlHttpObject(){
@@ -195,7 +195,9 @@ function submit_sign_up(){
           if (xmlhttp.responseText.trim() != "Faild") {
             location.reload();
           }else {
-            alert("This email is used Please change it or press forgot password");
+            setErrorFor(document.getElementById("email"),'This email is used');
+            document.querySelector('.pop_up .contan p').innerHTML = 'This email is used, Please Change it or press <a href="forgetPass1.php">Forget Password!</a>';
+            document.getElementsByClassName('pop_up')[0].style.display = 'block';
           }
         }
       }

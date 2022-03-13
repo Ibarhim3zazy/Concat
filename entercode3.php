@@ -15,7 +15,7 @@
 
 <body>
     <div class="code">
-        <div class="container">
+        <form class="container" action="" method="post">
             <h3>Enter security code</h3>
             <hr color="#eee" width="100%" size="1">
             <p>
@@ -23,7 +23,7 @@
                 Your code is 6 characters in length.
             </p>
             <div class="input_field">
-                <input type="text" id="text" placeholder="Enter code">
+                <input type="text" id="text" name="conVer_code" placeholder="Enter code">
                 <div class="any-name">
                     <small>Error Message</small>
                 </div>
@@ -31,10 +31,21 @@
             <hr color="#eee" width="100%" size="1">
             <div class="links">
                 <a href="index.php" class="cancel">Cancel</a>
-                <a href="newpass4.php" class="containue" id="con">Continue</a>
+                <input type="submit" class="containue" id="con" value="Continue">
             </div>
-        </div>
+        </form>
     </div>
+    <?php session_start(); require("connection.php");
+    if (isset($_SESSION['ver_code']) == true && isset($_POST['conVer_code']) == true) {
+      $conVer_code = $_POST['conVer_code']."    ";
+      $ver_code = $_SESSION['ver_code'];
+      if ($conVer_code == $ver_code) {
+        header("location: newpass4.php");
+        unset($_SESSION);
+        session_destroy();
+      }
+    }
+     ?>
     <script src="js/entercode.js"></script>
 </body>
 

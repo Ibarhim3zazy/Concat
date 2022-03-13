@@ -18,11 +18,11 @@
         <div class="container">
             <img src="images/cat-1.jpg" alt="">
             <!-- user name will change so it's variable -->
-            <input type="button" value="What's on your mind, User Name?">
+            <input type="button" value="What's on your mind, User Name?" onclick="showPost()">
             <!-- <hr>
             <div class="effect">
                 <div class="photo">
-                    
+
                 </div>
             </div> -->
         </div>
