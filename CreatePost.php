@@ -18,13 +18,13 @@
         <div class="container">
             <img src="images/cat-1.jpg" alt="">
             <!-- user name will change so it's variable -->
-            <input type="button" value="What's on your mind, User Name?" onclick="showPost()">
+            <input type="button" value="What's on your mind, User Name?">
             <!-- <hr>
-            <div class="effect">
-                <div class="photo">
+            <div class=" effect">
+            <div class="photo">
 
-                </div>
-            </div> -->
+            </div>
+        </div> -->
         </div>
     </div>
     <!-- pop up creating post -->
