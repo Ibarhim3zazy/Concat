@@ -20,8 +20,7 @@
 // }
 
 
-// edit 
-
+// edit  
 const container = document.querySelector(".wrapper")
 const privacy = container.querySelector(".privacy")
 
@@ -34,8 +33,19 @@ arrowBack.addEventListener("click", () => {
         container.classList.remove("active")
     }); 
 
+// const pup = document.querySelector(".pop_post")
 
-// change pop up  start 
+
+
+
+
+// function close() {
+
+// }
+
+
+
+// change pop up 
 const openPost = document.getElementById("openPost");
 const createPost = document.getElementById("createPost");
 const close = document.getElementById("close");
@@ -64,6 +74,11 @@ const sharepost = document.getElementById("sharepost");
 const boxTwo = document.getElementById("boxTwo");
 
 const textarea = document.getElementById("textarea")
+
+sharepost.addEventListener('click', () => {
+    boxTwo.appendChild(textarea);
+});
+
 
 sharepost.addEventListener('click', () => {
     boxTwo.appendChild(textarea);
