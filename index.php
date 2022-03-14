@@ -89,7 +89,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-address-card"></i>
-                                <input type="number" placeholder="Age" id="age" name="age">
+                                <input type="date" placeholder=" Age" id="age" name="age">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -118,7 +118,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-chalkboard-teacher"></i>
-                                <input type="text" placeholder="Career" id="career" name="career">
+                                <input type="text" placeholder="Current Address" id="career" name="career">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
