@@ -38,7 +38,6 @@
             </div>
             <div class="right">
                 <div class="account">
-
                     <div class="message">
                         <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
                     </div>

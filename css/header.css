@@ -115,7 +115,7 @@
 
 .header .container .right {
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
 .header .container .right .account {
