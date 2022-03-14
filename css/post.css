@@ -519,5 +519,14 @@
     color: var(--main-color-hover);
 } */
 
+.designPost .contain p {
+    width: 470px;
+    max-width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.5;
+}
+
 
 

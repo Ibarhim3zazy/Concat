@@ -160,8 +160,8 @@
                     <i class="fa-solid fa-angle-down"></i>
                 </span>
             </div>
-            <div class="box_2" id="boxTwo">
-            </div>
+            <p class="box_2" id="boxTwo">
+            </p>
             <div class="box_3">
                 <div class="box_container">
                     <div id="like">
