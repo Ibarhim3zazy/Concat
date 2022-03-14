@@ -14,7 +14,7 @@
                     <a href=""><img src="images/bear.svg" alt=""></a>
                 </div>
                 <div class="search">
-                    <input type="search" name="" id="search">
+                    <input type="search" name="" id="search" placeholder="Search">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
             </div>
@@ -37,19 +37,15 @@
                 </div>
             </div>
             <div class="right">
+                <div class="notification">
+                    <a href=""><i class="fa-solid fa-bell"></i></a>
+                </div>
+                <div class="message">
+                    <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
+                </div>
                 <div class="account">
-                    <div class="message">
-                        <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
-                    </div>
-                    <div class="notification">
-                        <a href=""><i class="fa-solid fa-bell"></i></a>
-                    </div>
-                    <div class="more">
-                        <a href=""><i class="fa-solid fa-bars"></i></a>
-                    </div>
-                    <a href="">
-                        <img src="images/cat-1.jpg" alt="">
-                    </a>
+                    <a href=""><img src="images/cat-1.jpg" alt=""></a>
                 </div>
             </div>
         </div>
+    </div>
