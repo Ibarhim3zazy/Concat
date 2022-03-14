@@ -174,27 +174,23 @@ function submit_sign_up(){
   if (nameuser.parentElement.classList.contains('success') == true &&
     password.parentElement.classList.contains('success') == true &&
     phone.parentElement.classList.contains('success') == true &&
-    age.parentElement.classList.contains('success') == true &&
     email.parentElement.classList.contains('success') == true &&
     gender.parentElement.classList.contains('success') == true &&
-    career.parentElement.classList.contains('success') == true &&
     document.getElementById('check').checked == true &&
     password.value === confirmPass.value) {
       let user=document.getElementById("name").value;
       let email=document.getElementById("email").value;
       let pass=document.getElementById("pass").value;
       let phone=document.getElementById("phone").value;
-      let gender=document.getElementById("gender").value;
-      let age=document.getElementById("age").value;
-      let career=document.getElementById("career").value; url="sign_up_ajax.php";
+      let gender=document.getElementById("gender").value; url="sign_up_ajax.php";
       let xmlhttp = GetXmlHttpObject();
       xmlhttp.onreadystatechange=function()
       {
       	if (xmlhttp.readyState==4 && xmlhttp.status==200){
-          // alert(xmlhttp.responseText.trim());
-          if (xmlhttp.responseText.trim() != "Faild") {
+          alert(xmlhttp.responseText.trim());
+          if (xmlhttp.responseText.trim() == "success") {
             location.reload();
-          }else {
+          }else if(xmlhttp.responseText.trim() == "email_exists"){
             setErrorFor(document.getElementById("email"),'This email is used');
             document.querySelector('.pop_up .contan p').innerHTML = 'This email is used, Please Change it or press <a href="forgetPass1.php">Forget Password!</a>';
             document.getElementsByClassName('pop_up')[0].style.display = 'block';
@@ -204,7 +200,7 @@ function submit_sign_up(){
       xmlhttp.open("POST",url,true);
       xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlhttp.setRequestHeader("Connection", "close");
-      xmlhttp.send("name="+user+"&email="+email+"&pass="+pass+"&phone="+phone+"&gender="+gender+"&age="+age+"&career="+career);
+      xmlhttp.send("name="+user+"&email="+email+"&pass="+pass+"&phone="+phone+"&gender="+gender);
   };
 };
 
