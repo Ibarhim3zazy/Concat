@@ -37,7 +37,11 @@
     border: 1px #eee solid;
     border-radius: 13px;
     padding: 10px;
+    cursor: pointer;
+    background-color: rgba(238, 238, 238, 0.562);
 }
+
+
 
 .header .container .left #search  {
     outline: none;
@@ -55,8 +59,8 @@
 }
 
 .header .container .left img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -82,7 +86,7 @@
 .header .container .right .message i,
 .header .container .right .notification i,
 .header .container .right .more {
-    font-size: 30px;
+    font-size: 20px;
     color: #333;
     transition: var(--main-transition);
 }
@@ -90,7 +94,7 @@
 .header .container .middle .home span a ,
 .header .container .middle .group span a,
 .header .container .middle .courses span a{
-    font-size: 17px;
+    font-size: 15px;
     color: #333;
 }
 
@@ -102,7 +106,10 @@
 .header .container .middle .courses i:hover,
 .header .container .right .message i:hover,
 .header .container .right .notification i:hover,
-.header .container .right .more i:hover {
+.header .container .right .more i:hover
+.header .container .middle .home span a:hover ,
+.header .container .middle .group span a:hover,
+.header .container .middle .courses span a:hover {
     color: var(--main-color); 
 }
 
@@ -119,19 +126,13 @@
 }
 
 .header .container .right .account img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
-.header .container .right .account span a {
-    color: #333;
-    font-size: 17px;
-    font-weight: normal;
-}
-
 .header .container .right .message i {
-    font-size: 30px;
+    font-size: 20px;
     color: #333;
     transition: var(--main-transition);
 }
