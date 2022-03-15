@@ -10,19 +10,17 @@
 //         container.classList.remove("active")
 //     });
 
-// const pup = document.querySelector(".pop_post");
+const pup = document.querySelector(".pop_post");
 
-// pup.addEventListener("click", () => {
-//     // pup.style.display = 'none';
-// })
-// function showPost() {
-//     pup.style.display = 'block';
-// }
+function showPost() {
+    pup.style.opacity = '1';
+    pup.style.pointerEvents = 'auto';
+}
 
 
 // edit
 
-// edit  
+// edit
 const container = document.querySelector(".wrapper")
 const privacy = container.querySelector(".privacy")
 
@@ -48,7 +46,7 @@ arrowBack.addEventListener("click", () => {
 // change pop up  start
 
 
-// change pop up 
+// change pop up
 const openPost = document.getElementById("openPost");
 const createPost = document.getElementById("createPost");
 const close = document.getElementById("close");

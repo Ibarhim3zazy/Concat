@@ -48,7 +48,6 @@
     border: none;
     background-color: rgba(238, 238, 238, 0.452);
     padding: 10px 6px;
-    cursor: pointer;
     border-radius: 13px;
     caret-color: var(--main-color);
 }
@@ -120,7 +119,7 @@
 .header .container .middle .home span a:hover ,
 .header .container .middle .group span a:hover,
 .header .container .middle .courses span a:hover {
-    color: var(--main-color); 
+    color: var(--main-color);
 }
 
 
@@ -131,7 +130,7 @@
 }
 
 /* .header .container .right .account {
-    height: 70px; 
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,4 +150,3 @@
     color: #333;
     transition: var(--main-transition);
 }
-
