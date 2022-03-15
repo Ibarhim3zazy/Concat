@@ -22,7 +22,7 @@
                     <div class="box">
                         <header>Create A Post</header>
                         <!--s change add close and id -->
-                        <div class="arrow" id="close">
+                        <div class="arrow" id="close" onclick="closePost()">
                             <i class="fa-solid fa-xmark"></i>
                         </div>
                         <!--e change -->
@@ -30,7 +30,7 @@
                     <!--e change -->
                     <form action="#">
                         <div class="contant">
-                            <img src="images/cat-1.jpg" alt="" width="66px" style="border-radius: 50%;" height="66px">
+                            <img src="images/cat-1.jpg" alt="" width="55px" style="border-radius: 50%;" height="55px">
                             <div class="detailes">
                                 <p>User Name</p>
                                 <div class="privacy">
@@ -141,8 +141,8 @@
         <div class="contain">
             <div class="box_1">
                 <div class="image">
-                    <a href="profile.php"><img src="images/cat-1.jpg" alt="" width="66px" style="border-radius: 50%;"
-                            height="66px"></a>
+                    <a href="profile.php"><img src="images/cat-1.jpg" alt="" width="55px" style="border-radius: 50%;"
+                            height="55px"></a>
                     <div class="infoProfile">
                         <div class="userName">
                             <a href="profile.php">

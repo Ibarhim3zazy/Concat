@@ -1,6 +1,6 @@
 
 .create_post {
-    width: 500px;
+    width: 450px;
     margin: 50px auto;
     box-shadow: var(--main-box-shadow);
     border-radius: 15px;
@@ -12,12 +12,11 @@
     justify-content: space-between;
     gap: 10px;
     padding: 20px 10px;
-
 }
 
 .create_post .container img {
-    width: 66px;
-    height: 66px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
@@ -48,7 +47,6 @@
     align-items: center;
     justify-content: center;
     min-height: fit-content;
-    background-color: rgba(238, 238, 238, 0.26);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,7 +57,7 @@
     z-index: 30000;
     background-color: rgba(211, 255, 248, 0.562);
     width: 100vw;
-
+    height: 100vh;
 }
 #createPost.show {
   opacity: 1;
@@ -87,6 +85,11 @@
     border-radius: 50%;
     color: #595959;
     cursor: pointer;
+}
+
+.pop_post .container .post .box .arrow.close {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* e change */
@@ -126,11 +129,10 @@
 
 
 .pop_post .container .post header {
-    font-size: 22px;
+    font-size: 19px;
     font-weight: var(--main-font-weight);
     text-align: center;
     padding: 17px 0;
-    /* border-bottom: 1px solid #bfbfbf; */
     color: #333;
 }
 
@@ -395,12 +397,11 @@
 }
 
 .designPost .contain {
-    /* background-color: rgba(153, 153, 153, 0.37); */
     box-shadow: var(--main-box-shadow);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 45%;
+    width: 40%;
     max-width: 100%;
     border-radius: 5px;
 }
@@ -416,7 +417,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 .designPost .contain .box_1 .image img {
@@ -430,7 +431,7 @@
 }
 
 .designPost .contain .box_1 .image .infoProfile .userName a {
-    font-size: 22px;
+    font-size: 18px;
     color: #333;
     font-weight: 600;
     transition: 1s;
