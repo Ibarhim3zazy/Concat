@@ -1,0 +1,22 @@
+.modal-content{
+    width:100%;
+   
+    margin-top: 100px;
+    background-color: #eee;
+   
+}
+
+
+
+.modal-content .modal-body ul{
+    list-style-position: inside;
+    padding: 10px;
+}
+img{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+   
+}
