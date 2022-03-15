@@ -23,7 +23,7 @@
                     <h2 class="tittle">Sign In</h2>
                     <div class="input-field  ">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="ID or your email" id="user">
+                        <input type="text" placeholder="ID or your email" id="user" tabindex="0">
                         <div class="any-name">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="password">
+                        <input type="password" placeholder="Password" id="password" tabindex="1">
                         <div class="any-name">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
@@ -62,7 +62,7 @@
                         <div class="right">
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Name" id="name" name="name">
+                                <input type="text" placeholder="Name" id="name" name="name" tabindex="0">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" id="pass" name="pass">
+                                <input type="password" placeholder="Password" id="pass" name="pass" tabindex="2">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-phone"></i>
-                                <input type="tel" placeholder="Phone Number" id="phone" name="phone">
+                                <input type="tel" placeholder="Phone Number" id="phone" name="phone" tabindex="4">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-address-card"></i>
-                                <input type="date" id="age" name="age">
+                                <input type="date" id="age" name="age" tabindex="6">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -100,7 +100,7 @@
                         <div class="left">
                             <div class="input-field">
                                 <i class="fa-solid fa-envelope"></i>
-                                <input type="email" placeholder="Email Address" id="email" name="email">
+                                <input type="email" tabindex="1" placeholder="Email Address" id="email" name="email">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -109,7 +109,8 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Confirm Your Password" id="confirmPass">
+                                <input type="password" tabindex="3" placeholder="Confirm Your Password"
+                                    id="confirmPass">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -118,7 +119,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-chalkboard-teacher"></i>
-                                <input type="text" placeholder="Current Address" id="career" name="career">
+                                <input type="text" tabindex="5" placeholder="Current Address" id="career" name="career">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -128,7 +129,7 @@
                             <div class="input-field">
                                 <i class="fa-solid fa-venus-mars"></i>
                                 <label for="gender"> Gender</label>
-                                <select name="Gender" id="gender">
+                                <select name="Gender" id="gender" tabindex="7">
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
