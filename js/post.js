@@ -9,14 +9,14 @@
 // arrowBack.addEventListener("click", () => {
 //         container.classList.remove("active")
 //     });
-
+////////////////////////
 const pup = document.querySelector(".pop_post");
 
 function showPost() {
     pup.style.opacity = '1';
     pup.style.pointerEvents = 'auto';
 }
-
+///////////////////////
 
 // edit
 
