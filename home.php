@@ -7,7 +7,7 @@
   <body>
     <?php require_once 'header.php';
         require 'CreatePost.php';?>
-        <!-- text -->
+        <!-- test Comment -->
 
   </body>
 </html>
