@@ -33,11 +33,11 @@
             <div class="min-container">
                 <div class="left">
                     <p>Send Code via email</p>
-                    <p id="email"><?php echo $usermail; ?></p>
+                    <p id="email"><?= htmlentities($usermail); ?></p>
                 </div>
                 <div class="right">
                     <img src="images/cat-1.jpg" alt="">
-                    <h4><?php echo $userName; ?></h4>
+                    <h4><?= htmlentities($userName); ?></h4>
                     <h4>Concat User</h4>
                 </div>
             </div>

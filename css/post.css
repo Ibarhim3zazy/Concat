@@ -61,9 +61,9 @@
     width: 100vw;
 
 }
-.pop_post.show {
-    opacity: 1;
-    pointer-events: all;
+#createPost.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .pop_post .container  {

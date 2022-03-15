@@ -9,7 +9,7 @@
 // arrowBack.addEventListener("click", () => {
 //         container.classList.remove("active")
 //     });
-////////////////////////
+///////////////////////
 const pup = document.querySelector(".pop_post");
 
 function showPost() {
@@ -44,22 +44,6 @@ arrowBack.addEventListener("click", () => {
 // }
 
 // change pop up  start
-
-
-// change pop up
-const openPost = document.getElementById("openPost");
-const createPost = document.getElementById("createPost");
-const close = document.getElementById("close");
-
-openPost.addEventListener('click', () => {
-    createPost.classList.add('show');
-});
-
-close.addEventListener('click', () => {
-    createPost.classList.remove('show');
-}
-);
-
 
 
 
