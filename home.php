@@ -9,7 +9,6 @@
 <body>
     <?php require_once 'header.php';
         require 'CreatePost.php';?>
-    <!-- test -->
 </body>
 
 </html>
