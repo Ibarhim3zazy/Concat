@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Concat</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <?php require_once 'header.php';
         require 'CreatePost.php';?>
-  </body>
+    <!-- test -->
+</body>
+
 </html>
