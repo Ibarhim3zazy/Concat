@@ -213,7 +213,7 @@ function GetXmlHttpObject(){
 		return new ActiveXObject("Microsoft.XMLHTTP");
 	return null;
 };
-function submit_sign_in(){
+function submit_sign_in() {
   if (user.parentElement.classList.contains('success') == true &&
     pass.parentElement.classList.contains('success') == true) {
       let user=document.getElementById("user").value;

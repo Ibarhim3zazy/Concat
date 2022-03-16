@@ -89,7 +89,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-address-card"></i>
-                                <input type="date" id="age" name="age" tabindex="6">
+                                <input type="date" id="age" name="age" tabindex="6" value="00 00 00">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>

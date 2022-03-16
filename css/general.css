@@ -20,6 +20,7 @@ body {
     --main-color-error :#e74c3c ;
     --main-transition : .5s;
     --main-font-weight : 600;
+    --main-box-shadow : 3px 3px 5px 5px rgb(0 0 0 / 20%)
 }
 
 a {
@@ -31,4 +32,8 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:not(:active) {
   -webkit-background-clip: text;
+}
+
+ul {
+    list-style: none;
 }

@@ -5,12 +5,6 @@
             <img src="images/cat-1.jpg" alt="">
             <!-- user name will change so it's variable -->
             <input type="button" onclick="showPost()" value="What's on your mind, User Name?">
-            <!-- <hr>
-            <div class=" effect">
-            <div class="photo">
-
-            </div>
-        </div> -->
         </div>
     </div>
     <!-- pop up creating post -->
@@ -30,7 +24,7 @@
                     <!--e change -->
                     <form action="#">
                         <div class="contant">
-                            <img src="images/cat-1.jpg" alt="" width="55px" style="border-radius: 50%;" height="55px">
+                            <img src="images/cat-1.jpg" alt="" width="45px" style="border-radius: 50%;" height="45px">
                             <div class="detailes">
                                 <p>User Name</p>
                                 <div class="privacy">
