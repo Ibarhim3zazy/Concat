@@ -67,11 +67,11 @@ function setSuccessFor(input) {
 const nameuser = document.getElementById("name");
 const password = document.getElementById("pass")
 const phone = document.getElementById("phone");
-const age = document.getElementById("age");
+const b_date = document.getElementById("b_date");
 const email = document.getElementById("email");
 const confirmPass = document.getElementById("confirmPass");
 const gender = document.getElementById("gender");
-const career = document.getElementById("career");
+const caddress = document.getElementById("caddress");
 
 
 // form2.addEventListener('submit', (e) => {
@@ -79,18 +79,16 @@ const career = document.getElementById("career");
 //     checkInputs();
 // })
 
-
 function checkInputs() {
-    // get the values from the inputs
+  // get the values from the inputs
     const nameValue = nameuser.value.trim();
     const passwordValue = password.value.trim();
     const phoneValue = phone.value.trim();
-    const ageValue = age.value.trim()
-    const emailValue = email.value.trim()
-    const confirmPassValue = confirmPass.value.trim()
+    const b_dateValue = b_date.value.trim();
+    const emailValue = email.value.trim();
+    const confirmPassValue = confirmPass.value.trim();
     const genderValue = gender.value.trim();
-    const careerValue = career.value.trim();
-
+    const caddressValue = caddress.value.trim();
 
     if (nameValue === "") {
         // show error
@@ -124,12 +122,10 @@ function checkInputs() {
         setSuccessFor(phone)
     }
 
-    if (ageValue === "") {
-        setErrorFor(age, 'Your Age is invalid')
-    } else if (isNaN(ageValue)) {
-        setErrorFor(age, 'Your age should not contain string')
-    } else {
-        setSuccessFor(age)
+    if (b_dateValue === "") {
+        setErrorFor(b_date, 'Your Age is invalid')
+    }else {
+        setSuccessFor(b_date)
     }
 
 
@@ -151,10 +147,10 @@ function checkInputs() {
         setSuccessFor(gender)
     }
 
-    if (careerValue === "") {
-        setErrorFor(career,'this field can not be empty')
+    if (caddressValue === "") {
+        setErrorFor(caddress,'this field can not be empty')
     } else {
-        setSuccessFor(career)
+        setSuccessFor(caddress);
     }
     if (document.getElementById('check').checked != true) {
       document.querySelector('.pop_up .contan p').innerHTML = "Please check agree to the Terms & Privacy Policy";
@@ -176,13 +172,20 @@ function submit_sign_up(){
     phone.parentElement.classList.contains('success') == true &&
     email.parentElement.classList.contains('success') == true &&
     gender.parentElement.classList.contains('success') == true &&
+    b_date.parentElement.classList.contains('success') == true &&
+    caddress.parentElement.classList.contains('success') == true &&
     document.getElementById('check').checked == true &&
     password.value === confirmPass.value) {
-      let user=document.getElementById("name").value;
-      let email=document.getElementById("email").value;
-      let pass=document.getElementById("pass").value;
-      let phone=document.getElementById("phone").value;
-      let gender=document.getElementById("gender").value; url="sign_up_ajax.php";
+      // get the values from the inputs
+      const nameValue = nameuser.value.trim();
+      const passwordValue = password.value.trim();
+      const phoneValue = phone.value.trim();
+      const b_dateValue = b_date.value.trim();
+      const emailValue = email.value.trim();
+      const confirmPassValue = confirmPass.value.trim();
+      const genderValue = gender.value.trim();
+      const caddressValue = caddress.value.trim();
+      url="sign_up_ajax.php";
       let xmlhttp = GetXmlHttpObject();
       xmlhttp.onreadystatechange=function()
       {
@@ -200,7 +203,7 @@ function submit_sign_up(){
       xmlhttp.open("POST",url,true);
       xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlhttp.setRequestHeader("Connection", "close");
-      xmlhttp.send("name="+user+"&email="+email+"&pass="+pass+"&phone="+phone+"&gender="+gender);
+      xmlhttp.send("name="+nameValue+"&email="+emailValue+"&pass="+passwordValue+"&phone="+phoneValue+"&b_date="+b_dateValue+"&caddress="+caddressValue+"&gender="+genderValue);
   };
 };
 

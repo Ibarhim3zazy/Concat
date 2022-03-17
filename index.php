@@ -89,7 +89,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-address-card"></i>
-                                <input type="date" id="age" name="age" tabindex="6" value="00 00 00">
+                                <input type="date" id="b_date" name="b_date" tabindex="6" value="00 00 00">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -119,7 +119,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-chalkboard-teacher"></i>
-                                <input type="text" tabindex="5" placeholder="Current Address" id="career" name="career">
+                                <input type="text" tabindex="5" placeholder="Current Address" id="caddress" name="caddress">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
