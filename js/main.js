@@ -128,8 +128,6 @@ function checkInputs() {
         setSuccessFor(b_date)
     }
 
-
-
     let at = emailValue.indexOf("@");
     let dot = emailValue.lastIndexOf(".")
 
@@ -190,9 +188,11 @@ function submit_sign_up(){
       xmlhttp.onreadystatechange=function()
       {
       	if (xmlhttp.readyState==4 && xmlhttp.status==200){
-          alert(xmlhttp.responseText.trim());
+          // alert(xmlhttp.responseText.trim());
           if (xmlhttp.responseText.trim() == "success") {
-            location.reload();
+            setTimeout(function () {
+              location.reload();
+            }, 2000);
           }else if(xmlhttp.responseText.trim() == "email_exists"){
             setErrorFor(document.getElementById("email"),'This email is used');
             document.querySelector('.pop_up .contan p').innerHTML = 'This email is used, Please Change it or press <a href="forgetPass1.php">Forget Password!</a>';
