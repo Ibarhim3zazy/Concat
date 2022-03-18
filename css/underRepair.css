@@ -71,5 +71,8 @@
     .container .back .text button{
         text-align: center;
         margin-left: 60px;
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
     }   
 }
