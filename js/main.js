@@ -89,6 +89,7 @@ function checkInputs() {
     const confirmPassValue = confirmPass.value.trim();
     const genderValue = gender.value.trim();
     const caddressValue = caddress.value.trim();
+    
 
     if (nameValue === "") {
         // show error

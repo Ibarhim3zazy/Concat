@@ -23,7 +23,7 @@
                     <h2 class="tittle">Sign In</h2>
                     <div class="input-field  ">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="ID or your email" id="user" tabindex="0">
+                        <input type="text" placeholder="ID or your email" id="user" tabindex="10">
                         <div class="any-name">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="password" tabindex="1">
+                        <input type="password" placeholder="Password" id="password" tabindex="20">
                         <div class="any-name">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
 
-                    <input type="button" onclick="checkInput(); submit_sign_in()" value="Sign In" class="btn solid">
+                    <input type="button" onclick="checkInput(); submit_sign_in()" value="Sign In" class="btn solid" tabindex = "30">
 
                     <div class="links">
                         <a href="">Terms</a>
@@ -62,7 +62,7 @@
                         <div class="right">
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Name" id="name" name="name" tabindex="0">
+                                <input type="text" placeholder="Name" id="name" name="name" tabindex="50">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" id="pass" name="pass" tabindex="2">
+                                <input type="password" placeholder="Password" id="pass" name="pass" tabindex="70">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-phone"></i>
-                                <input type="tel" placeholder="Phone Number" id="phone" name="phone" tabindex="4">
+                                <input type="tel" placeholder="Phone Number" id="phone" name="phone" tabindex="90">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fa-solid fa-address-card"></i>
-                                <input type="date" id="b_date" name="b_date" tabindex="6" value="00 00 00">
+                                <input type="date" id="b_date" name="b_date" tabindex="110" value="00 00 00">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -100,7 +100,7 @@
                         <div class="left">
                             <div class="input-field">
                                 <i class="fa-solid fa-envelope"></i>
-                                <input type="email" tabindex="1" placeholder="Email Address" id="email" name="email">
+                                <input type="email" tabindex="60" placeholder="Email Address" id="email" name="email">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -109,7 +109,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" tabindex="3" placeholder="Confirm Your Password"
+                                <input type="password" tabindex="80" placeholder="Confirm Your Password"
                                     id="confirmPass">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
@@ -119,7 +119,7 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-chalkboard-teacher"></i>
-                                <input type="text" tabindex="5" placeholder="Current Address" id="caddress" name="caddress">
+                                <input type="text" tabindex="100" placeholder="Current Address" id="caddress" name="caddress">
                                 <div class="any-name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
@@ -129,7 +129,7 @@
                             <div class="input-field">
                                 <i class="fa-solid fa-venus-mars"></i>
                                 <label for="gender"> Gender</label>
-                                <select name="Gender" id="gender" tabindex="7">
+                                <select name="Gender" id="gender" tabindex="140" tabindex = "130">
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
@@ -142,10 +142,10 @@
                         </div>
                     </div>
                     <div class="accept">
-                        <input type="checkbox" id="check">
+                        <input type="checkbox" id="check" tabindex="160">
                         <label for="check"> I agree to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
                     </div>
-                    <input type="button" onclick="checkInputs(); submit_sign_up()" value="Sign Up" class="btn solid">
+                    <input type="button" onclick="checkInputs(); submit_sign_up()" value="Sign Up" class="btn solid" tabindex= "170">
                 </div>
 
             </div>
@@ -161,7 +161,7 @@
                         especially
                         graduates, where we aim to achieve the greatest communication between us.
                     </p>
-                    <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+                    <button class="btn transparent" id="sign-up-btn" tabindex = "40">Sign Up</button>
                 </div>
                 <img src="images/buildingWebsite.svg" alt="" class="image">
             </div>
@@ -173,7 +173,7 @@
                         education, and find work and
                         courses through the offers that companies give them.
                     </p>
-                    <button class="btn transparent" id="sign-in-btn">Sign In</button>
+                    <button class="btn transparent" id="sign-in-btn" tabindex = "150">Sign In</button>
                 </div>
                 <img src="images/workchat.svg" alt="" class="image">
             </div>
@@ -183,7 +183,7 @@
         <div class="contan">
             <p></p>
             <div class="ok">
-                <a href="javascript:" onclick="            document.getElementsByClassName('pop_up')[0].style.display = 'none';
+                <a href="javascript:" onclick="document.getElementsByClassName('pop_up')[0].style.display = 'none';
 ">OK!</a>
             </div>
         </div>
