@@ -32,8 +32,13 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:not(:active) {
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 ul {
     list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
