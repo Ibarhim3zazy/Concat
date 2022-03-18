@@ -6,13 +6,13 @@
     isset($_POST['b_date']) == true &&
     isset($_POST['caddress']) == true &&
     isset($_POST['gender']) == true) {
-    $user= $_POST['name'];
-    $password= $_POST['pass'];
-    $phone= $_POST['phone'];
-    $email= $_POST['email'];
-    $b_date= $_POST['b_date'];
-    $caddress= $_POST['caddress'];
-    $gender= $_POST['gender'];
+    $user= htmlentities($_POST['name']);
+    $password= htmlentities($_POST['pass']);
+    $phone= htmlentities($_POST['phone']);
+    $email= htmlentities($_POST['email']);
+    $b_date= htmlentities($_POST['b_date']);
+    $caddress= htmlentities($_POST['caddress']);
+    $gender= htmlentities($_POST['gender']);
     $user_id = rand();
     // check email
     $result= $con->query("SELECT * FROM sign_up_general WHERE email='$email';");

@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  <?php session_start(); require("connection.php");
+    
+  ?>
     <div class="New_pass">
         <div class="container">
             <h3>Choose a new Password</h3>
