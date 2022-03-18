@@ -20,20 +20,26 @@
             </div>
             <div class="middle">
                 <div class="home">
-                    <a href=""><i class="fa-solid fa-house-user"></i></a>
-                    <span><a href="">Home</a></span>
+                    <a href="">
+                        <i class="fa-solid fa-house-user"></i>
+                        <span>Home</span>
+                    </a>
                 </div>
                 <div class="group">
-                    <a href=""><i class="fa-solid fa-users"></i></a>
-                    <span>
-                        <a href="">Groups</a>
-                    </span>
+                    <a href="">
+                        <i class="fa-solid fa-users"></i>
+                        <span>
+                            Groups
+                        </span>
+                    </a>
                 </div>
                 <div class="courses">
-                    <a href=""><i class="fa-solid fa-book"></i></a>
-                    <span>
-                        <a href="">Courses</a>
-                    </span>
+                    <a href="">
+                        <i class="fa-solid fa-book"></i>
+                        <span>
+                            Courses
+                        </span>
+                    </a>
                 </div>
             </div>
             <div class="right">

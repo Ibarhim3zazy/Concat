@@ -1,35 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
-body {
-    font-family: 'Poppins',sans-serif;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-ul {
-    list-style: none;
-}
-
-:root {
-    --main-color :#1f57b6 ;
-    --main-color-alt :#5995fd ;
-    --main-color-hover : #04befe;
-    --main-color-success :#2ecc71 ;
-    --main-color-error :#e74c3c ;
-    --main-transition : .5s;
-    --main-font-weight : 600;
-    
-}
-
-a {
-    text-decoration: none;
-} */
 
 .header {
     height: 70px;
@@ -112,40 +80,45 @@ a {
     gap: 100px;
 }
 
-.header .container .middle .home,
-.header .container .middle .group,
-.header .container .middle .courses {
+.header .container .middle .home a,
+.header .container .middle .group a,
+.header .container .middle .courses a {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.header .container .middle .home i ,
-.header .container .middle .group i,
-.header .container .middle .courses i,
-.header .container .right .messages i,
-.header .container .right .notification i,
-.header .container .right .more {
+.header .container .middle .home a i ,
+.header .container .middle .group a i,
+.header .container .middle .courses a i,
+.header .container .right .messages  i,
+.header .container .right .notification  i,
+.header .container .right .more  {
     font-size: 20px;
     color: #333;
     transition: var(--main-transition);
 }
 
-.header .container .middle .home span a ,
-.header .container .middle .group span a,
-.header .container .middle .courses span a{
+.header .container .middle .home span  ,
+.header .container .middle .group span ,
+.header .container .middle .courses span {
     font-size: 15px;
     color: #333;
     transition: var(--main-transition);
 }
 
-.header .container .middle .home i {
+.header .container .middle .home a i,
+.header .container .middle .home a span {
     color: var(--main-color);
 }
 
-.header .container .middle .group i:hover,
-.header .container .middle .courses i:hover,
+.header .container .middle a:hover i {
+    color: var(--main-color);
+}
+
+.header .container .middle .group a:hover  span,
+.header .container .middle .courses a:hover span,
 .header .container .right .messages i:hover,
 .header .container .right .notification i:hover,
 .header .container .right .more i:hover
