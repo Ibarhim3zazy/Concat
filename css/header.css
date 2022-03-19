@@ -152,6 +152,9 @@
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    /* opacity: 0;
+    pointer-events: none; */
+    display: none;
 }
 
 .header .container .right .notification ul li:first-of-type {
@@ -220,11 +223,11 @@
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-
+    display: none;
 
     /* ======================================================= */
-    opacity: 0;
-    pointer-events: none;
+    /* opacity: 0;
+    pointer-events: none; */
 }
 
 .header .container .right .messages ul li:last-of-type,
@@ -322,20 +325,25 @@
     justify-content: center;
     flex-direction: column;
     /* didn't work  ============================================================= */
-    opacity: 0; 
-    pointer-events: all; 
+    /* opacity: 0; 
+    pointer-events: all;  */
+    /* display: none; */
     transition: var(--main-transition) linear all;
 
 }
 
 .header .container .right .account > img {
     cursor: pointer;
+    position: relative;
 }
 
-.header .container .right .account > img:hover ul {
+
+
+
+/* .header .container .right .account > img:hover ul {
     opacity: 1;
     pointer-events: all;
-}
+} */
 
 /* ======================================================================= */
 
@@ -397,6 +405,7 @@
     color: #645caf79;
     font-size: 16px;
     transition: var(--main-transition);
+    position: relative;
 }
 
 .header .container .right .account ul li.center a:hover {
@@ -405,7 +414,8 @@
 
 .header .container .right .account ul li.center a:hover i{
     color: var(--main-color-hover);
-    animation: rotateRight 3s infinite linear;
+    position: relative;
+    animation: rotate 3s infinite linear;
 }
 
 
@@ -428,6 +438,7 @@
     color: #645caf79;
     font-size: 16px;
     transition: var(--main-transition);
+    position: relative;
 }
 
 .header .container .right .account ul li.setting a {
@@ -443,16 +454,17 @@
 
 .header .container .right .account ul li.setting a:hover i{
     color: var(--main-color-hover);
-    animation: rotate 3s infinite linear;
+    position: relative;
+    animation: rotate 1s infinite ease-out;
 }
 
 
 @keyframes rotate {
     0%,100% {
-        transform: rotate(0);
+        top: 0;
     }
     50% {
-        transform: rotate(360deg);
+        top: -3px;
     }
 }
 
@@ -490,15 +502,15 @@
 
 .header .container .right .account ul li.logOut a:hover i {
     color: var(--main-color-hover);
-    animation: rotateRight 2s infinite linear;
+    animation: rotateRight 1s infinite linear;
 }
 
 @keyframes rotateRight {
     0%,100% {
-        transform: rotate(0);
+        transform: rotate(10px);
     }
     50% {
-        transform: rotate(-180deg);
+        transform: rotate(-10deg);
     }
 }
 
@@ -540,10 +552,10 @@
 
 @keyframes left {
     0%,100% {
-        transform: rotate(30deg);
+        transform: rotate(20deg);
     }
     50% {
-        transform: rotate(-30deg);
+        transform: rotate(0);
     }
 }
 
