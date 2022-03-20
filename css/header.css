@@ -8,6 +8,7 @@
     top: 0;
     left: 0;
     box-shadow: var(--main-box-shadow);
+    z-index: 300000987;
 }
 
 .header .container {
@@ -136,6 +137,9 @@
 }
 
 /* =============Notification ======================= */
+/* .header .container .right .notification {
+    position: relative;
+} */
 .header .container .right .notification ul {
     position: absolute;
     top: 76px;
@@ -143,6 +147,8 @@
     /* padding: 10px; */
     width: 24%;
     max-width: 100%;
+    height: 400px;
+    overflow-y: hidden;
     min-height: 100%;
     background-color: #4345d40c;
     box-shadow: 2px 4px 4px 5px rgb(0 0 0 /13%);
@@ -154,8 +160,21 @@
     gap: 10px;
     /* opacity: 0;
     pointer-events: none; */
-    display: none;
+    /* display: none; */
 }
+
+/* .header .container .right .notification ul::-webkit-scrollbar {
+    width: 10px;
+}
+.header .container .right .notification ul::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgb(0 0 0 /13%);
+} */
+.header .container .right .notification ul {
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color);
+ }
+
 
 .header .container .right .notification ul li:first-of-type {
     font-size: 22px;
@@ -327,7 +346,7 @@
     /* didn't work  ============================================================= */
     /* opacity: 0; 
     pointer-events: all;  */
-    /* display: none; */
+    display: none;
     transition: var(--main-transition) linear all;
 
 }

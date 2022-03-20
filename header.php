@@ -97,6 +97,166 @@
                                 </div>
                             </div>
                         </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <div class="box">
+                                <div class="noti">
+                                    Hey! someone has like to your profile picture
+                                </div>
+                                <div class="time">
+                                    <div class="time">
+                                        11:00 AM
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="messages">
