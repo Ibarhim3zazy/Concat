@@ -8,7 +8,7 @@ body {
     width: 100vw;
     max-width: 100%;
     height: 78px;
-    background-color: #eee;
+    /* background-color: #eee; */
 }
 .friendschat .container {
     display: flex;
@@ -16,8 +16,9 @@ body {
     justify-content: space-between;
     margin-left: 13px;
     margin-right: 13px;
-    /* display: grid;
-    grid-template-columns: 20% 60% 20%; */
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 22% 55% 20%;
 }
 
 .friendschat .container .searchfriends {
@@ -419,7 +420,7 @@ img {
     }
 }
 
-@media (min-width:992px) and (max-width :1120px) {
+@media (min-width:992px) and (max-width :1010px) {
     .friendschat .container {
         display: grid;
         grid-template-columns: 20% 50% 20%;

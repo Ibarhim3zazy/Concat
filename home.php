@@ -9,7 +9,9 @@
 
 <body>
     <?php require_once 'header.php';
-        require 'CreatePost.php';?>
+        require 'CreatePost.php';
+        require 'friendsChat.php';
+        ?>
 
     <!-- <div class="conLeftPage">
         <div class="container">
