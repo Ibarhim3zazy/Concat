@@ -27,8 +27,7 @@
   }
 .container .back .image img{
     width: 300px;
-    height: 300px;
-      
+    height: 300px;    
 }
 @media(min-width:300px: max-width:500px){
     .container .back .image img
