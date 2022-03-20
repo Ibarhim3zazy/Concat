@@ -15,8 +15,10 @@
              <img src="./images/repair.jpg">
         </div>
         <div class="text">
-            <h1><span>Page</span> under construction</h1>
-            <button><a href="home.php"></a>GO BACK HOME</button>
+            <h1>Page under construction</h1>
+            <a href="home.php">
+                <input type="button" class="button" value="Go to Home" />
+             </a>
         </div>
        
      </div> 
