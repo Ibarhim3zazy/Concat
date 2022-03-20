@@ -44,7 +44,7 @@
             </div>
             <div class="right">
                 <div class="notification">
-                    <a href="" id="noti"><i class="fa-solid fa-bell"></i></a>
+                    <a href="javascript:" id="noti"><i class="fa-solid fa-bell"></i></a>
                     <ul id="ul">
                         <li>
                             Notification
@@ -260,7 +260,9 @@
                     </ul>
                 </div>
                 <div class="messages">
-                    <a href=""><i class="fa-brands fa-facebook-messenger" id="chat"></i></a>
+                    <a href="javascript:"><i class="fa-brands fa-facebook-messenger" id="chat"></i>
+
+                    </a>
                     <ul id="ulChat">
                         <li>
                             Messages
