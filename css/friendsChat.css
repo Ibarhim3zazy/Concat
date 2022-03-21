@@ -20,20 +20,21 @@ body {
 }
 
 .friendschat .container .searchfriends {
-    padding: 7px 15px;
+    padding: 7px 20px;
     background-color: #fff;
     box-shadow: var(--main-box-shadow);
     border-radius: 5px;
     position: relative;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 .friendschat .container .searchfriends #search {
     border: none;
     outline: none;
     padding: 15px 5px;
     caret-color: var(--main-color-hover);
+    max-width: 100%;
 }
 .friendschat .container .searchfriends #search::placeholder {
     font-size: 14px;
@@ -109,8 +110,11 @@ body {
     background-color: #fff;
     box-shadow: var(--main-box-shadow);
     border-radius: 5px;
-    padding: 7px 15px;
+    padding: 7px 25px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 .friendschat .container .textmessage #textmessage {
@@ -118,6 +122,7 @@ body {
     outline: none;
     padding: 15px 0;
     caret-color: var(--main-color-hover);
+    max-width: 100%;
 }
 
 .friendschat .container .textmessage #textmessage::placeholder {
@@ -133,7 +138,7 @@ body {
 
 .friendschat .container .textmessage button:active,
 .friendschat .container .searchfriends button:active {
-    transform: scale(1.1);
+    transform: scale(1.19);
 }
 
 .friendschat .container .textmessage i,
@@ -161,15 +166,16 @@ img {
     position: absolute;
     top: -425px;
     transition: var(--main-transition);
-    background-image: linear-gradient(to left , #fbc2eb8e  , #78a2eb3d);
+    /* background-image: linear-gradient(to left , #fbc2eb8e  , #78a2eb3d); */
+    background-color: #fff;
     padding: 15px;
-    width: 300px;
+    /* width: 370px; */
     max-width: 100%;
-    height: 420px;
+    height: 416px;
     overflow-y: hidden;
-    left: 0;
+    left: 0px;
     border-radius: 5px;
-    box-shadow: 2px 1px 5px 1px #5a1da985;
+    box-shadow: 2px 1px 5px 1px #333;
     z-index: 3000;
     display: none;
 }
@@ -177,9 +183,7 @@ img {
     transition: var(--main-transition) ease-in-out;
 }
 
-.friendschat .container .searchfriends ul.friends li {
-    margin-bottom: 8px;
-}
+
 
 
 
@@ -187,14 +191,16 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
-    gap: 15px;
+    /* color: #fff; */
+    gap: 10px;
     height: 55px;
+    max-width: 100%;    
 }
 .friendschat .container .searchfriends ul.friends .caption  h2 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    column-gap: 5px;
     font-size: 20px;
     color: rgb(48, 80, 102);
     text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.39);
@@ -203,7 +209,7 @@ img {
 .friendschat .container .searchfriends ul.friends .caption  h2 i {
     font-size: 14px;
     color: rgb(87, 141, 177);
-    margin-right: 5px;
+    /* margin-right: 3px; */
 }
 .friendschat .container .searchfriends ul.friends .caption > i {
     color: rgb(212, 87, 87);
@@ -226,6 +232,7 @@ img {
     column-gap: 5px;
 }
 
+
 .friendschat .container .searchfriends ul.friends li .box .info {
     display: flex;
     align-items: flex-start;
@@ -238,7 +245,7 @@ img {
 
 }
 .friendschat .container .searchfriends ul.friends li .box:hover .info h2 {
-    background-color: #baeff336;
+    /* background-color: #baeff336; */
     color: rgb(212, 87, 87);
     cursor: pointer;
 }
@@ -262,7 +269,7 @@ img {
 .friendschat .container .textmessage .contain {
     position: absolute;
     top: -455px;
-    right: -5px;
+    right: -21px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,13 +277,14 @@ img {
 }
 
 .friendschat .contain .chatBox {
-    width: 265px;
+    width: 285px;
     padding: 15px;
     max-width: 100%;
     height: 450px;
-    background-image: linear-gradient(to left , #b5f7f38e  , #a078eb3d);
+    /* background-image: linear-gradient(to left , #b5f7f38e  , #a078eb3d); */
     border-radius: 5px;
-    box-shadow: 0px 2px 5px 1px #5a1da985;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 1px #333;
     position: relative;
     overflow: hidden;
     padding: 0;
@@ -288,7 +296,7 @@ img {
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    background-color:#8181818e ;
+    background-color:#04befe ;
     padding: 15px;
 }
 
@@ -323,8 +331,9 @@ img {
 
 .friendschat .contain .chatBox .clientHead .client_info h2 {
     font-size: 17px;
-    color: rgba(29, 23, 51, 0.733);
-    font-family: 600;
+    /* color: rgba(29, 23, 51, 0.733); */
+    color: #fff;
+    font-weight: 600;
     cursor: pointer;
     transition: var(--main-transition) ease-in-out;
 }
@@ -333,14 +342,14 @@ img {
     color: rgba(37, 90, 134, 0.993);
 }
 .friendschat .contain .chatBox .clientHead .client_info p {
-    font-size: 11px;
-    color: #15a334;
+    font-size: 9px;
+    color: #22eb4d;
 }
 
 /* start chat selection */
 .chatBox .main_chat {
     width: 100%;
-    color: #fff;
+    color: rgb(20, 20, 20);
     padding: 0 15px;
     position: relative;
     font-size: 0.9em;
@@ -359,7 +368,7 @@ img {
     word-wrap: break-word;
     padding: 7px 10px;
     border-radius: 10px 10px 10px 0;
-    background-color: #058f94;
+    background-color: #eafffff6;
 }
 .chatBox .main_chat .box_client span {
     margin-top: -6px;
@@ -388,7 +397,7 @@ img {
     word-wrap: break-word;
     padding: 7px 10px;
     border-radius: 10px 10px 0 10px;
-    background-color: #407ca18e;
+    background-color: #8ee3ff;
 }
 
 /* responsive */
