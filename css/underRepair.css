@@ -56,7 +56,7 @@
 .container .back .button{
     padding: 10px;
     margin: 30px;
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 20px;
     transition: .3s;
     background-color: var(--main-color-error);
@@ -72,7 +72,5 @@
     } 
 }
 .container .back .button:hover{
-    background-color: var(--main-color-error);
-    color: white;
-   
+    border: none;
 }

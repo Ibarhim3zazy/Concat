@@ -15,7 +15,7 @@
           <h2 class="modal-title" id="policyModalLabel">Privacy and data security policy</h2>
    
     
-    
+   
     <div class="modal-body">
       <ul>
           <li>All data that is recorded on the system is owned by the owner of this data</li>
@@ -26,9 +26,8 @@
           <li>Each user of the system is fully responsible for his password and must take all possible precautions so that no one else can obtain it</li>
       </ul>
     </div>
+    <img src="./images/undraw_under_construction_46pa.png">
    
 </div>
- <img src="./images/cyber-security-vector-illustration-concept-characters-data-protected-access-control-privacy-protection-modern-flat-style-190881812.jpg">
-  
 </body>
 </html>
