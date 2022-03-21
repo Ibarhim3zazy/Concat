@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     gap: 10px;
     display: grid;
-    grid-template-columns: 19% 60% 18%;
+    grid-template-columns: 20% 60% 19%;
 }
 
 .friendschat .container .searchfriends {
@@ -142,6 +142,7 @@ body {
     font-size: 20px;
     color: rgb(196, 152, 247);
     transition: var(--main-transition) linear;
+    margin-left: 10px;
 }
 
 .friendschat .container .textmessage i:hover,
