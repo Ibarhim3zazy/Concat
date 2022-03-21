@@ -2,7 +2,7 @@
     margin: 0;
 }
 .container{
-   
+
     width: 800px;
 }
 .container .back{
@@ -27,7 +27,7 @@
       text-align: center;
     }
   }
-  
+
 @media (max-width: 800px) {
     .container .back {
      text-align: center;
@@ -35,7 +35,7 @@
   }
 .container .back .image img{
     width: 300px;
-    height: 300px;    
+    height: 300px;
 }
 
 @media (max-width: 360px) {
@@ -43,7 +43,7 @@
         width: 200px;
         height: 200px;
         margin-bottom: -239px;
-        
+
 
     }
   }
@@ -57,20 +57,21 @@
     padding: 10px;
     margin: 30px;
     border-radius: 25px;
-    font-size: 20px;
+    font-size: 14px;
     transition: .3s;
     background-color: var(--main-color-error);
      text-align: center;
      border: transparent;
      color: white;
-     
-     
+
+
 }
 @media(min-width:300px){
     .container .back .button{
-        font-size: 25px;
-    } 
+        font-size: 14px;
+    }
 }
 .container .back .button:hover{
     border: none;
+    cursor:pointer;
 }

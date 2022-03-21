@@ -179,18 +179,18 @@
     display: none;
 }
 
-/* .header .container .right .notification ul::-webkit-scrollbar {
+.header .container .right .notification ul::-webkit-scrollbar {
     width: 10px;
+    background-color: #000;
 }
 .header .container .right .notification ul::-webkit-scrollbar-track {
     border-radius: 5px;
     box-shadow: inset 0 0 10px rgb(0 0 0 /13%);
-} */
+}
 .header .container .right .notification ul {
     scrollbar-width: thin;
     scrollbar-color: var(--main-color);
  }
-
 
 .header .container .right .notification ul li:first-of-type {
     font-size: 22px;
@@ -276,7 +276,7 @@
     align-items: center;
     width: 100%;
     border-bottom: 1px #eee solid;
-    padding-bottom: 10px;  
+    padding-bottom: 10px;
 }
 
 .header .container .right .messages ul li .box .top {
@@ -338,7 +338,7 @@
 /* Account Done except few problems */
 
 .header .container .right .account {
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -360,7 +360,7 @@
     justify-content: center;
     flex-direction: column;
     /* didn't work  ============================================================= */
-    /* opacity: 0; 
+    /* opacity: 0;
     pointer-events: all;  */
     display: none;
     transition: var(--main-transition) linear all;
@@ -394,7 +394,7 @@
 .header .container .right .account ul li.prof_personal .personalInfo {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
 
