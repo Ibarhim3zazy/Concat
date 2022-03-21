@@ -64,6 +64,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="new"></span>
                         </li>
                         <li>
                             <div class="image">
@@ -72,7 +73,9 @@
                             </div>
                             <div class="box">
                                 <div class="noti">
-                                    Hey! someone has like to your profile picture
+                                    Hey! someone has like to your profile picture Hey! someone has like to your profile
+                                    picture
+
                                 </div>
                                 <div class="time">
                                     <div class="time">
@@ -282,6 +285,7 @@
                                     welcome Sam , How're you welcome Sam , How're you?
                                 </div>
                             </div>
+                            <span class="new"></span>
                         </li>
                         <li>
                             <img src="images/cat-1.jpg" alt="" width="55px" height="55px" style="border-radius: 50%;">

@@ -158,16 +158,16 @@
 } */
 .header .container .right .notification ul {
     position: absolute;
-    top: 76px;
+    top: 66px;
     right:70px;
     /* padding: 10px; */
-    width: 24%;
+    /* width: 24%; */
     max-width: 100%;
     height: 400px;
     overflow-y: hidden;
     min-height: 100%;
-    background-color: #4345d40c;
-    box-shadow: 2px 4px 4px 5px rgb(0 0 0 /13%);
+    background-color: #ffffff;
+    box-shadow: var(--main-box-shadow);
     border-radius: 5px 10px;
     display: flex;
     align-items: flex-start;
@@ -195,16 +195,40 @@
 .header .container .right .notification ul li:first-of-type {
     font-size: 22px;
     font-weight: var(--main-font-weight);
-    color: rgba(51, 51, 51, 0.596);
+    color: rgba(51, 51, 51, 0.692);
+    border-bottom: none;
+    justify-content: flex-start !important;
+    text-shadow: 1px 1px 3px rgba(0, 217, 255, 0.39);
+    background-color: transparent !important;
+    cursor: alias !important;
 }
 
 .header .container .right .notification ul li {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     column-gap: 10px;
     padding: 10px;
     border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+span.new {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(0, 88, 161);
+    border-radius: 50%;
+    border: 1px solid rgba(51, 51, 51, 0.438);
+}
+
+.header .container .right .notification ul li:hover,
+.header .container .right .messages ul li:hover {
+    background-color: #ebebeb6e;
+    cursor: pointer;
 }
 
 .header .container .right .notification ul li:last-of-type {
@@ -219,9 +243,10 @@
 }
 
 .header .container .right .notification ul li .box .noti {
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
+    word-wrap: break-word;
     line-height: 1.5;
     font-size: 14px;
     color: rgba(51, 51, 51, 0.685);
@@ -240,18 +265,18 @@
 /* =============message ======================= */
 .header .container .right .messages ul {
     position: absolute;
-    background-image: url(../images/undraw_quick_chat.svg);
+    /* background-image: url(../images/undraw_quick_chat.svg);
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: 40% 20%;
-    top: 76px;
-    right:70px;
-    padding-top: 10px;
-    width: 25%;
+    background-size: 40% 20%; */
+    top: 66px;
+    right:50px;
+    
+    /* width: 25%; */
     max-width: 100%;
     min-height: 100%;
-    background-color: #4345d40c;
-    box-shadow: 2px 4px 4px 5px rgb(0 0 0 /13%);
+    background-color: #fff;
+    box-shadow: var(--main-box-shadow);
     border-radius: 5px 10px;
     display: flex;
     align-items: flex-start;
@@ -270,19 +295,35 @@
     border-bottom: none;
 }
 
+.header .container .right .messages ul li:first-of-type {
+    font-size: 22px;
+    padding-left: 20px;
+    font-weight: var(--main-font-weight);
+    color: rgba(51, 51, 51, 0.692);
+    justify-content: flex-start !important;
+    text-shadow: 1px 1px 3px rgba(0, 217, 255, 0.39);
+    background-color: transparent !important;
+    cursor: alias !important;
+}
+
 .header .container .right .messages ul li {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 100%;
     border-bottom: 1px #eee solid;
     padding-bottom: 10px;
+    max-width: 100%;
+    column-gap: 10px;
+    padding: 10px 15px;
+    position: relative;
 }
 
 .header .container .right .messages ul li .box .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 100%;
 }
 
 .header .container .right .messages ul li .box .top .name {
@@ -326,6 +367,7 @@
     bottom: 10px;
     right: 10px;
     background-color: #2ecc71;
+    border: 1px solid #fff;
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -346,14 +388,14 @@
 }
 .header .container .right .account ul {
     position: absolute;
-    top: 76px;
+    top: 66px;
     right: 10px;
     width: 20%;
     max-width: 100%;
     min-height: 100%;
     padding : 10px 14px 10px 14px;
-    background-color: #4345d40c;
-    box-shadow: 2px 4px 4px 5px rgb(0 0 0 /13%);
+    background-color: #fff;
+    box-shadow: var(--main-box-shadow);
     border-radius: 5px 10px;
     display: flex;
     align-items: flex-start;
@@ -362,7 +404,7 @@
     /* didn't work  ============================================================= */
     /* opacity: 0;
     pointer-events: all;  */
-    display: none;
+    /* display: none; */
     transition: var(--main-transition) linear all;
 
 }
@@ -406,7 +448,7 @@
 }
 
 .header .container .right .account ul li.prof_personal .personalInfo span {
-    font-size: 12px;
+    font-size: 10px;
     color: rgba(51, 51, 51, 0.63);
 }
 
@@ -422,6 +464,7 @@
     justify-content: space-around;
     flex-direction: column;
     width: 100%;
+    max-width: 100%;
     padding-top: 5px;
     padding-bottom: 8px;
     border-bottom: 1px #eee solid;
