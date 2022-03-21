@@ -23,6 +23,8 @@
     .container .back {
         display: flex;
       flex-direction: column;
+      gap: 0px;
+      text-align: center;
     }
   }
   
