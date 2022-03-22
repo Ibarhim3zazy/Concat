@@ -28,3 +28,13 @@ const ulChat = document.getElementById('ulChat')
 chat.onclick = function openChat() {
     ulChat.style.display = "block";
 };
+
+
+
+
+
+$(document).ready(() => {
+    $("#header").clicl(() => {
+        $('#ul').slideToggle("slow");
+    });
+});
