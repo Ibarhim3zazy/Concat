@@ -174,9 +174,9 @@
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    /* opacity: 0;
-    pointer-events: none; */
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    /* display: none; */
 }
 
 .header .container .right .notification ul::-webkit-scrollbar {
@@ -404,7 +404,7 @@ span.new {
     /* didn't work  ============================================================= */
     /* opacity: 0;
     pointer-events: all;  */
-    /* display: none; */
+    display: none;
     transition: var(--main-transition) linear all;
 
 }

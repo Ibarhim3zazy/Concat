@@ -1,11 +1,12 @@
 
 // show notification ul
 const noti = document.getElementById('noti');
-const ul = document.getElementById('ul');
+const ulnoti = document.getElementById('ul');
 const body = document.getElementsByTagName('body')
 
 noti.onclick = function open() {
-    ul.style.display = "block";
+    ulnoti.style.opacity = "1";
+    ulnoti.style.pointerEvents = "all";
 };
 
 // show account ul
@@ -33,8 +34,28 @@ chat.onclick = function openChat() {
 
 
 
-$(document).ready(() => {
-    $("#header").clicl(() => {
-        $('#ul').slideToggle("slow");
-    });
-});
+// $(document).ready(() => {
+//     $("#header").click(() => {
+//         $('#ul').slideToggle("slow");
+//     });
+// });
+
+
+
+
+
+
+
+
+
+
+
+// close Notification when you click outside this field
+// window.onload = function () {
+//     var hidenoti = document.getElementById('ul');
+//     document.onclick = function (ul) {
+//         if (ul.target !== 'ul') {
+//             hidenoti.style.display = 'none';
+//         };
+//     };
+// };
