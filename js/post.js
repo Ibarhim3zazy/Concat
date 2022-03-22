@@ -7,6 +7,11 @@ function showPost() {
     pup.style.pointerEvents = 'auto';
 }
 
+$(document).ready(() => {
+    $("#btn_close_post").click(() => {
+        $(".pop_post").slideToggle("slow");
+    });
+});
 
 
 ///////////////////////

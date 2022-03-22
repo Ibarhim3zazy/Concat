@@ -18,8 +18,9 @@
                     <div class="box">
                         <header>Create A Post</header>
                         <!--s change add close and id -->
-                        <div class="arrow" id="close" onclick="closePost()">
-                            <i class="fa-solid fa-xmark"></i>
+                        <div class="arrow" id="close">
+                            <button id="btn_close_post" style="border: none; background-color : transparent" ;> <i
+                                    class="fa-solid fa-xmark"></i></button>
                         </div>
                         <!--e change -->
                     </div>
