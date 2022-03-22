@@ -402,13 +402,20 @@ img {
 
 /* responsive */
 
-@media (max-width : 676px) {
-    .friendschat {
+@media (max-width : 991px) {
+    .friendschat .container .searchfriends,
+    .friendschat .container .textmessage {
         display: none;
     }
+    /* .friendschat .container .friendsconnect {
+        display: flex;
+        flex: 1;
+    } */
+
+
 }
 
-@media (min-width : 678px) and (max-width : 991px) {
+/* @media (min-width : 678px) and (max-width : 991px) {
     .friendschat .container {
         display: grid;
         grid-template-columns: 6.6% 60% 6.6%;
@@ -419,15 +426,15 @@ img {
         display: none;
     }
     .friendschat .searchfriends  button  {
-        /* width: fit-content; */
+        width: fit-content;
         display: flex;
         align-items: center;
         justify-content: center;
-        /* border-radius: 50%; */
+        border-radius: 50%;
     }
-}
+} */
 
-@media (min-width:992px) and (max-width :1010px) {
+/* @media (min-width:992px) and (max-width :1010px) {
     .friendschat .container {
         display: grid;
         grid-template-columns: 20% 50% 20%;
@@ -437,4 +444,4 @@ img {
     input {
         max-width: 100%;
     }
-}
+} */

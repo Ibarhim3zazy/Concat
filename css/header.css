@@ -670,3 +670,14 @@ span.new {
     color: #333;
     transition: var(--main-transition);
 }
+
+
+@media (max-width : 991px) {
+    .header .container .left .search {
+        display: none;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmx(300px,1fr));
+    }
+}
