@@ -43,10 +43,32 @@ chat.onclick = function openChat() {
 
 
 
+// close notification ul 
 
 
+$(document).ready(() => {
+    $("#closeNotif").click(() => {
+        $('.notiUl').slideToggle("slow");
+    });
+});
 
 
+// close message chat ul 
+
+$(document).ready(() => {
+    $("#messageClose").click(() => {
+        $('.closechat').slideToggle("slow");
+    });
+});
+
+
+// close account  ul
+
+$(document).ready(() => {
+    $("#settingClose").click(() => {
+        $('.accountClose').slideToggle("slow");
+    });
+});
 
 
 

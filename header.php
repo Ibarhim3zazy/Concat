@@ -45,8 +45,9 @@
             <div class="right">
                 <div class="notification">
                     <a href="javascript:" id="noti"><i class="fa-solid fa-bell"></i></a>
-                    <ul id="ul">
+                    <ul id="ul" class="notiUl">
                         <li>
+                            <button id="closeNotif"><i class="fa-solid fa-xmark"></i></button>
                             Notification
                         </li>
                         <li>
@@ -228,7 +229,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <div class="image">
                                 <img src="images/cat-1.jpg" alt="" width="50px" height="50px"
                                     style="border-radius: 50%;">
@@ -259,15 +260,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="messages">
                     <a href="javascript:"><i class="fa-brands fa-facebook-messenger" id="chat"></i>
-
                     </a>
-                    <ul id="ulChat">
+                    <ul id="ulChat" class="closechat">
                         <li>
+                            <button id="messageClose"><i class="fa-solid fa-xmark"></i></button>
                             Messages
                         </li>
                         <li>
@@ -360,8 +361,9 @@
                     <img src="images/cat-1.jpg" alt="" id="account">
                     <span
                         style="position: absolute; top:43px; right:32px; width:12px; height:12px;background-color:var(--main-color-success); border-radius:50%;"></span>
-                    <ul id="ulAcc">
+                    <ul id="ulAcc" class="accountClose">
                         <li class="prof_personal">
+                            <button id="settingClose"><i class="fa-solid fa-xmark"></i></button>
                             <a href="profile.php"><img src="images/cat-1.jpg" alt="">
                                 <span
                                     style="position: absolute; top:43px; left:40px; width:12px; height:12px;background-color:var(--main-color-success); border-radius:50%;"></span>

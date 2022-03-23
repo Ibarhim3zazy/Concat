@@ -133,15 +133,15 @@
     position: relative;
 }
 
-.header .container .right .messages i::after,
-.header .container .right .notification i::after {
+.header .container .right .messages   i::after,
+.header .container .right .notification  i::after {
     content: '';
     position: absolute;
     height: 10px;
     width: 10px;
     top: -2px;
     right: -4px;
-    background-color: rgba(243, 69, 69, 0.979);
+    background-color: rgba(252, 205, 205, 0.979);
     border-radius: 50%;
 }
 
@@ -152,10 +152,8 @@
     flex-wrap: wrap;
 }
 
-/* =============Notification ======================= */
-/* .header .container .right .notification {
-    position: relative;
-} */
+/* =============Notification start ======================= */
+
 .header .container .right .notification ul {
     position: absolute;
     top: 66px;
@@ -168,12 +166,12 @@
     min-height: 100%;
     background-color: #ffffff;
     box-shadow: var(--main-box-shadow);
-    border-radius: 5px 10px;
+    border-radius: 5px 15px;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     opacity: 0;
     pointer-events: none;
     /* display: none; */
@@ -215,8 +213,8 @@
 
 span.new {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
@@ -243,9 +241,6 @@ span.new {
 }
 
 .header .container .right .notification ul li .box .noti {
-    /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
     word-wrap: break-word;
     line-height: 1.5;
     font-size: 14px;
@@ -261,18 +256,13 @@ span.new {
 }
 
 
+/* =============Notification end======================= */
 
-/* =============message ======================= */
+/* =============message start ======================= */
 .header .container .right .messages ul {
     position: absolute;
-    /* background-image: url(../images/undraw_quick_chat.svg);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 40% 20%; */
     top: 66px;
     right:50px;
-    
-    /* width: 25%; */
     max-width: 100%;
     min-height: 100%;
     background-color: #fff;
@@ -284,8 +274,6 @@ span.new {
     flex-direction: column;
     gap: 10px;
     display: none;
-
-    /* ======================================================= */
     /* opacity: 0;
     pointer-events: none; */
 }
@@ -374,10 +362,9 @@ span.new {
 }
 
 
+/* =============message end ======================= */
 
 /* =========================================start account ======================================== */
-
-/* Account Done except few problems */
 
 .header .container .right .account {
 
@@ -401,12 +388,10 @@ span.new {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    /* didn't work  ============================================================= */
     /* opacity: 0;
     pointer-events: all;  */
     display: none;
     transition: var(--main-transition) linear all;
-
 }
 
 .header .container .right .account > img {
@@ -648,16 +633,6 @@ span.new {
     margin-left: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .header .container .right .account img {
     width: 40px;
     height: 40px;
@@ -671,6 +646,10 @@ span.new {
     transition: var(--main-transition);
 }
 
+/* =========================================end account ======================================== */
+
+/* =========================================start media quary ======================================== */
+
 
 @media (max-width : 991px) {
     .header .container .left .search {
@@ -680,4 +659,96 @@ span.new {
         display: grid;
         grid-template-columns: repeat(auto-fill,minmx(300px,1fr));
     }
+}
+
+
+/* close notification ul "drop down" 
+* first add button with id
+*/
+.right .notification ul li button#closeNotif {
+    position: absolute;
+    right: -149px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.right .notification ul li button#closeNotif i {
+    padding: 5px 8px;
+    background-color: #e0dddd6e;
+    color: var(--main-color-hover);
+    text-shadow: 1px 1px 3px #acacac;
+    border-radius: 50%;
+    transition: var(--main-transition) ease;
+}
+.right .notification ul li button#closeNotif i:hover {
+    background-color: rgb(234, 239, 241);
+    color: rgba(51, 51, 51, 0.692);
+    text-shadow: 1px 1px 3px rgba(0, 217, 255, 0.39);
+}
+.right .notification ul li button#closeNotif i::after {
+    content: '';
+    background-color: transparent;
+}
+
+
+
+/* close message chat ul "drop down" 
+* first add button with id
+*/
+.right .messages ul li button#messageClose {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.right .messages ul li button#messageClose i::after {
+    content: '';
+    background-color: transparent;
+}
+
+.right .messages ul li button#messageClose i {
+    padding: 5px 8px;
+    background-color: #e0dddd6e;
+    color: var(--main-color-hover);
+    text-shadow: 1px 1px 3px #acacac;
+    border-radius: 50%;
+    transition: var(--main-transition) linear;
+}
+
+.right .messages ul li button#messageClose i:hover {
+    background-color: rgb(234, 239, 241);
+    color: rgba(51, 51, 51, 0.692);
+    text-shadow: 1px 1px 3px rgba(0, 217, 255, 0.39);
+}
+
+
+/* close notification ul "drop down" 
+* first add button with id
+*/
+
+.right .account ul li button#settingClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.right .account ul li button#settingClose i {
+    padding: 5px 8px;
+    background-color: #e0dddd6e;
+    color: var(--main-color-hover);
+    text-shadow: 1px 1px 3px #acacac;
+    border-radius: 50%;
+    transition: var(--main-transition) linear;
+}
+.right .account ul li button#settingClose i:hover {
+    background-color: rgb(234, 239, 241);
+    color: rgba(66, 78, 73, 0.692);
+    text-shadow: 1px 1px 3px rgba(66, 71, 71, 0.39);
 }
