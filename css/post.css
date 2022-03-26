@@ -1,7 +1,7 @@
 
 .create_post {
     width: 470px;
-    margin: 50px auto;
+    margin: 20px auto;
     box-shadow: var(--main-box-shadow);
     border-radius: 15px;
     background-color: #fff !important;
@@ -402,34 +402,36 @@
 /* change designPost  */
 
 .designPost {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-    width: 37%;
-    max-width: 100%;
+    transform: translate(-50%,-50%); */
+    margin: 20px auto;
 }
 
 .designPost .contain {
     box-shadow: var(--main-box-shadow);
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-direction: column !important;
     border-radius: 5px;
     background-color: #fff;
+    width: 510px;
+    max-width: 100%;
 }
 
 .designPost .contain .box_1 {
+    width: 100%;
     padding: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between !important;
 }
 
 .designPost .contain .box_1 .image  {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between !important;
     gap: 8px;
     position: relative;
 }
@@ -447,6 +449,7 @@
 .designPost .contain .box_1 .image .infoProfile  {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-top: 10px;
     /* row-gap: 2px; */
 }
@@ -511,6 +514,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .designPost .contain .box_3 .box_container {
@@ -536,8 +540,7 @@
 .designPost .contain p {
     width: 480px;
     max-width: 100%;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 17px;
     color: #333;
     line-height: 1.5;
     padding-left: 10px;

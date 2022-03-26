@@ -161,6 +161,7 @@
                 </span>
             </div>
             <p class="box_2" id="boxTwo">
+
             </p>
             <div class="box_3">
                 <div class="box_container">
@@ -178,6 +179,7 @@
                     <i class="fa-solid fa-bookmark"></i>
                 </div>
             </div>
+
         </div>
     </div>
     <script src="js/post.js"></script>

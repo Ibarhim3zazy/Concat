@@ -65,6 +65,13 @@
                     </div>
                     <button><i class="fa-solid fa-pen"></i> Edit Profile</button>
                 </div>
+                <div class="bioBox">
+                    <div class="bio">
+                        σƙҽყ.. <br>
+                        ιƚ'ʂ σƙҽყ ɳσƚ ƚσ Ⴆҽ σƙҽყ♡..
+                    </div>
+                    <button>Edit Bio</button>
+                </div>
                 <div class="client_profile">
                     <button><i class="fa-solid fa-user-plus"></i> <span>Add Buddy</span></button>
                     <button><i class="fa-brands fa-facebook-messenger"></i> <span>Send Message</span></button>
@@ -83,27 +90,74 @@
                 </div>
             </div>
         </div>
+
     </div>
+
     <div class="contain">
-        <div class="leftPart">
-            <a href="profile.php" class="pinName">
-                <img src="images/cat-1.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
-                <span>user name</span>
-            </a>
-            <div class="bioBox">
-                <div class="bio">
-                    σƙҽყ.. <br>
-                    ιƚ'ʂ σƙҽყ ɳσƚ ƚσ Ⴆҽ σƙҽყ♡..
+        <div class="rightPart">
+            <div class="info">
+                <h3>profile info</h3>
+                <div class="live box">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <span>
+                        Lives in
+                        <a href="">Mansourah, Ad Daqahliyah, Egypt</a>
+                    </span>
                 </div>
-                <button>Edit Bio</button>
+                <div class="form box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>
+                        Form
+                        <a href="">Egypt</a>
+                    </span>
+                </div>
+                <div class="protfolio box">
+                    <i class="fa-brands fa-airbnb"></i>
+                    <span>
+                        <a href="">portfolio</a>
+                    </span>
+                </div>
+                <div class="collage box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>
+                        Studied at
+                        Faculty of Physical Education, Zagazig University
+                    </span>
+                </div>
+                <div class="work box">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>
+                        Work at
+                        Health Square Fitness Club, RAK - Best Gym in RAK
+                    </span>
+                </div>
+                <div class="degree box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>
+                        Master's in Computer Science
+                    </span>
+                </div>
+                <div class="status box">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>
+                        Single
+                    </span>
+                </div>
+
+                <!-- <button>Edit Detailes</button> -->
             </div>
+
         </div>
         <div class="middle">
             <?php
                 require 'CreatePost.php';
             ?>
         </div>
-        <div class="rightPart">
+        <div class="links">
+            <a href="profile.php" class="pinAccount">
+                <img src="images/cat-1.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                <span>user name</span>
+            </a>
             <div class="pin">
                 <button>Posts</button>
                 <button>Photos</button>
@@ -112,20 +166,11 @@
                 <button>About</button>
                 <button>Friends</button>
             </div>
-            <div class="info">
-                <div class="live box">
-                    <i class="fa-solid fa-house-chimney"></i>
-                    <span>Lives in</span>
-                    <a href="">Mansourah, Ad Daqahliyah, Egypt</a>
-                </div>
-                <div class="form box">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Form</span>
-                    <a href="">Egypt</a>
-                </div>
-            </div>
         </div>
+
+
     </div>
+
     <script src="js/profile.js"></script>
 </body>
 

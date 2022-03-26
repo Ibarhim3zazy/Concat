@@ -14,6 +14,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background-image: linear-gradient(to right , rgba(248, 140, 140, 0.247) , rgba(29, 96, 221, 0.13));
     max-height: fit-content;
     box-shadow: 3px 2px 6px 5px #cbd0e4;
@@ -26,6 +27,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .profile_container .container .section_profile {
     display: flex;
@@ -190,7 +192,46 @@ html {
 .profile_name > button:hover {
     background-color: var(--main-color-hover);
 }
+
+/* start bio design */
+.bioBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+.bioBox .bio {
+    text-align: center;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 5px #ffffff;
+    color: #050505;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.bioBox button {
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    color: var(--main-color);
+    background-color: #eceef3;
+    border-radius: 40px;
+    transition: var(--main-transition) ease-in-out;
+    font-weight: 600;
+    padding: 10px 0;
+    width: 40%;
+    cursor: pointer;
+}
+.bioBox:hover button {
+    background-color: var(--main-color-hover);
+    color: #fff;
+    box-shadow: 1px 1px 5px 1px #000;
+}
+/* end bio design */
 /* ==============end profile_name =============================  */
+
 
 
 /* ==============start client_profile =============================  */
@@ -263,56 +304,172 @@ html {
 
 .contain {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    gap: 27px;
-    min-height: 100%;
+    column-gap: 10px;
+    margin: auto;
+    width: 100vw;
+    max-width: 100%;
 }
 
-.contain .leftPart ,
-.contain .rightPart {
-    background-color: rgb(255, 255, 255);
-    width: 320px;
-    border-radius: 10px;
-}
-
-.contain .leftPart .pinName {
+.links {
     position: sticky;
-    top: 0;
+    top: 78px;
     left: 0;
-    width: 100%;
-    border-radius: 10px 10px 0px 0 ;
-    background-color: #fff;
-    height: 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
-    column-gap: 15px;
-    padding: 20px;
-    box-shadow: 1px 1px 4px 5px #cbd0e493;
+    margin: 20px 0;
+    padding: 10px ;
+    box-shadow: var(--main-box-shadow);
+    background-color: rgba(255, 255, 255, 0.562);
+    border-radius:  10px;
+    flex-direction: column;
+    gap: 35px;
+    /* width: 110px; */
+    min-height: fit-content;
 }
 
-.contain .leftPart .pinName span {
+
+.links .pinAccount,
+.links .pin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.links .pinAccount span {
     font-size: 15px;
     font-weight: 600;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.514);
     color: #050505;
     text-transform: capitalize;
-    transition: var(--main-transition);
+    transition: var(--main-transition) ease-in-out;
+}
+.links .pinAccount:hover span {
+    color: var(--main-color);
 }
 
-.contain .leftPart .pinName span:hover {
-    color: var(--main-color)
+.links .pin {
+    gap: 15px;
+}
+.links .pin button {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: #8c939d;
+    transition: var(--main-transition) ease-in-out;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 1px #eee solid;
+    padding-bottom: 5px;
+    padding: 9px 14px;
+    border-radius: 30px;
+    
 }
 
-.contain .leftPart .bioBox {
+.links .pin button:first-of-type {
+    color: var(--main-color);
+}
+/* .links .pin button:last-of-type {
+    border-bottom: none;
+} */
+
+.links .pin button:hover {
+    color: var(--main-color);
+    background-color: #f2f2f2;
+}
+
+
+.contain .rightPart {
+    position: sticky;
+    top: 78px;
+    right: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin: 20px 0;
+    /* padding: 10px; */
+    box-shadow: var(--main-box-shadow);
     flex-direction: column;
-    row-gap: 20px;
-    padding: 15px 0;
+    gap: 30px;
+    min-height: fit-content;
+    background-color: rgba(255, 255, 255, 0.562);
+    border-radius: 5px;
 }
-.contain .leftPart .bioBox .bio {
-    text-align: center;
+.contain .rightPart .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 5px;
 }
+.contain .rightPart .info h3 {
+    text-shadow: 1px 1px 4px rgba(255, 246, 246, 0.514);
+    margin: auto;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eceef0;
+    font-size: 19px;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.514);
+    color: #050505;
+    text-transform: capitalize;
+}
+
+.contain .rightPart .info .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    padding: 5px 10px ;
+    
+    
+}
+
+.contain .rightPart .info .box i {
+    color: #8c939d;
+    font-size: 18px;
+}
+.contain .rightPart .info .box span {
+    color: #777777;
+    font-size: 13px;
+    word-wrap: break-word;
+    width: 300px;
+    line-height: 1.5;
+}
+
+.contain .rightPart .info .box span a {
+    color: #353535;
+    padding: 5px 0;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.contain .rightPart .info .box span a:hover {
+    text-decoration: underline
+}
+
+
+.contain .rightPart .info button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--main-color-alt);
+    transition: var(--main-transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    text-shadow: 2px 1px 5px rgb(0, 0, 0);
+}
+.contain .rightPart .info button:hover {
+    background-color: var(--main-color-hover);
+}
+
