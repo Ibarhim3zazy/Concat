@@ -9,6 +9,7 @@ html {
 .profile_container {
     position: relative;
     margin-left: 0;
+    margin-right: 0;
     width: 100vw;
     max-width: 100%;
     display: flex;
@@ -38,17 +39,17 @@ html {
 
 /* ==============start cover_photo ============================= */
 
-.section_profile .cover_photo {
+.cover_photo {
     position: relative;
     max-width: 100%;
 }
-.section_profile .cover_photo img {
+.cover_photo img {
     border-radius: 0 0px 10px 10px;
     box-shadow: 1px 1px 6px 4px rgba(255, 255, 255, 0.342);
     max-width: 100%;
     cursor: pointer;
 }
-.section_profile .cover_photo i {
+.cover_photo i {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -62,7 +63,7 @@ html {
     transition: var(--main-transition);
 }
 
-.section_profile .cover_photo i:hover {
+ .cover_photo i:hover {
     background-color: #edeef1cb;
     color: #000;
 }
@@ -78,11 +79,11 @@ html {
     left: 20px;
 }
 
-.section_profile .profile_pic img:hover {
+.section_profile .profile_pic .images img:hover {
     cursor: pointer;
 }
 
-.section_profile .profile_pic i {
+.section_profile .profile_pic .images i {
     position: absolute;
     right: 0;
     bottom: 15px;
@@ -96,7 +97,7 @@ html {
     transition: var(--main-transition);
 }
 
-.section_profile .profile_pic i:hover {
+.section_profile .profile_pic .images i:hover {
     background-color: #ffffffe5;
     color: #000;
 }
@@ -224,7 +225,7 @@ html {
     width: 40%;
     cursor: pointer;
 }
-.bioBox:hover button {
+.bioBox button:hover {
     background-color: var(--main-color-hover);
     color: #fff;
     box-shadow: 1px 1px 5px 1px #000;
@@ -278,7 +279,7 @@ html {
     bottom: -30px;
     background-color: #fff;
     border-radius: 5px;
-    width: 100px;
+    width: max-content;
     text-align: center;
     display: none;
 }
@@ -372,6 +373,7 @@ html {
 
 .links .pin button:first-of-type {
     color: var(--main-color);
+    background-color: #f2f2f2;
 }
 /* .links .pin button:last-of-type {
     border-bottom: none;
@@ -473,3 +475,156 @@ html {
     background-color: var(--main-color-hover);
 }
 
+
+/* start media quary */
+/* small */
+@media (max-width : 991px) {
+    .profile_container {
+        width: 992;
+    }
+    .container ,
+    .contain {
+        width: 992px;
+        max-width: 100%;
+    }
+    .cover_photo img {
+        max-width: 100%;
+    }
+    .profile_pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .profile_pic .images img {
+        width: 90px !important;
+        height: 90px !important;
+        max-width: 100%;
+    }
+    .section_profile .profile_pic .images i{
+        font-size: 10px;
+        padding: 9px;
+        position: relative;
+        left: -37px;
+        bottom: 7px;
+    }
+    .profile_name button {
+        display: none;
+        font-size: 10px;
+        padding: 8px 10px;
+        column-gap: 10px;
+    } 
+    .profile_name button i {
+        display: none;
+    }
+    .cover_photo i {
+        padding: 9px;
+        font-size: 10px;
+    }
+    .section_profile .profile_name {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -29px;
+    }
+    .section_profile .profile_name .rightside h2 {
+        font-size: 16px;
+    }
+    .section_profile .profile_name .rightside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .section_profile .profile_name .rightside .friends .frindImage img {
+        margin-right: -8px;
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .section_profile .profile_name .rightside .friends a {
+        font-size: 9px;
+        font-weight: 500;
+    }
+    .section_profile .profile_name .rightside .friends {
+        align-items: center;
+    }
+    .bioBox {
+        width: 100%;
+        margin: 11px 0;
+    }
+    .bioBox .bio {
+        font-size: 12px;
+    }
+    .bioBox button {
+        font-size: 10px;
+        width: fit-content;
+        padding: 8px 10px;
+    }
+    .client_profile {
+        column-gap: 5px;
+        margin-top: 10px;
+    }
+    .client_profile button {
+        padding: 10px;
+        font-size: 10px;
+        column-gap: 5px;
+        width: max-content;
+    }
+    .client_profile span ul {
+        right: -73px;
+        bottom: -16px;
+    }
+    .client_profile span ul li {
+        padding: 10px;
+        font-size: 10px;
+        column-gap: 5px;
+    }
+    .contain {
+        width: 992px;
+        max-width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .links {
+        display: none;
+    }
+
+    .contain .rightPart {
+        position: relative;
+        top: 22px;
+        margin: 0 auto;
+        width: max-content;
+        max-width: 100%;
+        box-shadow: none;
+        background-color:#fff;
+        border: 1px solid #f5f6f7;
+        margin-bottom: 25px;
+    }
+    .contain .rightPart .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #e3e3e3; */
+        /* box-shadow: 3px -5px 7px 16px #e2e7e7; */
+        /* box-shadow: none !important; */
+    }
+    .contain .rightPart .info h3 {
+    padding: 8px;
+    font-size: 14px;
+    }
+    .contain .rightPart .info .box {
+        column-gap: 6px;
+        padding: 5px 10px;
+    }
+
+.contain .rightPart .info .box i {
+    font-size: 12px;
+}
+.contain .rightPart .info .box span {
+    font-size: 11px;
+}
+}

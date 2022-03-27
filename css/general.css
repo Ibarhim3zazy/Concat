@@ -43,3 +43,22 @@ ul {
 html {
     scroll-behavior: smooth;
 }
+
+
+@media (max-width : 676px) {
+    .container {
+        width: 678px;
+    }
+}
+
+@media (min-width : 991px) {
+    .container {
+        width: 992px;
+    }
+}
+
+@media (min-width : 1200px) {
+    .container {
+        width: 1190px;
+    }
+}

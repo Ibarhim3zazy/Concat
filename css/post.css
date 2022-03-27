@@ -35,6 +35,7 @@
     cursor :pointer;
     font-weight: var(--main-font-weight);
     transition: var(--main-transition) linear;
+    max-width: 100%;
 }
 
 .create_post .container input:hover {

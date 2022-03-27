@@ -17,16 +17,18 @@
 <body>
     <?php require_once 'header.php';?>
     <div class="profile_container">
+        <div class="cover_photo">
+            <img src="images/background.jpg" alt="">
+            <i class="fa-solid fa-camera"></i>
+        </div>
         <div class="container">
             <div class="section_profile">
-                <div class="cover_photo">
-                    <img src="images/background.jpg" alt="">
-                    <i class="fa-solid fa-camera"></i>
-                </div>
                 <div class="profile_pic">
-                    <img src="images/cat-1.jpg" alt="" width="160px" height="160px"
-                        style="border-radius: 50%; border : 3px solid #fff;">
-                    <i class="fa-solid fa-camera"></i>
+                    <div class="images">
+                        <img src="images/cat-1.jpg" alt="" width="160px" height="160px"
+                            style="border-radius: 50%; border : 3px solid #fff;">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
                 </div>
                 <div class="profile_name">
                     <div class="rightside">
@@ -94,6 +96,7 @@
     </div>
 
     <div class="contain">
+
         <div class="rightPart">
             <div class="info">
                 <h3>profile info</h3>
