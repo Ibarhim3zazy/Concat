@@ -162,12 +162,12 @@
                 <span>user name</span>
             </a>
             <div class="pin">
-                <button>Posts</button>
-                <button>Photos</button>
-                <button>Videos</button>
-                <button>Links</button>
-                <button>About</button>
-                <button>Friends</button>
+                <a href="posts.php">Posts</a>
+                <a href="photos.php">Photos</a>
+                <a href="videos.php">Videos</a>
+                <a href="links.php">Links</a>
+                <a href="about.php">About</a>
+                <a href="friends.php">Friends</a>
             </div>
         </div>
 
