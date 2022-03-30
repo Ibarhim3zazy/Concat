@@ -8,6 +8,7 @@
 }
 
 .create_post .container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -407,7 +408,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%); */
-    margin: 20px auto;
+    margin: 45px auto;
+    width: fit-content;
 }
 
 .designPost .contain {
@@ -440,8 +442,8 @@
 .designPost .contain .box_1 .image img {
     cursor: pointer;
     position: absolute;
-    top: -39px;
-    left: -38px;
+    top: -32px;
+    left: -37px;
     border: 2px solid;
     border-color: lightgreen;
     border-radius: 20px 30px;

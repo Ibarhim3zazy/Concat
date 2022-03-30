@@ -138,8 +138,8 @@
         <div class="contain">
             <div class="box_1">
                 <div class="image">
-                    <a href="profile.php"><img src="images/cat-1.jpg" alt="" width="55px" style="border-radius: 50%;"
-                            height="55px">
+                    <a href="profile.php"><img src="images/cat-1.jpg" alt="" width="50" style="border-radius: 50%;"
+                            height="50px">
                         <span
                             style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
                     </a>

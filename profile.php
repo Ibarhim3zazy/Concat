@@ -75,8 +75,9 @@
                     <button>Edit Bio</button>
                 </div>
                 <div class="client_profile">
-                    <button><i class="fa-solid fa-user-plus"></i> <span>Add Buddy</span></button>
-                    <button><i class="fa-brands fa-facebook-messenger"></i> <span>Send Message</span></button>
+                    <button><a href="javascript:"><i class="fa-solid fa-user-plus"></i> Add Buddy</a></button>
+                    <button><a href="javascript:"><i class="fa-brands fa-facebook-messenger"></i> Send
+                            Message</a></button>
                     <span class="more">
                         <button id="openMore"><i class="fa-solid fa-ellipsis"></i></button>
                         <ul id="more">
@@ -165,7 +166,7 @@
                 <a href="posts.php">Posts</a>
                 <a href="photos.php">Photos</a>
                 <a href="videos.php">Videos</a>
-                <a href="links.php">Links</a>
+                <a href="links.php">Saved</a>
                 <a href="about.php">About</a>
                 <a href="friends.php">Friends</a>
             </div>

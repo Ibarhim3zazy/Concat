@@ -22,7 +22,7 @@ html {
 }
 
 .profile_container .container  {
-    width: calc(100vw - 400px);
+    width: 78%;
     max-width: 100%;
     /* background-color: #edeef1; */
     display: flex;
@@ -76,7 +76,7 @@ html {
 .section_profile .profile_pic {
     position: relative;
     top: -33px;
-    left: 20px;
+    left: 0px;
 }
 
 .section_profile .profile_pic .images img:hover {
@@ -173,7 +173,7 @@ html {
     color: #050505;
 }
 
-.profile_name > button {
+.profile_name > button  {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -250,6 +250,11 @@ html {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    
+}
+
+.client_profile button a,
+.client_profile .more button {
     color: rgb(49, 47, 47);
     font-weight: 600;
     padding: 14px 19px;
@@ -263,11 +268,17 @@ html {
     text-shadow: 2px 1px 5px rgb(228, 226, 226);
 }
 
-.client_profile button:hover {
+.client_profile button:hover a {
     background-color: #656774;
     color: #fff;
     text-shadow: 2px 1px 5px rgb(15, 15, 15);
 
+}
+
+.client_profile .more:hover button {
+    background-color: #656774;
+    color: #fff;
+    text-shadow: 2px 1px 5px rgb(15, 15, 15);
 }
 
 .client_profile span {
@@ -307,8 +318,8 @@ html {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    column-gap: 10px;
-    margin: auto;
+    column-gap: 45px;
+    margin: 20px  auto;
     width: 100vw;
     max-width: 100%;
 }

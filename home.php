@@ -110,6 +110,12 @@
                     <span>Pages</span>
                 </a>
             </div>
+            <div class="box">
+                <a href="message.php">
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
         </div>
         <div class="pratthree_shortcut boxmain">
             <h3 class="caption">
