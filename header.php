@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="icon" href="images/bear.svg">
     <link rel="stylesheet" href="css/header.css">
+    <script src="js/jquery-3.5.1.js"></script>
 
     <div class="header" id="header">
         <div class="container">
@@ -20,7 +21,7 @@
             </div>
             <div class="middle">
                 <div class="home">
-                    <a href="">
+                    <a href="home.php">
                         <i class="fa-solid fa-house-user"></i>
                         <span>Home</span>
                     </a>
@@ -43,8 +44,8 @@
                 </div>
             </div>
             <div class="right">
-                <div class="notification">
-                    <a href="javascript:" id="noti"><i class="fa-solid fa-bell"></i></a>
+                <div class="notification" id="notification">
+                    <a href="javascript:"><i class="fa-solid fa-bell"></i></a>
                     <ul id="ul" class="notiUl">
                         <li>
                             <button id="closeNotif"><i class="fa-solid fa-xmark"></i></button>
@@ -263,7 +264,7 @@
                         </li> -->
                     </ul>
                 </div>
-                <div class="messages">
+                <div class="messages" id="messages">
                     <a href="javascript:"><i class="fa-brands fa-facebook-messenger" id="chat"></i>
                     </a>
                     <ul id="ulChat" class="closechat">
@@ -412,5 +413,4 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/header.js"></script>

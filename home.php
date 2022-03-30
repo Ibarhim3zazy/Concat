@@ -10,7 +10,6 @@
 <body>
     <?php require_once 'header.php';
         require 'CreatePost.php';
-        require 'friendsChat.php';
         ?>
 
     <!-- <div class="conLeftPage">
@@ -127,6 +126,7 @@
             </div>
         </div>
     </div>
+    <?php require 'friendsChat.php'; ?>
 </body>
 
 </html>

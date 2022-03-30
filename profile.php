@@ -170,9 +170,8 @@
                 <a href="friends.php">Friends</a>
             </div>
         </div>
-
-
     </div>
+    <?php require 'friendsChat.php'; ?>
 
     <script src="js/profile.js"></script>
 </body>

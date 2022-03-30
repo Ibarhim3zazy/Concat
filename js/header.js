@@ -1,13 +1,49 @@
 
-// show notification ul
-const noti = document.getElementById('noti');
-const ulnoti = document.getElementById('ul');
-const body = document.getElementsByTagName('body')
+// notification ul
 
-noti.onclick = function open() {
-    ulnoti.style.opacity = "1";
-    ulnoti.style.pointerEvents = "all";
-};
+
+(function($) {
+
+  $("#notification").click(function(e){
+    e.stopPropagation();
+    var div = $("#ul");
+
+    // Make it visible off-page so
+    // we can measure it
+    div.css({
+      "display": "flex"
+    });
+    $("#ulChat").style.display = "none";
+    // if (window.getComputedStyle($("#ulChat"), null) == "flex") {
+    //   $("#ulChat").style.display = "none";
+    // }
+    // Move it where we want it to be
+  });
+$(document).click(function(e){
+  $('#ul').fadeOut(300);
+});
+})(jQuery);
+
+// messages ul
+
+(function($) {
+
+  $("#messages").click(function(e){
+    e.stopPropagation();
+    var div = $("#ulChat");
+
+    // Make it visible off-page so
+    // we can measure it
+    div.css({
+      "display": "flex"
+    });
+
+    // Move it where we want it to be
+  });
+$(document).click(function(e){
+  $('#ulChat').fadeOut(300);
+});
+})(jQuery);
 
 // show account ul
 const account = document.getElementById('account');
@@ -21,54 +57,13 @@ function close() {
     ulAcc.style.display = "none";
 }
 
-
-// show chat ul
-const chat = document.getElementById('chat');
-const ulChat = document.getElementById('ulChat')
-
-chat.onclick = function openChat() {
-    ulChat.style.display = "block";
-};
-
-
-
-
-
-// $(document).ready(() => {
-//     $("#header").click(() => {
-//         $('#ul').slideToggle("slow");
-//     });
-// });
-
-
-
-
-// close notification ul 
-
-
-$(document).ready(() => {
-    $("#closeNotif").click(() => {
-        $('.notiUl').slideToggle("slow");
-    });
-});
-
-
-// close message chat ul 
-
-$(document).ready(() => {
-    $("#messageClose").click(() => {
-        $('.closechat').slideToggle("slow");
-    });
-});
-
-
 // close account  ul
 
-$(document).ready(() => {
-    $("#settingClose").click(() => {
-        $('.accountClose').slideToggle("slow");
-    });
-});
+// $(document).ready(() => {
+//     $("#settingClose").click(() => {
+//         $('.accountClose').slideToggle("slow");
+//     });
+// });
 
 
 
