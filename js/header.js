@@ -13,10 +13,10 @@
     div.css({
       "display": "flex"
     });
-    $("#ulChat").style.display = "none";
-    // if (window.getComputedStyle($("#ulChat"), null) == "flex") {
-    //   $("#ulChat").style.display = "none";
-    // }
+    var ulChat = document.getElementById('ulChat');
+    if (getComputedStyle(ulChat, null).display == "flex") {
+          ulChat.style.display = "none";
+    }
     // Move it where we want it to be
   });
 $(document).click(function(e){
@@ -37,6 +37,10 @@ $(document).click(function(e){
     div.css({
       "display": "flex"
     });
+    var ul = document.getElementById('ul');
+    if (getComputedStyle(ul, null).display == "flex") {
+          ul.style.display = "none";
+    }
 
     // Move it where we want it to be
   });
