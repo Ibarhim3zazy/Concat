@@ -1,0 +1,456 @@
+body {
+    overflow-x: hidden;
+}
+.chats {
+ overflow: hidden;
+ width: 100vw;
+ width: 100%;
+ max-height: calc(100vh - 70px);
+ background-image: linear-gradient(to bottom , rgb(159, 252, 252) 0% 16% , #fff 64% 100% );
+}
+.chats .container {
+    overflow: hidden;
+ width: 100%;
+ /* padding: 20px; */
+ display: grid;
+ grid-template-columns: 26% 1fr;
+ column-gap: 15px;
+ 
+}
+
+/*==================== start left================================  */
+.chats .container .left {
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ row-gap: 10px;
+}
+.chats .container .left .fixed {
+ width: 100%;
+ position: sticky;
+ display: flex;
+ flex-direction: column;
+ /* row-gap: 10px; */
+ top: 0px;
+ left: 0;
+ padding: 10px 20px;
+ z-index: 20000;
+ background-image: linear-gradient(to right ,rgb(159, 252, 252) 0% 16% , #fff 90% 100%  );
+ border-radius:0  0 110px 0px; 
+ box-shadow: 2px 3px 10px 0px rgb(102, 165, 165);
+}
+.chats .container .left .fixed .friends {
+ padding : 10px;
+ width: 100%;
+ max-width: 100%;
+}
+.chats .container .left .fixed .friends .chat {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.chats .container .left .fixed .friends .chat h3 {
+ font-weight: 600;
+ font-size: 22px;
+ color: var(--main-color);
+ text-shadow: 1px 1px 10px #fff;
+}
+.chats .container .left .fixed .friends .chat button {
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+}
+.chats .container .left .fixed .friends .chat button a {
+ color: rgb(155, 155, 155);
+ font-size: 17px;
+ font-weight: 500;
+ transition: .6s ease-in-out;
+ position: relative;
+}
+.chats .container .left .fixed .friends .chat button:hover a {
+ color: rgb(52, 119, 196);
+}
+.chats .container .left .fixed .friends .chat button:hover {
+ animation: move 1s infinite linear;
+}
+/* .chats .container .left .friends .chat button:hover::before {
+ display: block;
+ animation: none;
+}
+.chats .container .left .friends .chat button::before {
+ content: 'Setting';
+ position: absolute;
+ bottom: -30px;
+ left: -20px;
+ padding: 5px;
+ font-size: 13px;
+ font-weight: 600;
+ background-color: #fff;
+ border-radius: 5px;
+ border: 1px solid #eee;
+ display: none;
+ animation: none;
+} */
+
+.chats .container .left .fixed .search {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ background-color: #fff;
+ border-radius: 30px;
+ padding: 10px 15px;
+ column-gap: 20px;
+ width: 85%;
+}
+.chats .container .left .fixed .search i {
+ color: #888;
+ transition: .5s ease-in-out;
+}
+.chats .container .left .fixed  .search i:hover {
+ color: var(--main-color-hover);
+}
+.chats .container .left  .search input {
+ border: none;
+ outline: none;
+ caret-color: var(--main-color-hover);
+}
+.chats .container .left .fixed  .search input::placeholder {
+ font-size: 12px;
+ color: #999;
+}
+.chats .container .left .con_message {
+    overflow-y: auto;
+ width: 100%;
+ padding: 5px 20px;
+ /* height: calc(100vh - 70px - 100px); */
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+ flex-direction: column;
+ row-gap: 5px;
+ /* border-right: 1px dashed rgb(181, 182, 182); */
+}
+
+.chats .container .left .con_message .box {
+ display: flex;
+ position: relative;
+ align-items: center;
+ justify-content: flex-start;
+ padding: 5px;
+ column-gap: 5px;
+ border: 1px solid  transparent;
+ transition: .5s ease-in-out;
+ border-radius: 10px;
+ width: 100%;
+ cursor: pointer;
+}
+
+/* span.new :: shaw when a new message come and disappear when u click */
+.box span.new {
+    position: absolute;
+ right: 5px;
+ top: 30%;
+ transform: translateY(-50%);
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ background-color: #1770e6;
+ border: 1px solid #fff;
+}
+/* span.read :: it means that message has been read */
+.box span.read {
+    position: absolute;
+    right: 5px;
+    top: 66%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #747a75;
+}
+/* span.unread ::it means that message has been sent */
+.box span.unread {
+    position: absolute;
+    right: 5px;
+    top: 66%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #1770e6;
+}
+.chats .container .left .con_message .box:hover {
+ border-color:rgb(179, 179, 179) ;
+ background-color: rgba(240, 240, 240, 0.164);
+}
+.chats .container .left .con_message .box img {
+ width: 55px !important;
+ height: 55px !important;
+ border: 2px solid rgb(255, 255, 255);
+}
+.chats .container .left .con_message .box .img {
+ position: relative;
+}
+span.active {
+ position: absolute;
+ right: 5px;
+ bottom: 3px;
+ width: 14px;
+ height: 14px;
+ border-radius: 50%;
+ background-color: #31a24c;
+ border: 1px solid #fff;
+}
+.chats .container .left .con_message .box .img span.offline {
+ position: absolute;
+ right: 7px;
+ bottom: 5px;
+ width: 14px;
+ height: 14px;
+ border-radius: 50%;
+ background-color: #747a75;
+ border: 1px solid #fff;
+}
+.chats .container .left .con_message .box .name {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+ flex-direction: column;
+ row-gap: 5px;
+}
+.chats .container .left .con_message .box .name  a {
+ font-size: 15px;
+ color: var(--main-color);
+ text-transform: capitalize;
+ font-weight: 600;
+}
+.chats .container .left .con_message .box .friendChat {
+ max-width: 100%;
+ gap: 10px;
+ padding:  0 ;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+} 
+.chats .container .left .con_message .box .friendChat p {
+    font-size: 13px;
+    color: rgba(51, 51, 51, 0.685);
+    width: 180px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    height: 18px;
+    margin-top: 3px;
+}
+.chats .container .left .con_message .box .friendChat span.time {
+ font-size: 11px;
+ color: rgba(51, 51, 51, 0.685);
+}
+
+/* ---------------------- start animation -----------------*/
+@keyframes move {
+ 0%{
+  transform: rotate(0deg);
+ }
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+/*==================== end left================================  */
+
+/* start middle */
+.chats .container .middle {
+ max-height: 100%;
+ width: 100%;
+ overflow-y: hidden;
+}
+
+.chats .container .middle .chatBox {
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-rows: 16% 1fr 8%;
+    overflow-y: hidden;
+     /* align-items: flex-start; */
+    /* flex-direction: column; */
+}
+
+.chats .container .middle .chatBox .clientHead {
+ width: 100%;
+ position: sticky;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ top: 0px;
+ left: 0;
+ padding: 10px 20px 10px 40px;
+ z-index: 20000;
+ background-image: linear-gradient(to left ,rgb(159, 252, 252) 0% 16% , #fff 90% 100%  );
+ border-radius:0  0 0px 110px; 
+ box-shadow: 2px 3px 10px 0px rgb(102, 165, 165);
+ height: 90px;
+}
+.chats .container .middle .chatBox .clientHead .box {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ column-gap: 10px;
+}
+.chats .container .middle .chatBox .clientHead .box div {
+    position: relative;
+}
+
+.chats .container .middle .chatBox .clientHead .box div img {
+    border: 2px solid rgb(159, 252, 252);
+}
+
+.chats .container .middle .chatBox .clientHead .box .client_info {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+.chats .container .middle .chatBox .clientHead .box .client_info h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+    text-transform: capitalize;
+    transition: .5s ease-in-out;
+}
+.chats .container .middle .chatBox .clientHead .box .client_info h2:hover {
+    color: var(--main-color-hover);
+}
+.chats .container .middle .chatBox .clientHead .box .client_info p {
+    font-size: 10px;
+    color: #31a24c;
+}
+.chats .container .middle .chatBox .clientHead  .mor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3px;
+}
+.chats .container .middle .chatBox .clientHead  .mor button {
+background-color: transparent;
+ border: none;
+ color: rgb(155, 155, 155);
+ font-size: 15px;
+ font-weight: 500;
+ transition: .6s ease-in-out;
+ position: relative;
+ cursor: pointer;
+ border-radius: 50%;
+ padding: 11px 10px;
+ text-align: center;
+}
+
+.chats .container .middle .chatBox .clientHead  .mor button:hover {
+    background-color: var(--main-color);
+    animation: up 1s infinite ease-in-out;
+    color: #fff;
+    
+}
+@keyframes up {
+    0%,100% {
+        top: -2px;
+    }
+    50% {
+        top: 2px;
+    }
+}
+
+/* strat main-chat */
+.middle .chatBox .main_chat {
+    overflow-y: auto;
+    width: 100%;
+    color: rgb(20, 20, 20);
+    padding: 5px 15px;
+    position: relative;
+    font-size: 0.9em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 0px 10px 10px;
+}
+
+.middle .chatBox .main_chat .box_client,
+.middle .chatBox .main_chat .box_me {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chatBox .main_chat .client_chat {
+    width: fit-content;
+    max-width: 400px;
+    margin: 20px 0;
+    word-wrap: break-word;
+    padding: 7px 10px;
+    border-radius: 10px 10px 10px 0;
+    background-color: #d0fffff6;
+}
+.chatBox .main_chat .box_client span {
+    margin-top: -6px;
+    font-size: 11px;
+    color: rgba(51, 51, 51, 0.747);
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    font-weight: 600;
+}
+.chatBox .main_chat .box_me span {
+    margin-top: -6px;
+    font-size: 11px;
+    color: rgba(51, 51, 51, 0.747);
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    font-weight: 600;
+}
+
+
+
+.chatBox .main_chat .my_chat {
+    width: fit-content;
+    max-width: 400px;
+    margin: 5px 0 5px auto;
+    word-wrap: break-word;
+    padding: 7px 10px;
+    border-radius: 10px 10px 0 10px;
+    background-color: #8ee3ff;
+}
+
+.chatBox .writting {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4% 1fr 4%;
+    column-gap: 5px;
+    padding: 3px;
+}
+
+.chatBox .writting button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #8ee3ff;
+    border-radius: 50%;
+    background-color: rgb(116, 240, 240);
+    color: #fff;
+    transition: .5s ease-in-out;
+}
+.chatBox .writting button:hover {
+    background-color: #ffffff;
+    color: rgb(116, 240, 240);
+    animation: pop 1s infinite ease-in-out;
+}
+button:active {
+    transform: scale(1.19);
+}
+.chatBox .writting textarea {
+    outline: none;
+    border: 1px solid #8ee3ff;
+    caret-color: #8ee3ff;
+    color: #333;
+    padding: 7px 10px;
+    font-size: 13px;
+    word-wrap: break-word;
+    border-radius: 20px;
+}
+
+

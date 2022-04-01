@@ -9,6 +9,9 @@
     left: 0;
     box-shadow: var(--main-box-shadow);
     z-index: 300000987;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header .container {
@@ -19,7 +22,7 @@
     padding-right: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    width: 100%;
+    max-width: 100%;
     position: relative;
     display:flex;
     justify-content: space-between;
