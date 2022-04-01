@@ -122,7 +122,7 @@ body {
 .chats .container .left .con_message {
     overflow-y: auto;
  width: 100%;
- padding: 5px 20px;
+ padding: 5px 10px;
  /* height: calc(100vh - 70px - 100px); */
  display: flex;
  justify-content: center;
@@ -149,7 +149,7 @@ body {
 /* span.new :: shaw when a new message come and disappear when u click */
 .box span.new {
     position: absolute;
- right: 5px;
+ right: 10px;
  top: 30%;
  transform: translateY(-50%);
  width: 10px;
@@ -161,7 +161,7 @@ body {
 /* span.read :: it means that message has been read */
 .box span.read {
     position: absolute;
-    right: 5px;
+    right: 10px;
     top: 66%;
     transform: translateY(-50%);
     font-size: 10px;
@@ -170,7 +170,7 @@ body {
 /* span.unread ::it means that message has been sent */
 .box span.unread {
     position: absolute;
-    right: 5px;
+    right: 10px;
     top: 66%;
     transform: translateY(-50%);
     font-size: 10px;
@@ -180,6 +180,7 @@ body {
  border-color:rgb(179, 179, 179) ;
  background-color: rgba(240, 240, 240, 0.164);
 }
+
 .chats .container .left .con_message .box img {
  width: 55px !important;
  height: 55px !important;
@@ -221,6 +222,13 @@ span.active {
  color: var(--main-color);
  text-transform: capitalize;
  font-weight: 600;
+ transition: .5s ease-in-out;
+}
+.chats .container .left .con_message .box:hover a {
+    color: var(--main-color-hover);
+}
+.chats .container .left .con_message .box:hover {
+    background-color: #fcfcfc80;
 }
 .chats .container .left .con_message .box .friendChat {
  max-width: 100%;
