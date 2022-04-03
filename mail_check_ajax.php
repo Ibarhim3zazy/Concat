@@ -5,12 +5,13 @@ if (isset($_POST['signout']) == true) {
 }
   if (isset($_SESSION['user_id']) == true) {
     $user_id = $_SESSION['user_id'];
-    $result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$user_id';");
+    $result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$user_id' LIMIT 1;");
     $num = $con->affected_rows;
     if($num != 0 && $result == true){
       $row = $result-> fetch_assoc();
     }
   }else {
     header("location: log_in.php");
+    die;
   }
 ?>

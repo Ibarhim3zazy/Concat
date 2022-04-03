@@ -3,7 +3,7 @@
     isset($_POST['pass']) == true) {
     $user= $_POST['name'];
     $password= $_POST['pass'];
-    $result= $con->query("SELECT * FROM sign_up_general WHERE email='$user' AND pass='$password' OR email='$user' AND pass='$password';");
+    $result= $con->query("SELECT * FROM sign_up_general WHERE email='$user' AND pass='$password' OR email='$user' AND pass='$password' LIMIT 1;");
       $num = $con->affected_rows;
 			if($num != 0 && $result == true){
         $row = $result-> fetch_assoc();
