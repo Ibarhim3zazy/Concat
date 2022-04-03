@@ -264,5 +264,5 @@
   <div class="" style="width: 100%; height: 70px;"></div>
 </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
     <script src="js/chat.js"></script>
