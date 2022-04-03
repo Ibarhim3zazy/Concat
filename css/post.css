@@ -149,26 +149,26 @@
     color: #333;
 }
 
-.pop_post .container .post form {
+.pop_post .container .post #post_form {
     margin: 20px 25px;
 }
 
-.pop_post .container .post form :where(.contant, .detailes .privacy ),
+.pop_post .container .post #post_form :where(.contant, .detailes .privacy ),
 .pop_post .container  .audience .list li .column {
     display: flex;
     align-items: center;
 }
 
-.pop_post .container .post form .contant .detailes {
+.pop_post .container .post #post_form .contant .detailes {
     margin: -3px 0 0 12px;
 }
 
-.pop_post .container .post form .contant .detailes p {
+.pop_post .container .post #post_form .contant .detailes p {
     font-size: 17px;
     font-weight: 500;
 }
 
-.pop_post .container .post form .contant .detailes .privacy {
+.pop_post .container .post #post_form .contant .detailes .privacy {
     max-width: 98px;
     font-size: 11px;
     background-color: #e4e6eb71;
@@ -180,51 +180,51 @@
     padding: 3px;
 }
 
-.pop_post .container .post form  .theme-emoji a i {
+.pop_post .container .post #post_form  .theme-emoji a i {
     font-size: 22px;
     color: #c3c4bd;
 }
 
-.pop_post .container .post form .contant .detailes .privacy span {
+.pop_post .container .post #post_form .contant .detailes .privacy span {
     font-size: 13px;
     margin-top: 1px;
     font-weight: 500;
 }
 
-.pop_post .container .post form .contant .detailes .privacy i {
+.pop_post .container .post #post_form .contant .detailes .privacy i {
     font-size: 11px;
     /* margin-left: 1px; */
 }
 
-.pop_post .container .post form :where(textarea , button ){
+.pop_post .container .post #post_form :where(textarea , button ){
     width: 100%;
     outline: none;
     border: none;
 }
 
-.pop_post .container .post form textarea {
+.pop_post .container .post #post_form textarea {
     resize: none;
     margin-top: 30px;
     min-height: 100px;
     font-size: 18px;
 }
 
-.pop_post .container .post form :where(.theme-emoji , .options) ,
+.pop_post .container .post #post_form :where(.theme-emoji , .options) ,
 .pop_post .container  .audience .list li {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.pop_post .container .post form .theme-emoji  i {
+.pop_post .container .post #post_form .theme-emoji  i {
     cursor: pointer;
 }
 
-.pop_post .container .post form .theme-emoji  i:last-child {
+.pop_post .container .post #post_form .theme-emoji  i:last-child {
     max-width: 24px;
 }
 
-.pop_post .container .post form .options {
+.pop_post .container .post #post_form .options {
     border: 1px solid #b9b9b9;
     height: 57px;
     border-radius: 7px;
@@ -232,20 +232,20 @@
     margin: 15px 0;
 }
 
-.pop_post .container .post form .options p {
+.pop_post .container .post #post_form .options p {
     font-size: 15px;
     font-weight: 500;
     color: #595959;
 }
 
-.pop_post .container .post form .options :where(.list , li),
+.pop_post .container .post #post_form .options :where(.list , li),
 .pop_post .container  .audience :where(.arrow-back , .icon , .radio) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.pop_post .container .post form .options .list li {
+.pop_post .container .post #post_form .options .list li {
     height: 42px;
     width: 42px;
     border-radius: 50%;
@@ -255,31 +255,31 @@
     font-size: 20px;
 }
 
-.pop_post .container .post form .options .list li i {
+.pop_post .container .post #post_form .options .list li i {
     width: 23px;
 }
 
-.pop_post .container .post form .options .list li:hover {
+.pop_post .container .post #post_form .options .list li:hover {
     background-color: #f0f1f4;
 }
 
-.pop_post .container .post form .options .list  .photo a i {
+.pop_post .container .post #post_form .options .list  .photo a i {
     color: #41b35d;
 }
 
-.pop_post .container .post form .options .list  .video a i  {
+.pop_post .container .post #post_form .options .list  .video a i  {
     color: #e73f5a;
 }
 
-.pop_post .container .post form .options .list  .link a i {
+.pop_post .container .post #post_form .options .list  .link a i {
     color: var(--main-color-hover);
 }
 
-.pop_post .container .post form .options .list  .tag_friends a i{
+.pop_post .container .post #post_form .options .list  .tag_friends a i{
     color : #1771E6
 }
 
-.pop_post .container .post form button {
+.pop_post .container .post #post_form button {
     height: 53px;
     border-radius: 7px;
     font-size: 18px;
@@ -289,7 +289,7 @@
     background-color: #e2e5e9;
 }
 
-.pop_post .container .post form textarea:valid ~ button {
+.pop_post .container .post #post_form textarea:valid ~ button {
     color: #fff;
     cursor: pointer;
     background-color: var(--main-color-hover);

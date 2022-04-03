@@ -1,5 +1,7 @@
     <link rel="stylesheet" href="css/post.css">
 
+    <?php require_once 'mail_check_ajax.php'; ?>
+
     <div class="create_post">
         <div class="container">
             <img src="<?= htmlentities($row['personal_pic']); ?>" alt="">
@@ -25,7 +27,7 @@
                         <!--e change -->
                     </div>
                     <!--e change -->
-                    <form action="#">
+                    <div id="post_form">
                         <div class="contant">
                             <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" style="border-radius: 50%;" height="45px">
                             <div class="detailes">
@@ -59,8 +61,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <button id="sharepost">Post</button>
-                    </form>
+                        <button id="sharepost" onclick="posting()">Post</button>
+                    </div>
                 </section>
 
 

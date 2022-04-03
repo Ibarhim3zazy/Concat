@@ -53,3 +53,34 @@ const textarea = document.getElementById("textarea")
 sharepost.addEventListener('click', () => {
     boxTwo.appendChild(textarea);
 });
+
+
+// create post
+
+function GetXmlHttpObject(){
+	if (window.XMLHttpRequest)
+		return new XMLHttpRequest();
+	if (window.ActiveXObject)
+		return new ActiveXObject("Microsoft.XMLHTTP");
+	return null;
+};
+function posting(){
+  if (document.getElementById('textarea').value != "") {
+      let post_content = document.getElementById("textarea").value;
+      url="creatpost_ajax.php";
+      let xmlhttp = GetXmlHttpObject();
+      xmlhttp.onreadystatechange=function()
+      {
+      	if (xmlhttp.readyState==4 && xmlhttp.status==200){
+          // alert(xmlhttp.responseText.trim());
+          if (xmlhttp.responseText.trim() == "Not_Signed") {
+            window.location.href = "../Concat/log_in.php";
+          }
+        }
+      }
+      xmlhttp.open("POST",url,true);
+      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xmlhttp.setRequestHeader("Connection", "close");
+      xmlhttp.send("post_content="+post_content);
+  };
+};
