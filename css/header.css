@@ -551,14 +551,17 @@ span.new {
 }
 
 
-.header .container .right .account ul li.logOut a {
+.header .container .right .account ul li.logOut input {
     transition: var(--main-transition) linear;
     font-size: 15px;
     font-weight: var(--main-font-weight);
     color: rgba(51, 51, 51, 0.815);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-.header .container .right .account ul li.logOut a:hover {
+.header .container .right .account ul li.logOut input:hover {
     color: var(--main-color-hover);
 }
 

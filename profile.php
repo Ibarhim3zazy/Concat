@@ -16,6 +16,7 @@
 
 <body>
     <?php require_once 'header.php';?>
+
     <div class="profile_container">
         <div class="cover_photo">
             <img src="images/background.jpg" alt="">
@@ -25,7 +26,7 @@
             <div class="section_profile">
                 <div class="profile_pic">
                     <div class="images">
-                        <img src="images/cat-1.jpg" alt="" width="160px" height="160px"
+                        <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="160px" height="160px"
                             style="border-radius: 50%; border : 3px solid #fff;">
                         <i class="fa-solid fa-camera"></i>
                     </div>
@@ -38,27 +39,27 @@
                             <a href="friends.php"><span>1.4K</span> Friends</a>
                             <div class="frindImage">
                                 <a href="">
-                                    <img src="images/cat-1.jpg" alt="" width="40px" height="40px"
+                                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
                                         style="border-radius: 50%;">
                                 </a>
                                 <a href="">
-                                    <img src="images/cat-1.jpg" alt="" width="40px" height="40px"
+                                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
                                         style="border-radius: 50%;">
                                 </a>
                                 <a href="">
-                                    <img src="images/cat-1.jpg" alt="" width="40px" height="40px"
+                                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
                                         style="border-radius: 50%;">
                                 </a>
                                 <a href="">
-                                    <img src="images/cat-1.jpg" alt="" width="40px" height="40px"
+                                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
                                         style="border-radius: 50%;">
                                 </a>
                                 <a href="">
-                                    <img src="images/cat-1.jpg" alt="" width="40px" height="40px"
+                                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
                                         style="border-radius: 50%;">
                                 </a>
                                 <a href="friends.php">
-                                    <img src="images/cat-1.jpg" alt="" width="40px" height="40px"
+                                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
                                         style="border-radius: 50%;">
                                     <span><i class="fa-solid fa-ellipsis"></i></span>
                                 </a>
@@ -159,7 +160,7 @@
         </div>
         <div class="links">
             <a href="profile.php" class="pinAccount">
-                <img src="images/cat-1.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50px" height="50px" style="border-radius: 50%;">
                 <span>user name</span>
             </a>
             <div class="pin">

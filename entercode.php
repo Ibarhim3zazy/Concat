@@ -40,13 +40,18 @@
       $conVer_code = $_POST['conVer_code']."    ";
       $ver_code = $_SESSION['ver_code'];
       if ($conVer_code == $ver_code) {
-        header("location: newpass4.php");
-        unset($_SESSION);
-        session_destroy();
+        if (isset($_SESSION['user_email']) == true) {
+          header("location: index.php");
+          unset($_SESSION);
+          session_destroy();
+        }else {
+          header("location: newpass4.php");
+          unset($_SESSION);
+          session_destroy();
+        }
       }
     }
      ?>
-    <script src="js/entercode.js"></script>
 </body>
 
 </html>

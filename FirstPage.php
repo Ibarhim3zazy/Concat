@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/firstPage.css">
     <link rel="icon" href="images/bear.svg">
     <title>Confirm Your Accont</title>
+    <script type="text/javascript" src="js/send_verificationCode.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                     <small>Error Message</small>
                 </div>
             </div>
-            <input type="button" value="Next Page" id="submit">
+            <input type="button" value="Next Page" id="submit" onclick="sending_verificationCode()">
         </div>
     </div>
     <script src="js/firstPage.js"></script>

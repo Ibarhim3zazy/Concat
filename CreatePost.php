@@ -2,7 +2,7 @@
 
     <div class="create_post">
         <div class="container">
-            <img src="images/cat-1.jpg" alt="">
+            <img src="<?= htmlentities($row['personal_pic']); ?>" alt="">
             <span
                 style="position: absolute; top:43px; left:42px; width:12px; height:12px;background-color:var(--main-color-success); border-radius:50%;"></span>
             <!-- user name will change so it's variable -->
@@ -27,7 +27,7 @@
                     <!--e change -->
                     <form action="#">
                         <div class="contant">
-                            <img src="images/cat-1.jpg" alt="" width="45px" style="border-radius: 50%;" height="45px">
+                            <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" style="border-radius: 50%;" height="45px">
                             <div class="detailes">
                                 <p>User Name</p>
                                 <div class="privacy">
@@ -138,7 +138,7 @@
         <div class="contain">
             <div class="box_1">
                 <div class="image">
-                    <a href="profile.php"><img src="images/cat-1.jpg" alt="" width="50" style="border-radius: 50%;"
+                    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50" style="border-radius: 50%;"
                             height="50px">
                         <span
                             style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>

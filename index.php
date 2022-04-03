@@ -1,194 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="images/bear.svg">
-    <title> Concat | Welcome In </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Concat</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="forms-container">
-            <div class="signin-signup">
-                <div class="sign-in-form form" id="form">
-                    <img src="images/begin-chat.svg" alt="" width="90px"
-                        style="border-radius: 50px 20px; padding: 5px; border: 2px solid #dee9fc;">
-                    <h2 class="tittle">Sign In</h2>
-                    <div class="input-field  ">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="ID or your email" id="user" tabindex="10">
-                        <div class="any-name">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error Message</small>
-                        </div>
-                    </div>
-                    <div class="check">
-                        <a href="forgetPass1.php">Forgetten Password?</a>
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="password" tabindex="20">
-                        <div class="any-name">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error Message</small>
-                        </div>
-                    </div>
+    <?php require_once 'header.php';
+        require 'CreatePost.php';
+      ?>
 
-                    <input type="button" onclick="checkInput(); submit_sign_in()" value="Sign In" class="btn solid" tabindex = "30">
-
-                    <div class="links">
-                        <a href="">Terms</a>
-                        <a href="">Privacy Policy</a>
-                        <a href=""> Help</a>
-                        <a href="">Security</a>
-                    </div>
+    <!-- <div class="conLeftPage">
+        <div class="container">
+            <div class="con_box">
+                <div class="box">
+                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="35px" height="35px" style="border-radius: 50%;">
+                    <span><a href="profile.php">User Name</a></span>
                 </div>
-
-
-                <div class="sign-up-form form" id="signIn">
-                    <img src="images/welcome.svg" alt="" width="90px"
-                        style="border-radius: 50px 20px; padding: 5px; border: 2px solid #dee9fc;">
-                    <h2 class="tittle">Sign Up</h2>
-                    <div class="container-fo">
-                        <div class="right">
-                            <div class="input-field">
-                                <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Name" id="name" name="name" tabindex="50">
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" id="pass" name="pass" tabindex="70">
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <i class="fa-solid fa-phone"></i>
-                                <input type="tel" placeholder="Phone Number" id="phone" name="phone" tabindex="90">
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <i class="fa-solid fa-address-card"></i>
-                                <input type="date" id="b_date" name="b_date" tabindex="110" value="00 00 00">
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="left">
-                            <div class="input-field">
-                                <i class="fa-solid fa-envelope"></i>
-                                <input type="email" tabindex="60" placeholder="Email Address" id="email" name="email">
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" tabindex="80" placeholder="Confirm Your Password"
-                                    id="confirmPass">
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <input type="text" tabindex="100" placeholder="Current Address" id="caddress" name="caddress">
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <i class="fa-solid fa-venus-mars"></i>
-                                <label for="gender"> Gender</label>
-                                <select name="Gender" id="gender" tabindex="140" tabindex = "130">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                                <div class="any-name">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accept">
-                        <input type="checkbox" id="check" tabindex="160">
-                        <label for="check"> I agree to the <a href="">Terms</a> & <a href="">Privacy Policy</a></label>
-                    </div>
-                    <input type="button" onclick="checkInputs(); submit_sign_up()" value="Sign Up" class="btn solid" tabindex= "170">
+                <div class="box">
+                    <a href=""><i class="fa-solid fa-user-group"></i></a>
+                    <span><a href="">Friends</a></span>
                 </div>
-
+                <div class="box">
+                    <a href=""><i class="fa-solid fa-users"></i></a>
+                    <span><a href="">Groups</a></span>
+                </div>
+                <div class="box">
+                    <a href=""><i class="fa-solid fa-book"></i></a>
+                    <span>
+                        <a href="">Courses</a>
+                    </span>
+                </div>
+                <div class="box">
+                    <a href=""><i class="fa-solid fa-bookmark"></i></a>
+                    <span>
+                        <a href="">Saved</a>
+                    </span>
+                </div>
+                <div class="box">
+                    <a href=""><i class="fa-solid fa-pager"></i></a>
+                    <span><a href="">Pages</a></span>
+                </div>
+            </div>
+            <div class="con_box">
+                <h3 class="caption">
+                    <i class="fa-solid fa-scissors"></i>
+                    Shortcut
+                </h3>
+                <div class="box">
+                    <a href=""><i class="fa-brands fa-cuttlefish"></i></a>
+                    <span>
+                        <a href="">Example</a>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="panels">
-            <div class="panel left-panel">
-                <div class="content">
-                    <h3>Are You New Here ?</h3>
-                    <p>
-                        Welcome to CONCAT. The website of Mansoura University, Faculty of Quality Education, Met Ghamr
-                        Branch.
-                        It is a social communication site that includes the faculty members, doctor , student and
-                        especially
-                        graduates, where we aim to achieve the greatest communication between us.
-                    </p>
-                    <button class="btn transparent" id="sign-up-btn" tabindex = "40">Sign Up</button>
-                </div>
-                <img src="images/buildingWebsite.svg" alt="" class="image">
+    </div> -->
+    <!-- after last edit -->
+    <div class="leftpageside">
+        <div class="partone_profile boxmain">
+            <div class="back_image">
+                <img src="images/background.jpg" alt="">
             </div>
-            <div class="panel right-panel">
-                <div class="content">
-                    <h3>Already have an account?</h3>
-                    <p>
-                        We aim to give recent graduates to be in a relationship with the college, continue their
-                        education, and find work and
-                        courses through the offers that companies give them.
-                    </p>
-                    <button class="btn transparent" id="sign-in-btn" tabindex = "150">Sign In</button>
-                </div>
-                <img src="images/workchat.svg" alt="" class="image">
+            <div class="profile_pic">
+                <img src="<?= htmlentities($row['personal_pic']); ?>" alt="">
+            </div>
+            <div class="profile_name">
+                <a href="profile.php"><?= htmlentities($row['name']); ?></a>
+            </div>
+            <p class="bio">
+                σƙҽყ.. <br>
+                ιƚ'ʂ σƙҽყ ɳσƚ ƚσ Ⴆҽ σƙҽყ♡..
+            </p>
+        </div>
+        <div class="parttwo_icons boxmain">
+            <div class="box">
+                <a href="">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Friends</span>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Groups</span>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <i class="fa-solid fa-book"></i>
+                    <span>
+                        Courses
+                    </span>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <span>
+                        Saved
+                    </span>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <i class="fa-solid fa-pager"></i>
+                    <span>Pages</span>
+                </a>
+            </div>
+            <div class="box">
+                <a href="message.php">
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </div>
+        <div class="pratthree_shortcut boxmain">
+            <h3 class="caption">
+                <i class="fa-solid fa-scissors"></i>
+                Shortcut
+            </h3>
+            <div class="box">
+                <a href="">
+                    <i class="fa-brands fa-cuttlefish"></i>
+                    <span>
+                        Example
+                    </span>
+                </a>
             </div>
         </div>
     </div>
-    <div class="pop_up">
-        <div class="contan">
-            <p></p>
-            <div class="ok">
-                <a href="javascript:" onclick="document.getElementsByClassName('pop_up')[0].style.display = 'none';
-">OK!</a>
-            </div>
-        </div>
-    </div>
-    <script src="js/main.js"></script>
+    <?php require 'friendsChat.php'; ?>
 </body>
 
 </html>

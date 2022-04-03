@@ -20,7 +20,7 @@
       if($num != 0 && $result == true){
         echo 'email_exists';
         }else {
-          $result = $con->query("INSERT INTO sign_up_general VALUES(NULL, '$user_id', '$user', '$email', '$password', '$phone','$b_date','0','$caddress','0', '$gender','0','0','0','user','0');");
+          $result = $con->query("INSERT INTO sign_up_general VALUES(NULL, '$user_id', '$user', '$email', '$password', '$phone','$b_date','0','$caddress','0', '$gender','0','0','images/user.png','user','0');");
           if ($result == true) {
             echo 'success';
           }else {

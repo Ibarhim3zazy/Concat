@@ -1,6 +1,8 @@
+var ulChat = document.getElementById('ulChat');
+var ul = document.getElementById('ul');
+var ulAcc = document.getElementById('ulAcc');
 
 // notification ul
-
 
 (function($) {
 
@@ -13,9 +15,10 @@
     div.css({
       "display": "flex"
     });
-    var ulChat = document.getElementById('ulChat');
     if (getComputedStyle(ulChat, null).display == "flex") {
           ulChat.style.display = "none";
+    }else if (getComputedStyle(ulAcc, null).display == "flex") {
+      ulAcc.style.display = "none";
     }
     // Move it where we want it to be
   });
@@ -37,9 +40,10 @@ $(document).click(function(e){
     div.css({
       "display": "flex"
     });
-    var ul = document.getElementById('ul');
     if (getComputedStyle(ul, null).display == "flex") {
           ul.style.display = "none";
+    }else if (getComputedStyle(ulAcc, null).display == "flex") {
+      ulAcc.style.display = "none";
     }
 
     // Move it where we want it to be
@@ -49,27 +53,30 @@ $(document).click(function(e){
 });
 })(jQuery);
 
-// show account ul
-const account = document.getElementById('account');
-const ulAcc = document.getElementById('ulAcc');
+// account ul
 
-account.onclick = function openDrop() {
-    ulAcc.style.display = "block";
-}
+(function($) {
 
-function close() {
-    ulAcc.style.display = "none";
-}
+  $("#account").click(function(e){
+    e.stopPropagation();
+    var div = $("#ulAcc");
 
-// close account  ul
-
-// $(document).ready(() => {
-//     $("#settingClose").click(() => {
-//         $('.accountClose').slideToggle("slow");
-//     });
-// });
-
-
+    // Make it visible off-page so
+    // we can measure it
+    div.css({
+      "display": "flex"
+    });
+    if (getComputedStyle(ulChat, null).display == "flex") {
+          ulChat.style.display = "none";
+    }else if (getComputedStyle(ul, null).display == "flex") {
+      ul.style.display = "none";
+    }
+    // Move it where we want it to be
+  });
+$(document).click(function(e){
+  $('#ulAcc').fadeOut(300);
+});
+})(jQuery);
 
 // close Notification when you click outside this field
 // window.onload = function () {
