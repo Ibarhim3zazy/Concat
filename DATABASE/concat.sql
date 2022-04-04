@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2022 at 11:30 AM
+-- Generation Time: Apr 04, 2022 at 02:17 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -35,8 +35,16 @@ CREATE TABLE `posting` (
   `image` varchar(500) NOT NULL,
   `comments` int(11) NOT NULL,
   `liks` int(11) NOT NULL,
-  `date` date NOT NULL
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `posting`
+--
+
+INSERT INTO `posting` (`id`, `post_id`, `user_id`, `post_content`, `image`, `comments`, `liks`, `date`) VALUES
+(1, 233750160, 1, 'First Post By I3', '0', 0, 0, '2022-04-04 12:16:59'),
+(2, 522833725, 1, 'Second Post By I3', '0', 0, 0, '2022-04-04 12:17:25');
 
 -- --------------------------------------------------------
 
@@ -190,7 +198,7 @@ ALTER TABLE `sign_up_user`
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sign_up_doctor`

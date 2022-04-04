@@ -48,7 +48,7 @@ const sharepost = document.getElementById("sharepost");
 
 const boxTwo = document.getElementById("boxTwo");
 
-const textarea = document.getElementById("textarea")
+const textarea = document.getElementById("textarea");
 
 sharepost.addEventListener('click', () => {
     boxTwo.appendChild(textarea);
@@ -67,12 +67,12 @@ function GetXmlHttpObject(){
 function posting(){
   if (document.getElementById('textarea').value != "") {
       let post_content = document.getElementById("textarea").value;
-      url="creatpost_ajax.php";
+      url="post_ajax.php";
       let xmlhttp = GetXmlHttpObject();
       xmlhttp.onreadystatechange=function()
       {
       	if (xmlhttp.readyState==4 && xmlhttp.status==200){
-          // alert(xmlhttp.responseText.trim());
+          alert(xmlhttp.responseText.trim());
           if (xmlhttp.responseText.trim() == "Not_Signed") {
             window.location.href = "../Concat/log_in.php";
           }
@@ -81,6 +81,6 @@ function posting(){
       xmlhttp.open("POST",url,true);
       xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlhttp.setRequestHeader("Connection", "close");
-      xmlhttp.send("post_content="+post_content);
+      xmlhttp.send("creating_post=true"+"&post_content="+post_content);
   };
 };
