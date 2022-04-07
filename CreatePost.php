@@ -81,56 +81,74 @@
         </div>
         <ul class="list">
          <li>
-          <div class="column">
-           <div class="icon"><i class="fas fa-globe-asia"></i></div>
-           <div class="detailes">
-            <p>Puplic</p>
-            <span>Anyone on or off Concat</span>
+          <label for="first">
+           <div class="column">
+            <div class="icon"><i class="fas fa-globe-asia"></i></div>
+            <div class="detailes">
+             <p>Puplic</p>
+             <span>Anyone on or off Concat</span>
+            </div>
            </div>
-          </div>
-          <div class="radio">
-           <input type="radio" name="one" id="one">
-          </div>
-         </li>
-         <li class="active">
-          <div class="column">
-           <div class="icon"><i class="fas fa-user-friends"></i></div>
-           <div class="detailes">
-            <p>Friends</p>
-            <span>Your friends on Concat</span>
+           <div>
+            <input type="radio" name="one" id="first">
            </div>
-          </div>
-          <div class="radio"></div>
+          </label>
          </li>
          <li>
-          <div class="column">
-           <div class="icon"><i class="fas fa-user"></i></div>
-           <div class="detailes">
-            <p>Specific</p>
-            <span>Only show to some friends</span>
+          <label for="active">
+           <div class="column">
+            <div class="icon"><i class="fas fa-user-friends"></i></div>
+            <div class="detailes">
+             <p>Friends</p>
+             <span>Your friends on Concat</span>
+            </div>
            </div>
-          </div>
-          <div class="radio"></div>
+           <div>
+            <input type="radio" name="two" id="active">
+           </div>
+          </label>
          </li>
          <li>
-          <div class="column">
-           <div class="icon"><i class="fas fa-lock"></i></div>
-           <div class="detailes">
-            <p>Only me</p>
-            <span>Only you can see your post</span>
+          <label for="third">
+           <div class="column">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <div class="detailes">
+             <p>Specific</p>
+             <span>Only show to some friends</span>
+            </div>
            </div>
-          </div>
-          <div class="radio"></div>
+           <div>
+            <input type="radio" name="three" id="third">
+           </div>
+          </label>
          </li>
          <li>
-          <div class="column">
-           <div class="icon"><i class="fas fa-cog"></i></div>
-           <div class="detailes">
-            <p>Custom</p>
-            <span>Include and exclude friends</span>
+          <label for="fourth">
+           <div class="column">
+            <div class="icon"><i class="fas fa-lock"></i></div>
+            <div class="detailes">
+             <p>Only me</p>
+             <span>Only you can see your post</span>
+            </div>
            </div>
-          </div>
-          <div class="radio"></div>
+           <div>
+            <input type="radio" name="four" id="fourth">
+           </div>
+          </label>
+         </li>
+         <li>
+          <label for="fivth">
+           <div class="column">
+            <div class="icon"><i class="fas fa-cog"></i></div>
+            <div class="detailes">
+             <p>Custom</p>
+             <span>Include and exclude friends</span>
+            </div>
+           </div>
+           <div>
+            <input type="radio" name="five" id="fivth">
+           </div>
+          </label>
          </li>
         </ul>
        </section>
