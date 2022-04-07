@@ -88,7 +88,9 @@
             <span>Anyone on or off Concat</span>
            </div>
           </div>
-          <div class="radio"></div>
+          <div class="radio">
+           <input type="radio" name="one" id="one">
+          </div>
          </li>
          <li class="active">
           <div class="column">
@@ -319,10 +321,13 @@
       <div class="box_2" id="boxTwo">
        <div class="image">
         <img src="user_media/image/background.jpg" alt="">
+        <img src="user_media/image/bear.jpg" alt="">
+        <img src="user_media/image/bear.jpg" alt="">
+        <img src="user_media/image/bear.jpg" alt="">
+        <img src="user_media/image/bear.jpg" alt="">
         <img src="user_media/image/background.jpg" alt="">
         <img src="user_media/image/background.jpg" alt="">
-        <img src="user_media/image/background.jpg" alt="">
-
+        <img src="user_media/image/background.jpg" alt="" class="last">
        </div>
 
       </div>
