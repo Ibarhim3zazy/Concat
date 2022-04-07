@@ -59,8 +59,8 @@
     transition: opacity .8s ease;
     opacity: 0;
     pointer-events: none;
-    z-index: 30000;
-    /* background-color: rgba(211, 255, 248, 0.562); */
+    z-index: 100000;
+    background-color: rgba(211, 255, 248, 0.562);
     width: 100vw;
     height: 100vh;
 }
@@ -133,7 +133,9 @@
 }
 
 .pop_post .container .wrapper.active {
-    height: 590px;
+    position: relative;
+    top: 23px;
+    height: 549px;
 }
 
 .pop_post .wrapper.active .post {
@@ -300,6 +302,7 @@
     border-bottom: 1px solid #bfbfbf;
     text-align: center;
     position: relative;
+
 }
 
 .pop_post .container  .audience header .arrow-back {
@@ -333,13 +336,12 @@
 }
 
 .pop_post .container  .audience .list {
-    margin: 15px 16px 20px;
+    margin: 0px 16px 20px;
 }
 
 .pop_post .container  .audience .list li {
-    
-    margin-bottom: 5px;
-    padding: 12px 10px;
+    margin-bottom: -4px;
+    padding: 15px 10px;
     border-radius: 7px;
     transition: var(--main-transition);
 }

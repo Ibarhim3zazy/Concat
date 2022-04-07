@@ -104,7 +104,7 @@
             </div>
            </div>
            <div>
-            <input type="radio" name="two" id="active">
+            <input type="radio" name="one" id="active">
            </div>
           </label>
          </li>
@@ -118,7 +118,7 @@
             </div>
            </div>
            <div>
-            <input type="radio" name="three" id="third">
+            <input type="radio" name="one" id="third">
            </div>
           </label>
          </li>
@@ -132,7 +132,7 @@
             </div>
            </div>
            <div>
-            <input type="radio" name="four" id="fourth">
+            <input type="radio" name="one" id="fourth">
            </div>
           </label>
          </li>
@@ -146,7 +146,7 @@
             </div>
            </div>
            <div>
-            <input type="radio" name="five" id="fivth">
+            <input type="radio" name="one" id="fivth">
            </div>
           </label>
          </li>
