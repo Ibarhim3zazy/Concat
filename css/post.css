@@ -52,7 +52,7 @@
     align-items: center;
     justify-content: center;
     min-height: fit-content;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -420,7 +420,7 @@
     margin: 45px auto;
     height: fit-content;
     width: 470px;
-    
+
 }
 
 .designPost .contain {
@@ -618,5 +618,3 @@ top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
 } */
-
-
