@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 02:17 PM
+-- Generation Time: Apr 08, 2022 at 06:06 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -101,15 +101,7 @@ CREATE TABLE `sign_up_general` (
 --
 
 INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `type`, `access_num`) VALUES
-(1, 0, 'Ibrahim', '0', '01145452440', 1145452440, '0000-00-00', '0', '0', '0', 'Male', '0', '0', '0', '0', 0),
-(5, 1, 'Ibrahim', 'ebrahim3zazy@gmail.com', '01145452440', 1145452440, '0000-00-00', '0', '0', '0', 'Male', '0', '0', 'images/user.png', '0', 28),
-(8, 2, 'Ibrahim', '3zazy@gmail.com', '01145452440', 1145452440, '0000-00-00', '0', '0', '0', 'Male', '0', '0', '0', '0', 0),
-(10, 3, 'Ibrahim', 'zazy@gmail.com', '01145452440', 1145452440, '0000-00-00', '0', '0', '0', 'Male', '0', '0', '0', '', 0),
-(11, 4, 'Ibrahim', 'z@gmail.com', '01145452440', 1145452440, '0000-00-00', '0', '0', '0', 'Male', '0', '0', '0', NULL, 1),
-(12, 2125898594, 'Ibrahim', 'a@gmail.com', '01145452440', 1145452440, '0000-00-00', '0', '0', '0', 'Male', '0', '0', '0', 'user', 0),
-(13, 38931059, 'Ibrahim', 'I.3zazy@gmail.com', '01145452440', 1145452440, '2000-02-01', '0', 'mit ghamr', '0', 'Male', '0', '0', '0', 'user', 0),
-(14, 1366343688, 'Ibrahim', 'last@gmail.com', '01145452440', 1145452440, '2000-02-01', '0', 'mit ghamr', '0', 'Male', '0', '0', '0', 'user', 0),
-(15, 1039652506, 'Ibrahim', 'test@gmail.com', '01145452440', 1145452440, '2000-02-01', '0', '01145452440', '0', 'Male', '0', '0', '0', 'user', 0);
+(16, 396084773, 'Admin', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'images/user.png', 'user', 2);
 
 -- --------------------------------------------------------
 
@@ -216,7 +208,7 @@ ALTER TABLE `sign_up_employee`
 -- AUTO_INCREMENT for table `sign_up_general`
 --
 ALTER TABLE `sign_up_general`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `sign_up_student`
