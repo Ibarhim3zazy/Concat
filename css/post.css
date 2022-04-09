@@ -47,7 +47,9 @@
 
 /* start pop up creating post */
 
+
 .pop_post {
+    width: 499px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,9 +62,9 @@
     opacity: 0;
     pointer-events: none;
     z-index: 100000;
-    background-color: rgba(211, 255, 248, 0.562);
-    width: 100vw;
-    height: 100vh;
+    /* background-color: rgba(211, 255, 248, 0.562); */
+    /* width: 100vw;
+    height: 100vh; */
 }
 #createPost.show {
   opacity: 1;
@@ -71,7 +73,7 @@
 
 .pop_post .container  {
     overflow: hidden;
-    width: 499px;
+    max-width: 100%;
 }
 
 /* change add */
