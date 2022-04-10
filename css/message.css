@@ -459,6 +459,8 @@ button:active {
     font-size: 13px;
     word-wrap: break-word;
     border-radius: 20px;
+    text-align: center;
+    max-width: 100%;
 }
 
 
