@@ -182,6 +182,7 @@ a {
 }
 .portfolio__social-link:hover {
  color: var(--main-color-hover);
+
 }
 .portfolio__info {
  grid-template-columns: repeat(2,max-content);
@@ -227,8 +228,12 @@ a {
  font-size: 1.25rem;
 }
 
+
 .button:hover {
  background-color: var(--main-color-hover);
+  text-decoration: none;
+ color: white;
+ 
 }
 .button__small {
  padding: .75rem;
@@ -241,6 +246,7 @@ a {
 .button__gray:hover {
  background-color: var(--text-color-light);
  color: #fff;
+ text-decoration: none;
 }
 
 /* about section */
