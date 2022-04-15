@@ -50,7 +50,7 @@ img {
 }
 
 .container { 
- max-width: 89vw;
+ max-width: 90vw;
  margin-left: 1.5rem;
  margin-right: 1.5rem; 
 }
@@ -91,7 +91,9 @@ main section {
  color: #0bceaf;
  font-size: var(--small-font-size);
  font-weight: 600;
- 
+}
+.filters_button:focus {
+ outline: none;
 }
 .filters_button:hover {
  background-color: rgb(255, 255, 255);
