@@ -67,6 +67,7 @@ img {
  position: sticky;
  top: 0px;
  z-index: 300000;
+ box-shadow: var(--main-box-shadow);
 }
 .filters_button  {
  width: 100%;
