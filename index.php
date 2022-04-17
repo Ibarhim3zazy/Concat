@@ -83,7 +83,7 @@
     </a>
    </div>
    <div class="box">
-    <a href="">
+    <a href="group.php">
      <i class="fa-solid fa-users"></i>
      <span>Groups</span>
     </a>

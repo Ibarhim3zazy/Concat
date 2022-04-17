@@ -9,6 +9,7 @@ body {
     max-width: 100%;
     padding: 10px 50px;
     background-color: #eee;
+    z-index: 2;
 }
 .friendschat .container {
     display: flex;
