@@ -13,6 +13,10 @@
     <span>Admin</span>
    </div>
   </div>
-
+  <input type="text" name="groupName" placeholder="Group Name">
+  <select>
+   <option>Private</option>
+   <option>Personal</option>
+  </select>
  </div>
 </div>
