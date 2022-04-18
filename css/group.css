@@ -91,6 +91,9 @@ border-radius: 10px;
 .home .container .left .contain .manager .box  a:hover {
 background-color: #eee;
 }
+/* .home .container .left .contain .manager .box  a:hover h3 {
+ color: rgb(0, 126, 230);
+} */
 .home .container .left .contain .manager .box  a img {
  width: 50px !important;
  height: 50px !important;
@@ -105,6 +108,7 @@ background-color: #eee;
  max-width: 100%;
  word-wrap: break-word;
  line-height: 1.5;
+ transition: 0.6s ease-in-out;
 }
 .home .container .left .contain .manager .box  a .namegroup {
  display: flex;

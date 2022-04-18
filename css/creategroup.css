@@ -1,0 +1,174 @@
+.create_group {
+ width: calc(100vw - 70px);
+ height: calc(100vh - 130px);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-image: url(../images/landing_page.svg);
+ background-repeat: no-repeat;
+ background-size: 25% 60%;
+ background-position: left bottom;
+ animation: up infinite ease-in-out 5s;
+ position: relative;
+}
+@keyframes up {
+ 0%,100% {
+  top: 0px;
+ }
+ 50% {
+  top: 10px;
+ }
+}
+
+.create_group .container {
+ margin: 80px 50px 30px;
+ padding: 20px 10px;
+ background-color: white;
+ border-radius: 10px;
+ box-shadow: var(--main-box-shadow);
+ width: 25%;
+ height: 98%;
+ max-width: 100%;
+ max-height: 100%;
+ animation: none;
+}
+.create_group .container .contain {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: column;
+ row-gap: 18px;
+ width: 100%;
+ animation: none;
+}
+.create_group .container .contain form {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-between;
+ flex-direction: column;
+ width: 100%;
+ height: 340px;
+ row-gap: 30px;
+}
+.create_group .container .contain form  .top {
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ width: 100%;
+ row-gap: 20px;
+}
+
+
+.create_group .container .contain  p {
+ font-size: 11px;
+ font-weight: 500;
+color: #999;
+}
+.create_group .container .contain  p a {
+ font-size: 16px;
+ font-weight: 600;
+ color: rgb(0, 177, 177);
+ transition: .7s ease-in-out;
+}
+.create_group .container .contain  a:hover  {
+ text-decoration: underline rgb(0, 177, 177);
+ color: rgb(114, 221, 185);
+}
+
+.create_group .container .contain h2 {
+ font-weight: 600;
+ font-size: 20px;
+ color: #3339;
+}
+
+.create_group .container .contain .admin {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ column-gap: 10px;
+}
+
+.create_group .container .contain .admin img {
+ border: 2px solid #eee;
+}
+.create_group .container .contain .admin .admin_name {
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ row-gap: 2px;
+}
+.create_group .container .contain .admin .admin_name h3 {
+ font-size: 13px;
+ text-transform: capitalize;
+ font-weight: 600;
+ color: #333;
+}
+.create_group .container .contain .admin .admin_name span {
+ font-size: 10px;
+ color: #999;
+}
+
+.create_group .container .contain form input{
+ width: 100%;
+ padding: 10px 15px;
+ caret-color: aquamarine;
+ outline: none;
+ border: 1px solid #d8d9da;
+ border-radius: 10px;
+ transition: 0.6s ease-in-out;
+}
+.create_group .container .contain form input::placeholder {
+ font-size: 12px;
+ text-transform: capitalize;
+ color: #999;
+}
+
+.create_group .container .contain form input:hover,
+.create_group .container .contain form .select:hover {
+ border-color: rgb(213, 247, 255);
+ background-color: #eee4;
+}
+
+.select {
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ width: 100%;
+ padding: 10px 15px;
+ border: 1px solid #d8d9da;
+ border-radius: 10px;
+ row-gap: 3px;
+ transition: 0.6s ease-in-out;
+}
+.select label {
+ font-size: 12px;
+ text-transform: capitalize;
+ color: #999;
+
+}
+.select:hover label,
+.create_group .container .contain form input:hover::placeholder {
+ color: rgb(2, 175, 255);
+}
+
+.select select {
+ border: 1px solid rgb(231, 231, 231);
+ padding: 5px;
+ outline: none;
+ font-size: 14px;
+ color: rgb(139, 135, 135);
+ border-radius: 10px;
+}
+.select select option {
+ border: 1px solid #eee;
+}
+
+
+
+.create_group .container .contain form > input:last-of-type:hover {
+ background-color: #1a6ed8;
+ color: #fff;
+}
