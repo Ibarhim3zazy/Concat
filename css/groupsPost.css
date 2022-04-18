@@ -7,9 +7,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%); */
-    margin: 55px auto;
+    /* margin: 55px auto; */
+    margin-top: 80px;
     height: fit-content;
     width: 470px;
+    max-width: 100%;
 }
 
 .designPost .contain {

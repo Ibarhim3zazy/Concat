@@ -1,0 +1,118 @@
+
+.home {
+ display: flex;
+  align-items: center;
+ justify-content: space-between;
+}
+
+
+.home .container {
+ display: grid;
+ align-items: flex-start;
+ justify-content: space-between;
+ grid-template-columns: 27%  50%  20%;
+ column-gap: 100px;
+}
+
+.home .container .left {
+ width: 100%;
+ position: relative;
+ z-index: 2;
+ background-color: #fff;
+ padding: 5px 15px 10px;
+ box-shadow: var(--main-box-shadow);
+ border-radius: 10px;
+}
+.home .container .left .contain {
+ display: flex;
+ align-items: flex-start;
+ flex-direction: column;
+ row-gap: 20px;
+ justify-content: center;
+}
+.home .container .left .contain  h1 {
+ font-weight: 600;
+ font-size: 23px;
+ color: #999;
+}
+.home .container .left .contain >  a {
+max-width: 100%;
+padding: 10px 20px;
+background-color: rgb(119, 217, 255);
+color: rgb(255, 255, 255);
+text-align: center;
+width: 100%;
+font-size: 14px;
+transition: 0.8s ease-in-out;
+border-radius: 10px;
+}
+
+.home .container .left .contain >  a:hover {
+ background-color: rgba(119, 216, 255, 0.582);
+ color: rgb(70, 70, 70);
+}
+
+.home .container .left .contain .manager {
+ width: 100%;
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ row-gap: 15px;
+}
+
+.home .container .left .contain .manager h2 {
+ font-weight: 600;
+ font-size: 15px;
+ color: #999;
+}
+
+.home .container .left .contain .manager .box {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-between;
+ padding: 5px 0px;
+ border-radius: 10px;
+ flex-direction: column;
+ row-gap: 10px;
+ width: 100%;
+}
+.home .container .left .contain .manager .box  a {
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ width: 100%;
+ padding: 5px 10px;
+ column-gap: 20px;
+ transition: .4s ease-in-out;
+ border-radius: 10px;
+}
+
+.home .container .left .contain .manager .box  a:hover {
+background-color: #eee;
+}
+.home .container .left .contain .manager .box  a img {
+ width: 50px !important;
+ height: 50px !important;
+ border-radius: 10px;
+ border: 2px solid #fff;
+}
+.home .container .left .contain .manager .box  a h3 {
+ font-weight: 600;
+ font-size: 13px;
+ color: rgb(121, 120, 120);
+ width: 110px;
+ max-width: 100%;
+ word-wrap: break-word;
+ line-height: 1.5;
+}
+.home .container .left .contain .manager .box  a .namegroup {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ column-gap: 20px;
+}
+.home .container .left .contain .manager .box  a  > i {
+ color: rgb(0, 126, 230);
+ margin-left: 40px;
+}
