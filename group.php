@@ -74,3 +74,4 @@
   </div>
  </div>
 </div>
+<?php require 'friendsChat.php'; ?>
