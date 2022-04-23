@@ -15,7 +15,7 @@
     <div class="manager">
      <h2>Groups you've managed</h2>
      <div class="box">
-      <a href="" style="width: 100%;">
+      <a href="groupName.php" style="width: 100%;">
        <div class="namegroup">
         <img src="user_media/image/bear.jpg" alt="" width="100px" height="100px">
         <h3>Aesthetics Art Aest Ar sqas</h3>

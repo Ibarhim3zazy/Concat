@@ -16,7 +16,7 @@
      <span>Admin</span>
     </div>
    </div>
-   <form action="">
+   <form action="groupName.php">
     <div class="top">
      <input type="text" name="groupName" placeholder="Group Name" required>
      <div class="select">
