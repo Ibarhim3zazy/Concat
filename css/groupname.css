@@ -5,30 +5,195 @@ body {
 
 header {
  width: 100%;
- height: 510px;
+ height: 490px;
  overflow-y: hidden;
  background-color: white;
  box-shadow: 0px 0px 3px 0px #999;
- background-image: linear-gradient(to bottom , rgb(167, 167, 167), white);
+ background-image: linear-gradient(to bottom , rgba(202, 202, 202, 0.548), white);
  display: flex;
  align-items: flex-start;
  justify-content: center;
 }
 
 header .container {
- width: 850px;
+ width: 68%;
+ height: 100%;
  max-width: 100%;
-}
-
-header .container .contains {
- width: 100%;
  display: flex;
- align-items: center;
+ align-items: flex-start;
+ justify-content: flex-start;
  flex-direction: column;
 }
 
-header .container .contains .cover img {
+
+header .container .cover {
  width: 100%;
  height: 300px;
- border-radius: 10px;
+ position: relative;
 }
+
+header .container  .cover img {
+ width: 100%;
+ max-width: 100%;
+ max-height: 100%;
+ background-repeat: no-repeat;
+ background-clip: border-box;
+ background-size: cover;
+ border-radius: 5px;
+}
+
+header .container  .cover p {
+position: absolute;
+width: 100%;
+height: 33px;
+background-color: #ff7a38;
+bottom: 0px;
+left: 0;
+color: #fff;
+font-size: 12px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding-left: 10px;
+border-radius: 0 0 5px 5px;
+
+}
+
+header .container  .cover p a {
+ color: #fff;
+ font-size: 14px;
+ padding-left: 5px;
+ text-shadow: 0 0 4px #999;
+ transition: 0.5s ease-in-out;
+ text-transform: capitalize;
+}
+header .container  .cover p a:hover {
+ text-decoration: underline #fff;
+ color: rgb(155, 72, 4);
+}
+
+header .container .contains {
+ max-width: 100%;
+ display: flex;
+ align-items: flex-start;
+ /* justify-content: center; */
+ flex-direction: column;
+ background-color: #fff;
+ width: 100%;
+ height: 100%;
+ border-radius: 5px 5px 0px 0px ;
+ row-gap: 10px;
+}
+
+header .container .contains  .info {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-between;
+ width: 100%;
+ padding: 30px 20px;
+}
+header .container .contains  .info .right,
+ header .container .contains  .info .left{
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ row-gap: 10px;
+}
+header .container .contains  .info .left {
+ flex-direction: row;
+ column-gap: 10px;
+ position: relative;
+}
+
+header .container .contains  .info .right h2 {
+ font-size: 22px;
+ font-weight: 600;
+ text-shadow: 1px 1px 5px rgb(160, 160, 160);
+ color: rgb(66, 66, 66);
+ text-transform: capitalize;
+}
+header .container .contains  .info .right p {
+ font-size: 12px;
+ color: rgb(80, 80, 80);
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ column-gap: 5px;
+}
+
+header .container .contains  .info .right p a {
+ font-size: 12px;
+ color: rgb(80, 80, 80);
+ transition: 0.3s ease-in-out;
+}
+header .container .contains  .info .right p a:hover {
+ color: #ff6d24;
+ text-decoration: #ff6e25 underline;
+}
+
+header .container .contains  .info .left .joinbtn {
+ display: flex;
+ align-items:center;
+ flex-direction: column;
+}
+
+header .container .contains  .info .left .joinbtn ul {
+ display: flex;
+ align-items: flex-end;
+ justify-content: center;
+ flex-direction: column;
+ /* row-gap: 9px; */
+ background-color: #fff0e9;
+ padding: 0 9px;
+ position: absolute;
+ /* width: 144px; */
+ /* height: 153px; */
+ bottom: -120px;
+ left: -104px;
+ border: 1px solid #e1e1e1b8;
+ border-radius: 10px;
+ display: none;
+}
+
+header .container .contains  .info .left .joinbtn ul > button {
+ width: 80px;
+ margin: 7px 0;
+}
+
+header .container .contains  .info .left .joinbtn ul > button {
+ background-color: #fff;
+}
+
+header .container .contains  .info .left button {
+ background-color: transparent;
+ border: none;
+ outline: none;
+ cursor: pointer;
+ padding:7px 15px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ column-gap: 8px;
+ /* width: 120px; */
+ max-width: 200px;
+ background-color: rgba(238, 238, 238, 0.575);
+ color: rgb(66, 66, 66);
+ border-radius: 5px;
+ font-size: 14px;
+ text-transform: capitalize;
+ box-shadow: 0px 0px 2px 0px #999;
+}
+header .container .contains  .info .left button i {
+ color: #d39393;
+}
+header .container .contains  .info .left> button:first-of-type ,
+ header .container .contains  .info .left> button:first-of-type i{
+ background-color: #ff6d24;
+ color: #fff;
+}
+
+
+
+
+
