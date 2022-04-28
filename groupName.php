@@ -39,17 +39,88 @@
  </div>
 </header>
 <div class="main">
+
  <div class="container">
+
   <div class="contains">
-   <?php
-        require 'CreatePost.php';
-      ?>
-   <div class="leftSide">
-    <div class="groupone">
-     <h2>About</h2>
-    </div>
+
+   <div class="post">
+    <?php
+    require 'CreatePost.php';
+    ?>
    </div>
+
+   <div class="leftSide">
+
+    <div class="group one">
+
+     <div class="box">
+      <h3>About</h3>
+      <hr>
+      <p>
+       لا أحد يفهم الجمال الا أولئك الذين جرحتهم السعادة
+      </p>
+     </div>
+
+     <div class="box">
+      <i class="fa-solid fa-earth-africa"></i>
+      <div class="minBox">
+       <h3>Public</h3>
+       <p>
+        Anyone can see who's in the group and what they post.
+       </p>
+      </div>
+     </div>
+
+     <div class="box">
+      <i class="fa-solid fa-eye"></i>
+      <div class="minBox">
+       <h3>Visible</h3>
+       <p>
+        Anyone can find this group.
+       </p>
+      </div>
+     </div>
+
+     <div class="box">
+      <i class="fa-solid fa-users"></i>
+      <div class="minBox">
+       <h3>General</h3>
+      </div>
+     </div>
+
+     <div class="box">
+      <i class="fa-solid fa-clock"></i>
+      <div class="minBox">
+       <h3>History</h3>
+       <p>
+        Group created on March 26, 2020
+       </p>
+      </div>
+     </div>
+
+    </div>
+
+    <div class="group two">
+
+     <h3>Group rules</h3>
+     <hr>
+     <ol start="1">
+      <li>
+       عندما يتم رفض منشور او فيديو ايا كان.. لاي عضو، من فضلك الرجوع لقواعد الجروب او الادمن ممنوع
+       المناقشة في التعليقات.
+      </li>
+      <li>
+       welcome here bro..
+      </li>
+     </ol>
+    </div>
+
+   </div>
+
   </div>
+
  </div>
+
 </div>
 <script src="js/groupname.js"></script>
