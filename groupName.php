@@ -56,8 +56,8 @@
 
      <div class="box">
       <h3>About</h3>
-      <hr>
-      <p>
+      <hr size="1" color="#eee" width="100%" style="margin: 7px 0 10px;">
+      <p class="intro">
        لا أحد يفهم الجمال الا أولئك الذين جرحتهم السعادة
       </p>
      </div>
@@ -82,11 +82,18 @@
       </div>
      </div>
 
+
+
      <div class="box">
       <i class="fa-solid fa-users"></i>
       <div class="minBox">
        <h3>General</h3>
       </div>
+     </div>
+
+     <div class="box">
+      <i class="fa-brands fa-meetup"></i>
+      <a href="member.php">Members <span>1.3K</span></a>
      </div>
 
      <div class="box">
@@ -104,7 +111,8 @@
     <div class="group two">
 
      <h3>Group rules</h3>
-     <hr>
+
+     <hr size="1" color="#eee" width="100%">
      <ol start="1">
       <li>
        عندما يتم رفض منشور او فيديو ايا كان.. لاي عضو، من فضلك الرجوع لقواعد الجروب او الادمن ممنوع
@@ -116,6 +124,20 @@
      </ol>
     </div>
 
+    <!--  Media Box
+      <div class="group three">
+     <div class="box">
+      <h3>Recent media</h3>
+      <div class="media">
+       <img src="user_media/image/one.jpg" alt="">
+       <img src="user_media/image/two.jpg" alt="">
+       <img src="user_media/image/three.jpg" alt="">
+       <img src="user_media/image/four.jpg" alt="">
+      </div>
+      <a href="media_group.php"></a>
+     </div>
+    </div> -->
+
    </div>
 
   </div>
@@ -123,4 +145,5 @@
  </div>
 
 </div>
+<a href="#" class="back"><i class="fa-solid fa-arrows-rotate"></i></a>
 <script src="js/groupname.js"></script>
