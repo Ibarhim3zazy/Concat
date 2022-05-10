@@ -10,8 +10,8 @@
  display: grid;
  align-items: flex-start;
  justify-content: space-between;
- grid-template-columns: 27%  50%  20%;
- column-gap: 100px;
+ grid-template-columns: 25.5%  50%  20%;
+ column-gap: 160px;
 }
 
 .home .container .left {
@@ -22,8 +22,10 @@
  padding: 5px 15px 10px;
  box-shadow: var(--main-box-shadow);
  border-radius: 10px;
+ margin: 30px 45px;
 }
 .home .container .left .contain {
+ width: 100%;
  display: flex;
  align-items: flex-start;
  flex-direction: column;

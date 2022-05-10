@@ -2,7 +2,7 @@
 .header {
     height: 70px;
     /* overflow: hidden; */
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     position: sticky;
     top: 0;
