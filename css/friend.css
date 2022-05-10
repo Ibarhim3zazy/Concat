@@ -41,19 +41,30 @@
 }
 
 .friend .container .title  a {
-    color: var(--main-color);
+    color: rgb(4, 172, 223);
     font-size: 15px;
     font-weight: 600;
     text-transform: capitalize;
     padding: 10px 15px;
     transition: .5s ease-in-out;
-    
+}
+
+.friend .container .title .con_friend p { 
+    color: rgb(104, 133, 136);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    transition: .5s ease-in-out;
+    /* margin-right: 10px; */
 }
 .friend .container .title  a:hover {
     background-color: rgba(238, 238, 238, 0.26);
     color: var(--main-color-hover);
     border-radius: 10px;
 }
+
+
 
 .friend .container .title .con_friend  .search {
     background-color: rgb(240, 240, 240);

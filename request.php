@@ -21,7 +21,7 @@
   <div class="container">
    <div class="title">
     <div class="con_friend">
-     <a href="request.php">Friend Requests</a>
+     <p>Friend Requests</p>
      <div class="search">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="search" id="search" placeholder="search">
