@@ -37,7 +37,7 @@
         </a>
        </div>
        <div class="courses">
-        <a href="">
+        <a href="courses.php">
          <i class="fa-solid fa-book"></i>
          <span>
           Courses
@@ -381,10 +381,16 @@
          </li>
          <li class="center">
           <div class="con_center">
-           <a href="">
+
+           <a href="portfolio.php">
+            <i class="fa-solid fa-podcast"></i>
+            Portfolio
+           </a>
+
+           <!-- <a href="">
             <i class="fa-solid fa-award"></i>
             Example
-           </a>
+           </a> -->
           </div>
          </li>
          <li class="setting">

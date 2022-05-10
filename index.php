@@ -77,7 +77,7 @@
   </div>
   <div class="parttwo_icons boxmain">
    <div class="box">
-    <a href="">
+    <a href="friends.php">
      <i class="fa-solid fa-user-group"></i>
      <span>Friends</span>
     </a>
@@ -89,7 +89,7 @@
     </a>
    </div>
    <div class="box">
-    <a href="">
+    <a href="courses.php">
      <i class="fa-solid fa-book"></i>
      <span>
       Courses
@@ -97,7 +97,7 @@
     </a>
    </div>
    <div class="box">
-    <a href="">
+    <a href="saved.php">
      <i class="fa-solid fa-bookmark"></i>
      <span>
       Saved
@@ -105,7 +105,7 @@
     </a>
    </div>
    <div class="box">
-    <a href="">
+    <a href="pages.php">
      <i class="fa-solid fa-pager"></i>
      <span>Pages</span>
     </a>
