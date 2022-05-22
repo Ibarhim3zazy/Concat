@@ -6,6 +6,7 @@
 
 <div class="addCourse-container">
  <div class="container">
+
   <form action="courses.php" method="get">
    <div class="together">
     <div class="department sec">
