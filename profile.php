@@ -139,9 +139,9 @@
 
  </div>
  <div class="middle">
-  <?php
-                require 'CreatePost.php';
-            ?>
+<?php
+      require 'CreatePost.php';
+?>
  </div>
  <div class="links">
   <a href="profile.php" class="pinAccount">

@@ -267,12 +267,14 @@
     background-color: #f0f1f4;
 }
 
-.pop_post .container .post #post_form .options .list  .photo a i {
+.pop_post .container .post #post_form .options .list  .photo label i {
     color: #41b35d;
+    cursor: pointer;
 }
 
-.pop_post .container .post #post_form .options .list  .video a i  {
+.pop_post .container .post #post_form .options .list  .video label i  {
     color: #e73f5a;
+    cursor: pointer;
 }
 
 .pop_post .container .post #post_form .options .list  .link a i {

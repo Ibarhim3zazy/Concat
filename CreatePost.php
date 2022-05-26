@@ -1,6 +1,6 @@
     <link rel="stylesheet" href="css/post.css">
 
-    <?php require_once 'mail_check_ajax.php'; ?>
+<?php require 'post_ajax.php';?>
 
     <div class="create_post">
      <div class="container">
@@ -49,16 +49,12 @@
           <p>Add to your post</p>
           <ul class="list">
            <li class="photo">
-            <a href=""><i class="fa-solid fa-images"></i></a>
+            <label for="inputUploadImg"><i class="fa-solid fa-images"></i></label>
+            <input id="inputUploadImg" name="inputUploadImg" type="file" style="display: none;" accept="image/*"/>
            </li>
            <li class="video">
-            <a href=""><i class="fa-solid fa-video"></i></a>
-           </li>
-           <li class="link">
-            <a href=""><i class="fa-solid fa-link"></i></a>
-           </li>
-           <li class="tag_friends">
-            <a href=""><i class="fa-solid fa-user-tag"></i></a>
+            <label for="inputUploadVid"><i class="fa-solid fa-video"></i></label>
+            <input id="inputUploadVid" name="inputUploadVid" type="file" style="display: none;" accept="video/*"/>
            </li>
           </ul>
          </div>
@@ -158,163 +154,15 @@
 
     <!-- change design post -->
     <!-- ======================= only video==================================== -->
-    <div class="designPost" id="designPost">
-     <div class="contain">
-      <div class="box_1">
-       <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
-          style="border-radius: 50%;" height="50px">
-         <span
-          style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
-        </a>
-        <div class="infoProfile">
-         <div class="userName">
-          <a href="profile.php">
-           User Name
-          </a>
-         </div>
-         <div class="data">
-          <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
-          <i class="fas fa-user-friends"></i>
-         </div>
-        </div>
-       </div>
-       <span class="more">
-        <i class="fa-solid fa-angle-down"></i>
-       </span>
-      </div>
-      <div class="box_2" id="boxTwo">
-       <video src="user_media/videos/n.mp4" controls></video>
-      </div>
-      <div class="box_3">
-       <div class="box_container">
-        <div id="like">
-         <i class="fa-solid fa-thumbs-up"></i>
-        </div>
-        <div class="com" id="com">
-         <i class="fa-solid fa-comments"></i>
-        </div>
-        <div class="share" id="share">
-         <i class="fa-solid fa-share-nodes"></i>
-        </div>
-       </div>
-       <div class="save" id="save">
-        <i class="fa-solid fa-bookmark"></i>
-       </div>
-      </div>
 
-     </div>
-    </div>
-    <!-- ============================ words with video =======================================-->
-    <div class="designPost" id="designPost">
-     <div class="contain">
-      <div class="box_1">
-       <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
-          style="border-radius: 50%;" height="50px">
-         <span
-          style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
-        </a>
-        <div class="infoProfile">
-         <div class="userName">
-          <a href="profile.php">
-           User Name
-          </a>
-         </div>
-         <div class="data">
-          <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
-          <i class="fas fa-user-friends"></i>
-         </div>
-        </div>
-       </div>
-       <span class="more">
-        <i class="fa-solid fa-angle-down"></i>
-       </span>
-      </div>
-      <div class="box_2" id="boxTwo">
-       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quia optio molestias. Neque repudiandae,
-        aspernatur velit molestiae commodi dolorum distinctio iure nobis aliquam dolor modi quisquam dolorem ratione
-        minima adipisci.
-       </p>
-       <video src="user_media/videos/n.mp4" controls></video>
-      </div>
-      <div class="box_3">
-       <div class="box_container">
-        <div id="like">
-         <i class="fa-solid fa-thumbs-up"></i>
-        </div>
-        <div class="com" id="com">
-         <i class="fa-solid fa-comments"></i>
-        </div>
-        <div class="share" id="share">
-         <i class="fa-solid fa-share-nodes"></i>
-        </div>
-       </div>
-       <div class="save" id="save">
-        <i class="fa-solid fa-bookmark"></i>
-       </div>
-      </div>
+    <?php veiw_post($con, htmlentities($row['personal_pic']));?>
 
-     </div>
-    </div>
-    <!--========================= only image========================================== -->
-    <div class="designPost" id="designPost">
-     <div class="contain">
-      <div class="box_1">
-       <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
-          style="border-radius: 50%;" height="50px">
-         <span
-          style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
-        </a>
-        <div class="infoProfile">
-         <div class="userName">
-          <a href="profile.php">
-           User Name
-          </a>
-         </div>
-         <div class="data">
-          <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
-          <i class="fas fa-user-friends"></i>
-         </div>
-        </div>
-       </div>
-       <span class="more">
-        <i class="fa-solid fa-angle-down"></i>
-       </span>
-      </div>
-      <div class="box_2" id="boxTwo">
-       <img src="user_media/image/background.jpg" alt="">
-      </div>
-      <div class="box_3">
-       <div class="box_container">
-        <div id="like">
-         <i class="fa-solid fa-thumbs-up"></i>
-        </div>
-        <div class="com" id="com">
-         <i class="fa-solid fa-comments"></i>
-        </div>
-        <div class="share" id="share">
-         <i class="fa-solid fa-share-nodes"></i>
-        </div>
-       </div>
-       <div class="save" id="save">
-        <i class="fa-solid fa-bookmark"></i>
-       </div>
-      </div>
-
-     </div>
-    </div>
     <!--========================= only multiy image========================================== -->
-    <div class="designPost" id="designPost">
+    <!-- <div class="designPost" id="designPost">
      <div class="contain">
       <div class="box_1">
        <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
+        <a href="profile.php"><img src="" alt="" width="50"
           style="border-radius: 50%;" height="50px">
          <span
           style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
@@ -325,9 +173,9 @@
            User Name
           </a>
          </div>
-         <div class="data">
+         <div class="data"> -->
           <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
+        <!--  <a href="">13m <i class="fa-solid fa-clock"></i></a>
           <i class="fas fa-user-friends"></i>
          </div>
         </div>
@@ -367,120 +215,14 @@
       </div>
 
      </div>
-    </div>
-    <!-- ================================ words with image============================================ -->
-    <div class="designPost" id="designPost">
-     <div class="contain">
-      <div class="box_1">
-       <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
-          style="border-radius: 50%;" height="50px">
-         <span
-          style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
-        </a>
-        <div class="infoProfile">
-         <div class="userName">
-          <a href="profile.php">
-           User Name
-          </a>
-         </div>
-         <div class="data">
-          <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
-          <i class="fas fa-user-friends"></i>
-         </div>
-        </div>
-       </div>
-       <span class="more">
-        <i class="fa-solid fa-angle-down"></i>
-       </span>
-      </div>
-      <div class="box_2" id="boxTwo">
-       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum hic aperiam consectetur temporibus dolores
-        molestiae quod labore impedit, vel molestias dolor magnam incidunt, amet vitae culpa. Distinctio doloremque
-        libero odit?
-       </p>
-       <img src="user_media/image/background.jpg" alt="">
-      </div>
-      <div class="box_3">
-       <div class="box_container">
-        <div id="like">
-         <i class="fa-solid fa-thumbs-up"></i>
-        </div>
-        <div class="com" id="com">
-         <i class="fa-solid fa-comments"></i>
-        </div>
-        <div class="share" id="share">
-         <i class="fa-solid fa-share-nodes"></i>
-        </div>
-       </div>
-       <div class="save" id="save">
-        <i class="fa-solid fa-bookmark"></i>
-       </div>
-      </div>
+    </div> -->
 
-     </div>
-    </div>
-    <!-- ================================ only words ============================================ -->
-    <div class="designPost" id="designPost">
-     <div class="contain">
-      <div class="box_1">
-       <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
-          style="border-radius: 50%;" height="50px">
-         <span
-          style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
-        </a>
-        <div class="infoProfile">
-         <div class="userName">
-          <a href="profile.php">
-           User Name
-          </a>
-         </div>
-         <div class="data">
-          <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
-          <i class="fas fa-user-friends"></i>
-         </div>
-        </div>
-       </div>
-       <span class="more">
-        <i class="fa-solid fa-angle-down"></i>
-       </span>
-      </div>
-      <div class="box_2" id="boxTwo">
-       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum hic aperiam consectetur temporibus dolores
-        molestiae quod labore impedit, vel molestias dolor magnam incidunt, amet vitae culpa. Distinctio doloremque
-        libero odit?
-       </p>
-      </div>
-      <div class="box_3">
-       <div class="box_container">
-        <div id="like">
-         <i class="fa-solid fa-thumbs-up"></i>
-        </div>
-        <div class="com" id="com">
-         <i class="fa-solid fa-comments"></i>
-        </div>
-        <div class="share" id="share">
-         <i class="fa-solid fa-share-nodes"></i>
-        </div>
-       </div>
-       <div class="save" id="save">
-        <i class="fa-solid fa-bookmark"></i>
-       </div>
-      </div>
-
-     </div>
-    </div>
     <!-- ================================ words with link ============================================ -->
-    <div class="designPost" id="designPost">
+    <!-- <div class="designPost" id="designPost">
      <div class="contain">
       <div class="box_1">
        <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
+        <a href="profile.php"><img src="" alt="" width="50"
           style="border-radius: 50%;" height="50px">
          <span
           style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
@@ -491,9 +233,9 @@
            User Name
           </a>
          </div>
-         <div class="data">
+         <div class="data"> -->
           <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
+          <!-- <a href="">13m <i class="fa-solid fa-clock"></i></a>
           <i class="fas fa-user-friends"></i>
          </div>
         </div>
@@ -529,13 +271,13 @@
       </div>
 
      </div>
-    </div>
+    </div> -->
     <!-- ================================ link ============================================ -->
-    <div class="designPost" id="designPost">
+    <!-- <div class="designPost" id="designPost">
      <div class="contain">
       <div class="box_1">
        <div class="image">
-        <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="50"
+        <a href="profile.php"><img src="" alt="" width="50"
           style="border-radius: 50%;" height="50px">
          <span
           style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
@@ -546,9 +288,9 @@
            User Name
           </a>
          </div>
-         <div class="data">
+         <div class="data"> -->
           <!-- date must be changed -->
-          <a href="">13m <i class="fa-solid fa-clock"></i></a>
+          <!-- <a href="">13m <i class="fa-solid fa-clock"></i></a>
           <i class="fas fa-user-friends"></i>
          </div>
         </div>
@@ -578,5 +320,5 @@
       </div>
 
      </div>
-    </div>
+    </div> -->
     <script src="js/post.js"></script>

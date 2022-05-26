@@ -45,6 +45,7 @@
  justify-content: center;
  flex-direction: column;
  row-gap: 30px;
+ margin: auto;
 }
 
 .addCourse-container form .together {
@@ -82,7 +83,7 @@
  row-gap: 5px;
  background-color: #2f3640;
  border-radius: 10px;
- 
+
 }
 .addCourse-container .text-box label {
  font-size: 14px;

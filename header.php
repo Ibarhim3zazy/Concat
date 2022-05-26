@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/header.css">
     <script src="js/jquery-3.6.0.js"></script>
 
-    <?php require_once 'mail_check_ajax.php'; ?>
+    <?php require_once 'general_ajax.php';
+      GetPersonalInfo($con);
+     ?>
 
     <div class="header" id="header">
      <div class="container">
