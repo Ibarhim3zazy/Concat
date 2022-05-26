@@ -140,27 +140,33 @@ function veiw_post($con, $PersonalPicture)
        <video src="video___post/'.htmlentities($veiw_row['videos']).'" controls></video>
 ';
   }
-  echo '
-  </div>
-  <div class="box_3">
-   <div class="box_container">
-    <div id="like">
-     <i class="fa-solid fa-thumbs-up"></i>
+  $post_id = htmlentities($veiw_row['post_id']);
+  $post_like_result= $con->query("SELECT * FROM post_like WHERE post_id='$post_id' ORDER BY id DESC;");
+  $veiw_post_like_num = $con->affected_rows;
+  if($post_like_result == true){
+    echo '
     </div>
-    <div class="com" id="com">
-     <i class="fa-solid fa-comments"></i>
-    </div>
-    <div class="share" id="share">
-     <i class="fa-solid fa-share-nodes"></i>
+    <div class="box_3">
+     <div class="box_container">
+      <div id="like">
+        <a href="javascript:">'.$veiw_post_like_num.' </a>
+        <i class="fa-solid fa-thumbs-up"></i>
+      </div>
+      <div class="com" id="com">
+       <i class="fa-solid fa-comments"></i>
+      </div>
+      <div class="share" id="share">
+       <i class="fa-solid fa-share-nodes"></i>
+      </div>
+     </div>
+     <div class="save" id="save">
+      <i class="fa-solid fa-bookmark"></i>
+     </div>
     </div>
    </div>
-   <div class="save" id="save">
-    <i class="fa-solid fa-bookmark"></i>
-   </div>
   </div>
- </div>
-</div>
-  ';
+    ';
+  }
     // else {
     //   header("location: log_in.php");
     //   die;
