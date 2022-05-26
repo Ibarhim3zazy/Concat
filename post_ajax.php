@@ -112,15 +112,15 @@ function veiw_post($con, $PersonalPicture)
              </div>
             <div class="box_2" id="boxTwo">
         ';
-        if (htmlentities($veiw_row['contain']) == 1) {
-          echo '
-             <p>'.htmlentities($veiw_row['post_content']).'</p>
-          ';
-    }
-    if (htmlentities($veiw_row['contain']) == 2) {
-      echo '
-         <img src="img___post/'.htmlentities($veiw_row['image']).'" alt="">
-';
+  if (htmlentities($veiw_row['contain']) == 1) {
+    echo '
+       <pre>'.htmlentities($veiw_row['post_content']).'</pre>
+    ';
+  }
+  if (htmlentities($veiw_row['contain']) == 2) {
+    echo '
+       <img src="img___post/'.htmlentities($veiw_row['image']).'" alt="">
+  ';
   }
   if (htmlentities($veiw_row['contain']) == 3){
     echo '
