@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2022 at 03:27 PM
+-- Generation Time: May 26, 2022 at 05:54 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -53,7 +53,21 @@ INSERT INTO `posting` (`id`, `post_id`, `user_id`, `post_content`, `image`, `vid
 (196, 1704861124, 396084773, 'WES:OIDFjOISD\r\nSDFi;oS:Edf\r\nSDfcnfJPOES:FDKc\r\nESJIDFhciOESdfklc\r\nWESDFIUhcIUWESfd\r\n]WESIODFiuSEnfdiucx', '0', '0', '0', 0, 0, '2022-05-26 12:25:33', 1),
 (198, 216974817, 396084773, 'Post', 'BLOG_ganhardinheiroemcasa-arabe-670x419.png', '0', '0', 0, 0, '2022-05-26 13:08:08', 4),
 (200, 38669667, 396084773, 'ode', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:20:26', 5),
-(202, 1926007098, 396084773, 'ode \r\nPosted by Ibrahim3zazy', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:22:51', 5);
+(202, 1926007098, 396084773, 'ode \r\nPosted by Ibrahim3zazy', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:22:51', 5),
+(203, 724320340, 396084773, 'cgyvbh', '0', '0', '0', 0, 0, '2022-05-26 15:32:07', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post_like`
+--
+
+CREATE TABLE `post_like` (
+  `id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `post_like` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -156,6 +170,12 @@ ALTER TABLE `posting`
 ALTER TABLE `posting` ADD FULLTEXT KEY `post_content` (`post_content`);
 
 --
+-- Indexes for table `post_like`
+--
+ALTER TABLE `post_like`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sign_up_doctor`
 --
 ALTER TABLE `sign_up_doctor`
@@ -200,7 +220,13 @@ ALTER TABLE `sign_up_user`
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
+
+--
+-- AUTO_INCREMENT for table `post_like`
+--
+ALTER TABLE `post_like`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sign_up_doctor`
