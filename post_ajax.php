@@ -64,9 +64,10 @@ function create_post($con, $image_name, $video_name) {
       }
       echo $image_name.'*****'.$video_name.'*****';
 
-      $post_id = rand();
+      $post_id[] = rand();
+      shuffle($post_id);
       $user_id = $_SESSION['user_id'];
-      $result = $con->query("INSERT INTO posting VALUES(NULL, '$post_id', '$user_id', '$post_content', '$image_name', '$video_name','0', '0', '0', NULL, '$contain');");
+      $result = $con->query("INSERT INTO posting VALUES(NULL, '$post_id[0]', '$user_id', '$post_content', '$image_name', '$video_name','0', '0', '0', NULL, '$contain');");
         if ($result == true) {
           echo 'success';
         }else {
@@ -78,7 +79,7 @@ function veiw_post($con, $PersonalPicture)
 {
   if (isset($_SESSION['user_id']) == true) {
     $user_id = $_SESSION['user_id'];
-    $veiw_result= $con->query("SELECT * FROM posting WHERE user_id='$user_id' LIMIT 20;");
+    $veiw_result= $con->query("SELECT * FROM posting WHERE user_id='$user_id' ORDER BY id DESC LIMIT 20;");
     $veiw_num = $con->affected_rows;
     if($veiw_num != 0 && $veiw_result == true){
       while ($veiw_row = $veiw_result-> fetch_assoc()) {
@@ -129,13 +130,13 @@ function veiw_post($con, $PersonalPicture)
   }
   if (htmlentities($veiw_row['contain']) == 4){
     echo '
-       <p>'.htmlentities($veiw_row['post_content']).'</p>
+       <pre>'.htmlentities($veiw_row['post_content']).'</pre>
        <img src="img___post/'.htmlentities($veiw_row['image']).'" alt="">
 ';
   }
   if (htmlentities($veiw_row['contain']) == 5){
     echo '
-       <p>'.htmlentities($veiw_row['post_content']).'</p>
+       <pre>'.htmlentities($veiw_row['post_content']).'</pre>
        <video src="video___post/'.htmlentities($veiw_row['videos']).'" controls></video>
 ';
   }
