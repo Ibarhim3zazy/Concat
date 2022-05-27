@@ -18,7 +18,7 @@
       <div class="con_box_friends">
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -28,7 +28,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -38,7 +38,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -48,7 +48,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -58,7 +58,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -68,7 +68,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -78,7 +78,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -88,7 +88,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>
@@ -98,7 +98,7 @@
        </div>
        <div class="box">
         <div class="min-box">
-         <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
+         <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="130px" height="130px">
          <div class="friendName">
           <h3>user name</h3>
           <p><span>5</span>mutual friends</p>

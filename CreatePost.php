@@ -4,7 +4,7 @@
 
     <div class="create_post">
      <div class="container">
-      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="">
+      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="">
       <span
        style="position: absolute; top:43px; left:42px; width:12px; height:12px;background-color:var(--main-color-success); border-radius:50%;"></span>
       <!-- user name will change so it's variable -->
@@ -29,7 +29,7 @@
         <!--e change -->
         <div id="post_form">
          <div class="contant">
-          <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" style="border-radius: 50%;"
+          <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" style="border-radius: 50%;"
            height="45px">
           <div class="detailes">
            <p>User Name</p>

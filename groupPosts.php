@@ -17,7 +17,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">
@@ -68,7 +68,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative;">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">
@@ -124,7 +124,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative;">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">
@@ -175,7 +175,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative;">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">
@@ -236,7 +236,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative;">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">
@@ -292,7 +292,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative;">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">
@@ -347,7 +347,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative;">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">
@@ -404,7 +404,7 @@
  <div class="contain">
   <div class="box_1">
    <div class="image">
-    <a href="profile.php"><img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
+    <a href="profile.php"><img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px"
       style="border-radius: 50%;" height="40px ; z-index:2; position:relative;">
      <!-- enter to group_name  it is variable-->
      <a href="group.php">

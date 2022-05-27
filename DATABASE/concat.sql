@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2022 at 05:54 PM
+-- Generation Time: May 27, 2022 at 03:32 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -53,8 +53,7 @@ INSERT INTO `posting` (`id`, `post_id`, `user_id`, `post_content`, `image`, `vid
 (196, 1704861124, 396084773, 'WES:OIDFjOISD\r\nSDFi;oS:Edf\r\nSDfcnfJPOES:FDKc\r\nESJIDFhciOESdfklc\r\nWESDFIUhcIUWESfd\r\n]WESIODFiuSEnfdiucx', '0', '0', '0', 0, 0, '2022-05-26 12:25:33', 1),
 (198, 216974817, 396084773, 'Post', 'BLOG_ganhardinheiroemcasa-arabe-670x419.png', '0', '0', 0, 0, '2022-05-26 13:08:08', 4),
 (200, 38669667, 396084773, 'ode', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:20:26', 5),
-(202, 1926007098, 396084773, 'ode \r\nPosted by Ibrahim3zazy', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:22:51', 5),
-(203, 724320340, 396084773, 'cgyvbh', '0', '0', '0', 0, 0, '2022-05-26 15:32:07', 1);
+(202, 1926007098, 396084773, 'ode \r\nPosted by Ibrahim3zazy', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:22:51', 5);
 
 -- --------------------------------------------------------
 
@@ -115,6 +114,7 @@ CREATE TABLE `sign_up_general` (
   `nationality` varchar(10) NOT NULL,
   `social_status` varchar(10) NOT NULL,
   `personal_pic` varchar(100) NOT NULL,
+  `cover_pic` text NOT NULL,
   `type` varchar(25) DEFAULT 'user',
   `access_num` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -123,8 +123,8 @@ CREATE TABLE `sign_up_general` (
 -- Dumping data for table `sign_up_general`
 --
 
-INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `type`, `access_num`) VALUES
-(16, 396084773, 'Admin', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'images/user.png', 'user', 7);
+INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `cover_pic`, `type`, `access_num`) VALUES
+(16, 396084773, 'Admin', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 12);
 
 -- --------------------------------------------------------
 

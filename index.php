@@ -16,7 +16,7 @@
         <div class="container">
             <div class="con_box">
                 <div class="box">
-                    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="35px" height="35px" style="border-radius: 50%;">
+                    <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="35px" height="35px" style="border-radius: 50%;">
                     <span><a href="profile.php">User Name</a></span>
                 </div>
                 <div class="box">
@@ -65,7 +65,7 @@
     <img src="images/background.jpg" alt="">
    </div>
    <div class="profile_pic">
-    <img src="<?= htmlentities($row['personal_pic']); ?>" alt="">
+    <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="">
    </div>
    <div class="profile_name">
     <a href="profile.php"><?= htmlentities($row['name']); ?></a>

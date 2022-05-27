@@ -19,7 +19,7 @@
                   <li>
                       <div class="box" id="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" id="chat1" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" id="chat1" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -32,7 +32,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -45,7 +45,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -58,7 +58,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span></span>
                           </div>
@@ -71,7 +71,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -84,7 +84,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -97,7 +97,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -110,7 +110,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -123,7 +123,7 @@
                   <li>
                       <div class="box">
                           <div>
-                              <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                              <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                   style="border-radius: 50%;">
                               <span class="active"></span>
                           </div>
@@ -139,71 +139,71 @@
               <i class="fa-solid fa-angle-left" id="left"></i>
               <div class="friendsimage">
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
                   <div>
-                      <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
                       <span class="active"></span>
                   </div>
               </div>
@@ -218,7 +218,7 @@
                       <div class="clientHead">
                           <div class="box">
                               <div>
-                                  <img src="<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
+                                  <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px"
                                       style="border-radius: 50%;">
                                   <span class="active"></span>
                               </div>
