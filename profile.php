@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="css/profile.css">
-
+<script>
+  if(window.history.replaceState){
+  	window.history.replaceState(null, null, window.location.href);
+  }
+</script>
 <?php require 'sign_in_ajax.php';
 if(isset($_POST['blocked'])) {
   CheckStatueOfMyFriend($con,'blocked');
@@ -32,17 +36,17 @@ if (isset($_FILES['inputUploadCoverPic']['name']) == true){
 }
 // call header.php
 require_once 'header.php';
-if (isset($_POST['friend_req'])) {
-  $my_id = $_SESSION['user_id'];
-  $friend_id = $_GET['friend_id'];
-  $con->query("INSERT INTO friend_request VALUES(NULL, '$my_id', '$friend_id', 'friend');");
-}elseif (isset($_POST['remove_friend'])) {
-  $my_id = $_SESSION['user_id'];
-  $friend_id = $_GET['friend_id'];
-  $con->query("DELETE FROM friend_request WHERE my_user_id='$my_id' AND freind_user_id='$friend_id' OR freind_user_id='$my_id' AND
-    my_user_id='$friend_id';");
-}
 if (isset($_GET['friend_id'])) {
+  if (isset($_POST['friend_req'])) {
+    $my_id = $_SESSION['user_id'];
+    $friend_id = $_GET['friend_id'];
+    $con->query("INSERT INTO friend_request VALUES(NULL, '$my_id', '$friend_id', 'friend');");
+  }elseif (isset($_POST['remove_friend'])) {
+    $my_id = $_SESSION['user_id'];
+    $friend_id = $_GET['friend_id'];
+    $con->query("DELETE FROM friend_request WHERE my_user_id='$my_id' AND freind_user_id='$friend_id' OR freind_user_id='$my_id' AND
+      my_user_id='$friend_id';");
+  }
   $visitor_id = $_GET['friend_id'];
   GetMyFriendInfo($con,$visitor_id);
 }
