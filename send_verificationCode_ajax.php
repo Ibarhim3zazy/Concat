@@ -1,4 +1,5 @@
-<?php require("connection.php"); session_start();
+<?php require("connection.php");
+if (!isset($_SESSION)) session_start();
 if (isset($_POST['email']) == true) {
   $to_email = $_POST['email'];
   $result= $con->query("SELECT * FROM sign_up_general WHERE email='$to_email';");

@@ -11,3 +11,6 @@ document.getElementById("change_prof_pic_submit").submit();
 function change_cover_pic() {
 document.getElementById("change_cover_pic_submit").submit();
 }
+function addfriend(){
+  document.getElementById("form1").submit();
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2022 at 03:32 PM
+-- Generation Time: May 30, 2022 at 12:03 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `concat`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `friend_request`
+--
+
+CREATE TABLE `friend_request` (
+  `id` int(11) NOT NULL,
+  `my_user_id` int(11) NOT NULL,
+  `freind_user_id` int(11) NOT NULL,
+  `statue` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `friend_request`
+--
+
+INSERT INTO `friend_request` (`id`, `my_user_id`, `freind_user_id`, `statue`) VALUES
+(12, 1319098029, 396084773, 'friend');
 
 -- --------------------------------------------------------
 
@@ -53,7 +73,8 @@ INSERT INTO `posting` (`id`, `post_id`, `user_id`, `post_content`, `image`, `vid
 (196, 1704861124, 396084773, 'WES:OIDFjOISD\r\nSDFi;oS:Edf\r\nSDfcnfJPOES:FDKc\r\nESJIDFhciOESdfklc\r\nWESDFIUhcIUWESfd\r\n]WESIODFiuSEnfdiucx', '0', '0', '0', 0, 0, '2022-05-26 12:25:33', 1),
 (198, 216974817, 396084773, 'Post', 'BLOG_ganhardinheiroemcasa-arabe-670x419.png', '0', '0', 0, 0, '2022-05-26 13:08:08', 4),
 (200, 38669667, 396084773, 'ode', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:20:26', 5),
-(202, 1926007098, 396084773, 'ode \r\nPosted by Ibrahim3zazy', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:22:51', 5);
+(202, 1926007098, 396084773, 'ode \r\nPosted by Ibrahim3zazy', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:22:51', 5),
+(205, 510124601, 1319098029, 'مهارات التواصل', '98-bdee5aمهارات-التواصل.webp', '0', '0', 0, 0, '2022-05-28 08:26:05', 4);
 
 -- --------------------------------------------------------
 
@@ -124,7 +145,8 @@ CREATE TABLE `sign_up_general` (
 --
 
 INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `cover_pic`, `type`, `access_num`) VALUES
-(16, 396084773, 'Admin', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 12);
+(16, 396084773, 'Ibrahim', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 13),
+(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', 1094989981, '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', 'user.png', 'background.jpg', 'user', 2);
 
 -- --------------------------------------------------------
 
@@ -158,6 +180,12 @@ CREATE TABLE `sign_up_user` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `friend_request`
+--
+ALTER TABLE `friend_request`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `posting`
@@ -217,10 +245,16 @@ ALTER TABLE `sign_up_user`
 --
 
 --
+-- AUTO_INCREMENT for table `friend_request`
+--
+ALTER TABLE `friend_request`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=206;
 
 --
 -- AUTO_INCREMENT for table `post_like`
@@ -244,7 +278,7 @@ ALTER TABLE `sign_up_employee`
 -- AUTO_INCREMENT for table `sign_up_general`
 --
 ALTER TABLE `sign_up_general`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `sign_up_student`

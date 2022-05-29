@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="css/profile.css">
 
 <?php require 'sign_in_ajax.php';
+if(isset($_POST['blocked'])) {
+  CheckStatueOfMyFriend($con,'blocked');
+}
 $user_id = $_SESSION['user_id'];
 if (isset($_FILES['inputUploadProfPic']['name']) == true){
   $pic_name = $_FILES['inputUploadProfPic']['name'];
@@ -27,76 +30,172 @@ if (isset($_FILES['inputUploadCoverPic']['name']) == true){
     echo 'Failure_vid';
   }
 }
-
+// call header.php
 require_once 'header.php';
+if (isset($_POST['friend_req'])) {
+  $my_id = $_SESSION['user_id'];
+  $friend_id = $_GET['friend_id'];
+  $con->query("INSERT INTO friend_request VALUES(NULL, '$my_id', '$friend_id', 'friend');");
+}elseif (isset($_POST['remove_friend'])) {
+  $my_id = $_SESSION['user_id'];
+  $friend_id = $_GET['friend_id'];
+  $con->query("DELETE FROM friend_request WHERE my_user_id='$my_id' AND freind_user_id='$friend_id' OR freind_user_id='$my_id' AND
+    my_user_id='$friend_id';");
+}
+if (isset($_GET['friend_id'])) {
+  $visitor_id = $_GET['friend_id'];
+  GetMyFriendInfo($con,$visitor_id);
+}
 ?>
 
 <div class="profile_container">
- <form enctype="multipart/form-data" method="post" class="cover_photo" id="change_cover_pic_submit">
-  <img src="cover___pic/<?= htmlentities($row['cover_pic']); ?>" alt="">
-  <label for="inputUploadCoverPic"><i class="fa-solid fa-camera"></i></label>
-  <input id="inputUploadCoverPic" name="inputUploadCoverPic" type="file" style="display: none;" accept="image/*" onchange="change_cover_pic()"/>
-</form>
- <div class="container">
-  <div class="section_profile">
-   <div class="profile_pic">
-    <form enctype="multipart/form-data" method="post" class="images" id="change_prof_pic_submit">
-     <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="160px" height="160px"
-      style="border-radius: 50%; border : 3px solid #fff;">
-      <label for="inputUploadProfPic"><i class="fa-solid fa-camera"></i></label>
-     <input id="inputUploadProfPic" name="inputUploadProfPic" type="file" style="display: none;" accept="image/*" onchange="change_profile_pic()"/>
-   </form>
-   </div>
-   <div class="profile_name">
-    <div class="rightside">
-     <h2>user name</h2>
-     <div class="friends">
-      <!-- this number will be variable -->
-      <a href="friends.php"><span>1.4K</span> Friends</a>
-      <div class="frindImage">
-       <a href="">
-        <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
-         style="border-radius: 50%;">
-       </a>
-       <a href="">
-        <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
-         style="border-radius: 50%;">
-       </a>
-       <a href="">
-        <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
-         style="border-radius: 50%;">
-       </a>
-       <a href="">
-        <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
-         style="border-radius: 50%;">
-       </a>
-       <a href="">
-        <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
-         style="border-radius: 50%;">
-       </a>
-       <a href="friends.php">
-        <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="40px" height="40px"
-         style="border-radius: 50%;">
-        <span><i class="fa-solid fa-ellipsis"></i></span>
-       </a>
-      </div>
+  <?php
+    if ($_SESSION['user_id'] === $row['user_id']){
+      echo '
+      <form enctype="multipart/form-data" method="post" class="cover_photo" id="change_cover_pic_submit">
+       <img src="cover___pic/'.htmlentities($row['cover_pic']).'" alt="">
+       <label for="inputUploadCoverPic"><i class="fa-solid fa-camera"></i></label>
+       <input id="inputUploadCoverPic" name="inputUploadCoverPic" type="file" style="display: none;" accept="image/*" onchange="change_cover_pic()"/>
+     </form>
+      ';
+    }else {
+      echo '
+      <div class="cover_photo">
+       <img src="cover___pic/'.htmlentities($row['cover_pic']).'" alt="">
      </div>
+      ';
+    }
+   ?>
+ <div class="container">
+   <?php
+    if ($_SESSION['user_id'] !== $row['user_id']){
+      echo '
+        <div class="section_profile" style="align-items: center;">
+      ';
+    }else {
+      echo '
+        <div class="section_profile">
+      ';
+    }
+    ?>
+
+   <div class="profile_pic">
+     <?php
+       if ($_SESSION['user_id'] === $row['user_id']){
+         echo '
+         <form enctype="multipart/form-data" method="post" class="images" id="change_prof_pic_submit">
+          <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="160px" height="160px"
+           style="border-radius: 50%; border : 3px solid #fff;">
+           <label for="inputUploadProfPic"><i class="fa-solid fa-camera"></i></label>
+          <input id="inputUploadProfPic" name="inputUploadProfPic" type="file" style="display: none;" accept="image/*" onchange="change_profile_pic()"/>
+        </form>
+         ';
+       }else {
+         echo '
+         <div class="images">
+          <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="160px" height="160px"
+           style="border-radius: 50%; border : 3px solid #fff;">
+        </div>
+         ';
+
+       }
+      ?>
+   </div>
+   <?php
+    if ($_SESSION['user_id'] !== $row['user_id']){
+      echo '
+        <div class="profile_name" style="margin-top: -15px;">
+      ';
+    }else {
+      echo '
+        <div class="profile_name">
+      ';
+    }
+    ?>
+    <div class="rightside">
+     <h2><?= htmlentities($row['name']); ?></h2>
+     <?php
+      if ($_SESSION['user_id'] === $row['user_id']){
+        echo '
+        <div class="friends">
+         <!-- this number will be variable -->
+         <a href="friends.php"><span>1.4K</span> Friends</a>
+         <div class="frindImage">
+          <a href="">
+           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
+            style="border-radius: 50%;">
+          </a>
+          <a href="">
+           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
+            style="border-radius: 50%;">
+          </a>
+          <a href="">
+           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
+            style="border-radius: 50%;">
+          </a>
+          <a href="">
+           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
+            style="border-radius: 50%;">
+          </a>
+          <a href="">
+           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
+            style="border-radius: 50%;">
+          </a>
+          <a href="friends.php">
+           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
+            style="border-radius: 50%;">
+           <span><i class="fa-solid fa-ellipsis"></i></span>
+          </a>
+         </div>
+        </div>
+        ';
+      }
+      ?>
     </div>
-    <button><i class="fa-solid fa-pen"></i> Edit Profile</button>
+    <?php
+      if ($_SESSION['user_id'] == $row['user_id']){
+        echo '
+        <button><i class="fa-solid fa-pen"></i> Edit Profile</button>
+        ';
+      }
+     ?>
    </div>
    <div class="bioBox">
     <div class="bio">
      σƙҽყ.. <br>
      ιƚ'ʂ σƙҽყ ɳσƚ ƚσ Ⴆҽ σƙҽყ♡..
     </div>
-    <button>Edit Bio</button>
+    <?php
+      if ($_SESSION['user_id'] === $row['user_id']){
+        echo '
+        <button>Edit Bio</button>
+        ';
+      }
+     ?>
   </div>
+
+
   <?php
-    GetPersonalInfo($con);
     if ($_SESSION['user_id'] !== $row['user_id']) {
       echo '
       <div class="client_profile">
-       <button><a href="javascript:"><i class="fa-solid fa-user-plus"></i> Add Buddy</a></button>
+      ';
+      if (CheckStatueOfMyFriend($con,'friend')) {
+        echo '
+        <form method="post" id="form1">
+         <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Remove Friend</a></button>
+         <input type="hidden" name="remove_friend" value="remove_friend">
+        </form>
+        ';
+      }else {
+        echo '
+        <form method="post" id="form1">
+         <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Add Buddy</a></button>
+         <input type="hidden" name="friend_req" value="friend_req">
+        </form>
+        ';
+      }
+      echo '
        <button><a href="javascript:"><i class="fa-brands fa-facebook-messenger"></i> Send
          Message</a></button>
        <span class="more">

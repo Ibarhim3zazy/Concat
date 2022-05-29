@@ -37,7 +37,7 @@ if (isset($_FILES['fileVid']['name']) == true){
 ///////////////////
 if (isset($_POST['post_content']) == true) { create_post($con, $image_name, $video_name); }
 function create_post($con, $image_name, $video_name) {
-  session_start();
+  if (!isset($_SESSION)) session_start();
   if (isset($_SESSION['user_id']) != true) {
     echo "Not_Signed";
     die;
