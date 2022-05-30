@@ -15,7 +15,7 @@
 
 <body>
   <?php session_start(); require("connection.php");
-    
+
   ?>
     <div class="New_pass">
         <div class="container">
@@ -28,6 +28,7 @@
             </p>
             <div class="input">
                 <input type="password" id="password" placeholder="New password">
+                <input type="password" id="password" placeholder="confirm password">
             </div>
             <hr color="#eee" width="100%" size="1">
             <div class="links">

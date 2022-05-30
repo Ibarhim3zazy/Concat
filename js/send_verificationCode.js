@@ -15,6 +15,7 @@ function sending_verificationCode(){
       xmlhttp.onreadystatechange=function()
       {
       	if (xmlhttp.readyState==4 && xmlhttp.status==200){
+					// alert(xmlhttp.responseText.trim());
           if (xmlhttp.responseText.trim() == "Email successfully sent") {
             window.location.href = "../Concat/entercode.php";
           }else {

@@ -18,11 +18,12 @@
   <?php require("connection.php");
   if (isset($_GET['email']) == true) {
     $usermail = $_GET['email'];
-    $result= $con->query("SELECT * FROM sign_up WHERE email='$usermail';");
+    $result= $con->query("SELECT * FROM sign_up_general WHERE email='$usermail';");
       $num = $con->affected_rows;
       if($num != 0 && $result == true){
         $row = $result-> fetch_assoc();
         $userName = $row['name'];
+        $personal_pic = $row['personal_pic'];
       }
   }
   ?>
@@ -36,7 +37,7 @@
                     <p id="email"><?= htmlentities($usermail); ?></p>
                 </div>
                 <div class="right">
-                    <img src="images/cat-1.jpg" alt="">
+                    <img src="profile___pic/<?= htmlentities($personal_pic) ?>" alt="">
                     <h4><?= htmlentities($userName); ?></h4>
                     <h4>Concat User</h4>
                 </div>
