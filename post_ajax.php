@@ -77,8 +77,11 @@ function create_post($con, $image_name, $video_name) {
 }
 function veiw_post($con, $PersonalPicture)
 {
-  if (isset($_SESSION['user_id']) == true) {
+  if (isset($_GET['friend_id']) == true) {
+    $user_id = $_GET['friend_id'];
+  }else {
     $user_id = $_SESSION['user_id'];
+  }
     $veiw_result= $con->query("SELECT * FROM posting WHERE user_id='$user_id' ORDER BY id DESC LIMIT 20;");
     $veiw_num = $con->affected_rows;
     if($veiw_num != 0 && $veiw_result == true){
@@ -172,7 +175,6 @@ function veiw_post($con, $PersonalPicture)
     //   die;
     // }
   }
-}
 }
 }
  ?>

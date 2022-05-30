@@ -29,7 +29,6 @@
               <input type="hidden" name="friend_id" value="'.htmlentities($my_friend_row['user_id']).'">
               </div>
              </div>
-            <button><i class="fa-solid fa-user-xmark"></i> </button>
            </form>
             ';
           }

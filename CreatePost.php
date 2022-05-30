@@ -1,16 +1,19 @@
     <link rel="stylesheet" href="css/post.css">
 
-<?php require 'post_ajax.php';?>
-
-    <div class="create_post">
-     <div class="container">
-      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="">
-      <span
-       style="position: absolute; top:43px; left:42px; width:12px; height:12px;background-color:var(--main-color-success); border-radius:50%;"></span>
-      <!-- user name will change so it's variable -->
-      <input type="button" onclick="showPost()" value="What's on your mind, User Name?">
-     </div>
-    </div>
+<?php require 'post_ajax.php';
+if ($_SESSION['user_id'] === $row['user_id']){
+  echo '
+  <div class="create_post">
+   <div class="container">
+    <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="">
+    <span
+     style="position: absolute; top:43px; left:42px; width:12px; height:12px;background-color:var(--main-color-success); border-radius:50%;"></span>
+    <input type="button" onclick="showPost()" value="What\'s on your mind, User Name?">
+   </div>
+  </div>
+  ';
+}
+?>
     <!-- pop up creating post -->
     <div class="pop_post">
      <div class="container">
@@ -21,7 +24,7 @@
          <header>Create A Post</header>
          <!--s change add close and id -->
          <div class="arrow" id="close">
-          <button id="btn_close_post" style="border: none; background-color : transparent" ;> <i
+          <button id="btn_close_post" style="border: none; background-color: transparent;"><i
             class="fa-solid fa-xmark"></i></button>
          </div>
          <!--e change -->
