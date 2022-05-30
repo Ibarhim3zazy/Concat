@@ -136,78 +136,25 @@
               </ul>
           </div>
           <div class="friendsconnect">
-              <i class="fa-solid fa-angle-left" id="left"></i>
               <div class="friendsimage">
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
-                  <div>
-                      <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="45px" height="45px" style="border-radius: 50%;">
-                      <span class="active"></span>
-                  </div>
+                <?php
+                CheckStatueOfMyFriend($con,'friend');
+                $i = 0;
+                if (isset($my_friend_row)) {
+                  $i++;
+                  echo '
+                  <form class="box" action="profile.php" id="form'.$i.'" method="get">
+                   <div class="min-box" data-id-form="form'.$i.'" onclick="viewProfile(this)">
+                    <img src="profile___pic/'.htmlentities($my_friend_row['personal_pic']).'" alt="" width="45px" height="45px" style="border-radius: 50%;">
+                    <span class="active"></span>
+                    <!-- <p><span>5</span>mutual friends</p> -->
+                    <input type="hidden" name="friend_id" value="'.htmlentities($my_friend_row['user_id']).'">
+                   </div>
+                 </form>
+                  ';
+                }
+              ?>
               </div>
-              <i class="fa-solid fa-angle-right" id="right"></i>
           </div>
           <div class="textmessage">
               <input type="text" name="" id="textmessage" placeholder="Type your message">
@@ -264,5 +211,6 @@
   <div class="" style="width: 100%; height: 70px;"></div>
 </div>
 
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/chat.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
+    <script type="text/javascript" src="js/friends.js"></script>

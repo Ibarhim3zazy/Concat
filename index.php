@@ -62,7 +62,7 @@
  <div class="leftpageside">
   <div class="partone_profile boxmain">
    <div class="back_image">
-    <img src="images/background.jpg" alt="">
+    <img src="cover___pic/<?= htmlentities($row['cover_pic']); ?>" alt="">
    </div>
    <div class="profile_pic">
     <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="">

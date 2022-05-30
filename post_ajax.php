@@ -75,7 +75,7 @@ function create_post($con, $image_name, $video_name) {
         }
     }
 }
-function veiw_post($con, $PersonalPicture)
+function veiw_post($con, $PersonalPicture,$name)
 {
   if (isset($_GET['friend_id']) == true) {
     $user_id = $_GET['friend_id'];
@@ -99,7 +99,7 @@ function veiw_post($con, $PersonalPicture)
              <div class="infoProfile">
               <div class="userName">
                <a href="profile.php">
-                User Name
+                '.$name.'
                </a>
               </div>
               <div class="data">

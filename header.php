@@ -10,6 +10,11 @@
 
     <?php require_once 'general_ajax.php';
       GetPersonalInfo($con);
+      $user_id = $_SESSION['user_id'];
+      if (isset($_SESSION['user_id']) != true) {
+        $today = date("Y-m-d H:i:s");
+        $con->query("UPDATE last_seen SET last_seen='$today', active='0' WHERE user_id='$user_id';");
+      }
      ?>
 
     <div class="header" id="header">

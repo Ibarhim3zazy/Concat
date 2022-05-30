@@ -87,3 +87,23 @@ $(document).click(function(e){
 //         };
 //     };
 // };
+
+function GetXmlHttpObject(){
+	if (window.XMLHttpRequest)
+		return new XMLHttpRequest();
+	if (window.ActiveXObject)
+		return new ActiveXObject("Microsoft.XMLHTTP");
+	return null;
+};
+
+window.onload = function() {
+  setInterval( function () {
+    url="general_ajax.php";
+    let xmlhttp = GetXmlHttpObject();
+    xmlhttp.open("POST",url,true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.setRequestHeader("Connection", "close");
+    xmlhttp.send("last_seen=last_seen");
+  }
+    , 5000);
+};

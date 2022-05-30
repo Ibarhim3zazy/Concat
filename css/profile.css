@@ -47,6 +47,7 @@ html {
     border-radius: 0 0px 10px 10px;
     box-shadow: 1px 1px 6px 4px rgba(255, 255, 255, 0.342);
     max-width: 100%;
+    max-height: 320px;
     cursor: pointer;
 }
 .cover_photo i {
@@ -250,7 +251,7 @@ html {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    
+
 }
 
 .client_profile button a,
