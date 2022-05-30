@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2022 at 07:29 AM
+-- Generation Time: May 30, 2022 at 08:30 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -39,7 +39,29 @@ CREATE TABLE `friend_request` (
 --
 
 INSERT INTO `friend_request` (`id`, `my_user_id`, `freind_user_id`, `statue`) VALUES
-(30, 1319098029, 396084773, 'friend');
+(31, 1319098029, 396084773, 'friend');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `last_seen`
+--
+
+CREATE TABLE `last_seen` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `login_time` timestamp NULL DEFAULT NULL,
+  `last_seen` timestamp NULL DEFAULT NULL,
+  `active` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `last_seen`
+--
+
+INSERT INTO `last_seen` (`id`, `user_id`, `login_time`, `last_seen`, `active`) VALUES
+(1, 1319098029, '2022-05-30 07:22:02', '2022-05-30 18:30:40', 1),
+(2, 396084773, '2022-05-28 06:18:59', '2022-05-29 06:18:59', 0);
 
 -- --------------------------------------------------------
 
@@ -87,7 +109,7 @@ CREATE TABLE `post_like` (
   `id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `post_like` tinyint(1) NOT NULL
+  `post_like` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -147,7 +169,7 @@ CREATE TABLE `sign_up_general` (
 
 INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `cover_pic`, `type`, `access_num`) VALUES
 (16, 396084773, 'Ibrahim', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 13),
-(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', 1094989981, '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', 'user.png', 'background.jpg', 'user', 2);
+(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', 1094989981, '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', 'user.png', 'background.jpg', 'user', 9);
 
 -- --------------------------------------------------------
 
@@ -186,6 +208,12 @@ CREATE TABLE `sign_up_user` (
 -- Indexes for table `friend_request`
 --
 ALTER TABLE `friend_request`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `last_seen`
+--
+ALTER TABLE `last_seen`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -249,13 +277,19 @@ ALTER TABLE `sign_up_user`
 -- AUTO_INCREMENT for table `friend_request`
 --
 ALTER TABLE `friend_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `last_seen`
+--
+ALTER TABLE `last_seen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 
 --
 -- AUTO_INCREMENT for table `post_like`
