@@ -47,19 +47,30 @@ function CheckStatueOfMyFriend($con,$statue)
     while ($friend_result_row = $friend_result-> fetch_assoc()) {
       if ($friend_result_row['freind_user_id'] == $user_id) {
         $my_friend_id = htmlentities($friend_result_row['my_user_id']);
+        $statue_data = htmlentities($friend_result_row['statue']);
       }elseif ($friend_result_row['my_user_id'] == $user_id) {
         $my_friend_id = htmlentities($friend_result_row['freind_user_id']);
+        $statue_data = htmlentities($friend_result_row['statue']);
       }
       $num = $con->affected_rows;
       if ($num != 0) {
-        if ($statue == 'friend') {
+        if ($statue == 'friend' && $statue_data == 'friend') {
           $my_friend_result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$my_friend_id';");
           $GLOBALS['my_friend_row'] = $my_friend_result-> fetch_assoc();
           $GLOBALS['my_friend_id'] = $my_friend_id;
           return 'friend';
+        }elseif ($statue == 'friend_req' && $statue_data == 'friend_req') {
+          if ($user_id == htmlentities($friend_result_row['my_user_id'])) {
+            return 'cancel_req';
+          }else {
+            $my_friend_result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$my_friend_id';");
+            $GLOBALS['my_friend_row'] = $my_friend_result-> fetch_assoc();
+            $GLOBALS['my_friend_id'] = $my_friend_id;
+            return 'friend_req';
+          }
+        }elseif ($statue == 'blocked' && $statue_data == 'blocked') {
+          header("location: under_repair.php");
         }
-      }elseif ($statue == 'blocked') {
-        header("location: under_repair.php");
       }
     }
   }

@@ -40,8 +40,12 @@ if (isset($_GET['friend_id'])) {
   if (isset($_POST['friend_req'])) {
     $my_id = $_SESSION['user_id'];
     $friend_id = $_GET['friend_id'];
-    $con->query("INSERT INTO friend_request VALUES(NULL, '$my_id', '$friend_id', 'friend');");
-  }elseif (isset($_POST['remove_friend'])) {
+    $con->query("INSERT INTO friend_request VALUES(NULL, '$my_id', '$friend_id', 'friend_req');");
+  }elseif (isset($_POST['accept_friend'])) {
+    $my_id = $_SESSION['user_id'];
+    $friend_id = $_GET['friend_id'];
+    $con->query("UPDATE friend_request SET statue='friend' WHERE my_user_id='$friend_id' AND freind_user_id='$user_id';");
+  } elseif (isset($_POST['remove_friend'])) {
     $my_id = $_SESSION['user_id'];
     $friend_id = $_GET['friend_id'];
     $con->query("DELETE FROM friend_request WHERE my_user_id='$my_id' AND freind_user_id='$friend_id' OR freind_user_id='$my_id' AND
@@ -177,17 +181,32 @@ if (isset($_GET['friend_id'])) {
       }
      ?>
   </div>
-
+  <div class="client_profile">
 
   <?php
     if ($_SESSION['user_id'] !== $row['user_id']) {
-      echo '
-      <div class="client_profile">
-      ';
-      if (CheckStatueOfMyFriend($con,'friend')) {
+      if (CheckStatueOfMyFriend($con,'friend') == 'friend') {
         echo '
         <form method="post" id="form1">
-         <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Remove Friend</a></button>
+         <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Remove Buddy</a></button>
+         <input type="hidden" name="remove_friend" value="remove_friend">
+        </form>
+        ';
+      }elseif (CheckStatueOfMyFriend($con,'friend_req') == 'friend_req') {
+        echo '
+        <form method="post" id="form1">
+         <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Accept Request</a></button>
+         <input type="hidden" name="accept_friend" value="accept_friend">
+        </form>
+        <form method="post" id="form2">
+         <button><a href="javascript:" onclick="remove_friend();"><i class="fa-solid fa-user-plus"></i> Cancel Request</a></button>
+         <input type="hidden" name="remove_friend" value="remove_friend">
+        </form>
+        ';
+        }elseif (CheckStatueOfMyFriend($con,'friend_req') == 'cancel_req') {
+        echo '
+        <form method="post" id="form1">
+         <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Cancel Request</a></button>
          <input type="hidden" name="remove_friend" value="remove_friend">
         </form>
         ';
@@ -214,10 +233,10 @@ if (isset($_GET['friend_id'])) {
          </li>
         </ul>
        </span>
-      </div>
       ';
     }
   ?>
+    </div>
   </div>
  </div>
 

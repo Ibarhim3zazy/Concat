@@ -14,3 +14,6 @@ document.getElementById("change_cover_pic_submit").submit();
 function addfriend(){
   document.getElementById("form1").submit();
 }
+function remove_friend(){
+  document.getElementById("form2").submit();
+}

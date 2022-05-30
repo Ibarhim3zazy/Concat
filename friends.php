@@ -24,7 +24,7 @@
              <div class="min-box" data-id-form="form'.$i.'" onclick="viewProfile(this)">
               <img src="profile___pic/'.htmlentities($my_friend_row['personal_pic']).'" alt="" width="130px" height="130px">
               <div class="friendName">
-               <h3>user name</h3>
+               <h3>'.htmlentities($my_friend_row['name']).'</h3>
               <!-- <p><span>5</span>mutual friends</p> -->
               <input type="hidden" name="friend_id" value="'.htmlentities($my_friend_row['user_id']).'">
               </div>
