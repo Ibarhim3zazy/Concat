@@ -286,7 +286,7 @@ span.new {
     display: none;
     /* opacity: 0;
     pointer-events: none; */
-    overflow-y: ;
+    overflow-y: auto;
 }
 
 .header .container .right .messages ul li:last-of-type,

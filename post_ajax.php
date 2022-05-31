@@ -111,6 +111,10 @@ function veiw_post($con, $PersonalPicture,$name)
             </div>
             <span class="more">
              <i class="fa-solid fa-angle-down"></i>
+             <ul id = "postList">
+              <button>Edit post</button>
+              <button>Delete post</button>
+             </ul>
             </span>
 
              </div>
