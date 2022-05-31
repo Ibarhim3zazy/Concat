@@ -1,8 +1,6 @@
 <link rel="stylesheet" href="css/courses.css">
 
-<?php require_once 'mail_check_ajax.php';
- require_once 'header.php';
-     ?>
+<?php require_once 'header.php'; ?>
 
 <div class="couses_container">
  <div class="container">

@@ -2,9 +2,7 @@
 
 <title>Group Name | Concat</title>
 
-<?php require_once 'mail_check_ajax.php';
- require_once 'header.php';
-     ?>
+<?php require_once 'header.php'; ?>
 
 <a href="groupName.php" class="back">Go Back Group</a>
 

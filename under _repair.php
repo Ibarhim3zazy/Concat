@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-      <div class="back"> 
+      <div class="back">
         <div class="image">
              <img src="./images/repair.jpg">
         </div>
@@ -20,8 +20,8 @@
                 <input type="button" class="button" value="Go to Home" />
              </a>
         </div>
-       
-     </div> 
+
+     </div>
     </div>
 </body>
 </html>

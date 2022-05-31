@@ -7,9 +7,6 @@
 <link rel="icon" href="images/bear.svg">
 <link rel="stylesheet" href="css/groupsPost.css">
 
-<?php require_once 'mail_check_ajax.php';
-     ?>
-
 
 <!-- change design post -->
 <!-- ======================= only video==================================== -->
