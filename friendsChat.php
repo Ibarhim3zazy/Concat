@@ -155,6 +155,8 @@
                    </div>
                  </form>
                   ';
+                }else {
+                  echo 'No Friends Active Right Now';
                 }
               ?>
               </div>
