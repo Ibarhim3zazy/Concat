@@ -14,6 +14,12 @@
 </head>
 
 <body>
+  <?php
+  if (!isset($_SESSION)) session_start();
+    if (isset($_SESSION['user_id']) == true){
+      header("location: index.php");
+    }
+   ?>
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">

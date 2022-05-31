@@ -4,7 +4,7 @@
   // if (isset($_POST['post_content']) == true) {
   //   echo htmlentities($_POST['post_content']).' ---txt--- ';
   // }
-// test change
+// test change pull req
 if (isset($_FILES['fileImg']['name']) == true){
   $image_name = $_FILES['fileImg']['name'];
   /* Choose where to save the uploaded file */

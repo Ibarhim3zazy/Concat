@@ -139,8 +139,11 @@
               <div class="friendsimage">
                 <?php
                 CheckStatueOfMyFriend($con,'friend');
+                GetLastSeen($con,$my_friend_id);
+                $lastseentime = $last_seen_row['last_seen'];
+                $num_sec = time() - strtotime($lastseentime);
                 $i = 0;
-                if (isset($my_friend_row)) {
+                if (isset($my_friend_row) && $num_sec < 10) {
                   $i++;
                   echo '
                   <form class="box" action="profile.php" id="form'.$i.'" method="get">
@@ -148,7 +151,7 @@
                     <img src="profile___pic/'.htmlentities($my_friend_row['personal_pic']).'" alt="" width="45px" height="45px" style="border-radius: 50%;">
                     <span class="active"></span>
                     <!-- <p><span>5</span>mutual friends</p> -->
-                    <input type="hidden" name="friend_id" value="'.htmlentities($my_friend_row['user_id']).'">
+                    <input type="hidden" name="friend_id" value="'.htmlentities($my_friend_id).'">
                    </div>
                  </form>
                   ';

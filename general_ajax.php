@@ -8,6 +8,16 @@ if (isset($_POST['last_seen']) == true) {
   $con->query("UPDATE last_seen SET last_seen='$today', active='1' WHERE user_id='$user_id';");
 }
 
+function GetLastSeen($con, $user_id)
+{
+  $last_seen_result= $con->query("SELECT * FROM last_seen WHERE user_id='$user_id' LIMIT 1;");
+  $num = $con->affected_rows;
+  if($num != 0 && $last_seen_result == true){
+    $GLOBALS['last_seen_row'] = $last_seen_result-> fetch_assoc();
+    return $GLOBALS['last_seen_row'];
+  }
+}
+
 function GetPersonalInfo($con)
 {
   if (isset($_POST['signout']) == true) {
@@ -32,12 +42,14 @@ function GetPersonalInfo($con)
 }
 function GetMyFriendInfo($con,$visitor_id)
 {
+  if (is_numeric($visitor_id) == true) {
     $result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$visitor_id' LIMIT 1;");
     $num = $con->affected_rows;
     if($num != 0 && $result == true){
       $GLOBALS['row'] = $result-> fetch_assoc();
       return $GLOBALS['row'];
     }
+  }
 }
 function CheckStatueOfMyFriend($con,$statue)
 {
@@ -75,4 +87,5 @@ function CheckStatueOfMyFriend($con,$statue)
     }
   }
 }
+
 ?>
