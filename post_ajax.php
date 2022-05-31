@@ -108,9 +108,9 @@ function veiw_post($con, $PersonalPicture,$name)
               </div>
              </div>
             </div>
-            <span class="more">
-             <i class="fa-solid fa-angle-down"></i>
-             <ul id = "postList">
+            <span class="more" onClick="toggle()">
+             <i class="fa-solid fa-angle-down" ></i>
+             <ul id ="postList" class = " listpost">
               <button>Edit post</button>
               <button>Delete post</button>
              </ul>
@@ -155,22 +155,36 @@ function veiw_post($con, $PersonalPicture,$name)
     <div class="box_3">
      <div class="box_container">
       <div id="like">
-        <a href="javascript:">'.$veiw_post_like_num.' </a>
-        <i class="fa-solid fa-thumbs-up"></i>
+        <a href="javascript:" class="likeNum">'.$veiw_post_like_num.' </a>
+        <i class="fa-solid fa-thumbs-up" id="likeI" onClick="togglelike() "></i>
       </div>
       <div class="com" id="com">
+       <a href = "comments.php"  target = "_blank">
        <i class="fa-solid fa-comments"></i>
+       </a>
       </div>
       <div class="share" id="share">
-       <i class="fa-solid fa-share-nodes"></i>
+       <i class="fa-solid fa-share-nodes" onClick="toggleCopy()"></i>
+       <div class="copyPopUp">
+        <div class="box">
+          <h3>Copy & Share post</h3>
+          <button onClick="toggleCopy()">&times;</button>
+        </div>
+         <div class="copyBox ">
+           <input type="text" placeholder="link@89ih@hhh"   class="inputclass" >
+           <button onClick="funcCopy()">
+           <i class="fa-solid fa-copy"></i></button>
+         </div>
+       </div>
       </div>
      </div>
      <div class="save" id="save">
-      <i class="fa-solid fa-bookmark"></i>
+      <i class="fa-solid fa-bookmark" id="saveI" onClick="togglesave()"></i>
      </div>
     </div>
    </div>
   </div>
+
     ';
   }
     // else {

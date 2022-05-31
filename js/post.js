@@ -2,16 +2,32 @@
 ///////////////////////
 const pup = document.querySelector(".pop_post");
 
-function showPost() {
+// function showPost() {
+//     pup.style.opacity = '1';
+//     pup.style.pointerEvents = 'auto';
+// }
+var toggledPost = false;
+function togglepost() {
+  if (!toggledPost) {
+    toggledPost = true;
     pup.style.opacity = '1';
-    pup.style.pointerEvents = 'auto';
-}
+    pup.style.pointerEvents ='all';
+    return;
+  } else {
+    toggledPost = false;
+    pup.style.opacity ='0';
+    pup.style.pointerEvents ='none';
+    return;
+  };
+};
 
-$(document).ready(() => {
-    $("#btn_close_post").click(() => {
-        $(".pop_post").slideToggle("slow");
-    });
-});
+
+//
+// $(document).ready(() => {
+//     $("#btn_close_post").click(() => {
+//         $(".pop_post").slideToggle("slow")
+//     });
+// });
 
 
 ///////////////////////
@@ -51,7 +67,8 @@ const boxTwo = document.getElementById("boxTwo");
 const textarea = document.getElementById("textarea");
 
 sharepost.addEventListener('click', () => {
-    boxTwo.appendChild(textarea);
+    boxTwo.appendChild(pup);
+    pup.style.display ='none';
 });
 
 
@@ -69,7 +86,123 @@ await fetch('post_ajax.php', {
       alert(text);
     });
   });
+};
+
+// start play with code ul.listPost in post_ajax.php....
+
+const listPost = document.querySelector(".listpost");
+
+var toggled = false;
+function toggle() {
+  if (!toggled) {
+    toggled = true;
+    listPost.style.opacity = '1';
+    listPost.style.pointerEvents = 'all';
+    return;
+  } else {
+    toggled = false;
+    listPost.style.opacity = '0';
+    listPost.style.pointerEvents = 'none';
+    return;
+  };
+};
+
+///////////////////////////////////////
+// like and save toggle
+
+const like = document.getElementById('likeI');
+console.log(like);
+
+var toggledLike = false;
+function togglelike() {
+  if (!toggledLike) {
+    toggledLike = true;
+    like.style.color = "#49c4fc";
+    return;
+  }else {
+    toggledLike = false;
+    like.style.color = "#595959a8";
+    return;
+  };
+};
+
+
+const save = document.getElementById('saveI');
+console.log(save);
+
+var toggledSave = false;
+function togglesave() {
+  if (!toggledSave) {
+    toggledSave = true;
+    save.style.color = "#49c4fc";
+    return;
+  }else {
+    toggledSave = false;
+    save.style.color = "#595959a8";
+    return;
+  };
+};
+
+///////////////////////////
+// copy share post
+
+
+
+
+const copy = document.querySelector(".copyPopUp");
+console.log(copy);
+
+var toggledcopy = false;
+function toggleCopy() {
+  if (!toggledcopy) {
+    toggledcopy = true;
+    copy.style.opacity = '1';
+    copy.style.pointerEvents = 'all';
+    return;
+  }else {
+    toggledcopy = false ;
+    copy.style.opacity ='0';
+    copy.style.pointerEvents = 'none';
+    return;
+  };
+};
+
+
+/////////function copy
+
+const text = document.querySelector(".inputclass");
+console.log(text);
+
+function funcCopy() {
+  text.select();
+text.setSelectionRange(0, 99999);
+navigator.clipboard.writeText(text.value);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // async function uploadVid() {
 // let formDataVid = new FormData();
 // formDataVid.append("fileVid", inputUploadVid.files[0]);

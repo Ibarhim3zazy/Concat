@@ -8,7 +8,7 @@ if ($_SESSION['user_id'] === $row['user_id']){
     <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="">
     <span
      style="position: absolute; top:43px; left:42px; width:12px; height:12px;background-color:var(--main-color-success); border-radius:50%;"></span>
-    <input type="button" onclick="showPost()" value="What\'s on your mind, User Name?">
+    <input type="button" onclick="togglepost()" value="What\'s on your mind, User Name?">
    </div>
   </div>
   ';
@@ -24,7 +24,7 @@ if ($_SESSION['user_id'] === $row['user_id']){
          <header>Create A Post</header>
          <!--s change add close and id -->
          <div class="arrow" id="close">
-          <button id="btn_close_post" style="border: none; background-color: transparent;"><i
+          <button id="btn_close_post" onclick="togglepost()" style="border: none; background-color: transparent;"><i
             class="fa-solid fa-xmark"></i></button>
          </div>
          <!--e change -->
