@@ -12,9 +12,9 @@
  align-items: flex-start;
  justify-content: center;
  padding: 10px;
- background-color: rgb(0, 169, 211);
  column-gap: 4px;
  border-radius: 10px;
+ background-color: rgb(183, 233, 233) ;
  color: white;
  max-width: 90%;
  overflow: hidden;
@@ -40,11 +40,11 @@
 
 .couses_container .container .taps li.active ,
 .couses_container .container .taps li:hover {
- background-color: #ddd;
+ background-color: #cfeaee;
 }
 
 .couses_container .container .contents {
- background-color: #ddd;
+ background-color: #cfeaee;
  width: 100%;
  border-radius: 5px;
  height: 100%;
