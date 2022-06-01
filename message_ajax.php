@@ -31,7 +31,9 @@
     $receiver_id = $_POST['receiver_id'];
     $messages_limit = $_POST['messages_limit'];
     $veiw_result= $con->query("SELECT * FROM messages WHERE sender_id='$sender_id' OR receiver_id='$sender_id' AND receiver_id='$sender_id' OR receiver_id='$receiver_id' ORDER BY id DESC LIMIT $messages_limit;");
+    $veiw_last_num = 0;
     $veiw_num = $con->affected_rows;
+    $veiw_last_num = $veiw_num;
     if($veiw_num != 0 && $veiw_result == true){
       while ($veiw_row = $veiw_result-> fetch_assoc()){
         if ($sender_id === htmlentities($veiw_row['sender_id']) &&

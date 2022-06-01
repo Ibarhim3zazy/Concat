@@ -26,6 +26,8 @@ function GetXmlHttpObject(){
 		return new ActiveXObject("Microsoft.XMLHTTP");
 	return null;
 };
+message_array_lenght = [];
+message_array_lenght[0] = 0;
 function load_messages(messages_limit = 50){
   if (document.getElementById('sender_id').value.trim() != "" &&
     document.getElementById('receiver_id').value.trim() != "") {
@@ -37,17 +39,29 @@ function load_messages(messages_limit = 50){
       xmlhttp.onreadystatechange=function()
       {
       	if (xmlhttp.readyState==4 && xmlhttp.status==200){
-          test = xmlhttp.responseText.trim();
-          if (test == document.getElementById('main_chat').innerHTML) {
+          message_array = xmlhttp.responseText.trim();
+          if (message_array == document.getElementById('main_chat').innerHTML) {
             return false;
           }
-          test2 = test.split("e?n?d?s?e?n?d?i?n?g?M?e?s?s?a?g?e?").reverse();
-          test2.forEach((item, i) => {
+          message_array = message_array.split("e?n?d?s?e?n?d?i?n?g?M?e?s?s?a?g?e?").reverse();
+          message_array.forEach((item, i) => {
             if (item.slice(0, 6) == 'sender') {
               message = item.slice(8);
+              if (message_array_lenght[0] !== message) {
+                message_array_lenght[0] = message;
+              }else {
+                // console.log(message);
+                return false;
+              }
               document.getElementById('main_chat').innerHTML += '<div class="box_me"><pre class="my_chat">'+message+'</pre><span class="time">11:57 Am</span></div>';
             }else if (item.slice(0, 7) == 'recever') {
               message = item.slice(9);
+              if (message_array_lenght[1] !== message) {
+                message_array_lenght[1] = message;
+              }else {
+                // console.log(message);
+                return false;
+              }
               document.getElementById('main_chat').innerHTML += '<div class="box_client"><pre class="client_chat">'+message+'</pre><span class="time">11:57 Am</span></div>';
             }
           });
@@ -63,9 +77,9 @@ window.addEventListener('load', (event) => {
   load_messages();
   // alert(load_messages(1))
   setInterval(function () {
-    if (test !== document.getElementById('main_chat').innerHTML) {
-      // load_messages(1)
-    }
+    // if (test !== document.getElementById('main_chat').innerHTML) {
+      load_messages(1)
+    // }
   }, 1000);
   // load_all_messages()
 });
