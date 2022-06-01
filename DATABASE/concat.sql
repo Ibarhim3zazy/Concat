@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2022 at 08:30 PM
+-- Generation Time: Jun 01, 2022 at 12:34 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -39,7 +39,7 @@ CREATE TABLE `friend_request` (
 --
 
 INSERT INTO `friend_request` (`id`, `my_user_id`, `freind_user_id`, `statue`) VALUES
-(31, 1319098029, 396084773, 'friend');
+(50, 1319098029, 27539121, 'friend');
 
 -- --------------------------------------------------------
 
@@ -60,8 +60,57 @@ CREATE TABLE `last_seen` (
 --
 
 INSERT INTO `last_seen` (`id`, `user_id`, `login_time`, `last_seen`, `active`) VALUES
-(1, 1319098029, '2022-05-30 07:22:02', '2022-05-30 18:30:40', 1),
-(2, 396084773, '2022-05-28 06:18:59', '2022-05-29 06:18:59', 0);
+(1, 1319098029, '2022-06-01 06:49:48', '2022-06-01 10:33:25', 1),
+(2, 396084773, '2022-05-31 17:29:26', '2022-05-31 18:53:19', 0),
+(3, 27539121, '2022-05-30 23:03:04', '2022-06-01 10:33:25', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` bigint(20) NOT NULL,
+  `msg_id` int(11) NOT NULL,
+  `sender_id` bigint(20) NOT NULL,
+  `receiver_id` bigint(20) NOT NULL,
+  `file` varchar(500) NOT NULL,
+  `message` text NOT NULL,
+  `received` tinyint(1) NOT NULL DEFAULT 0,
+  `seen` tinyint(1) NOT NULL DEFAULT 0,
+  `delete_sender` int(1) NOT NULL DEFAULT 0,
+  `delete_receiver` int(1) NOT NULL DEFAULT 0,
+  `time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `msg_id`, `sender_id`, `receiver_id`, `file`, `message`, `received`, `seen`, `delete_sender`, `delete_receiver`, `time`) VALUES
+(7, 1395639786, 27539121, 396084773, '98-bdee5aمهارات-التواصل.webp', 'First Message', 0, 0, 0, 0, '2022-06-01 06:25:42'),
+(8, 2147483647, 27539121, 396084773, '98-bdee5aمهارات-التواصل.webp', 'First Message', 0, 0, 0, 0, '2022-06-01 06:25:59'),
+(9, 2147483647, 27539121, 396084773, '0', 'Seconed Message', 0, 0, 0, 0, '2022-06-01 06:49:25'),
+(10, 2147483647, 1319098029, 27539121, '0', 'some message', 0, 0, 0, 0, '2022-06-01 06:50:39'),
+(11, 2147483647, 27539121, 1319098029, '0', 'hi hamed', 0, 0, 0, 0, '2022-06-01 06:53:10'),
+(12, 2147483647, 1319098029, 27539121, '0', 'hi ibrahim 3zazy', 0, 0, 0, 0, '2022-06-01 06:53:54'),
+(13, 2147483647, 27539121, 1319098029, '0', 'how are you', 0, 0, 0, 0, '2022-06-01 07:12:42'),
+(14, 2147483647, 1319098029, 27539121, '0', 'fine thanks', 0, 0, 0, 0, '2022-06-01 07:13:04'),
+(15, 2147483647, 1319098029, 27539121, '0', 'iam sender', 0, 0, 0, 0, '2022-06-01 07:16:05'),
+(17, 2147483647, 27539121, 1319098029, '0', 'and iam recever', 0, 0, 0, 0, '2022-06-01 07:53:35'),
+(18, 2147483647, 1319098029, 27539121, '0', 'zesdfjznlksdf\r\nzespdifj;', 0, 0, 0, 0, '2022-06-01 08:05:12'),
+(19, 2147483647, 1319098029, 27539121, '0', 'line one\r\nline two', 0, 0, 0, 0, '2022-06-01 08:05:42'),
+(20, 2147483647, 27539121, 1319098029, '0', 'some message', 0, 0, 0, 0, '2022-06-01 08:24:54'),
+(21, 2147483647, 27539121, 1319098029, '0', 'hi', 0, 0, 0, 0, '2022-06-01 08:30:27'),
+(22, 2147483647, 27539121, 1319098029, '0', 'some message', 0, 0, 0, 0, '2022-06-01 08:30:53'),
+(23, 2147483647, 27539121, 1319098029, '0', 'test\r\n', 0, 0, 0, 0, '2022-06-01 08:31:52'),
+(24, 2147483647, 27539121, 1319098029, '0', 'test 2 ', 0, 0, 0, 0, '2022-06-01 08:32:51'),
+(25, 2147483647, 27539121, 1319098029, '0', 'hi', 0, 0, 0, 0, '2022-06-01 09:12:01'),
+(26, 2147483647, 27539121, 1319098029, '0', 'sds', 0, 0, 0, 0, '2022-06-01 09:30:51'),
+(27, 2147483647, 1319098029, 27539121, '0', 'hi', 0, 0, 0, 0, '2022-06-01 09:39:07'),
+(28, 2147483647, 1319098029, 27539121, '0', 'hello', 0, 0, 0, 0, '2022-06-01 09:39:21'),
+(29, 2147483647, 27539121, 1319098029, '0', 'hi', 0, 0, 0, 0, '2022-06-01 09:39:28');
 
 -- --------------------------------------------------------
 
@@ -97,7 +146,10 @@ INSERT INTO `posting` (`id`, `post_id`, `user_id`, `post_content`, `image`, `vid
 (200, 38669667, 396084773, 'ode', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:20:26', 5),
 (202, 1926007098, 396084773, 'ode \r\nPosted by Ibrahim3zazy', '0', 'qq.mp4', '0', 0, 0, '2022-05-26 13:22:51', 5),
 (205, 510124601, 1319098029, 'مهارات التواصل', '98-bdee5aمهارات-التواصل.webp', '0', '0', 0, 0, '2022-05-28 08:26:05', 4),
-(206, 2016586050, 1319098029, 'Posted By Ibrahim 3zazy', '0', '0', '0', 0, 0, '2022-05-30 05:27:59', 1);
+(206, 2016586050, 1319098029, 'Posted By Ibrahim 3zazy', '0', '0', '0', 0, 0, '2022-05-30 05:27:59', 1),
+(208, 1828395452, 1319098029, '0', '0', '0', '0', 0, 0, '2022-05-30 20:31:13', 0),
+(209, 994494778, 1319098029, '0', '0', '0', '0', 0, 0, '2022-05-30 20:32:04', 0),
+(210, 867191471, 27539121, '?', '330-3302186_open-book-clipart-png-download.png', '0', '0', 0, 0, '2022-05-31 12:41:56', 4);
 
 -- --------------------------------------------------------
 
@@ -168,8 +220,9 @@ CREATE TABLE `sign_up_general` (
 --
 
 INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `cover_pic`, `type`, `access_num`) VALUES
-(16, 396084773, 'Ibrahim', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 13),
-(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', 1094989981, '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', 'user.png', 'background.jpg', 'user', 9);
+(16, 396084773, 'Ibrahim', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 15),
+(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', 1094989981, '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', '—Pngtree—muslim man photo_6934073.png', 'background.jpg', 'user', 11),
+(18, 27539121, 'Ibrahim 3zazy', 'Ibrahim3zazy@hotmail.com', 'admin1', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'quran (2).png', 'cover-96.jpg', 'user', 3);
 
 -- --------------------------------------------------------
 
@@ -215,6 +268,16 @@ ALTER TABLE `friend_request`
 --
 ALTER TABLE `last_seen`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sender_id` (`sender_id`),
+  ADD KEY `receiver_id` (`receiver_id`),
+  ADD KEY `file` (`file`),
+  ADD KEY `message` (`message`(1024));
 
 --
 -- Indexes for table `posting`
@@ -277,19 +340,25 @@ ALTER TABLE `sign_up_user`
 -- AUTO_INCREMENT for table `friend_request`
 --
 ALTER TABLE `friend_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `last_seen`
 --
 ALTER TABLE `last_seen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 
 --
 -- AUTO_INCREMENT for table `post_like`
@@ -313,7 +382,7 @@ ALTER TABLE `sign_up_employee`
 -- AUTO_INCREMENT for table `sign_up_general`
 --
 ALTER TABLE `sign_up_general`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `sign_up_student`
