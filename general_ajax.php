@@ -1,6 +1,24 @@
 <?php require("connection.php");
 if (!isset($_SESSION)) session_start();
 
+function id_generator($con)
+{
+  $result = $con->query("SELECT * FROM messages ORDER BY id DESC LIMIT 1;");
+  $num = $con->affected_rows;
+  if($num != 0){
+    $some_row = $result-> fetch_assoc();
+    $generate_id[] = rand();
+    shuffle($generate_id);
+    $GLOBALS['id_generated'] = $generate_id[0].$some_row['id'];
+    return $GLOBALS['id_generated'];
+  }else {
+    $generate_id[] = rand();
+    shuffle($generate_id);
+    $GLOBALS['id_generated'] = $generate_id[0];
+    return $GLOBALS['id_generated'];
+  }
+}
+
 // update last seen
 if (isset($_POST['last_seen']) == true) {
   $user_id = $_SESSION['user_id'];
@@ -51,9 +69,27 @@ function GetMyFriendInfo($con,$visitor_id)
     }
   }
 }
-function CheckStatueOfMyFriend($con,$statue)
+function CheckStatueOfMyFriend($con,$statue,$visitor_id=0)
 {
   $user_id = $_SESSION['user_id'];
+  if ($visitor_id !== 0) {
+    $friend_result = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' AND freind_user_id='$visitor_id' OR my_user_id='$visitor_id' AND freind_user_id='$user_id';");
+    if($friend_result == true){
+      while ($friend_result_row = $friend_result-> fetch_assoc()) {
+        if ($friend_result_row['freind_user_id'] == $user_id) {
+          $statue_data = htmlentities($friend_result_row['statue']);
+          return $statue_data;
+        }elseif ($friend_result_row['my_user_id'] == $user_id) {
+          $statue_data = htmlentities($friend_result_row['statue']);
+          if ($statue_data == 'friend_req') {
+            return 'cancel_req';
+          }else {
+            return $statue_data;
+          }
+        }
+      }
+    }
+  }else {
   $friend_result = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' OR freind_user_id='$user_id' ORDER BY id DESC;");
   if($friend_result == true){
     while ($friend_result_row = $friend_result-> fetch_assoc()) {
@@ -81,11 +117,12 @@ function CheckStatueOfMyFriend($con,$statue)
             return 'friend_req';
           }
         }elseif ($statue == 'blocked' && $statue_data == 'blocked') {
-          header("location: under_repair.php");
+          return header("location: under_repair.php");
         }
       }
     }
   }
+}
 }
 
 ?>

@@ -138,12 +138,12 @@
           <div class="friendsconnect">
               <div class="friendsimage">
                 <?php
-                CheckStatueOfMyFriend($con,'friend');
-                GetLastSeen($con,$my_friend_id);
-                $lastseentime = $last_seen_row['last_seen'];
-                $num_sec = time() - strtotime($lastseentime);
+                if (CheckStatueOfMyFriend($con,'friend')) {
+                  GetLastSeen($con,$my_friend_id);
+                  $lastseentime = $last_seen_row['last_seen'];
+                  $num_sec = time() - strtotime($lastseentime);
                 $i = 0;
-                if (isset($my_friend_row) && $num_sec < 10) {
+                if (isset($my_friend_row) && $num_sec < 5) {
                   $i++;
                   echo '
                   <form class="box" action="profile.php" id="form'.$i.'" method="get">
@@ -158,6 +158,7 @@
                 }else {
                   echo 'No Friends Active Right Now';
                 }
+              }
               ?>
               </div>
           </div>

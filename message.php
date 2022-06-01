@@ -10,7 +10,7 @@
  <link rel="stylesheet" href="css/general.css">
  <link rel="icon" href="images/bear.svg">
  <link rel="stylesheet" href="css/message.css">
- <title>Concat | User Name</title>
+ <title>Concat | Messages</title>
 </head>
 
 <body>
@@ -31,21 +31,44 @@
      </div>
     </div>
     <div class="con_message">
-     <div class="box" tabindex="1">
-      <span class="new"></span>
-      <span class="read" style="position: absolute;"><i class="fa-solid fa-check-double"></i></span>
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="offline"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
+      <?php
+      CheckStatueOfMyFriend($con,'friend');
+      GetLastSeen($con,$my_friend_id);
+      $lastseentime = $last_seen_row['last_seen'];
+      $num_sec = time() - strtotime($lastseentime);
+      $i = 0;
+      if (isset($my_friend_row)) {
+        $i++;
+        echo '
+        <div class="box" tabindex="1">
+         <span class="new"></span>
+         <span class="read" style="position: absolute;"><i class="fa-solid fa-check-double"></i></span>
+         <div class="img">
+          <img src="profile___pic/'.htmlentities($my_friend_row['personal_pic']).'" alt="" width="45px" height="45px" style="border-radius: 50%;">';
+          if ($num_sec > 10) {
+            echo '
+              <span class="offline"></span>
+            ';
+          }else {
+            echo '
+              <span class="active"></span>
+            ';
+          }
+         echo '
+         </div>
+         <div class="name">
+          <a href="message.php?receiver_id='.htmlentities($my_friend_id).'">'.htmlentities($my_friend_row['name']).'</a>
+          <div class="friendChat">
+           <p>Hey how are you my friend, please call me if you can cause</p>
+           <span class="time">13 Am</span>
+          </div>
+         </div>
+        </div>
+        ';
+      }else {
+        echo 'No Donn\'t Have Any Friends Right Now';
+      }
+       ?>
      <div class="box" tabindex="2">
       <span class="new"></span>
       <div class="img">
@@ -144,19 +167,51 @@
    <div class="middle" id="middle">
     <div class="chatBox">
      <div class="clientHead">
-      <div class="box">
-       <div>
-        <a href=""><img src="images/cat-1.jpg" alt="" width="46px" height="46px" style="border-radius: 50%;">
-         <span class="active"></span>
-        </a>
-       </div>
-       <div class="client_info">
-        <a href="">
-         <h2>User Name</h2>
-        </a>
-        <p>Active Now</p>
-       </div>
+       <?php
+          if (isset($_GET['receiver_id']) == true) {
+            $visitor_id = $_GET['receiver_id'];
+            GetMyFriendInfo($con,$visitor_id);
+            GetLastSeen($con,$visitor_id);
+            $lastseentime = $last_seen_row['last_seen'];
+            $num_sec = time() - strtotime($lastseentime);
+            echo '
+            <div class="box">
+             <div>
+              <a href=""><img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="46px" height="46px" style="border-radius: 50%;">
+              ';
+              if ($num_sec < 5) {
+                echo '
+                  <span class="active"></span>
+                ';
+              }else {
+                echo '
+                  <span class="active" style="background-color: #EA5546;"></span>
+                ';
+              }
+              echo '
+              </a>
+             </div>
+             <div class="client_info">
+              <a href="">
+               <h2>'.htmlentities($row['name']).'</h2>
+              </a>
+              ';
+              if ($num_sec < 5) {
+                echo '
+                  <p>Active Now</p>
+                ';
+              }else {
+                echo '
+                  <p style="color: #EA5546;">NOT Active</p>
+                ';
+              }
+
+
+
+          }
+        ?>
       </div>
+     </div>
       <div class="mor">
        <button>
         <i class="fa-solid fa-trash-can"></i>
@@ -189,42 +244,28 @@
       </div>
      </div>
      <!-- main chat  -->
-     <div class="main_chat">
-      <div class="box_client">
-       <div class="client_chat">
-        Hi!
-       </div>
-       <span class="time">11:56 Am</span>
-      </div>
-      <div class="box_me">
-       <div class="my_chat">
-        Hi!
-       </div>
-       <span class="time">11:57 Am</span>
-      </div>
-      <div class="box_client">
-       <div class="client_chat">
-        tell me bro, How did you create this beauty chat?
-       </div>
-       <span class="time">11:59 Am</span>
-      </div>
-      <div class="box_me">
-       <div class="my_chat">
-        Oh! it's easy, just follow me..
-       </div>
-       <span class="time">12:01 Pm</span>
-      </div>
-     </div>
+     <div class="main_chat" id="main_chat"></div>
      <div class="writting">
-      <button><i class="fa-solid fa-plus"></i></button>
-      <textarea style="resize: none;"></textarea>
-      <button><i class="fa-solid fa-paper-plane"></i></button>
+       <button><label for="inputUploadfiles" style="cursor: pointer;"><i class="fa-solid fa-plus"></i></label></button>
+       <input id="inputUploadfiles" name="inputUploadfiles" type="file" style="display: none;" onchange="change_files_upload()"/>
+       <?php if (isset($_GET['receiver_id']) == true){
+         $visitor_id = $_GET['receiver_id'];
+         $my_id = $_SESSION['user_id'];
+         echo '
+         <input type="hidden" id="sender_id" value="'.$my_id.'">
+         <input type="hidden" id="receiver_id" value="'.$visitor_id.'">
+         ';
+       }
+      ?>
+
+      <textarea style="resize: none;" id="message_text"></textarea>
+      <button onclick="sendingMessage()"><i class="fa-solid fa-paper-plane"></i></button>
      </div>
     </div>
    </div>
   </div>
  </div>
-
+ <script type="text/javascript" src="js/message.js"></script>
 </body>
 
 </html>

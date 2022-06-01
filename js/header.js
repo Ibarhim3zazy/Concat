@@ -102,7 +102,6 @@ window.onload = function() {
     let xmlhttp = GetXmlHttpObject();
     xmlhttp.open("POST",url,true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.setRequestHeader("Connection", "close");
     xmlhttp.send("last_seen=last_seen");
   }
     , 5000);

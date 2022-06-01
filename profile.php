@@ -36,7 +36,10 @@ if (isset($_FILES['inputUploadCoverPic']['name']) == true){
 }
 // call header.php
 require_once 'header.php';
+
 if (isset($_GET['friend_id'])) {
+  $visitor_id = $_GET['friend_id'];
+  GetMyFriendInfo($con,$visitor_id);
   if (isset($_POST['friend_req'])) {
     $my_id = $_SESSION['user_id'];
     $friend_id = $_GET['friend_id'];
@@ -51,8 +54,6 @@ if (isset($_GET['friend_id'])) {
     $con->query("DELETE FROM friend_request WHERE my_user_id='$my_id' AND freind_user_id='$friend_id' OR freind_user_id='$my_id' AND
       my_user_id='$friend_id';");
   }
-  $visitor_id = $_GET['friend_id'];
-  GetMyFriendInfo($con,$visitor_id);
 }
 ?>
 
@@ -185,14 +186,15 @@ if (isset($_GET['friend_id'])) {
 
   <?php
     if ($_SESSION['user_id'] !== $row['user_id']) {
-      if (CheckStatueOfMyFriend($con,'friend') == 'friend') {
+      $visitor_id = $row['user_id'];
+      if (CheckStatueOfMyFriend($con,'friend',$visitor_id) == 'friend') {
         echo '
         <form method="post" id="form1">
          <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Remove Buddy</a></button>
          <input type="hidden" name="remove_friend" value="remove_friend">
         </form>
         ';
-      }elseif (CheckStatueOfMyFriend($con,'friend_req') == 'friend_req') {
+      }elseif (CheckStatueOfMyFriend($con,'friend_req',$visitor_id) == 'friend_req') {
         echo '
         <form method="post" id="form1">
          <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Accept Request</a></button>
@@ -203,7 +205,7 @@ if (isset($_GET['friend_id'])) {
          <input type="hidden" name="remove_friend" value="remove_friend">
         </form>
         ';
-        }elseif (CheckStatueOfMyFriend($con,'friend_req') == 'cancel_req') {
+        }elseif (CheckStatueOfMyFriend($con,'friend_req',$visitor_id) == 'cancel_req') {
         echo '
         <form method="post" id="form1">
          <button><a href="javascript:" onclick="addfriend();"><i class="fa-solid fa-user-plus"></i> Cancel Request</a></button>
