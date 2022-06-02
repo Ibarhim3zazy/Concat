@@ -26,11 +26,11 @@
       </div>
      </div>
      <div class="search">
-      <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-      <input type="search" placeholder="Search Message">
+      <a href="javascript:" onclick="search_for_chat()"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <input type="text" id="searchWord" placeholder="Search For Chat" onchange="search_for_chat()">
      </div>
     </div>
-    <div class="con_message">
+    <div class="con_message" id="con_message">
       <?php
       $chat_result = $con->query("SELECT * FROM chating WHERE sender_id='$user_id' OR receiver_id='$user_id' ORDER BY id DESC");
       if($chat_result == true){
@@ -49,6 +49,9 @@
           $messages_row['seen'] = 0;
           $messages_row['received'] = 0;
           $messages_row['message'] = 'Say Hi';
+        }else {
+          $mesage_time = htmlentities($messages_row['time']);
+          $message_time = date('h:i A', strtotime($mesage_time));
         }
         GetLastSeen($con,$my_friend_id);
         $lastseentime = $last_seen_row['last_seen'];
@@ -90,7 +93,7 @@
             <a href="message.php?receiver_id='.htmlentities($my_friend_id).'">'.htmlentities($my_friend_row['name']).'</a>
             <div class="friendChat">
              <p>'.htmlentities($messages_row['message']).'</p>
-             <span class="time">13 Am</span>
+             <span class="time">'.$message_time.'</span>
             </div>
            </div>
           </div>

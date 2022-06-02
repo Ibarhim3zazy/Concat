@@ -132,5 +132,23 @@ function getmessages($con,$sender_id,$receiver_id,$messages_limit)
     }
   }
 }
-
+if (isset($_GET['search_peole_Word'])) {
+  $searchWord = $_GET['search_peole_Word'];
+  SearchPeople($con,$searchWord,25);
+}
+function SearchPeople($con,$searchWord,$search_limit)
+{
+  $people_search_result= $con->query("SELECT * FROM sign_up_general WHERE name LIKE '%$searchWord%' ORDER BY id DESC LIMIT $search_limit;");
+  $num_row = $con->affected_rows;
+  if($people_search_result == true && $num_row != 0 && $num_row < 25){
+    while ($people_search_row = $people_search_result-> fetch_assoc()){
+      echo $people_search_row['user_id']." u?s?e?r?f?o?r?m?e?s?s?a?g?e?i?d?".$people_search_row['name']." p?i?c?p?r?o?f?i?l?e?p?h?o?t?o?".$people_search_row['personal_pic']." e?n?d?s?e?a?r?c?h?r?e?s?u?l?t?";
+    }
+  }elseif ($people_search_result == true && $num_row != 0 && $num_row > 25) {
+    $people_search_result = $con->query("SELECT * FROM sign_up_general WHERE email LIKE '%$searchWord%' ORDER BY id DESC LIMIT $search_limit;");
+    while ($people_search_row = $people_search_result-> fetch_assoc()){
+      echo $people_search_row['email'];
+    }
+  }
+}
 ?>
