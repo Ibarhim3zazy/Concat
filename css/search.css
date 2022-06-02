@@ -245,3 +245,27 @@
 .search-container .two .conten  .box a{
   margin-top: -50px;
 }
+ .up {
+   position: fixed;
+   bottom: 100px;
+   transition: 0.3s;
+   right: 50px;
+ }
+ .up i {
+   font-size: 13px;
+   padding: 7px 10px;
+   border: 1px solid #eee;
+   border-radius: 50%;
+   background-color: #fff;
+   color: #333;
+   cursor: pointer;
+  box-shadow: 0px 0px 10px 0px #00c9ff;
+  transition: 0.3s;
+ }
+
+  .up:hover {
+    transform: scale(1.1);
+  }
+  .up:hover i {
+    color: #00c9ff;
+  }
