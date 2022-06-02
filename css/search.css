@@ -29,6 +29,8 @@
   border: 1px solid #eee;
   transition: 0.2s;
   box-shadow: 1px 1px 6px 4px #cfeaee;
+  position: sticky;
+  top: 130px;
 }
 
 .search-container .container .taps li {
