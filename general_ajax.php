@@ -32,6 +32,13 @@ function GetLastSeen($con, $user_id)
   $num = $con->affected_rows;
   if($num != 0 && $last_seen_result == true){
     $GLOBALS['last_seen_row'] = $last_seen_result-> fetch_assoc();
+    $received_result = $con->query("SELECT * FROM messages WHERE receiver_id='$user_id' ORDER BY id DESC LIMIT 10;");
+    $received_num = $con->affected_rows;
+    if($received_num != 0 && $received_result == true){
+      while ($received_row = $received_result-> fetch_assoc()){
+        $con->query("UPDATE messages SET received='1' WHERE  receiver_id='$user_id';");
+      }
+    }
     return $GLOBALS['last_seen_row'];
   }
 }
@@ -142,7 +149,9 @@ function SearchPeople($con,$searchWord,$search_limit)
   $num_row = $con->affected_rows;
   if($people_search_result == true && $num_row != 0 && $num_row < 25){
     while ($people_search_row = $people_search_result-> fetch_assoc()){
-      echo $people_search_row['user_id']." u?s?e?r?f?o?r?m?e?s?s?a?g?e?i?d?".$people_search_row['name']." p?i?c?p?r?o?f?i?l?e?p?h?o?t?o?".$people_search_row['personal_pic']." e?n?d?s?e?a?r?c?h?r?e?s?u?l?t?";
+      if ($people_search_row['user_id'] != $_SESSION['user_id']) {
+        echo $people_search_row['user_id']." u?s?e?r?f?o?r?m?e?s?s?a?g?e?i?d?".$people_search_row['name']." p?i?c?p?r?o?f?i?l?e?p?h?o?t?o?".$people_search_row['personal_pic']." e?n?d?s?e?a?r?c?h?r?e?s?u?l?t?";
+      }
     }
   }elseif ($people_search_result == true && $num_row != 0 && $num_row > 25) {
     $people_search_result = $con->query("SELECT * FROM sign_up_general WHERE email LIKE '%$searchWord%' ORDER BY id DESC LIMIT $search_limit;");

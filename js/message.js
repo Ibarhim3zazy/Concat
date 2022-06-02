@@ -138,16 +138,19 @@ function search_for_chat() {
 
 // live chating
 window.addEventListener('load', (event) => {
-  load_messages();
-  setTimeout(function () {
-    objDiv = document.getElementById("main_chat");
-    if ( window.history.replaceState ) {
-       objDiv.scrollTop = objDiv.scrollHeight;
-        window.history.replaceState( null, null,
-        window.location.href );
-        }
-  }, 100)
-  setInterval(function () {
-      load_messages(1);
-  }, 1000);
+  if (document.getElementById('sender_id').value.trim() != "" &&
+    document.getElementById('receiver_id').value.trim() != "") {
+      load_messages();
+      setTimeout(function () {
+        objDiv = document.getElementById("main_chat");
+        if ( window.history.replaceState ) {
+           objDiv.scrollTop = objDiv.scrollHeight;
+            window.history.replaceState( null, null,
+            window.location.href );
+            }
+      }, 100)
+      setInterval(function () {
+          load_messages(1);
+      }, 1000);
+    }
 });
