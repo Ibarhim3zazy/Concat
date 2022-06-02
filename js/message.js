@@ -1,6 +1,7 @@
 // Send messages
 
 async function sendingMessage() {
+  objDiv = document.getElementById("main_chat");
 let formDatafile = new FormData();
 formDatafile.append("fileany", inputUploadfiles.files[0]);
 formDatafile.append("message", document.getElementById("message_text").value);
@@ -12,7 +13,13 @@ await fetch('message_ajax.php', {
 }).then(function(response) {
     return response.text().then(function(text) {
       document.getElementById("message_text").value = "";
-      // alert(text);
+      setTimeout(function () {
+        if ( window.history.replaceState ) {
+           objDiv.scrollTop = objDiv.scrollHeight;
+            window.history.replaceState( null, null,
+            window.location.href );
+            }
+      }, 500)
     });
   });
 };
@@ -53,8 +60,13 @@ function load_messages(messages_limit = 50){
                 // console.log(message);
                 return false;
               }
-              document.getElementById('main_chat').innerHTML += '<div class="box_me"><pre class="my_chat">'+message+'</pre><span class="time">11:57 Am</span></div>';
-            }else if (item.slice(0, 7) == 'recever') {
+              message_id = message.slice(message.indexOf("m?e?s?s?a?g?e?_?i?d?") + 20,message.indexOf("m?e?s?s?a?g?e?_?r?e?c?e?i?v?e?d?"));
+              message_received = message.slice(message.indexOf("m?e?s?s?a?g?e?_?r?e?c?e?i?v?e?d?") + 32,message.indexOf("m?e?s?s?a?g?e?_?s?e?e?n?"));
+              message_seen = message.slice(message.indexOf("m?e?s?s?a?g?e?_?s?e?e?n?") + 24,message.indexOf("m?e?s?s?a?g?e?_?t?i?m?e?"));
+              message_time = message.slice(message.indexOf("m?e?s?s?a?g?e?_?t?i?m?e?") + 24,message.indexOf("m?e?s?s?a?g?e?_?t?e??x??t?"));
+              message_text = message.slice(message.indexOf("m?e?s?s?a?g?e?_?t?e??x??t?") + 26,message.indexOf("e?n?d?s?e?n?d?i?n?g?M?e?s?s?a?g?e?"));
+              document.getElementById('main_chat').innerHTML += '<div class="box_me"><pre class="my_chat">'+message_text+'</pre><span class="time">'+message_time+'</span></div>';
+            }else if (item.slice(0, 8) == 'receiver') {
               message = item.slice(9);
               if (message_array_lenght[1] !== message) {
                 message_array_lenght[1] = message;
@@ -62,7 +74,12 @@ function load_messages(messages_limit = 50){
                 // console.log(message);
                 return false;
               }
-              document.getElementById('main_chat').innerHTML += '<div class="box_client"><pre class="client_chat">'+message+'</pre><span class="time">11:57 Am</span></div>';
+              message_id = message.slice(message.indexOf("m?e?s?s?a?g?e?_?i?d?") + 20,message.indexOf("m?e?s?s?a?g?e?_?r?e?c?e?i?v?e?d?"));
+              message_received = message.slice(message.indexOf("m?e?s?s?a?g?e?_?r?e?c?e?i?v?e?d?") + 32,message.indexOf("m?e?s?s?a?g?e?_?s?e?e?n?"));
+              message_seen = message.slice(message.indexOf("m?e?s?s?a?g?e?_?s?e?e?n?") + 24,message.indexOf("m?e?s?s?a?g?e?_?t?i?m?e?"));
+              message_time = message.slice(message.indexOf("m?e?s?s?a?g?e?_?t?i?m?e?") + 24,message.indexOf("m?e?s?s?a?g?e?_?t?e??x??t?"));
+              message_text = message.slice(message.indexOf("m?e?s?s?a?g?e?_?t?e??x??t?") + 26,message.indexOf("e?n?d?s?e?n?d?i?n?g?M?e?s?s?a?g?e?"));
+              document.getElementById('main_chat').innerHTML += '<div class="box_client"><pre class="client_chat">'+message_text+'</pre><span class="time">'+message_time+'</span></div>';
             }
           });
         }
@@ -73,13 +90,33 @@ function load_messages(messages_limit = 50){
   };
 };
 
+function markSeenMessage() {
+  let sender_id = document.getElementById("sender_id").value.trim();
+  let receiver_id = document.getElementById("receiver_id").value.trim();
+  url="message_ajax.php";
+  let xmlhttp = GetXmlHttpObject();
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200){
+      // alert(xmlhttp.responseText.trim());
+    }
+  }
+  xmlhttp.open("POST",url,true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send("sender_id="+sender_id+"&receiver_id="+receiver_id+"&message_seen=message_seen");
+}
+// live chating
 window.addEventListener('load', (event) => {
   load_messages();
-  // alert(load_messages(1))
+  setTimeout(function () {
+    objDiv = document.getElementById("main_chat");
+    if ( window.history.replaceState ) {
+       objDiv.scrollTop = objDiv.scrollHeight;
+        window.history.replaceState( null, null,
+        window.location.href );
+        }
+  }, 100)
   setInterval(function () {
-    // if (test !== document.getElementById('main_chat').innerHTML) {
-      load_messages(1)
-    // }
+      load_messages(1);
   }, 1000);
-  // load_all_messages()
 });

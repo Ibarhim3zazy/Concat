@@ -71,6 +71,7 @@ function GetMyFriendInfo($con,$visitor_id)
 }
 function CheckStatueOfMyFriend($con,$statue,$visitor_id=0)
 {
+  $my_friend_id = 0;
   $user_id = $_SESSION['user_id'];
   if ($visitor_id !== 0) {
     $friend_result = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' AND freind_user_id='$visitor_id' OR my_user_id='$visitor_id' AND freind_user_id='$user_id';");
@@ -100,8 +101,6 @@ function CheckStatueOfMyFriend($con,$statue,$visitor_id=0)
         $my_friend_id = htmlentities($friend_result_row['freind_user_id']);
         $statue_data = htmlentities($friend_result_row['statue']);
       }
-      $num = $con->affected_rows;
-      if ($num != 0) {
         if ($statue == 'friend' && $statue_data == 'friend') {
           $my_friend_result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$my_friend_id';");
           $GLOBALS['my_friend_row'] = $my_friend_result-> fetch_assoc();
@@ -123,6 +122,20 @@ function CheckStatueOfMyFriend($con,$statue,$visitor_id=0)
     }
   }
 }
+
+function getmessages($con,$sender_id,$receiver_id,$messages_limit)
+{
+  $messages_result= $con->query("SELECT * FROM messages WHERE sender_id='$sender_id' AND receiver_id='$receiver_id' OR sender_id='$receiver_id' AND receiver_id='$sender_id' AND seen='1' ORDER BY id DESC LIMIT $messages_limit;");
+  if($messages_result == true){
+    while ($messages_row = $messages_result-> fetch_assoc()){
+      $num = $con->affected_rows;
+      if($num != 0){
+        return $GLOBALS['messages_row'] = $messages_row;
+      }else {
+        return $messages_row['seen'] = 0;
+      }
+    }
+  }
 }
 
 ?>

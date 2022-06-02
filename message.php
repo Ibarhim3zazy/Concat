@@ -32,136 +32,80 @@
     </div>
     <div class="con_message">
       <?php
-      CheckStatueOfMyFriend($con,'friend');
-      GetLastSeen($con,$my_friend_id);
-      $lastseentime = $last_seen_row['last_seen'];
-      $num_sec = time() - strtotime($lastseentime);
-      $i = 0;
-      if (isset($my_friend_row)) {
-        $i++;
-        echo '
-        <div class="box" tabindex="1">
-         <span class="new"></span>
-         <span class="read" style="position: absolute;"><i class="fa-solid fa-check-double"></i></span>
-         <div class="img">
-          <img src="profile___pic/'.htmlentities($my_friend_row['personal_pic']).'" alt="" width="45px" height="45px" style="border-radius: 50%;">';
-          if ($num_sec > 10) {
+      $friend_result = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' OR freind_user_id='$user_id' ORDER BY id DESC;");
+      if($friend_result == true){
+        while ($friend_result_row = $friend_result-> fetch_assoc()) {
+          if ($friend_result_row['freind_user_id'] == $user_id) {
+            $my_friend_id = htmlentities($friend_result_row['my_user_id']);
+            $statue_data = htmlentities($friend_result_row['statue']);
+          }elseif ($friend_result_row['my_user_id'] == $user_id) {
+            $my_friend_id = htmlentities($friend_result_row['freind_user_id']);
+            $statue_data = htmlentities($friend_result_row['statue']);
+          }
+        if ($statue_data == 'friend') {
+          $my_friend_result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$my_friend_id';");
+          $my_friend_row = $my_friend_result-> fetch_assoc();
+          if (isset($my_friend_row)) {
+        $receiver_id = $my_friend_row['user_id'];
+        getmessages($con,$user_id,$receiver_id,1);
+        $num = $con->affected_rows;
+        if($num == 0){
+          $messages_row['seen'] = 0;
+          $messages_row['received'] = 0;
+          $messages_row['message'] = 'Say Hi';
+        }
+        GetLastSeen($con,$receiver_id);
+        $lastseentime = $last_seen_row['last_seen'];
+        $num_sec = time() - strtotime($lastseentime);
+        $i = 0;
+          $i++;
+          echo '
+          <div class="box" tabindex="1">
+          ';
+          if ($messages_row['seen'] == 1) {
             echo '
-              <span class="offline"></span>
+            <span class="unread"><i class="fa-solid fa-check-double"></i></span>
+            ';
+          }elseif ($messages_row['received'] == 1) {
+            echo '
+            <span class="read" style="position: absolute;"><i class="fa-solid fa-check-double"></i></span>
             ';
           }else {
             echo '
-              <span class="active"></span>
+              <span class="new"></span>
             ';
           }
-         echo '
-         </div>
-         <div class="name">
-          <a href="message.php?receiver_id='.htmlentities($my_friend_id).'">'.htmlentities($my_friend_row['name']).'</a>
-          <div class="friendChat">
-           <p>Hey how are you my friend, please call me if you can cause</p>
-           <span class="time">13 Am</span>
+          echo '
+           <div class="img">
+            <img src="profile___pic/'.htmlentities($my_friend_row['personal_pic']).'" alt="" width="45px" height="45px" style="border-radius: 50%;">
+            ';
+            if ($num_sec > 10) {
+              echo '
+                <span class="offline"></span>
+              ';
+            }else {
+              echo '
+                <span class="active"></span>
+              ';
+            }
+           echo '
+           </div>
+           <div class="name">
+            <a href="message.php?receiver_id='.htmlentities($my_friend_id).'">'.htmlentities($my_friend_row['name']).'</a>
+            <div class="friendChat">
+             <p>'.htmlentities($messages_row['message']).'</p>
+             <span class="time">13 Am</span>
+            </div>
+           </div>
           </div>
-         </div>
-        </div>
-        ';
-      }else {
-        echo 'No Donn\'t Have Any Friends Right Now';
+          ';
+        }
       }
+    }
+  }else {
+    echo 'You Donn\'t Have Any Friends Right Now';
+  }
        ?>
-     <div class="box" tabindex="2">
-      <span class="new"></span>
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="active"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
-     <div class="box" tabindex="3">
-      <span class="unread"><i class="fa-solid fa-check-double"></i></span>
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="active"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
-     <div class="box">
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="active"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
-     <div class="box">
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="active"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
-     <div class="box">
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="active"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
-     <div class="box">
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="active"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
-     <div class="box">
-      <div class="img">
-       <img src="images/cat-1.jpg" alt="" width="45px" height="45px" style="border-radius: 50%;">
-       <span class="active"></span>
-      </div>
-      <div class="name">
-       <a href="">user name</a>
-       <div class="friendChat">
-        <p>Hey how are you my friend, please call me if you can cause</p>
-        <span class="time">13 Am</span>
-       </div>
-      </div>
-     </div>
     </div>
    </div>
    <div class="middle" id="middle">
@@ -258,7 +202,7 @@
        }
       ?>
 
-      <textarea style="resize: none;" id="message_text"></textarea>
+      <textarea style="resize: none;" id="message_text" onfocus="markSeenMessage()"></textarea>
       <button onclick="sendingMessage()"><i class="fa-solid fa-paper-plane"></i></button>
      </div>
     </div>

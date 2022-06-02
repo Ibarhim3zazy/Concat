@@ -138,7 +138,19 @@
           <div class="friendsconnect">
               <div class="friendsimage">
                 <?php
-                if (CheckStatueOfMyFriend($con,'friend')) {
+                $friend_result = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' OR freind_user_id='$user_id' ORDER BY id DESC;");
+                if($friend_result == true){
+                  while ($friend_result_row = $friend_result-> fetch_assoc()) {
+                    if ($friend_result_row['freind_user_id'] == $user_id) {
+                      $my_friend_id = htmlentities($friend_result_row['my_user_id']);
+                      $statue_data = htmlentities($friend_result_row['statue']);
+                    }elseif ($friend_result_row['my_user_id'] == $user_id) {
+                      $my_friend_id = htmlentities($friend_result_row['freind_user_id']);
+                      $statue_data = htmlentities($friend_result_row['statue']);
+                    }
+                  if ($statue_data == 'friend') {
+                    $my_friend_result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$my_friend_id';");
+                    $my_friend_row = $my_friend_result-> fetch_assoc();
                   GetLastSeen($con,$my_friend_id);
                   $lastseentime = $last_seen_row['last_seen'];
                   $num_sec = time() - strtotime($lastseentime);
@@ -155,10 +167,14 @@
                    </div>
                  </form>
                   ';
-                }else {
-                  echo 'No Friends Active Right Now';
                 }
+              }else {
+                echo 'No Friends Active Right Now';
               }
+            }
+          }else {
+            echo 'You Haven\'t Any Friends';
+          }
               ?>
               </div>
           </div>
