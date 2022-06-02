@@ -32,29 +32,25 @@
     </div>
     <div class="con_message">
       <?php
-      $friend_result = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' OR freind_user_id='$user_id' ORDER BY id DESC;");
-      if($friend_result == true){
-        while ($friend_result_row = $friend_result-> fetch_assoc()) {
-          if ($friend_result_row['freind_user_id'] == $user_id) {
-            $my_friend_id = htmlentities($friend_result_row['my_user_id']);
-            $statue_data = htmlentities($friend_result_row['statue']);
-          }elseif ($friend_result_row['my_user_id'] == $user_id) {
-            $my_friend_id = htmlentities($friend_result_row['freind_user_id']);
-            $statue_data = htmlentities($friend_result_row['statue']);
+      $chat_result = $con->query("SELECT * FROM chating WHERE sender_id='$user_id' OR receiver_id='$user_id' ORDER BY id DESC");
+      if($chat_result == true){
+        while ($chat_result_row = $chat_result-> fetch_assoc()) {
+          if ($chat_result_row['receiver_id'] == $user_id) {
+            $my_friend_id = htmlentities($chat_result_row['sender_id']);
+          }elseif ($chat_result_row['sender_id'] == $user_id) {
+            $my_friend_id = htmlentities($chat_result_row['receiver_id']);
           }
-        if ($statue_data == 'friend') {
           $my_friend_result= $con->query("SELECT * FROM sign_up_general WHERE user_id='$my_friend_id';");
           $my_friend_row = $my_friend_result-> fetch_assoc();
           if (isset($my_friend_row)) {
-        $receiver_id = $my_friend_row['user_id'];
-        getmessages($con,$user_id,$receiver_id,1);
+        getmessages($con,$user_id,$my_friend_id,1);
         $num = $con->affected_rows;
         if($num == 0){
           $messages_row['seen'] = 0;
           $messages_row['received'] = 0;
           $messages_row['message'] = 'Say Hi';
         }
-        GetLastSeen($con,$receiver_id);
+        GetLastSeen($con,$my_friend_id);
         $lastseentime = $last_seen_row['last_seen'];
         $num_sec = time() - strtotime($lastseentime);
         $i = 0;
@@ -79,7 +75,7 @@
            <div class="img">
             <img src="profile___pic/'.htmlentities($my_friend_row['personal_pic']).'" alt="" width="45px" height="45px" style="border-radius: 50%;">
             ';
-            if ($num_sec > 10) {
+            if ($num_sec > 5) {
               echo '
                 <span class="offline"></span>
               ';
@@ -101,10 +97,9 @@
           ';
         }
       }
+    }else {
+      echo 'You Donn\'t Have Any Chats Right Now';
     }
-  }else {
-    echo 'You Donn\'t Have Any Friends Right Now';
-  }
        ?>
     </div>
    </div>

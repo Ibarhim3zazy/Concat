@@ -128,12 +128,7 @@ function getmessages($con,$sender_id,$receiver_id,$messages_limit)
   $messages_result= $con->query("SELECT * FROM messages WHERE sender_id='$sender_id' AND receiver_id='$receiver_id' OR sender_id='$receiver_id' AND receiver_id='$sender_id' AND seen='1' ORDER BY id DESC LIMIT $messages_limit;");
   if($messages_result == true){
     while ($messages_row = $messages_result-> fetch_assoc()){
-      $num = $con->affected_rows;
-      if($num != 0){
-        return $GLOBALS['messages_row'] = $messages_row;
-      }else {
-        return $messages_row['seen'] = 0;
-      }
+      return $GLOBALS['messages_row'] = $messages_row;
     }
   }
 }

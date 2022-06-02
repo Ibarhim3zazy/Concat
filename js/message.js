@@ -12,6 +12,7 @@ await fetch('message_ajax.php', {
   body: formDatafile
 }).then(function(response) {
     return response.text().then(function(text) {
+      // alert(text);
       document.getElementById("message_text").value = "";
       setTimeout(function () {
         if ( window.history.replaceState ) {

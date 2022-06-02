@@ -20,7 +20,11 @@
     // echo 'Message ID: '.$id_generated .' '. $_POST['message'] .' from '. $_POST['sender_id'].' to '. $_POST['receiver_id'] .' has img named: '. $file_name;
     $result_message = $con->query("INSERT INTO messages VALUES(NULL, '$id_generated', '$sender_id', '$receiver_id', '$file_name', '$message','0', '0', '0', '0', Null);");
       if ($result_message == true) {
-        // echo 'success';
+        $has_chat_result= $con->query("SELECT * FROM chating WHERE sender_id='$sender_id' AND receiver_id='$receiver_id' OR sender_id='$receiver_id' AND receiver_id='$sender_id' ORDER BY id DESC");
+        $num_row = $con->affected_rows;
+        if ($num_row == 0) {
+          $con->query("INSERT INTO chating VALUES(NULL, '$sender_id', '$receiver_id', Null);");
+        }
       }else {
         echo 'send_faild';
       }
