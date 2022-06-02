@@ -139,6 +139,7 @@ function getmessages($con,$sender_id,$receiver_id,$messages_limit)
     }
   }
 }
+
 if (isset($_GET['search_peole_Word'])) {
   $searchWord = $_GET['search_peole_Word'];
   SearchPeople($con,$searchWord,25);
@@ -160,4 +161,28 @@ function SearchPeople($con,$searchWord,$search_limit)
     }
   }
 }
+
+// get messages that i receive it only for notification
+
+if (isset($_POST['myid']) == true && isset($_POST['msgs_limit']) == true) {
+  $myid = $_POST['myid'];
+  $messages_limit = $_POST['msgs_limit'];
+  load_messages_nofi($con,$myid,$messages_limit);
+}
+function load_messages_nofi($con,$myid,$messages_limit)
+{
+  $messages_result= $con->query("SELECT * FROM messages WHERE receiver_id='$myid' AND seen='0' ORDER BY id ASC LIMIT $messages_limit;");
+  if($messages_result == true){
+    while ($messages_row = $messages_result-> fetch_assoc()){
+      $sender_id = htmlentities($messages_row['sender_id']);
+      $sender_message_time = htmlentities($messages_row['time']);
+      $sender_message_time = date('h:i A', strtotime($sender_message_time));
+      $user_result = $con->query("SELECT * FROM sign_up_general WHERE user_id='$sender_id' LIMIT 1;");
+      if ($user_row = $user_result-> fetch_assoc()){
+        echo $user_row['name']." u?s?e?r?n?a?m?e?f?o?r?n?o?t?i?".$messages_row['message']." s?e?n?d?e?r?m?e?s?s?a?g?e?".$sender_message_time." s?e?n?d?e?r?m?e?s?s?a?g?e?t?i?m?e?".$user_row['personal_pic']." s?e?n?d?e?r?p?i?c?f?o?r?n?o?t?f?i?".$sender_id." e?n?d?m?e?s?s?a?g?e?r?o?w?";
+      }
+    }
+  }
+}
+
 ?>

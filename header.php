@@ -274,47 +274,16 @@
         </ul>
        </div>
        <div class="messages" id="messages">
-        <a href="javascript:"><i class="fa-brands fa-facebook-messenger" id="chat"></i>
+        <a href="javascript:" onclick="load_messages_nofi()"><i class="fa-brands fa-facebook-messenger" id="chat"></i>
+        <input type="hidden" id="user_id" value="<?= htmlentities($_SESSION['user_id']) ?>">
         </a>
         <ul id="ulChat" class="closechat">
+
          <li>
-          <button id="messageClose"><i class="fa-solid fa-xmark"></i></button>
-          Messages
+
          </li>
          <li>
-          <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="55px" height="55px"
-           style="border-radius: 50%;">
-          <div class="box">
-           <div class="top">
-            <div class="name">
-             User name
-            </div>
-            <div class="time">
-             11:00 AM
-            </div>
-           </div>
-           <div class="message">
-            welcome Sam , How're you welcome Sam , How're you?
-           </div>
-          </div>
-          <span class="new"></span>
-         </li>
-         <li>
-          <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="55px" height="55px"
-           style="border-radius: 50%;">
-          <div class="box">
-           <div class="top">
-            <div class="name">
-             User name
-            </div>
-            <div class="time">
-             11:00 AM
-            </div>
-           </div>
-           <div class="message">
-            welcome Sam , How're you?
-           </div>
-          </div>
+
          </li>
          <li>
           <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="55px" height="55px"

@@ -302,7 +302,7 @@ span.new {
     justify-content: flex-start !important;
     text-shadow: 1px 1px 3px rgba(0, 217, 255, 0.39);
     background-color: transparent !important;
-    cursor: alias !important;
+    cursor: pointer !important;
 }
 
 .header .container .right .messages ul li {

@@ -36,7 +36,7 @@ function GetXmlHttpObject(){
 };
 message_array_lenght = [];
 message_array_lenght[0] = 0;
-function load_messages(messages_limit = 50){
+function load_messages(messages_limit = 1000){
   if (document.getElementById('sender_id').value.trim() != "" &&
     document.getElementById('receiver_id').value.trim() != "") {
 			let sender_id = document.getElementById("sender_id").value.trim();
