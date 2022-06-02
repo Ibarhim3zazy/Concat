@@ -175,6 +175,9 @@
       </div>
     </div>
   </div>
+  <a class="up" href="#">
+    <i class="fa-solid fa-angles-up"></i>
+  </a>
 </div>
 
 <script src="js/search.js"></script>
