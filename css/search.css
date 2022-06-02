@@ -110,6 +110,8 @@
   top: 50%
 }
 
+
+
 .search-container .conten {
   display:
   grid;
@@ -236,4 +238,8 @@
 }
 .search-container .three .box:hover {
   transform: scale(1.1);
+}
+
+.search-container .two .conten  .box a{
+  margin-top: -50px;
 }

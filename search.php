@@ -92,43 +92,43 @@
           <div class="back">
             <img src="images/backjack.jpg" alt="">
           </div>
-          <div class="pic">
+          <!-- <div class="pic">
             <img src="images/jacksparow.jpg" alt="">
-          </div>
+          </div> -->
           <a href="">Johnny Deep Fans</a>
           </div>
           <div class="box">
           <div class="back">
             <img src="images/aotback.jpg" alt="">
           </div>
-          <div class="pic">
+          <!-- <div class="pic">
             <img src="images/aotpic.jpg" alt="">
-          </div>
+          </div> -->
           <a href="">Attack on titan </a>
           </div>
           <div class="box">
           <div class="back">
             <img src="images/aotback.jpg" alt="">
           </div>
-          <div class="pic">
+          <!-- <div class="pic">
             <img src="images/aotpic.jpg" alt="">
-          </div>
+          </div> -->
           <a href="">Attack on titan </a>
           </div>  <div class="box">
             <div class="back">
               <img src="images/aotback.jpg" alt="">
             </div>
-            <div class="pic">
+            <!-- <div class="pic">
               <img src="images/aotpic.jpg" alt="">
-            </div>
+            </div> -->
             <a href="">Attack on titan </a>
             </div>  <div class="box">
               <div class="back">
                 <img src="images/aotback.jpg" alt="">
               </div>
-              <div class="pic">
+              <!-- <div class="pic">
                 <img src="images/aotpic.jpg" alt="">
-              </div>
+              </div> -->
               <a href="">Attack on titan </a>
               </div>
         </div>
