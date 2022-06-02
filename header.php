@@ -25,7 +25,7 @@
        </div>
        <div class="search">
         <input type="search" name="" id="search" placeholder="Search">
-        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
        </div>
       </div>
       <div class="middle">

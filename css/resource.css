@@ -20,7 +20,7 @@
  height: 445px;
  border-radius: 10px;
  overflow: auto;
- 
+
 }
 
 .resource_container .container .box  {
@@ -33,7 +33,6 @@
  flex-direction: column;
  row-gap: 5px;
  transition: .5s;
-
 }
 
 .resource_container .container .box a {
@@ -59,7 +58,7 @@
  font-weight: 600;
  color: rgb(70, 70, 70);
  text-transform: capitalize;
- word-spacing: 1px; 
+ word-spacing: 1px;
  width: 100%;
  padding: 10px;
  text-align: center;
@@ -111,4 +110,3 @@
  color: rgb(233, 60, 60);
  text-decoration: underline rgb(250, 201, 201);
 }
-

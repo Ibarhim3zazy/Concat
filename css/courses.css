@@ -41,6 +41,7 @@
 .couses_container .container .taps li.active ,
 .couses_container .container .taps li:hover {
  background-color: #cfeaee;
+  color: #fff;
 }
 
 .couses_container .container .contents {
