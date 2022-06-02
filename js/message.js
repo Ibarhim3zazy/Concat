@@ -112,26 +112,28 @@ function markSeenMessage() {
 
 function search_for_chat() {
   let search_peole_Word = document.getElementById("searchWord").value.trim();
-  url="general_ajax.php?search_peole_Word="+search_peole_Word;
-  let xmlhttp = GetXmlHttpObject();
-  xmlhttp.onreadystatechange=function()
-  {
-    if (xmlhttp.readyState==4 && xmlhttp.status==200){
-      document.getElementById('con_message').innerHTML = "";
-      result_array = xmlhttp.responseText.trim();
-      result_array = result_array.split("e?n?d?s?e?a?r?c?h?r?e?s?u?l?t?").reverse();
-      result_array.forEach((item, i) => {
-        result_user_id = item.slice(0,item.indexOf("u?s?e?r?f?o?r?m?e?s?s?a?g?e?i?d?"));
-        result_user_name = item.slice(item.indexOf("u?s?e?r?f?o?r?m?e?s?s?a?g?e?i?d?") + 32,item.indexOf("p?i?c?p?r?o?f?i?l?e?p?h?o?t?o?"));
-        result_user_pic = item.slice(item.indexOf("p?i?c?p?r?o?f?i?l?e?p?h?o?t?o?") + 30,item.indexOf("e?n?d?s?e?a?r?c?h?r?e?s?u?l?t?"));
-        if (result_user_id != "") {
-          document.getElementById('con_message').innerHTML += '<div class="box" tabindex="1"><div class="img"><img src="profile___pic/'+result_user_pic+'" alt="" width="45px" height="45px" style="border-radius: 50%;"></div><div class="name"><a href="message.php?receiver_id='+result_user_id+'">'+result_user_name+'</a></div></div>';
+  if (search_peole_Word.length > 2) {
+    url="general_ajax.php?search_peole_Word="+search_peole_Word;
+    let xmlhttp = GetXmlHttpObject();
+    xmlhttp.onreadystatechange=function()
+    {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200){
+        document.getElementById('con_message').innerHTML = "";
+        result_array = xmlhttp.responseText.trim();
+        result_array = result_array.split("e?n?d?s?e?a?r?c?h?r?e?s?u?l?t?").reverse();
+        result_array.forEach((item, i) => {
+          result_user_id = item.slice(0,item.indexOf("u?s?e?r?f?o?r?m?e?s?s?a?g?e?i?d?"));
+          result_user_name = item.slice(item.indexOf("u?s?e?r?f?o?r?m?e?s?s?a?g?e?i?d?") + 32,item.indexOf("p?i?c?p?r?o?f?i?l?e?p?h?o?t?o?"));
+          result_user_pic = item.slice(item.indexOf("p?i?c?p?r?o?f?i?l?e?p?h?o?t?o?") + 30,item.indexOf("e?n?d?s?e?a?r?c?h?r?e?s?u?l?t?"));
+          if (result_user_id != "") {
+            document.getElementById('con_message').innerHTML += '<div class="box" tabindex="1"><div class="img"><img src="profile___pic/'+result_user_pic+'" alt="" width="45px" height="45px" style="border-radius: 50%;"></div><div class="name"><a href="message.php?receiver_id='+result_user_id+'">'+result_user_name+'</a></div></div>';
+          }
+        });
         }
-      });
       }
-    }
-  xmlhttp.open("GET",url,true);
-  xmlhttp.send();
+    xmlhttp.open("GET",url,true);
+    xmlhttp.send();
+  }
 }
 
 // live chating
