@@ -370,7 +370,7 @@
           </div>
          </li>
          <li class="setting">
-          <a href="" class="settPage">
+          <a href="setting.php" class="settPage">
            <i class="fa-solid fa-gear"></i>
            Setting
           </a>

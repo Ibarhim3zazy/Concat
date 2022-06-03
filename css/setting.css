@@ -1,0 +1,266 @@
+.setting-container {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.setting-container .container {
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: 10% 80%;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  /* padding: 10px 15px; */
+  /* box-shadow: 1px 1px 10px 6px white; */
+}
+
+.setting-container .container .taps {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* gap:20px; */
+  margin-right: 5px;
+  background-color: #fff;
+  transition: 0.3s;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.setting-container .container .taps li {
+  padding: 13px 15px ;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: cursive;
+  color: #999989;
+  width: 100%;
+  position: relative;
+  border-right: 2px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+
+.setting-container .container .taps li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 4px;
+  background-color: #00c9ff;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+.setting-container .container .taps li:hover::after {
+  content: '';
+  width: 100%;
+}
+.setting-container .container .taps li.active ,
+.setting-container .container .taps li:hover {
+ background-color: #f2fdff;
+ color: var(--main-color-hover);
+}
+.setting-container .container .content {
+   background-color: #f2fdff;
+   border-radius: 5px;
+   width: 100%;
+   padding: 15px ;
+}
+
+.setting-container  .container .taps li.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #00c9ff;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.setting-container .container .contents > div:not(:first-child) {
+ display: none;
+}
+
+.setting-container .container .contents .password {
+  margin-top: 7px;
+}
+
+
+
+
+.setting-container .container .contents .conten {
+  width: 100%;
+  max-width: 100%;
+}
+
+.setting-container .container .contents .form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  /* gap :30px; */
+}
+
+.setting-container .container .contents .form .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap : 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.setting-container .container .contents .personal {
+  margin-top: -20px;
+}
+
+.setting-container  h1 {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: cursive;
+  color: rgb(97, 97, 97);
+  text-transform: capitalize;
+  padding: 10px 30px;
+  text-shadow: 1px 1px 8px 10px #f2fdff;
+}
+.setting-container .container .contents .form .content .min-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 70%;
+  justify-content: center;
+  align-items: flex-start;
+  gap : 50px;
+}
+
+.setting-container .container .contents .form .content .min-box .center {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 49% 49%;
+  gap : 10px;
+  justify-content: space-between;
+}
+
+.setting-container input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  caret-color: #00c9ff;
+  font-size: 16px;
+  color: #999989;
+  font-family: cursive;
+  transition: 0.3s;
+
+}
+.setting-container input::placeholder {
+  opacity: .9;
+}
+.setting-container input:hover::placeholder {
+  transition: 0.3s;
+  opacity: .4;
+}
+.setting-container input:focus {
+  outline: none;
+}
+.setting-container input:hover {
+  box-shadow: 0px 0px 6px 1px #00c9ff;
+}
+
+.setting-container .vertical {
+  display: grid;
+  gap : 15px;
+}
+
+.setting-container .vertical input {
+  background-color: #fff !important;
+}
+
+.setting-container .container .contents .form .content .min-box .center-box {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 80% 19%;
+  gap : 10px;
+  justify-content: space-between;
+}
+
+.setting-container  input[type="button"] {
+  font-family: Arial;
+  font-size: 13px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #999989;
+  cursor: pointer;
+}
+.setting-container  input[type="button"].notactive {
+  background-color: #81BDCD;
+  color: #fff;
+  cursor : no-drop;
+  box-shadow: none;
+}
+
+.setting-container input[type="button"].active-btn  {
+  background-color: #017A9B;
+  color: #fff;
+  cursor: pointer;
+}
+
+.setting-container .minbox {
+  display: flex;
+  flex-direction: column;
+  gap : 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.setting-container .minbox .resend {
+  background-color: transparent;
+  text-transform: lowercase;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+  color: #00c9ff;
+  text-transform: capitalize;
+}
+
+.setting-container .minbox .resend:hover {
+  box-shadow: none;
+  color: #86e6ff;
+}
+
+.setting-container .minbox .enterCode {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0px 10px;
+  gap :15px
+}
+.setting-container .minbox .enterCode p {
+  font-size: 13px;
+  color: 999989;
+}
+
+.setting-container .minbox .code {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap : 10px;
+}
+
+.setting-container h3 {
+  font-weight: 500;
+  font-size: 14px;
+  color: #787872;
+  text-transform: capitalize;
+}
