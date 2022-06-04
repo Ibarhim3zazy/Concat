@@ -170,7 +170,7 @@ if (isset($_GET['friend_id'])) {
      ?>
    </div>
    <div class="bioBox">
-    <div class="bio">
+    <div class="bio" >
      σƙҽყ.. <br>
      ιƚ'ʂ σƙҽყ ɳσƚ ƚσ Ⴆҽ σƙҽყ♡..
     </div>
