@@ -90,7 +90,51 @@
         <div class="conten">
           <div class="box">
             <form class="form manage"  method="post">
-
+              <div class="content">
+                <h1>About</h1>
+                <div class="min-box">
+                  <h3><i class="fa-solid fa-user-pen"></i> Edit Bio</h3>
+                  <textarea name="name">
+                     σƙҽყ..
+                     ιƚ'ʂ σƙҽყ ɳσƚ ƚσ Ⴆҽ σƙҽყ♡..
+                   </textarea >
+                </div>
+                <div class="min-box">
+                  <h3><i class="fa-solid fa-house-chimney"></i> Live in</h3>
+                  <input type="text"  value="Mansourah, Ad Daqahliyah, Egypt">
+                </div>
+                <div class="min-box">
+                  <h3><i class="fa-solid fa-location-dot"></i> Form</h3>
+                  <input type="text" value="Egypt">
+                </div>
+                <div class="min-box">
+                  <h3> <i class="fa-solid fa-graduation-cap"></i> Study at</h3>
+                  <input type="text" name="" value=" Faculty of Physical Education, Zagazig University">
+                </div>
+                <div class="min-box">
+                  <h3> <i class="fa-solid fa-graduation-cap"></i> Degree</h3>
+                  <input type="text" name="" value=" Master's in Computer Science">
+                </div>
+                <div class="min-box">
+                  <h3> <i class="fa-solid fa-briefcase"></i> Work at</h3>
+                  <input type="text" name="" value=" Health Square Fitness Club, RAK - Best Gym in RAK">
+                </div>
+                <div class="min-box">
+                  <h3><i class="fa-solid fa-signal"></i> status</h3>
+                  <select class="statue select" name="">
+                    <option value="single">Single</option>
+                    <option value="in a relation">in a relation</option>
+                    <option value="engaged">engaged</option>
+                    <option value="married">married</option>
+                    <option value="divorced">divorced</option>
+                    <option value="separated">separated</option>
+                  </select>
+                </div>
+              </div>
+              <div class="submit">
+                <input type="button"  value="Cancel">
+                <input type="button"  value="Save" class="notactive">
+              </div>
             </form>
           </div>
         </div>
@@ -100,7 +144,51 @@
         <div class="conten">
           <div class="box">
             <form class="form block"  method="post">
-
+              <div class="content">
+                <h1>Blocking List</h1>
+                <div class="min-box">
+                  <div class="prof">
+                    <img src="images/picsearch2.jpg" alt="">
+                    <h3>Selena Gomez</h3>
+                  </div>
+                  <input type="button"  value="Unblock">
+                </div>
+                <div class="min-box">
+                  <div class="prof">
+                    <img src="images/picsearch3.jpg" alt="">
+                    <h3>Selena Gomez</h3>
+                  </div>
+                  <input type="button"  value="Unblock">
+                </div>
+                <div class="min-box">
+                  <div class="prof">
+                    <img src="images/picsearch4.jpg" alt="">
+                    <h3>Selena Gomez</h3>
+                  </div>
+                  <input type="button"  value="Unblock">
+                </div>
+                <div class="min-box">
+                  <div class="prof">
+                    <img src="images/picsearch5.jpg" alt="">
+                    <h3>Selena Gomez</h3>
+                  </div>
+                  <input type="button"  value="Unblock">
+                </div>
+                <div class="min-box">
+                  <div class="prof">
+                    <img src="images/picsearch6.jpg" alt="">
+                    <h3>Selena Gomez</h3>
+                  </div>
+                  <input type="button"  value="Unblock">
+                </div>
+                <div class="min-box">
+                  <div class="prof">
+                    <img src="images/picsearch7.jpg" alt="">
+                    <h3>Selena Gomez</h3>
+                  </div>
+                  <input type="button"  value="Unblock">
+                </div>
+              </div>
             </form>
           </div>
         </div>
