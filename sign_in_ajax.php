@@ -1,4 +1,6 @@
-<?php require("connection.php"); session_start();
+<?php require("connection.php");
+if (!isset($_SESSION)) session_start();
+
   if (isset($_POST['name']) == true &&
     isset($_POST['pass']) == true) {
     $user= $_POST['name'];

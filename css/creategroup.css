@@ -34,8 +34,8 @@
  position: relative;
 }
 /*
- animation down : to keep "container" in his place 
- means .. didn't move  up with body. 
+ animation down : to keep "container" in his place
+ means .. didn't move  up with body.
 */
 @keyframes down {
  0%,100% {
@@ -54,7 +54,7 @@
  width: 100%;
  animation: none;
 }
-.create_group .container .contain form {
+.create_group .container .contain #creating_group {
  display: flex;
  align-items: flex-start;
  justify-content: space-between;
@@ -63,7 +63,7 @@
  height: 340px;
  row-gap: 30px;
 }
-.create_group .container .contain form  .top {
+.create_group .container .contain #creating_group  .top {
  display: flex;
  align-items: flex-start;
  justify-content: center;
@@ -123,7 +123,7 @@ color: #999;
  color: #999;
 }
 
-.create_group .container .contain form input{
+.create_group .container .contain #creating_group input{
  width: 100%;
  padding: 10px 15px;
  caret-color: aquamarine;
@@ -133,19 +133,19 @@ color: #999;
  transition: 0.6s ease-in-out;
  transition: .5s ease-in-out;
 }
-.create_group .container .contain form input::placeholder {
+.create_group .container .contain #creating_group input::placeholder {
  font-size: 12px;
  text-transform: capitalize;
  color: #999;
- 
+
 }
 
-.create_group .container .contain form input:hover::placeholder {
+.create_group .container .contain #creating_group input:hover::placeholder {
  opacity: .4;
 }
 
-.create_group .container .contain form input:hover,
-.create_group .container .contain form .select:hover {
+.create_group .container .contain #creating_group input:hover,
+.create_group .container .contain #creating_group .select:hover {
  border-color: rgb(213, 247, 255);
  background-color: #eee4;
 }
@@ -169,7 +169,7 @@ color: #999;
 
 }
 .select:hover label,
-.create_group .container .contain form input:hover::placeholder {
+.create_group .container .contain #creating_group input:hover::placeholder {
  color: rgb(2, 175, 255);
 }
 
@@ -187,7 +187,7 @@ color: #999;
 
 
 
-.create_group .container .contain form > input:last-of-type:hover {
+.create_group .container .contain #creating_group > input:last-of-type:hover {
  background-color: #1a6ed8;
  color: #fff;
  cursor: pointer;

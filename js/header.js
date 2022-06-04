@@ -98,7 +98,7 @@ function GetXmlHttpObject(){
 
 function load_messages_nofi() {
   myid = document.getElementById('user_id').value;
-  msgs_limit = 10;
+  msgs_limit = 200;
   url="general_ajax.php";
   let xmlhttp = GetXmlHttpObject();
   xmlhttp.onreadystatechange=function()

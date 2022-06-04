@@ -151,7 +151,7 @@ header .container .contains  .info .left .joinbtn ul {
  position: absolute;
  /* width: 144px; */
  /* height: 153px; */
- bottom: -120px;
+ bottom: -88px;
  left: -104px;
  border: 1px solid #e1e1e1b8;
  border-radius: 10px;
@@ -159,12 +159,12 @@ header .container .contains  .info .left .joinbtn ul {
  z-index: 20;
 }
 
-header .container .contains  .info .left .joinbtn ul > button {
+header .container .contains  .info .left .joinbtn ul > form button {
  width: 80px;
  margin: 7px 0;
 }
 
-header .container .contains  .info .left .joinbtn ul > button {
+header .container .contains  .info .left .joinbtn ul > form button {
  background-color: #fff;
 }
 
@@ -190,8 +190,8 @@ header .container .contains  .info .left button {
 header .container .contains  .info .left button i {
  color: #d39393;
 }
-header .container .contains  .info .left> button:first-of-type ,
- header .container .contains  .info .left> button:first-of-type i{
+header .container .contains  .info .left > button:first-of-type ,
+ header .container .contains  .info .left > button:first-of-type i{
  background-color: #ff6d24;
  color: #fff;
 }
