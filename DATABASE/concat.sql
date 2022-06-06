@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2022 at 01:03 PM
+-- Generation Time: Jun 06, 2022 at 03:46 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -66,12 +66,6 @@ CREATE TABLE `create_group` (
 --
 
 INSERT INTO `create_group` (`id`, `admin_id`, `group_id`, `group_name`, `type`, `visible`, `group_pic`, `group_about`, `group_rules`, `date`) VALUES
-(1, 27539121, 0, 'First Group', 0, 1, '', '', NULL, '2022-06-03 05:22:33'),
-(2, 27539121, 248486368114, 'First Group', 0, 1, '', '', NULL, '2022-06-03 05:26:34'),
-(3, 27539121, 242547207114, 'First Group', 0, 1, '', '', NULL, '2022-06-03 05:29:45'),
-(4, 27539121, 1979747118114, 'First Group', 0, 1, '', '', NULL, '2022-06-03 05:30:47'),
-(5, 27539121, 539315256114, 'First Group', 0, 1, '', '', NULL, '2022-06-03 05:31:24'),
-(6, 27539121, 1519925956114, 'a', 0, 1, '', '', NULL, '2022-06-03 05:56:12'),
 (7, 27539121, 242618731114, 'First', 0, 1, 'defulte_cover.jpg', '', NULL, '2022-06-03 05:56:57'),
 (8, 27539121, 2113057528114, 'Second Group', 1, 1, 'defulte_cover.jpg', '', NULL, '2022-06-03 05:58:24'),
 (9, 27539121, 1753710930114, 'First', 0, 1, 'defulte_cover.jpg', NULL, NULL, '2022-06-03 12:33:17'),
@@ -121,8 +115,8 @@ CREATE TABLE `group_members` (
 --
 
 INSERT INTO `group_members` (`id`, `group_id`, `group_members_id`, `accept`) VALUES
-(8, 916430527114, 1319098029, 1),
-(10, 916430527114, 396084773, 1);
+(10, 916430527114, 396084773, 1),
+(11, 916430527114, 1319098029, 1);
 
 -- --------------------------------------------------------
 
@@ -176,9 +170,9 @@ CREATE TABLE `last_seen` (
 --
 
 INSERT INTO `last_seen` (`id`, `user_id`, `login_time`, `last_seen`, `active`) VALUES
-(1, 1319098029, '2022-06-04 08:28:52', '2022-06-04 11:03:45', 1),
-(2, 396084773, '2022-06-04 11:02:35', '2022-06-04 11:03:45', 1),
-(3, 27539121, '2022-05-30 23:03:04', '2022-06-04 11:03:42', 1);
+(1, 1319098029, '2022-06-06 00:57:50', '2022-06-06 01:46:36', 1),
+(2, 396084773, '2022-06-04 11:02:35', '2022-06-04 11:04:44', 1),
+(3, 27539121, '2022-05-30 23:03:04', '2022-06-06 01:46:40', 1);
 
 -- --------------------------------------------------------
 
@@ -330,7 +324,8 @@ INSERT INTO `posting` (`id`, `post_id`, `user_id`, `post_content`, `image`, `vid
 (209, 994494778, 1319098029, '0', '0', '0', '0', 0, 0, '2022-05-30 20:32:04', 0),
 (210, 867191471, 27539121, '?', '330-3302186_open-book-clipart-png-download.png', '0', '0', 0, 0, '2022-05-31 12:41:56', 4),
 (211, 1279983112, 27539121, '0', '0', '0', '0', 0, 0, '2022-06-02 12:30:53', 0),
-(212, 1365025577, 27539121, 'post', '0', '0', '0', 0, 0, '2022-06-02 12:31:06', 1);
+(212, 1365025577, 27539121, 'post', '0', '0', '0', 0, 0, '2022-06-02 12:31:06', 1),
+(213, 1449153495, 27539121, 'TEST &gt;_&lt;', '—Pngtree—abstract geometric shape group set_1196104.jpg', '0', '0', 0, 0, '2022-06-05 16:26:46', 4);
 
 -- --------------------------------------------------------
 
@@ -382,7 +377,7 @@ CREATE TABLE `sign_up_general` (
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `pass` varchar(50) NOT NULL,
-  `mobile_num` int(11) NOT NULL,
+  `mobile_num` varchar(11) NOT NULL,
   `birth_date` date NOT NULL DEFAULT current_timestamp(),
   `birth_address` varchar(40) NOT NULL,
   `current_address` varchar(40) NOT NULL,
@@ -401,9 +396,9 @@ CREATE TABLE `sign_up_general` (
 --
 
 INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `cover_pic`, `type`, `access_num`) VALUES
-(16, 396084773, 'Ibrahim', 'ebrahim3zazy@gmail.com', 'Admin3', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 19),
-(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', 1094989981, '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', '—Pngtree—muslim man photo_6934073.png', 'background.jpg', 'user', 14),
-(18, 27539121, 'Ibrahim 3zazy', 'Ibrahim3zazy@hotmail.com', 'admin1', 1145452440, '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'quran (2).png', 'cover-96.jpg', 'user', 3);
+(16, 396084773, 'Ibrahim', 'ebrahim3zazy@gmail.com', 'Admin3', '01145452440', '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 19),
+(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', '01094989981', '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', '—Pngtree—muslim man photo_6934073.png', 'background.jpg', 'user', 15),
+(18, 27539121, 'Ibrahim 3zazy', 'Ibrahim3zazy@hotmail.com', 'admin1', '01145452440', '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'quran (2).png', 'cover-96.jpg', 'user', 3);
 
 -- --------------------------------------------------------
 
@@ -570,7 +565,7 @@ ALTER TABLE `friend_request`
 -- AUTO_INCREMENT for table `group_members`
 --
 ALTER TABLE `group_members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `group_posting`
@@ -594,7 +589,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
 
 --
 -- AUTO_INCREMENT for table `post_like`
