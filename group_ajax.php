@@ -29,17 +29,15 @@ if (isset($_POST['group_name']) && isset($_POST['admin_id']) && isset($_POST['gr
   // view group basic information
   function GetGroupInfo($con,$group_id)
   {
-    if (isset($_GET['group_id']) == true) {
-      $group_id = $_GET['group_id'];
       $result_group_info= $con->query("SELECT * FROM create_group WHERE group_id='$group_id' LIMIT 1;");
       $num_group_info = $con->affected_rows;
       if($num_group_info != 0 && $result_group_info == true){
         $GLOBALS['row_group_info'] = $result_group_info-> fetch_assoc();
         return $GLOBALS['row_group_info'];
+      }else {
+        echo '<script>window.location = "index.php"</script>';
+        die();
       }
-    }else {
-      echo "No Group Found";
-    }
   }
 
   // check user if he a group member

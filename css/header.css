@@ -766,3 +766,7 @@ span.new {
     color: rgba(66, 78, 73, 0.692);
     text-shadow: 1px 1px 3px rgba(66, 71, 71, 0.39);
 }
+
+.fa-solid.fa-magnifying-glass{
+  cursor: pointer;
+}

@@ -23,10 +23,10 @@
        <div class="logo">
         <a href="index.php"><img src="images/logo.png" alt=""></a>
        </div>
-       <div class="search">
-        <input type="search" name="" id="search" placeholder="Search">
-        <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
-       </div>
+       <form action="search.php" method="get" class="search" id="submit_search">
+        <input type="search" name="Search" id="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass" onclick="submit_search()"></i>
+       </form>
       </div>
       <div class="middle">
        <div class="home">

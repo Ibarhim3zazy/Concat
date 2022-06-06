@@ -1,6 +1,11 @@
 <link rel="stylesheet" href="css/search.css">
 
-<?php require_once 'header.php'; ?>
+<?php require_once 'header.php'; require_once 'general_ajax.php';
+
+if (isset($_GET['Search'])) {
+  $SearchWord = $_GET['Search'];
+}
+?>
 
 <div class="search-container">
   <div class="container">
@@ -12,125 +17,45 @@
     <div class="contents">
       <div class="one">
         <div class="conten">
-          <div class="box">
-          <div class="back">
-            <img src="images/backsearch1.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch1.jpg" alt="">
-          </div>
-          <a href="">Sella Samy</a>
-          </div>
-          <!-- <div class="box">
-          <div class="back">
-            <img src="images/backsearch2.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch2.jpg" alt="">
-          </div>
-          <h1>Karena Kabour</h1>
-          </div> -->
-          <div class="box">
-          <div class="back">
-            <img src="images/backsearch6.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch2.jpg" alt="" >
-          </div>
-          <a href="">lina hany</a>
-          </div>
-          <div class="box">
-          <div class="back">
-            <img src="images/backsearch8.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch8.jpg" alt="">
-          </div>
-          <a href="">Hamada Samir</a>
-          </div>
-          <div class="box">
-          <div class="back">
-            <img src="images/backsearch4.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch6.jpg" alt="">
-          </div>
-          <a href="">sara Samir</a>
-          </div>
-          <div class="box">
-          <div class="back">
-            <img src="images/backsearch5.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch7.jpg" alt="">
-          </div>
-          <a href="">Ahmed Samir</a>
-          </div>
-          <!-- <div class="box">
-          <div class="back">
-            <img src="images/backsearch5.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch7.jpg" alt="">
-          </div>
-          <h1>Ahmed Samir</h1>
-          </div> -->
-          <!-- <div class="box">
-          <div class="back">
-            <img src="images/backsearch6.jpg" alt="">
-          </div>
-          <div class="pic">
-            <img src="images/picsearch4.jpg" alt="">
-          </div>
-          <h1>Adela Dain</h1>
-          </div> -->
+          <?php
+          $result= $con->query("SELECT * FROM sign_up_general WHERE name LIKE '%$SearchWord%' OR email LIKE '%$SearchWord%.com' OR mobile_num LIKE '$SearchWord' LIMIT 20;");
+          $num_Search = $con->affected_rows;
+          if($num_Search != 0 && $result == true){
+            while ($row_Search = $result-> fetch_assoc()) {
+              echo '
+              <div class="box">
+              <div class="back">
+                <img src="cover___pic/'.$row_Search['cover_pic'].'" alt="">
+              </div>
+              <div class="pic">
+                <img src="profile___pic/'.$row_Search['personal_pic'].'" alt="">
+              </div>
+              <a href="profile.php?friend_id='.$row_Search['user_id'].'">'.$row_Search['name'].'</a>
+              </div>
+              ';
+            }
+          }
+           ?>
         </div>
       </div>
       <div class="two">
         <div class="conten">
-          <div class="box">
-          <div class="back">
-            <img src="images/backjack.jpg" alt="">
-          </div>
-          <!-- <div class="pic">
-            <img src="images/jacksparow.jpg" alt="">
-          </div> -->
-          <a href="">Johnny Deep Fans</a>
-          </div>
-          <div class="box">
-          <div class="back">
-            <img src="images/aotback.jpg" alt="">
-          </div>
-          <!-- <div class="pic">
-            <img src="images/aotpic.jpg" alt="">
-          </div> -->
-          <a href="">Attack on titan </a>
-          </div>
-          <div class="box">
-          <div class="back">
-            <img src="images/aotback.jpg" alt="">
-          </div>
-          <!-- <div class="pic">
-            <img src="images/aotpic.jpg" alt="">
-          </div> -->
-          <a href="">Attack on titan </a>
-          </div>  <div class="box">
-            <div class="back">
-              <img src="images/aotback.jpg" alt="">
-            </div>
-            <!-- <div class="pic">
-              <img src="images/aotpic.jpg" alt="">
-            </div> -->
-            <a href="">Attack on titan </a>
-            </div>  <div class="box">
+          <?php
+          $result_group_search= $con->query("SELECT * FROM create_group WHERE group_name LIKE '%$SearchWord%' AND visible='1' LIMIT 20;");
+          $num_Search = $con->affected_rows;
+          if($num_Search != 0 && $result_group_search == true){
+            while ($row_Search = $result_group_search-> fetch_assoc()) {
+              echo '
+              <div class="box">
               <div class="back">
-                <img src="images/aotback.jpg" alt="">
+                <img src="group___pic/'.$row_Search['group_pic'].'" alt="">
               </div>
-              <!-- <div class="pic">
-                <img src="images/aotpic.jpg" alt="">
-              </div> -->
-              <a href="">Attack on titan </a>
+              <a href="groupName.php?group_id='.$row_Search['group_id'].'">'.$row_Search['group_name'].'</a>
               </div>
+              ';
+            }
+          }
+           ?>
         </div>
       </div>
       <div class="three">

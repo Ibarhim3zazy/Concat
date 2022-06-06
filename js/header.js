@@ -88,6 +88,13 @@ $(document).click(function(e){
 //     };
 // };
 
+// Submit SearchPeople
+
+function submit_search() {
+  // alert()
+  document.getElementById('submit_search').submit();
+}
+
 function GetXmlHttpObject(){
 	if (window.XMLHttpRequest)
 		return new XMLHttpRequest();

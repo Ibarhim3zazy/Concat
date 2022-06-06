@@ -6,7 +6,7 @@
   }
 </script>
 <?php
-if (isset($_GET['group_id']) == true) {
+if (isset($_GET['group_id']) == true && $_GET['group_id'] != "") {
   require_once 'header.php'; require 'group_ajax.php';
   $user_id = $_SESSION['user_id'];
   $group_id = $_GET['group_id'];
