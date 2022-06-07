@@ -349,3 +349,7 @@
   justify-content: flex-start;
   gap : 20px;
 }
+
+.setting-container .manage .lock {
+  width: 100px;
+}

@@ -130,6 +130,10 @@
                     <option value="separated">separated</option>
                   </select>
                 </div>
+                <div class="min-box">
+                  <h3> <i class="fa-solid fa-lock"></i></i> Lock profile</h3>
+                  <input type="button"  class="lock" value="Lock">
+                </div>
               </div>
               <div class="submit">
                 <input type="button"  value="Cancel">
@@ -162,28 +166,28 @@
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch4.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch5.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch6.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch7.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">

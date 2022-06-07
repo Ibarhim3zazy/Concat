@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="css/lockProfile.css">
 <script>
   if(window.history.replaceState){
   	window.history.replaceState(null, null, window.location.href);
@@ -63,8 +63,7 @@ if (isset($_GET['friend_id'])) {
       echo '
       <form enctype="multipart/form-data" method="post" class="cover_photo" id="change_cover_pic_submit">
        <img src="cover___pic/'.htmlentities($row['cover_pic']).'" alt="">
-       <label for="inputUploadCoverPic"><i class="fa-solid fa-camera"></i></label>
-       <input id="inputUploadCoverPic" name="inputUploadCoverPic" type="file" style="display: none;" accept="image/*" onchange="change_cover_pic()"/>
+
      </form>
       ';
     }else {
@@ -95,14 +94,13 @@ if (isset($_GET['friend_id'])) {
          <form enctype="multipart/form-data" method="post" class="images" id="change_prof_pic_submit">
           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="160px" height="160px"
            style="border-radius: 50%; border : 3px solid #fff;">
-           <label for="inputUploadProfPic"><i class="fa-solid fa-camera"></i></label>
-          <input id="inputUploadProfPic" name="inputUploadProfPic" type="file" style="display: none;" accept="image/*" onchange="change_profile_pic()"/>
+          
         </form>
          ';
        }else {
          echo '
          <div class="images">
-          <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="160px" height="160px"
+          <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="150px" height="150px"
            style="border-radius: 50%; border : 3px solid #fff;">
         </div>
          ';
@@ -117,71 +115,17 @@ if (isset($_GET['friend_id'])) {
       ';
     }else {
       echo '
-        <div class="profile_name">
+        <div class="profile_name" style = "margin-top : -15px; ">
       ';
     }
     ?>
     <div class="rightside">
      <h2><?= htmlentities($row['name']); ?></h2>
-     <?php
-      if ($_SESSION['user_id'] === $row['user_id']){
-        echo '
-        <div class="friends">
-         <!-- this number will be variable -->
-         <a href="friends.php"><span>1.4K</span> Friends</a>
-         <div class="frindImage">
-          <a href="">
-           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
-            style="border-radius: 50%;">
-          </a>
-          <a href="">
-           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
-            style="border-radius: 50%;">
-          </a>
-          <a href="">
-           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
-            style="border-radius: 50%;">
-          </a>
-          <a href="">
-           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
-            style="border-radius: 50%;">
-          </a>
-          <a href="">
-           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
-            style="border-radius: 50%;">
-          </a>
-          <a href="friends.php">
-           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="40px" height="40px"
-            style="border-radius: 50%;">
-           <span><i class="fa-solid fa-ellipsis"></i></span>
-          </a>
-         </div>
-        </div>
-        ';
-      }
-      ?>
+
     </div>
-    <?php
-      if ($_SESSION['user_id'] == $row['user_id']){
-        echo '
-        <button><i class="fa-solid fa-pen"></i> Edit Profile</button>
-        ';
-      }
-     ?>
+
    </div>
-   <div class="bioBox">
-    <div class="bio" >
-     σƙҽყ.. <br>
-     ιƚ'ʂ σƙҽყ ɳσƚ ƚσ Ⴆҽ σƙҽყ♡..
-    </div>
-    <?php
-      if ($_SESSION['user_id'] === $row['user_id']){
-        echo '
-        <button>Edit Bio</button>
-        ';
-      }
-     ?>
-  </div>
+
   <div class="client_profile">
 
   <?php
@@ -301,11 +245,20 @@ if (isset($_GET['friend_id'])) {
 
  </div>
  <div class="middle">
-<?php
-      require 'CreatePost.php';
-?>
+<div class="conten">
+<i class="fa-solid fa-lock"></i>
+  <div class="con">
+    <h3>Ibrahim locked his profile</h3>
+    <p>
+      Only her friends can see what he shares on his profile.
+    </p>
+  </div>
+</div>
+<p>
+  No posts available
+</p>
  </div>
- <div class="links">
+ <!-- <div class="links">
   <a href="profile.php" class="pinAccount">
    <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="50px" height="50px" style="border-radius: 50%;">
    <span>user name</span>
@@ -318,7 +271,7 @@ if (isset($_GET['friend_id'])) {
    <a href="setting.php">About</a>
    <a href="friends.php">Friends</a>
   </div>
- </div>
+ </div> -->
 </div>
 <?php require 'friendsChat.php'; ?>
 
