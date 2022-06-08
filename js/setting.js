@@ -16,3 +16,16 @@ tabsArray.forEach((ele) => {
   document.querySelector(e.currentTarget.dataset.cont).style.display = "block";
  });
 });
+
+
+
+const verified = document.querySelector(".verified")
+// console.log(verified);
+
+const resendCode = document.querySelectorAll(" div.resendCode");
+console.log(resendCode);
+
+verified.onclick = function () {
+  verified.style.cursor = "pointer";
+  resendCode.style.display = "block !important";
+}

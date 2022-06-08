@@ -32,7 +32,22 @@
                 <h3>Add Another Email</h3>
                 <div class="vertical">
                   <input type="email" placeholder="enter new email" >
-                  <input type="password" placeholder="password">
+                  <div class="center-box">
+                    <input type="password" placeholder="password">
+                    <input type="button" value="Verified" class="notactive" onclick="not()">
+                    <div class="minbox resendCode" >
+                      <input type="button" value="Resend verification code" class="resend">
+                      <div class="enterCode">
+                        <p>Enter your one-time verification code that was sent to your mobile device:</p>
+                      <div class="code">
+                        <input type="text"  >
+                        <input type="button" value="Submit" class="active">
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
               <div class="min-box">
@@ -43,8 +58,8 @@
                 <h3>Add phone number</h3>
                 <div class="center-box">
                   <input type="text" placeholder="new phone number..">
-                  <input type="button" value="Verified" class="notactive">
-                  <div class="minbox">
+                  <input type="button" value="Verified" class="notactive verified ">
+                  <div class="minbox resendCode">
                     <input type="button" value="Resend verification code" class="resend">
                     <div class="enterCode">
                       <p>Enter your one-time verification code that was sent to your mobile device:</p>
