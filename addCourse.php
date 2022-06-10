@@ -5,52 +5,84 @@
 <div class="addCourse-container">
  <div class="container">
 
-  <form action="courses.php" method="get">
+  <form action="addinstructor.php" method="post">
    <div class="together">
     <div class="department sec">
      <div class="select-box">
 
       <div class="options-container  ">
        <div class="option">
-        <input type="radio" class="radio" id="automobiles" name="category">
-        <label for="automobiles">Automobiles</label>
+        <input type="radio" class="radio" id="automobiles" name="category" value="Front-end">
+        <label for="automobiles">Front-end</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="film" name="category">
-        <label for="film">Film & Animation</label>
+        <input type="radio" class="radio" id="film"  name="category" value="Back-end">
+        <label for="film">Back-end</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="science" name="category">
-        <label for="science">Science & Technology</label>
+        <input type="radio" class="radio" id="science"  name="category" value="Android">
+        <label for="science">Android</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="art" name="category">
-        <label for="art">Art</label>
+        <input type="radio" class="radio" id="art"  name="category" value="iOS">
+        <label for="art">iOS</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="music" name="category">
-        <label for="music">Music</label>
+        <input type="radio" class="radio" id="music"  name="category" value="Desktop_programming">
+        <label for="music">Desktop programming</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="travel" name="category">
-        <label for="travel">Travel & Events</label>
+        <input type="radio" class="radio" id="travel"  name="category" value="Game_programming">
+        <label for="travel">Game programming</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="sports" name="category">
-        <label for="sports">Sports</label>
+        <input type="radio" class="radio" id="sports"  name="category" value="Graphics">
+        <label for="sports">Graphics</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="news" name="category">
-        <label for="news">News & Politics</label>
+        <input type="radio" class="radio" id="news"  name="category" value="Systems_programming">
+        <label for="news">Systems programming</label>
        </div>
        <div class="option">
-        <input type="radio" class="radio" id="tutorials" name="category">
-        <label for="tutorials">Tutorials</label>
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Internet_of_Things">
+        <label for="tutorials">Internet of Things</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Robotics">
+        <label for="tutorials">Robotics</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Data_science">
+        <label for="tutorials">Data science</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Machine_learning">
+        <label for="tutorials">Machine learning</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Cloud_computing">
+        <label for="tutorials">Cloud computing</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Numerical_computing">
+        <label for="tutorials">Numerical computing</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Virtual_augmented">
+        <label for="tutorials">Virtual/augmented reality</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Enterprise_business_computing">
+        <label for="tutorials">Enterprise business computing</label>
+       </div>
+       <div class="option">
+        <input type="radio" class="radio" id="tutorials"  name="category" value="Industrial_automation">
+        <label for="tutorials">Industrial automation</label>
        </div>
       </div>
 
       <div class="selected">
-       Select Department
+       Select Field
       </div>
 
       <div class="search-box">
@@ -61,7 +93,7 @@
      <div class="or">OR
      </div>
      <div class="text-box">
-      <label for="text">Enter Department Name</label>
+      <label for="text">Enter Field Name</label>
       <input type="text" name="text" id="text">
      </div>
 
@@ -71,43 +103,110 @@
      <div class="select-box">
       <div class=" lang-container ">
        <div class=" lang-option">
-        <input type="radio" class="radio" id="html" name="category">
+        <input type="radio" class="radio" id="html"  name="category_b" value="HTML">
         <label for="html">HTML</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="css" name="category">
-        <label for="css">Css</label>
+        <input type="radio" class="radio" id="css"  name="category_b" value="CSS">
+        <label for="css">CSS</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="java" name="category">
+        <input type="radio" class="radio" id="java"  name="category_b" value="Java">
         <label for="java">Java</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="javascript" name="category">
-        <label for="javascript">Javascript</label>
+        <input type="radio" class="radio" id="javascript"  name="category_b" value="JavaScript">
+        <label for="javascript">JavaScript</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="jquary" name="category">
+        <input type="radio" class="radio" id="jquary"  name="category_b" value="jQuray">
         <label for="jquary">jQuray</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="python" name="category">
+        <input type="radio" class="radio" id="python"  name="category_b" value="Python">
         <label for="python">Python</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="go" name="category">
+        <input type="radio" class="radio" id="go"  name="category_b" value="Go">
         <label for="go">Go</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="perl" name="category">
+        <input type="radio" class="radio" id="perl"  name="category_b" value="Perl">
         <label for="perl">Perl</label>
        </div>
        <div class=" lang-option">
-        <input type="radio" class="radio" id="csharp" name="category">
-        <label for="csharp">C#</label>
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Swift">
+        <label for="csharp">Swift</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="c_plusplus">
+        <label for="csharp">C++</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="R">
+        <label for="csharp">R</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="PHP">
+        <label for="csharp">PHP</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="TypeScript">
+        <label for="csharp">TypeScript</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Scala">
+        <label for="csharp">Scala</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Shell">
+        <label for="csharp">Shell</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="PowerShell">
+        <label for="csharp">PowerShell</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Haskell">
+        <label for="csharp">Haskell</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Kotlin">
+        <label for="csharp">Kotlin</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Visual_Basic">
+        <label for="csharp">Visual Basic .NET</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="SQL">
+        <label for="csharp">SQL</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Delphi">
+        <label for="csharp">Delphi</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="MATLAB">
+        <label for="csharp">MATLAB</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Groovy">
+        <label for="csharp">Groovy</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Lua">
+        <label for="csharp">Lua</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Rust">
+        <label for="csharp">Rust</label>
+       </div>
+       <div class=" lang-option">
+        <input type="radio" class="radio" id="csharp"  name="category_b" value="Ruby">
+        <label for="csharp">Ruby</label>
        </div>
       </div>
-
       <div class=" lang-selected">
        Select Language
       </div>
@@ -122,20 +221,10 @@
       <label for="text">Enter Language Name</label>
       <input type="text" name="text" id="text">
      </div>
+     <div class="text-box">
+     <label for="lang_cover">Language Cover</label>
+     <input type="file" name="lang_cover" id="lang_cover" accept="image/jpeg,image/x-png,image/gif">
     </div>
-   </div>
-   <div class="middle">
-    <div class="text-box">
-     <label for="coursename">Course Name</label>
-     <input type="text" name="name" id="coursename" required>
-    </div>
-    <div class="text-box">
-     <label for="cover">Course Cover</label>
-     <input type="file" name="cover" id="cover">
-    </div>
-    <div class="text-box">
-     <label for="path">Course Path "Link"</label>
-     <input type="text" name="path" id="path" required>
     </div>
    </div>
    <button>ADD</button>

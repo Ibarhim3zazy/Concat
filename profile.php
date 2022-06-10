@@ -64,7 +64,7 @@ if (isset($_GET['friend_id'])) {
       <form enctype="multipart/form-data" method="post" class="cover_photo" id="change_cover_pic_submit">
        <img src="cover___pic/'.htmlentities($row['cover_pic']).'" alt="">
        <label for="inputUploadCoverPic"><i class="fa-solid fa-camera"></i></label>
-       <input id="inputUploadCoverPic" name="inputUploadCoverPic" type="file" style="display: none;" accept="image/*" onchange="change_cover_pic()"/>
+       <input id="inputUploadCoverPic" name="inputUploadCoverPic" type="file" style="display: none;" accept="image/jpeg,image/x-png,image/gif" onchange="change_cover_pic()"/>
      </form>
       ';
     }else {
@@ -96,7 +96,7 @@ if (isset($_GET['friend_id'])) {
           <img src="profile___pic/'.htmlentities($row['personal_pic']).'" alt="" width="160px" height="160px"
            style="border-radius: 50%; border : 3px solid #fff;">
            <label for="inputUploadProfPic"><i class="fa-solid fa-camera"></i></label>
-          <input id="inputUploadProfPic" name="inputUploadProfPic" type="file" style="display: none;" accept="image/*" onchange="change_profile_pic()"/>
+          <input id="inputUploadProfPic" name="inputUploadProfPic" type="file" style="display: none;" accept="image/jpeg,image/x-png,image/gif" onchange="change_profile_pic()"/>
         </form>
          ';
        }else {
