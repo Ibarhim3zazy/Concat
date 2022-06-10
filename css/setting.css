@@ -121,7 +121,7 @@
 }
 
 .setting-container .container .contents .personal {
-  margin-top: -20px;
+  margin-top: -8px;
 }
 
 .setting-container  h1 {
@@ -183,7 +183,7 @@
   gap : 15px;
 }
 
-.setting-container .vertical input {
+.setting-container .vertical  > input {
   background-color: #fff !important;
 }
 
@@ -205,8 +205,8 @@
   cursor: pointer;
 }
 .setting-container  input[type="button"].notactive {
-  background-color: #81BDCD;
-  color: #fff;
+  background-color: #81BDCD !important;
+  color: #fff !important;
   cursor : no-drop;
   box-shadow: none;
 }
@@ -298,7 +298,7 @@
 }
 
 .setting-container .manage .content {
-  margin-top: -21px;
+  margin-top: -25px;
 }
 
 .setting-container .manage .select {
@@ -348,4 +348,12 @@
   align-items: center;
   justify-content: flex-start;
   gap : 20px;
+}
+
+.setting-container .manage .lock {
+  width: 100px;
+}
+
+.resendCode {
+  display: none !important;
 }

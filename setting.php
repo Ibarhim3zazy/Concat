@@ -32,7 +32,22 @@
                 <h3>Add Another Email</h3>
                 <div class="vertical">
                   <input type="email" placeholder="enter new email" >
-                  <input type="password" placeholder="password">
+                  <div class="center-box">
+                    <input type="password" placeholder="password">
+                    <input type="button" value="Verified" class="notactive" onclick="not()">
+                    <div class="minbox resendCode" >
+                      <input type="button" value="Resend verification code" class="resend">
+                      <div class="enterCode">
+                        <p>Enter your one-time verification code that was sent to your mobile device:</p>
+                      <div class="code">
+                        <input type="text"  >
+                        <input type="button" value="Submit" class="active">
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
               <div class="min-box">
@@ -43,8 +58,8 @@
                 <h3>Add phone number</h3>
                 <div class="center-box">
                   <input type="text" placeholder="new phone number..">
-                  <input type="button" value="Verified" class="notactive">
-                  <div class="minbox">
+                  <input type="button" value="Verified" class="notactive verified ">
+                  <div class="minbox resendCode">
                     <input type="button" value="Resend verification code" class="resend">
                     <div class="enterCode">
                       <p>Enter your one-time verification code that was sent to your mobile device:</p>
@@ -130,6 +145,10 @@
                     <option value="separated">separated</option>
                   </select>
                 </div>
+                <div class="min-box">
+                  <h3> <i class="fa-solid fa-lock"></i></i> Lock profile</h3>
+                  <input type="button"  class="lock" value="Lock">
+                </div>
               </div>
               <div class="submit">
                 <input type="button"  value="Cancel">
@@ -162,28 +181,28 @@
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch4.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch5.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch6.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">
                 </div>
                 <div class="min-box">
                   <div class="prof">
-                    <img src="images/picsearch7.jpg" alt="">
+                    <img src="images/picsearch2.jpg" alt="">
                     <h3>Selena Gomez</h3>
                   </div>
                   <input type="button"  value="Unblock">
