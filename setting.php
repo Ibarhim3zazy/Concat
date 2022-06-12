@@ -220,18 +220,21 @@
           <div class="box">
             <form class="form mail" >
               <div class="content">
+                <span id="pass-error"> </span>
                 <h1>Add an additional email address :</h1>
-                <input type="email"  placeholder="enter">
+                <input type="email"  placeholder="enter" id="emailnew" required>
+
                 <p>
                   adding a current email to your Concat account can help you log in and receive notifications as well as reset your password easily. <br>
 
                   To save this setting, please enter your Concat password.
                 </p>
-                <input type="password">
+                <input type="password" id="pass" required>
+
               </div>
               <div class="submit">
-                <input type="button"  value="Cancel">
-                <input type="button"  value="Add Email" class="notactive">
+                <input type="button"  value="Cancel" >
+                <input type="button"  value="Add Email" class="active"  onclick="check()">
               </div>
             </form>
           </div>
