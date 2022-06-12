@@ -9,7 +9,8 @@
       <li data-cont=".password">Password</li>
       <li data-cont=".manage">Manage your profile</li>
       <li data-cont=".blocking">Blocking</li>
-    </ul>
+      <li data-cont=".newEmail">add new email</li>
+        </ul>
     <div class="contents">
       <div class="personal">
         <div class="conten">
@@ -29,12 +30,13 @@
                 <input type="email" placeholder="email@email.com" disabled>
               </div>
               <div class="min-box">
-                <h3>Add Another Email</h3>
-                <div class="vertical">
-                  <input type="email" placeholder="enter new email" >
-                  <div class="center-box">
-                    <input type="password" placeholder="password">
-                    <input type="button" value="Verified" class="notactive" onclick="not()">
+                <h3>An additional Email</h3>
+                <div class="center-box">
+                  <input type="email" placeholder="email@email.com" disabled >
+                  <button type="button" name="button"><i class="fa-solid fa-trash"></i></button>
+                  <!-- <div class="center-box">
+
+                    <input type="button" value="Verified" class="notactive" >
                     <div class="minbox resendCode" >
                       <input type="button" value="Resend verification code" class="resend">
                       <div class="enterCode">
@@ -45,7 +47,7 @@
                       </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
 
                 </div>
@@ -54,7 +56,7 @@
                 <h3>phone Number</h3>
                 <input type="text" placeholder="01298291011" disabled>
               </div>
-              <div class="min-box">
+              <!-- <div class="min-box">
                 <h3>Add phone number</h3>
                 <div class="center-box">
                   <input type="text" placeholder="new phone number..">
@@ -71,7 +73,7 @@
                   </div>
                 </div>
 
-              </div>
+              </div> -->
 
                 </div>
                 <div class="submit">
@@ -210,6 +212,30 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+
+      <div class="newEmail">
+        <div class="conten">
+          <div class="box">
+            <form class="form mail" >
+              <div class="content">
+                <h1>Add an additional email address :</h1>
+                <input type="email"  placeholder="enter">
+                <p>
+                  adding a current email to your Concat account can help you log in and receive notifications as well as reset your password easily. <br>
+
+                  To save this setting, please enter your Concat password.
+                </p>
+                <input type="password">
+              </div>
+              <div class="submit">
+                <input type="button"  value="Cancel">
+                <input type="button"  value="Add Email" class="notactive">
+              </div>
+            </form>
+          </div>
+
         </div>
       </div>
 

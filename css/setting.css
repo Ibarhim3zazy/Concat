@@ -8,26 +8,30 @@
 
 .setting-container .container {
   display: grid;
-  grid-template-columns: 80%;
-  grid-template-rows: 10% 80%;
+  grid-template-columns: 70%;
+  grid-template-rows: 12% 80%;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+
   /* padding: 10px 15px; */
-  /* box-shadow: 1px 1px 10px 6px white; */
 }
 
 .setting-container .container .taps {
   width: 100%;
+  height: max-content;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  text-align: center;
+
   /* gap:20px; */
   margin-right: 5px;
   background-color: #fff;
   transition: 0.3s;
   border-radius: 5px;
   border: 1px solid #eee;
+    box-shadow: 0px 0px 10px 0px #57dbff;
 }
 
 .setting-container .container .taps li {
@@ -45,13 +49,14 @@
   justify-content: center;
   transition: 0.5s;
   text-transform: capitalize;
+  height: 50px;
 }
 
 .setting-container .container .taps li::after {
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  top: -2px;
   width: 0;
   height: 4px;
   background-color: #00c9ff;
@@ -71,14 +76,17 @@
    background-color: #f2fdff;
    border-radius: 5px;
    width: 100%;
-   padding: 15px ;
+   /* height: 100%; */
+   padding: 15px;
+  box-shadow: 0px 0px 10px 0px #57dbff;
+
 }
 
 .setting-container  .container .taps li.active::after {
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  top: -2px;
   width: 100%;
   height: 5px;
   background-color: #00c9ff;
@@ -91,7 +99,7 @@
 }
 
 .setting-container .container .contents .password {
-  margin-top: 7px;
+  margin-top: -4px;
 }
 
 
@@ -100,6 +108,7 @@
 .setting-container .container .contents .conten {
   width: 100%;
   max-width: 100%;
+  margin-top: 10px
 }
 
 .setting-container .container .contents .form {
@@ -121,7 +130,7 @@
 }
 
 .setting-container .container .contents .personal {
-  margin-top: -8px;
+  margin-top: -10px;
 }
 
 .setting-container  h1 {
@@ -140,6 +149,24 @@
   justify-content: center;
   align-items: flex-start;
   gap : 50px;
+}
+
+.setting-container button {
+  padding: 8px 12px;
+  color: #999989;
+  font-size: 17px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.setting-container button i {
+  transition: 0.4s;
+}
+.setting-container button:hover i {
+  color: #00c9ff;
+  transform: scale(1.1);
 }
 
 .setting-container .container .contents .form .content .min-box .center {
@@ -248,9 +275,12 @@
   padding: 0px 10px;
   gap :15px
 }
-.setting-container .minbox .enterCode p {
-  font-size: 13px;
-  color: 999989;
+.setting-container  p {
+  font-size: 15px;
+  color: #787878;
+  max-width: 500px;
+  line-height: 1.5;
+  word-spacing: 2px
 }
 
 .setting-container .minbox .code {
@@ -298,7 +328,7 @@
 }
 
 .setting-container .manage .content {
-  margin-top: -25px;
+  margin-top: -43px !important;
 }
 
 .setting-container .manage .select {
@@ -338,7 +368,7 @@
 
 .setting-container .blocking .content {
   padding: 30px 40px;
-  margin-top: -21px;
+  margin-top: -37px;
 }
 .setting-container .blocking .min-box input[type="button"] {
   width: 120px;
@@ -354,6 +384,18 @@
   width: 100px;
 }
 
-.resendCode {
+/* .resendCode {
   display: none !important;
+} */
+
+
+.setting-container .newEmail  {
+  margin-top: -10px
+}
+.setting-container .newEmail .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction:column;
+  width: 100%;
 }
