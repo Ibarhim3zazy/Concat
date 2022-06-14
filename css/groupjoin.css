@@ -1,0 +1,198 @@
+.groupjoin-container {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.groupjoin-container .container {
+  display: grid;
+  width: 100%;
+  /* background-color: rgb(10, 7, 121); */
+  justify-content: center;
+  align-items: center;
+  grid-row-gap: 30px;
+}
+.groupjoin-container .container header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 1000px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #6f6f6f;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 8px 2px #ddd;
+}
+
+.groupjoin-container .container header .cover {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.groupjoin-container .container header  .cover img {
+  width: 100%;
+  max-width: 100%;
+  height: 390px;
+  border-radius: 10px 10px 0px 0;
+}
+
+.groupjoin-container .container header  .cover span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(119, 119, 119);
+  color: #fffff8;
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 13px;
+}
+.groupjoin-container .container header  .cover span a {
+  margin-left: 3px;
+  color: rgb(131, 223, 247);
+  text-transform: capitalize;
+  transition: 0.4s;
+  font-size: 15px;
+}
+
+.groupjoin-container .container header  .cover span a:hover {
+  color: rgb(0,201,255);
+  text-decoration: underline rgb(0,201,255);
+}
+.groupjoin-container .container header .groupInfo {
+  padding: 35px 35px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.groupjoin-container .container header .groupInfo .box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap : 10px;
+}
+
+.groupjoin-container .container header .groupInfo .box > a {
+  color: rgb(0, 131, 166);
+  text-transform: capitalize;
+  font-size: 18px;
+  /* font-family : sans-serif; */
+  transition: 0.4s;
+  font-weight: 600;
+}
+
+.groupjoin-container .container header .groupInfo .box > a:hover {
+  color: rgb(0,201,255);
+}
+
+.groupjoin-container .container header .groupInfo .box p i {
+  font-size: 13px;
+  margin-right: 2px;
+}
+
+.groupjoin-container .container header .groupInfo .box p {
+  font-size: 15px;
+}
+
+.groupjoin-container .container header .groupInfo .box p > a {
+  font-size: 14px;
+  color:  rgb(0, 131, 166);
+  transition: 0.3s;
+}
+/* .groupjoin-container .container header .groupInfo .box p > a:hover {
+  color: rgb(0,201,255);
+} */
+
+.groupjoin-container .container header .groupInfo button {
+  background-color: rgb(0, 131, 166);
+  color: #fffff7;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.groupjoin-container .container header .groupInfo button:hover {
+  outline: none;
+  transform: scale(1.05);
+}
+
+.groupjoin-container .container main {
+  width: 100%;
+  /* background-color: #fff; */
+  display: grid;
+  align-items: flex-start;
+  justify-content:center;
+  grid-gap: 10px;
+  grid-template-columns: 53% 40%;
+}
+
+.groupjoin-container .container main .content {
+  background-color: #fff;
+  height: 350px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap : 15px;
+}
+
+.groupjoin-container .container main .content i {
+  font-size: 50px;
+  color: #9f9f9f;
+}
+.groupjoin-container .container main .content h2 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #6f6f6f;
+}
+
+.groupjoin-container .container main .content p {
+  font-size: 13px;
+  color: #6f6f6f;
+}
+
+.groupjoin-container .container main .about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap : 20px;
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.groupjoin-container .container main .about .box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap : 5px;
+}
+
+.groupjoin-container .container main .about .box h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(103, 103, 103);
+  text-transform: capitalize;
+}
+
+.groupjoin-container .container main .about .box h3 i {
+  margin-right: 4px;
+  color: rgb(0,201,255);
+  font-size: 15px;
+}
+
+.groupjoin-container .container main .about .box p {
+  font-size: 15px;
+  color: #838383;
+  padding: 0 0px 0 18px;
+}
