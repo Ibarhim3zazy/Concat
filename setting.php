@@ -9,7 +9,8 @@
       <li data-cont=".password">Password</li>
       <li data-cont=".manage">Manage your profile</li>
       <li data-cont=".blocking">Blocking</li>
-      <li data-cont=".newEmail">add new email</li>
+      <li data-cont=".newEmail"> new email</li>
+      <li data-cont=".newPhone"> new Phone</li>
         </ul>
     <div class="contents">
       <div class="personal">
@@ -29,11 +30,11 @@
                 <h3>Primary Email</h3>
                 <input type="email" placeholder="email@email.com" disabled>
               </div>
-              <div class="min-box">
+              <!-- <div class="min-box">
                 <h3>An additional Email</h3>
                 <div class="center-box">
                   <input type="email" placeholder="email@email.com" disabled >
-                  <button type="button" name="button"><i class="fa-solid fa-trash"></i></button>
+                  <button type="button" name="button"><i class="fa-solid fa-trash"></i></button> -->
                   <!-- <div class="center-box">
 
                     <input type="button" value="Verified" class="notactive" >
@@ -50,11 +51,14 @@
                   </div> -->
 
 
-                </div>
-              </div>
+                <!-- </div>
+              </div> -->
               <div class="min-box">
                 <h3>phone Number</h3>
-                <input type="text" placeholder="01298291011" disabled>
+                <div class="center-box">
+                  <input type="text" placeholder="01298291011" disabled>
+                  <a href="newPhone" >Change</a>
+              </div>
               </div>
               <!-- <div class="min-box">
                 <h3>Add phone number</h3>
@@ -242,6 +246,17 @@
         </div>
       </div>
 
+      <div class="newPhone">
+        <div class="conten">
+          <div class="box">
+            <form class="from"  method="post">
+              <div class="content">
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

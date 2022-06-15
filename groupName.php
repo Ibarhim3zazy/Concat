@@ -226,5 +226,5 @@ if (isset($_GET['group_id']) == true && $_GET['group_id'] != "") {
  </div>
 
 </div>
-<a href="#" class="back"><i class="fa-solid fa-arrows-rotate"></i></a>
+<a href="" class="back"><i class="fa-solid fa-arrows-rotate"></i></a>
 <script src="js/groupname.js"></script>
