@@ -9,56 +9,11 @@
 
 <body>
  <?php require_once 'header.php';
-        require 'CreatePost.php';
+
       ?>
 
- <!-- <div class="conLeftPage">
-        <div class="container">
-            <div class="con_box">
-                <div class="box">
-                    <img src="profile___pic/<?= htmlentities($row['personal_pic']); ?>" alt="" width="35px" height="35px" style="border-radius: 50%;">
-                    <span><a href="profile.php">User Name</a></span>
-                </div>
-                <div class="box">
-                    <a href=""><i class="fa-solid fa-user-group"></i></a>
-                    <span><a href="">Friends</a></span>
-                </div>
-                <div class="box">
-                    <a href=""><i class="fa-solid fa-users"></i></a>
-                    <span><a href="">Groups</a></span>
-                </div>
-                <div class="box">
-                    <a href=""><i class="fa-solid fa-book"></i></a>
-                    <span>
-                        <a href="">Courses</a>
-                    </span>
-                </div>
-                <div class="box">
-                    <a href=""><i class="fa-solid fa-bookmark"></i></a>
-                    <span>
-                        <a href="">Saved</a>
-                    </span>
-                </div>
-                <div class="box">
-                    <a href=""><i class="fa-solid fa-pager"></i></a>
-                    <span><a href="">Pages</a></span>
-                </div>
-            </div>
-            <div class="con_box">
-                <h3 class="caption">
-                    <i class="fa-solid fa-scissors"></i>
-                    Shortcut
-                </h3>
-                <div class="box">
-                    <a href=""><i class="fa-brands fa-cuttlefish"></i></a>
-                    <span>
-                        <a href="">Example</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div> -->
  <!-- after last edit -->
+ <div class="home-container">
  <div class="leftpageside">
   <div class="partone_profile boxmain">
    <div class="back_image">
@@ -137,6 +92,56 @@
     </a>
    </div>
   </div>
+ </div>
+ <div class="middle">
+    <?php require 'CreatePost.php'; ?>
+ </div>
+ <div class="rightSide">
+   <div class="container">
+     <div class="title">
+       <i class="fa-solid fa-rectangle-ad"></i>
+       advertisement
+     </div>
+     <div class="box">
+        <div class="name-container">
+          <img src="images/picsearch4.jpg" alt="" >
+          <a href="#">Sara Mohsen</a>
+        </div>
+        <div class="text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+          <img src="images/backsearch7.jpg" alt="">
+        </div>
+     </div>
+     <div class="box">
+        <div class="name-container">
+          <img src="images/picsearch4.jpg" alt="" >
+          <a href="#">Sara Mohsen</a>
+        </div>
+        <div class="text">
+          <!-- <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p> -->
+          <a href="#">this is a link.com</a>
+          <img src="images/backsearch7.jpg" alt="">
+        </div>
+     </div>
+     <div class="box">
+        <div class="name-container">
+          <img src="images/picsearch4.jpg" alt="" width="50px" height="50px">
+          <a href="#">Sara Mohsen</a>
+        </div>
+        <div class="text">
+          <a href="#">this is a link.com</a>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+          <!-- <img src="images/backsearch7.jpg" alt=""> -->
+        </div>
+     </div>
+   </div>
+ </div>
  </div>
  <?php require 'friendsChat.php'; ?>
 </body>
