@@ -16,7 +16,7 @@
  border-radius: 10px;
  background-color: rgb(183, 233, 233) ;
  color: white;
- max-width: 90%;
+ max-width: 80%;
  overflow: hidden;
  height: 70vh;
  box-shadow: 1px 1px 10px 6px white;
@@ -110,4 +110,58 @@
  font-weight: 600;
  color: rgb(0, 62, 90);
  padding: 10px 0;
+}
+
+.flow,
+.flow-2 {
+  position: fixed;
+  top: 200px;
+  left: 30px;
+  transition: 1s;
+}
+
+.flow a,
+.flow-2 a {
+  font-size: 15px;
+  padding: 10px 15px;
+  background-color: #fff;
+  color: rgb(27, 152, 255);
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 7px 3px #ddd;
+  text-transform: capitalize;
+  transition: 0.4s;
+}
+
+.flow a i ,
+.flow-2 a  i {
+  margin-right: 5px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.flow:hover ,
+.flow-2:hover {
+  transform: scale(1.03);
+}
+
+.flow a:hover,
+.flow-2 a:hover {
+  color: #fff;
+  background-color: rgb(27, 152, 255);
+}
+
+.flow a:hover  i,
+.flow-2 a:hover i  {
+  position: relative;
+  animation :  up infinite ease-in-out 1s;
+}
+
+@keyframes up {
+  0%,100%{
+    top: 0;
+  }
+  50% {
+    right: 2px;
+  }
 }
