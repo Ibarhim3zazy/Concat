@@ -51,6 +51,14 @@
          </span>
         </a>
        </div>
+       <div class="protolio">
+        <a href="portfolio.php">
+         <i class="fa-solid fa-podcast"></i>
+         <span>
+          Portfolio
+         </span>
+        </a>
+       </div>
       </div>
       <div class="right">
        <div class="notification" id="notification">
