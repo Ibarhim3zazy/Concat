@@ -399,7 +399,7 @@
           </form>
          </li>
          <li class="report">
-          <a href="">
+          <a href="feedback.php">
            <i class="fa-solid fa-flag"></i>
            Send Feedback
           </a>

@@ -1,0 +1,178 @@
+.report-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.report-container .container {
+  background-color: #fff;
+  width: 50%;
+  height: fit-content;
+  box-shadow: 1px 1px 9px 5px #ddd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap : 10px;
+}
+
+.report-container .container h1 {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  padding:  15px 0;
+  background-color: rgba(134, 200, 218, 0.64);
+  width: 100%;
+  margin-top: 0;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-family :sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px #fffff9;
+}
+
+.report-container .container form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap : 20px;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.report-container .container form h2 {
+  font-weight: 600;
+  font-size: 17px;
+  color: rgb(2, 81, 102);
+  word-spacing: 1px;
+}
+
+.report-container .container input {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: rgba(247, 253, 255, 1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  caret-color: #00c9ff;
+  transition: 0.3s linear;
+}
+.report-container .container input:focus,
+.report-container .container .box-container textarea:focus {
+  outline: none;
+}
+
+.report-container .container input::placeholder,
+.report-container .container .box-container textarea::placeholder {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: rgb(106, 106, 106);
+  padding-left: 2px;
+  transition: 0.3s linear;
+}
+
+.report-container .container input:hover,
+.report-container .container .box-container textarea:hover {
+  box-shadow: 0px 0px 7px 0px rgba(0, 201, 255, 0.77);
+}
+
+.report-container .container input:hover::placeholder,
+.report-container .container .box-container textarea:hover::placeholder {
+  opacity: .3;
+}
+
+.report-container .container .box-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap : 5px;
+  width: 100%;
+}
+
+.report-container .container .box-container label {
+  font-size: 12px;
+  color: rgb(19, 83, 99);
+  text-transform: capitalize;
+}
+
+.report-container .container .box-container textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 10px;
+  background-color: rgba(247, 253, 255, 1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  caret-color: #00c9ff;
+  transition: 0.3s linear;
+}
+
+#link {
+  font-size: 12px;
+  color: rgb(19, 83, 99);
+  cursor: pointer;
+}
+
+.report-container .container p {
+  font-size: 13px;
+  color: rgb(19, 83, 99);
+  background-color: rgba(247, 253, 255, 1);
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.report-container .container p a {
+  color: rgb(3, 160, 201);
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 2px;
+  transition: 0.3s linear;
+}
+.report-container .container p a:hover {
+  color: #00c9ff;
+  text-decoration: underline #00c9ff;
+
+}
+
+.report-container .container .btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap : 10px;
+  width: 100%;
+}
+
+.report-container .container .btns > input {
+  width: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgb(4, 116, 144);
+  text-transform: capitalize;
+  background-color: #fff;
+}
+
+.report-container .container .btns > #send {
+  background-color: #eee;
+  color: rgb(139, 139, 139);
+  cursor: no-drop;
+}
+
+.report-container .container .btns > #send:hover {
+  box-shadow: none;
+}
+/*
+  this style will active when the file compelete;
+ */
+.report-container .container .btns > input.active {
+  background-color: #00c9ff !important;
+  color: #fff !important;
+  cursor: pointer !important;
+}
