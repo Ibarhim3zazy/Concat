@@ -110,20 +110,35 @@ function toggle() {
 ///////////////////////////////////////
 // like and save toggle
 
-const like = document.getElementById('likeI');
-console.log(like);
-
-var toggledLike = false;
-function togglelike() {
-  if (!toggledLike) {
-    toggledLike = true;
-    like.style.color = "#49c4fc";
+function GetXmlHttpObject(){
+	if (window.XMLHttpRequest)
+		return new XMLHttpRequest();
+	if (window.ActiveXObject)
+		return new ActiveXObject("Microsoft.XMLHTTP");
+	return null;
+};
+function togglelike(PostID) {
+    url="post_ajax.php";
+    let xmlhttp = GetXmlHttpObject();
+    xmlhttp.onreadystatechange=function()
+    {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200){
+        // alert(xmlhttp.responseText.trim());
+      }
+    }
+    xmlhttp.open("POST",url,true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.setRequestHeader("Connection", "close");
+    xmlhttp.send("like=1"+"&post_id="+PostID);
+    like = document.getElementById('like' + PostID);
+    if (window.getComputedStyle(like, null).color == "rgb(73, 196, 252)") {
+      document.getElementById('likeNum' + PostID).innerHTML = parseInt(document.getElementById('likeNum' + PostID).innerHTML) - 1;
+      document.getElementById('like' + PostID).style.color = "#595959a8";
+    }else {
+      document.getElementById('likeNum' + PostID).innerHTML = parseInt(document.getElementById('likeNum' + PostID).innerHTML) + 1;
+      document.getElementById('like' + PostID).style.color = "#49c4fc";
+    }
     return;
-  }else {
-    toggledLike = false;
-    like.style.color = "#595959a8";
-    return;
-  };
 };
 
 

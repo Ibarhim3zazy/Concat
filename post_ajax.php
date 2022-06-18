@@ -1,4 +1,5 @@
 <?php require("connection.php");
+if (!isset($_SESSION)) session_start();
   $image_name = 0;
   $video_name = 0;
   // if (isset($_POST['post_content']) == true) {
@@ -36,7 +37,6 @@ if (isset($_FILES['fileVid']['name']) == true){
 ///////////////////
 if (isset($_POST['post_content']) == true) { create_post($con, $image_name, $video_name); }
 function create_post($con, $image_name, $video_name) {
-  if (!isset($_SESSION)) session_start();
   if (isset($_SESSION['user_id']) != true) {
     echo "Not_Signed";
     die;
@@ -73,6 +73,19 @@ function create_post($con, $image_name, $video_name) {
           echo 'faild';
         }
     }
+}
+
+if (isset($_POST['like']) == true && isset($_POST['post_id']) == true && isset($_SESSION['user_id']) == true) {
+  $post_id = htmlentities($_POST['post_id']);
+    $user_id = $_SESSION['user_id'];
+    $check_like_result= $con->query("SELECT * FROM post_like WHERE post_id='$post_id' AND user_id='$user_id' ORDER BY id DESC LIMIT 1;");
+    if ($veiw_num = $con->affected_rows) {
+      $con->query("DELETE FROM post_like WHERE post_id='$post_id' AND user_id='$user_id';");
+    }else {
+      $con->query("INSERT INTO post_like VALUES(NULL, '$post_id', '$user_id', '1');");
+    }
+}else {
+  echo "string";
 }
 function veiw_post($con, $PersonalPicture,$name)
 {
@@ -147,22 +160,37 @@ function veiw_post($con, $PersonalPicture,$name)
 ';
   }
   $post_id = htmlentities($veiw_row['post_id']);
-  $post_like_result= $con->query("SELECT * FROM post_like WHERE post_id='$post_id' ORDER BY id DESC;");
+  $post_like_result = $con->query("SELECT post_id FROM post_like WHERE post_id='$post_id' ORDER BY id DESC;");
   $veiw_post_like_num = $con->affected_rows;
   if($post_like_result == true){
+    $Post_ID = htmlentities($veiw_row['post_id']);
     echo '
     </div>
     <div class="box_3">
      <div class="box_container">
       <div id="like">
-        <a href="javascript:" class="likeNum">'.$veiw_post_like_num.' </a>
-        <i class="fa-solid fa-thumbs-up" id="likeI" onClick="togglelike() "></i>
+        <input type="hidden" id="posting_id" value="'.$Post_ID.'">
+        <a href="javascript:" class="likeNum" id="likeNum'.$Post_ID.'">'.$veiw_post_like_num.' </a>
+        ';
+        $user_id = $_SESSION['user_id'];
+        $check_like_result= $con->query("SELECT * FROM post_like WHERE post_id='$Post_ID' AND user_id='$user_id' ORDER BY id DESC LIMIT 1;");
+        if ($veiw_num = $con->affected_rows) {
+          echo '
+          <i class="fa-solid fa-thumbs-up" id="like'.htmlentities($veiw_row['post_id']).'" onClick="togglelike('.htmlentities($veiw_row['post_id']).');" style = "color: #49c4fc;"></i>
+          ';
+        }else {
+          echo '
+          <i class="fa-solid fa-thumbs-up" id="like'.htmlentities($veiw_row['post_id']).'" onClick="togglelike('.htmlentities($veiw_row['post_id']).');"></i>
+          ';
+        }
+    echo '
       </div>
-      <div class="com" id="com">
-       <a href = "comments.php"  target = "_blank">
+      <form action="comments.php" method="get" class="com" id="com">
+      <input type="hidden" id="posting_id" name="PostID" value="'.$Post_ID.'">
+       <a href="javascript:document.getElementById(\'com\').submit()">
        <i class="fa-solid fa-comments"></i>
        </a>
-      </div>
+      </form>
       <div class="share" id="share">
        <i class="fa-solid fa-share-nodes" onClick="toggleCopy()"></i>
        <div class="copyPopUp">

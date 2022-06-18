@@ -49,7 +49,7 @@ const searchBox = document.querySelector(".search-box input");
 
 searchBox.addEventListener("keyup", function (e) {
  filterlist(e.target.value);
- 
+
 });
 
 const filterlist = searchTerm => {
