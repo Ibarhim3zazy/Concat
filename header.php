@@ -382,11 +382,11 @@
            <i class="fa-solid fa-gear"></i>
            Setting
           </a>
-          <a href="" class="help">
+          <a href="help.php" class="help">
            <i class="fa-solid fa-handshake-angle"></i>
            Help
           </a>
-          <a href="" class="about">
+          <a href="about.php" class="about">
            <i class="fa-solid fa-circle-info"></i>
            About Us
           </a>
