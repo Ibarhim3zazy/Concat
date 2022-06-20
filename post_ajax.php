@@ -84,8 +84,6 @@ if (isset($_POST['like']) == true && isset($_POST['post_id']) == true && isset($
     }else {
       $con->query("INSERT INTO post_like VALUES(NULL, '$post_id', '$user_id', '1');");
     }
-}else {
-  echo "string";
 }
 function veiw_post($con, $PersonalPicture,$name)
 {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 03:46 AM
+-- Generation Time: Jun 20, 2022 at 10:03 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -41,6 +41,61 @@ CREATE TABLE `chating` (
 INSERT INTO `chating` (`id`, `sender_id`, `receiver_id`, `chat_time`) VALUES
 (4, 27539121, 1319098029, '2022-06-02 12:28:23'),
 (5, 27539121, 396084773, '2022-06-02 12:29:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment_like`
+--
+
+CREATE TABLE `comment_like` (
+  `id` bigint(20) NOT NULL,
+  `comment_id` bigint(20) NOT NULL,
+  `post_id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `post_like` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `comment_like`
+--
+
+INSERT INTO `comment_like` (`id`, `comment_id`, `post_id`, `user_id`, `post_like`, `date`) VALUES
+(122, 2023644923115, 1449153495, 27539121, 1, '2022-06-20 07:26:29'),
+(123, 1026416097115, 1449153495, 27539121, 1, '2022-06-20 07:26:30'),
+(171, 727603890115, 1449153495, 27539121, 1, '2022-06-20 08:01:27'),
+(172, 1626781093115, 1449153495, 1319098029, 1, '2022-06-20 08:02:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cources`
+--
+
+CREATE TABLE `cources` (
+  `id` int(11) NOT NULL,
+  `language_id` bigint(20) NOT NULL,
+  `field` varchar(250) NOT NULL,
+  `language` varchar(120) NOT NULL,
+  `lang_cover` varchar(500) NOT NULL,
+  `add_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `cources`
+--
+
+INSERT INTO `cources` (`id`, `language_id`, `field`, `language`, `lang_cover`, `add_date`) VALUES
+(1, 1544435530115, 'Back-end', 'HTML', 'me.png', '2022-06-18 05:41:54'),
+(2, 1632457625115, 'Back-end', 'HTML', 'me.png', '2022-06-18 05:43:20'),
+(3, 1648430490115, 'Front-end', 'HTML', 'me.png', '2022-06-18 06:21:07'),
+(4, 2055912039115, 'Front-end', 'HTML', 'me.png', '2022-06-18 06:22:23'),
+(5, 289762209115, 'Front-end', 'CSS', 'me.png', '2022-06-18 06:23:33'),
+(6, 676966234115, 'Back-end', 'JavaScript', 'IMG_20220510_073314.jpg', '2022-06-18 10:46:06'),
+(7, 1163467373115, 'Front-end', 'HTML', 'IMG_20220510_073314.jpg', '2022-06-18 10:48:06'),
+(8, 119601228115, 'Desktop_programming', 'Visual_Basic', 'IMG_20220510_073314.jpg', '2022-06-18 11:11:29'),
+(9, 1501783709115, 'Front-end', 'HTML', 'me.png', '2022-06-18 11:40:34');
 
 -- --------------------------------------------------------
 
@@ -154,6 +209,55 @@ CREATE TABLE `group_posting` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `instructor_course`
+--
+
+CREATE TABLE `instructor_course` (
+  `id` int(11) NOT NULL,
+  `language_id` bigint(20) NOT NULL,
+  `course_id` bigint(20) NOT NULL,
+  `instructor_name` varchar(100) NOT NULL,
+  `course_cover` text NOT NULL,
+  `course_link` text NOT NULL,
+  `add_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `instructor_course`
+--
+
+INSERT INTO `instructor_course` (`id`, `language_id`, `course_id`, `instructor_name`, `course_cover`, `course_link`, `add_date`) VALUES
+(1, 289762209115, 1340725115, 'Ibrahim', 'IMG_20220510_073314.jpg', 'course_path', '2022-06-18 06:23:39'),
+(2, 0, 1214889146115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:29:27'),
+(3, 0, 2049183399115, 'as', 'me.png', 'course_path', '2022-06-18 10:29:52'),
+(4, 0, 2026123498115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:30:15'),
+(5, 0, 1279950702115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:31:02'),
+(6, 0, 1705668428115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:31:49'),
+(7, 0, 1949853538115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:35:55'),
+(8, 0, 1807014277115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:37:02'),
+(9, 0, 1890334647115, 'as', 'me.png', 'course_path', '2022-06-18 10:37:40'),
+(10, 0, 33792255115, 'Ibrahim', 'IMG_20220510_073314.jpg', 'course_path', '2022-06-18 10:38:26'),
+(11, 0, 1042548287115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:39:08'),
+(12, 0, 1747768078115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:39:36'),
+(13, 0, 749705425115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:45:32'),
+(14, 676966234115, 1341777587115, 'Ibrahim', 'IMG_20220510_073314.jpg', 'course_path', '2022-06-18 10:46:12'),
+(15, 0, 1608065677115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:46:29'),
+(16, 0, 1748291176115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:47:50'),
+(17, 1163467373115, 1979359553115, 'Ibrahim', 'IMG_20220510_073314.jpg', 'course_path', '2022-06-18 10:48:11'),
+(18, 0, 2034128525115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 10:48:18'),
+(19, 119601228115, 1231415195115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 11:11:36'),
+(20, 119601228115, 1235499933115, 'as', 'IMG_20220510_073314.jpg', 'course_path', '2022-06-18 11:11:42'),
+(21, 0, 1737602956115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 11:40:00'),
+(22, 1501783709115, 992592680115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 11:40:40'),
+(23, 1501783709115, 325137028115, 'as', 'IMG_20220510_073314.jpg', 'course_path', '2022-06-18 11:40:47'),
+(24, 1501783709115, 430146406115, 'Ibrahim', 'me.png', 'course_path', '2022-06-18 11:40:53'),
+(25, 1501783709115, 689745215115, 'Ibrahim', 'me.png', 'https://roadmap.sh/backend', '2022-06-18 11:42:21'),
+(26, 1501783709115, 1411243365115, 'Ibrahim', 'me.png', 'https://roadmap.sh/backend', '2022-06-18 11:43:28'),
+(27, 1501783709115, 702593413115, 'as', 'me.png', 'https://roadmap.sh/frontend', '2022-06-18 11:44:10');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `last_seen`
 --
 
@@ -170,9 +274,10 @@ CREATE TABLE `last_seen` (
 --
 
 INSERT INTO `last_seen` (`id`, `user_id`, `login_time`, `last_seen`, `active`) VALUES
-(1, 1319098029, '2022-06-06 00:57:50', '2022-06-06 01:46:36', 1),
+(1, 1319098029, '2022-06-18 14:58:07', '2022-06-19 16:57:36', 1),
 (2, 396084773, '2022-06-04 11:02:35', '2022-06-04 11:04:44', 1),
-(3, 27539121, '2022-05-30 23:03:04', '2022-06-06 01:46:40', 1);
+(3, 27539121, '2022-05-30 23:03:04', '2022-06-20 08:03:31', 1),
+(5, 2147483647, '2022-06-19 10:18:40', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -325,7 +430,35 @@ INSERT INTO `posting` (`id`, `post_id`, `user_id`, `post_content`, `image`, `vid
 (210, 867191471, 27539121, '?', '330-3302186_open-book-clipart-png-download.png', '0', '0', 0, 0, '2022-05-31 12:41:56', 4),
 (211, 1279983112, 27539121, '0', '0', '0', '0', 0, 0, '2022-06-02 12:30:53', 0),
 (212, 1365025577, 27539121, 'post', '0', '0', '0', 0, 0, '2022-06-02 12:31:06', 1),
-(213, 1449153495, 27539121, 'TEST &gt;_&lt;', '—Pngtree—abstract geometric shape group set_1196104.jpg', '0', '0', 0, 0, '2022-06-05 16:26:46', 4);
+(213, 1449153495, 27539121, 'TEST &gt;_&lt;', '—Pngtree—abstract geometric shape group set_1196104.jpg', '0', '0', 0, 3, '2022-06-05 16:26:46', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post_comment`
+--
+
+CREATE TABLE `post_comment` (
+  `id` bigint(20) NOT NULL,
+  `comment_id` bigint(20) NOT NULL,
+  `post_id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `post_comment` text NOT NULL,
+  `comment_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `post_comment`
+--
+
+INSERT INTO `post_comment` (`id`, `comment_id`, `post_id`, `user_id`, `post_comment`, `comment_date`) VALUES
+(28, 608240413115, 1449153495, 27539121, 'qwqw', '2022-06-19 00:06:25'),
+(29, 1928208936115, 1449153495, 27539121, 'asas', '2022-06-19 00:07:23'),
+(33, 727603890115, 1449153495, 27539121, 'comment 1', '2022-06-19 00:07:25'),
+(36, 1462990012115, 1449153495, 1319098029, 'any\r\n', '2022-06-19 00:07:43'),
+(38, 1026416097115, 1449153495, 1319098029, 'comment', '2022-06-19 00:09:12'),
+(39, 2023644923115, 1449153495, 1319098029, 'any', '2022-06-19 00:09:37'),
+(45, 1626781093115, 1449153495, 1319098029, 'Last Comment', '2022-06-20 08:02:14');
 
 -- --------------------------------------------------------
 
@@ -337,8 +470,19 @@ CREATE TABLE `post_like` (
   `id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `post_like` int(1) NOT NULL
+  `post_like` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `post_like`
+--
+
+INSERT INTO `post_like` (`id`, `post_id`, `user_id`, `post_like`) VALUES
+(66, 867191471, 27539121, 1),
+(71, 1449153495, 1319098029, 1),
+(73, 0, 0, 1),
+(74, 1365025577, 27539121, 1),
+(75, 1279983112, 27539121, 1);
 
 -- --------------------------------------------------------
 
@@ -397,8 +541,9 @@ CREATE TABLE `sign_up_general` (
 
 INSERT INTO `sign_up_general` (`id`, `user_id`, `name`, `email`, `pass`, `mobile_num`, `birth_date`, `birth_address`, `current_address`, `religion`, `gender`, `nationality`, `social_status`, `personal_pic`, `cover_pic`, `type`, `access_num`) VALUES
 (16, 396084773, 'Ibrahim', 'ebrahim3zazy@gmail.com', 'Admin3', '01145452440', '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'policeofficer_man_person_polici_2846.png', 'unnamed.png', 'user', 19),
-(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', '01094989981', '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', '—Pngtree—muslim man photo_6934073.png', 'background.jpg', 'user', 15),
-(18, 27539121, 'Ibrahim 3zazy', 'Ibrahim3zazy@hotmail.com', 'admin1', '01145452440', '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'quran (2).png', 'cover-96.jpg', 'user', 3);
+(17, 1319098029, 'hamed', 'ebrahimelazazy1@yahoo.com', 'admin1', '01094989981', '1998-01-23', '0', 'mitghamr', '0', 'Male', '0', '0', '—Pngtree—muslim man photo_6934073.png', 'background.jpg', 'user', 16),
+(18, 27539121, 'Ibrahim 3zazy', 'Ibrahim3zazy@hotmail.com', 'admin1', '01145452440', '2000-02-01', '0', 'Mit Ghamr', '0', 'Male', '0', '0', 'quran (2).png', 'cover-96.jpg', 'user', 3),
+(19, 2147483647, 'i.3zazy', 'ebrahimelazazy2@yahoo.com', 'asasasas', '01045452440', '2022-06-24', '0', 'asasasas', '0', 'Male', '0', '0', 'user.png', 'background.jpg', 'user', 0);
 
 -- --------------------------------------------------------
 
@@ -440,6 +585,18 @@ ALTER TABLE `chating`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `comment_like`
+--
+ALTER TABLE `comment_like`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cources`
+--
+ALTER TABLE `cources`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `create_group`
 --
 ALTER TABLE `create_group`
@@ -471,6 +628,12 @@ ALTER TABLE `group_posting`
 ALTER TABLE `group_posting` ADD FULLTEXT KEY `post_content` (`post_content`);
 
 --
+-- Indexes for table `instructor_course`
+--
+ALTER TABLE `instructor_course`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `last_seen`
 --
 ALTER TABLE `last_seen`
@@ -495,6 +658,12 @@ ALTER TABLE `posting`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `contain` (`contain`);
 ALTER TABLE `posting` ADD FULLTEXT KEY `post_content` (`post_content`);
+
+--
+-- Indexes for table `post_comment`
+--
+ALTER TABLE `post_comment`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `post_like`
@@ -550,6 +719,18 @@ ALTER TABLE `chating`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `comment_like`
+--
+ALTER TABLE `comment_like`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
+
+--
+-- AUTO_INCREMENT for table `cources`
+--
+ALTER TABLE `cources`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `create_group`
 --
 ALTER TABLE `create_group`
@@ -574,10 +755,16 @@ ALTER TABLE `group_posting`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
 
 --
+-- AUTO_INCREMENT for table `instructor_course`
+--
+ALTER TABLE `instructor_course`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
 -- AUTO_INCREMENT for table `last_seen`
 --
 ALTER TABLE `last_seen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -592,10 +779,16 @@ ALTER TABLE `posting`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
 
 --
+-- AUTO_INCREMENT for table `post_comment`
+--
+ALTER TABLE `post_comment`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
+--
 -- AUTO_INCREMENT for table `post_like`
 --
 ALTER TABLE `post_like`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `sign_up_doctor`
@@ -613,7 +806,7 @@ ALTER TABLE `sign_up_employee`
 -- AUTO_INCREMENT for table `sign_up_general`
 --
 ALTER TABLE `sign_up_general`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `sign_up_student`
