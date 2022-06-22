@@ -20,7 +20,15 @@ $lang_category = '';
     $roadmap_link = 0;
     if (isset($_POST['roadmap_link']) == true) {
       $roadmap_link = htmlentities($_POST['roadmap_link']);
+      $con->query("SELECT * FROM road_map WHERE field='$field_category';");
+      $num_row = $con->affected_rows;
+      if($num_row != 0){
+        $con->query("UPDATE road_map SET roadmap_link='$roadmap_link' WHERE field='$field_category';");
+      }else {
+        $con->query("INSERT INTO road_map VALUES(NULL, '$field_category', '$roadmap_link');");
+      }
     }
+
     if (isset($_FILES['lang_cover']['name']) == true){
       $pic_name = $_FILES['lang_cover']['name'];
       /* Choose where to save the uploaded file */
@@ -29,7 +37,13 @@ $lang_category = '';
       if ( move_uploaded_file($_FILES['lang_cover']['tmp_name'], $location) ) {
         id_generator($con);
         $language_id = $id_generated;
-        $con->query("INSERT INTO cources VALUES(NULL, '$language_id', '$field_category', '$lang_category', '$roadmap_link', '$pic_name',NULL);");
+        $con->query("SELECT * FROM cources WHERE field='$field_category' AND language='$lang_category';");
+        $num_row = $con->affected_rows;
+        if($num_row != 0){
+          $con->query("UPDATE cources SET lang_cover='$pic_name' WHERE field='$field_category' AND language='$lang_category';");
+        }else {
+          $con->query("INSERT INTO cources VALUES(NULL, '$language_id', '$field_category', '$lang_category', '$pic_name',NULL);");
+        }
       } else {
         echo 'Failure_pic_upload';
       }
@@ -88,6 +102,7 @@ $lang_category = '';
     </div>
    </div>
    <button>ADD</button>
+   <a href="courses.php">Return to Courses Page</a>
   </form>
  </div>
 </div>

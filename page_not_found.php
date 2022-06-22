@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/page not found.css">
     <link rel="stylesheet" href="css/general.css">
-    
+
     <title>Page not found</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
         <h2>Oops! Page not found.</h2>
         <h1>404</h1>
         <p>We can't find the page you're looking for.</p>
-        <a href="#">Go back home</a>
+        <a href="index.php">Go back home</a>
     </div>
 </body>
 </html>

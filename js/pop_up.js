@@ -7,3 +7,14 @@ function courseSubmit() {
     document.getElementsByClassName('pop_up_ok')[0].style.display = 'block';
   }
 }
+function InstructorSubmit() {
+  if (document.getElementById('selected').innerHTML != 'Select Language' &&
+    document.getElementById('coursename').value != '' &&
+    document.getElementById('course_cover').value != '' &&
+      document.getElementById('path').value != '') {
+      document.getElementById('add_course').submit();
+  }else {
+    document.querySelector('.pop_up_ok .contan p').innerHTML = "Please check that you Selected a correct language and instructor name and course cover and correct link course";
+    document.getElementsByClassName('pop_up_ok')[0].style.display = 'block';
+  }
+}

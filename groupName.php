@@ -37,7 +37,7 @@ if (isset($_GET['group_id']) == true && $_GET['group_id'] != "") {
 }
 ?>
 
-<header>
+<header class="group_header">
  <div class="container">
   <div class="cover">
    <img src="group___pic/<?= $row_group_info['group_pic'] ?>" alt="">
@@ -109,16 +109,15 @@ if (isset($_GET['group_id']) == true && $_GET['group_id'] != "") {
   </div>
  </div>
 </header>
-<div class="main">
+<div class="group_main">
 
  <div class="container">
 
   <div class="contains">
 
    <div class="post">
-    <?php
-    require 'CreatePost.php';
-    ?>
+     <?php require 'create_post_group.php'; ?>
+     <?php veiw_post_group($con);?>
    </div>
 
    <div class="leftSide">

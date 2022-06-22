@@ -83,7 +83,7 @@ await fetch('post_ajax.php', {
   body: formDataImg
 }).then(function(response) {
     return response.text().then(function(text) {
-      alert(text);
+      location.reload();
     });
   });
 };

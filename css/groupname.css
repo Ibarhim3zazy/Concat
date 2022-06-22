@@ -4,7 +4,7 @@ body {
  overflow-x: hidden;
 }
 
-header {
+.group_header {
  width: 100%;
  height: 470px;
  /* overflow-y: hidden; */
@@ -16,7 +16,7 @@ header {
  justify-content: center;
 }
 
-header > .container {
+.group_header > .container {
  width: 68%;
  height: 100%;
  max-width: 100%;
@@ -27,14 +27,14 @@ header > .container {
 }
 
 
-header .container .cover {
+.group_header .container .cover {
  width: 100%;
  height: 350px;
  position: relative;
  box-shadow: 0px 0px 3px 0px rgb(255, 255, 255);
 }
 
-header .container  .cover img {
+.group_header .container  .cover img {
  width: 100%;
  max-width: 100%;
  max-height: 100%;
@@ -44,7 +44,7 @@ header .container  .cover img {
  border-radius: 5px;
 }
 
-header .container  .cover p {
+.group_header .container  .cover p {
 position: absolute;
 width: 100%;
 height: 33px;
@@ -61,7 +61,7 @@ border-radius: 0 0 5px 5px;
 
 }
 
-header .container  .cover p a {
+.group_header .container  .cover p a {
  color: #fff;
  font-size: 14px;
  padding-left: 5px;
@@ -69,12 +69,12 @@ header .container  .cover p a {
  transition: 0.5s ease-in-out;
  text-transform: capitalize;
 }
-header .container  .cover p a:hover {
+.group_header .container  .cover p a:hover {
  text-decoration: underline #fff;
  color: rgb(155, 72, 4);
 }
 
-header .container .contains {
+.group_header .container .contains {
  max-width: 100%;
  display: flex;
  align-items: flex-start;
@@ -87,35 +87,35 @@ header .container .contains {
  row-gap: 10px;
 }
 
-header .container .contains  .info {
+.group_header .container .contains  .info {
  display: flex;
  align-items: flex-start;
  justify-content: space-between;
  width: 100%;
  padding: 25px 36px;
 }
-header .container .contains  .info .right,
- header .container .contains  .info .left{
+.group_header .container .contains  .info .right,
+ .group_header .container .contains  .info .left{
  display: flex;
  align-items: flex-start;
  justify-content: center;
  flex-direction: column;
  row-gap: 10px;
 }
-header .container .contains  .info .left {
+.group_header .container .contains  .info .left {
  flex-direction: row;
  column-gap: 10px;
  position: relative;
 }
 
-header .container .contains  .info .right h2 {
+.group_header .container .contains  .info .right h2 {
  font-size: 22px;
  font-weight: 600;
  text-shadow: 1px 1px 5px rgb(160, 160, 160);
  color: rgb(66, 66, 66);
  text-transform: capitalize;
 }
-header .container .contains  .info .right p {
+.group_header .container .contains  .info .right p {
  font-size: 12px;
  color: rgb(80, 80, 80);
  display: flex;
@@ -124,23 +124,23 @@ header .container .contains  .info .right p {
  column-gap: 5px;
 }
 
-header .container .contains  .info .right p a {
+.group_header .container .contains  .info .right p a {
  font-size: 12px;
  color: rgb(80, 80, 80);
  transition: 0.3s ease-in-out;
 }
-header .container .contains  .info .right p a:hover {
+.group_header .container .contains  .info .right p a:hover {
  color: #ff6d24;
  text-decoration: #ff6e25 underline;
 }
 
-header .container .contains  .info .left .joinbtn {
+.group_header .container .contains  .info .left .joinbtn {
  display: flex;
  align-items:center;
  flex-direction: column;
 }
 
-header .container .contains  .info .left .joinbtn ul {
+.group_header .container .contains  .info .left .joinbtn ul {
  display: flex;
  align-items: flex-end;
  justify-content: center;
@@ -159,16 +159,16 @@ header .container .contains  .info .left .joinbtn ul {
  z-index: 20;
 }
 
-header .container .contains  .info .left .joinbtn ul > form button {
+.group_header .container .contains  .info .left .joinbtn ul > form button {
  width: 80px;
  margin: 7px 0;
 }
 
-header .container .contains  .info .left .joinbtn ul > form button {
+.group_header .container .contains  .info .left .joinbtn ul > form button {
  background-color: #fff;
 }
 
-header .container .contains  .info .left button {
+.group_header .container .contains  .info .left button {
  background-color: transparent;
  border: none;
  outline: none;
@@ -187,17 +187,17 @@ header .container .contains  .info .left button {
  text-transform: capitalize;
  box-shadow: 0px 0px 2px 0px #999;
 }
-header .container .contains  .info .left button i {
+.group_header .container .contains  .info .left button i {
  color: #d39393;
 }
-header .container .contains  .info .left > button:first-of-type ,
+.group_header .container .contains  .info .left > button:first-of-type ,
  header .container .contains  .info .left > button:first-of-type i{
  background-color: #ff6d24;
  color: #fff;
 }
 
 
-.main {
+.group_main {
  max-width: 100%;
  height: max-content;
  display: flex;
@@ -205,17 +205,17 @@ header .container .contains  .info .left > button:first-of-type ,
  justify-content: center;
 }
 
-.main .container {
+.group_main .container {
  width: 68%;
  margin-top: 5px;
 }
-.main .container .contains {
+.group_main .container .contains {
  max-width: 100%;
  display: flex;
  align-items: flex-start;
  justify-content: space-around;
 }
-.main .container .contains .leftSide {
+.group_main .container .contains .leftSide {
  margin-top: 10px;
  position: sticky;
  top: 90px;
@@ -230,7 +230,7 @@ header .container .contains  .info .left > button:first-of-type ,
  width: 40%;
 }
 
-.main .container .contains .leftSide .group {
+.group_main .container .contains .leftSide .group {
  padding: 10px 15px;
  background-color: #fff;
  border-radius: 10px;
@@ -243,18 +243,18 @@ header .container .contains  .info .left > button:first-of-type ,
  box-shadow: var(--main-box-shadow);
 }
 
-.main .container .contains .leftSide .group .box:first-of-type {
+.group_main .container .contains .leftSide .group .box:first-of-type {
  flex-direction: column;
  width: 100%;
 }
-.main .container .contains .leftSide .group .box .intro {
+.group_main .container .contains .leftSide .group .box .intro {
  text-align: right !important;
  width: 100%;
  word-spacing: 2px;
  font-size: 16px !important;
 }
 
-.main .container .contains .leftSide .group .box {
+.group_main .container .contains .leftSide .group .box {
  max-width: 100%;
  display: flex;
  align-items: flex-start;
@@ -263,7 +263,7 @@ header .container .contains  .info .left > button:first-of-type ,
  column-gap: 10px;
 }
 
-.main .container .contains .leftSide .group .box .minBox {
+.group_main .container .contains .leftSide .group .box .minBox {
  max-width: 100%;
  display: flex;
  align-items: flex-start;
@@ -272,32 +272,32 @@ header .container .contains  .info .left > button:first-of-type ,
  row-gap: 3px;
 }
 
-.main .container .contains .leftSide .group h3 {
+.group_main .container .contains .leftSide .group h3 {
  font-size: 16px;
  font-weight: 600;
  color: #4d4c4c;
  font-family: 'Times New Roman', Times, serif;
 }
 
-.main .container .contains .leftSide .group i {
+.group_main .container .contains .leftSide .group i {
  color: #ffbd9b;
  font-size: 15px;
 }
 
-.main .container .contains .leftSide .group p ,
-.main .container .contains .leftSide .group a {
+.group_main .container .contains .leftSide .group p ,
+.group_main .container .contains .leftSide .group a {
  font-size: 14px;
  color: #585858;
  font-family: cursive;
  transition: .5s ease-in-out;
 }
 
-.main .container .contains .leftSide .group a:hover {
+.group_main .container .contains .leftSide .group a:hover {
  color: #ff6d24;
  text-decoration: underline #ff6d24 dashed;
 }
 
-.main .container .contains .leftSide .group ol {
+.group_main .container .contains .leftSide .group ol {
  display: flex;
  align-items: flex-start;
  justify-content: center;
@@ -309,7 +309,7 @@ header .container .contains  .info .left > button:first-of-type ,
  row-gap: 10px;
 
 }
-.main .container .contains .leftSide .group ol li {
+.group_main .container .contains .leftSide .group ol li {
  font-size: 15px;
  color: #585858;
  text-align: right;

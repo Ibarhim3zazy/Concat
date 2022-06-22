@@ -67,8 +67,7 @@
    </div>
   </div>
   <div class="middle">
-   <?php require_once 'groupPosts.php'
-     ?>
+   <?php require_once 'groupPosts.php'; ?>
   </div>
   <div class="right">
    <div class="contain">
