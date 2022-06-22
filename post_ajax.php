@@ -10,11 +10,7 @@ if (isset($_FILES['fileImg']['name']) == true){
   /* Choose where to save the uploaded file */
   $location = "img___post/".$image_name;
   /* Save the uploaded file to the local filesystem */
-  if ( move_uploaded_file($_FILES['fileImg']['tmp_name'], $location) ) {
-    // echo 'Success_img';
-  } else {
-    echo 'Failure_img';
-  }
+  move_uploaded_file($_FILES['fileImg']['tmp_name'], $location);
 }
 
 if (isset($_FILES['fileVid']['name']) == true){
@@ -22,11 +18,7 @@ if (isset($_FILES['fileVid']['name']) == true){
   /* Choose where to save the uploaded file */
   $location = "video___post/".$video_name;
   /* Save the uploaded file to the local filesystem */
-  if ( move_uploaded_file($_FILES['fileVid']['tmp_name'], $location) ) {
-    echo 'Success_vid';
-  } else {
-    echo 'Failure_vid';
-  }
+  move_uploaded_file($_FILES['fileVid']['tmp_name'], $location);
 }
 // echo ' '.htmlentities($image_name).' ---1--- ';
 //
@@ -61,17 +53,11 @@ function create_post($con, $image_name, $video_name) {
       if ($post_content != 0 && $video_name != 0) {
         $contain = 5;
       }
-      echo $image_name.'*****'.$video_name.'*****';
 
       $post_id[] = rand();
       shuffle($post_id);
       $user_id = $_SESSION['user_id'];
       $result = $con->query("INSERT INTO posting VALUES(NULL, '$post_id[0]', '$user_id', '$post_content', '$image_name', '$video_name','0', '0', '0', NULL, '$contain');");
-        if ($result == true) {
-          echo 'success';
-        }else {
-          echo 'faild';
-        }
     }
 }
 
@@ -379,21 +365,13 @@ function veiw_post_group($con)
   }else {
     $user_id = $_SESSION['user_id'];
   }
-    $veiw_result= $con->query("SELECT * FROM posting ORDER BY id DESC LIMIT 60;");
+  $group_id = $_GET['group_id'];
+    $veiw_result= $con->query("SELECT * FROM group_posting WHERE group_id='$group_id' ORDER BY id DESC LIMIT 60;");
     $veiw_num = $con->affected_rows;
     if($veiw_num != 0 && $veiw_result == true){
       while ($veiw_row = $veiw_result-> fetch_assoc()) {
-        $veiw_result_friend = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' AND statue='friend' OR freind_user_id='$user_id' AND statue='friend' ORDER BY id DESC;");
-        $veiw_friend_num = $con->affected_rows;
-        if($veiw_friend_num != 0 && $veiw_result_friend == true){
-          while ($veiw_friend_row = $veiw_result_friend-> fetch_assoc()) {
-            if ($veiw_friend_row['my_user_id'] == $user_id) {
-              $freind_user_id = $veiw_friend_row['freind_user_id'];
-            }else {
-              $freind_user_id = $veiw_friend_row['my_user_id'];
-            }
-            if ($freind_user_id == $veiw_row['user_id']) {
-              GetMyFriendInfo($con,$freind_user_id);
+            $member_user_id = $veiw_row['user_id'];
+              GetMyFriendInfo($con,$member_user_id);
               $PersonalPicture = htmlentities($GLOBALS['row']['personal_pic']);
               $name = htmlentities($GLOBALS['row']['name']);
               echo '
@@ -401,14 +379,14 @@ function veiw_post_group($con)
                <div class="contain">
                  <div class="box_1">
                   <div class="image">
-                   <a href="profile.php?friend_id='.$freind_user_id.'"><img src="profile___pic/'.$PersonalPicture.'" alt="" width="50"
+                   <a href="profile.php?friend_id='.$member_user_id.'"><img src="profile___pic/'.$PersonalPicture.'" alt="" width="50"
                      style="border-radius: 50%;" height="50px">
                     <span
                      style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
                    </a>
                    <div class="infoProfile">
                     <div class="userName">
-                     <a href="profile.php?friend_id='.$freind_user_id.'">
+                     <a href="profile.php?friend_id='.$member_user_id.'">
                       '.$name.'
                      </a>
                     </div>
@@ -511,9 +489,6 @@ function veiw_post_group($con)
         </div>
 
           ';
-            }
-          }
-        }
   }
     // else {
     //   header("location: log_in.php");

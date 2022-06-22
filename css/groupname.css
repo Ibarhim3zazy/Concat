@@ -191,7 +191,7 @@ border-radius: 0 0 5px 5px;
  color: #d39393;
 }
 .group_header .container .contains  .info .left > button:first-of-type ,
- header .container .contains  .info .left > button:first-of-type i{
+ .group_header .container .contains  .info .left > button:first-of-type i{
  background-color: #ff6d24;
  color: #fff;
 }

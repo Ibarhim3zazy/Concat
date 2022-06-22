@@ -197,10 +197,9 @@ if (isset($_GET['group_id']) == true && $_GET['group_id'] != "") {
      <!-- will edit by designe donn't forget >_< -->
        <pre>
          <?= $row_group_info['group_rules'] ?>
-
-          1. a;lemdsjmlas
-          2.a;skcf;lm
-          3. asfidjdoDSLKJFNkjSDFNjSBDFKJbSDKJFbkjsdfkjbsejds
+          1. rule one
+          2. rule two
+          3. rule three
        </pre>
     </div>
 
