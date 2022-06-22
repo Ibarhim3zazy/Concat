@@ -8,9 +8,7 @@
 </head>
 
 <body>
- <?php require_once 'header.php';
-
-      ?>
+ <?php require_once 'header.php'; ?>
 
  <!-- after last edit -->
  <div class="home-container">
@@ -95,6 +93,7 @@
  </div>
  <div class="middle">
     <?php require 'CreatePost.php'; ?>
+    <?php veiw_post_main($con);?>
  </div>
  <div class="rightSide">
    <div class="container">

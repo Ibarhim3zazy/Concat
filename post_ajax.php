@@ -184,7 +184,7 @@ function veiw_post($con, $PersonalPicture,$name)
     echo '
       </div>
       <form action="comments.php" method="get" class="com" id="com">
-      <input type="hidden" id="posting_id" name="PostID" value="'.$Post_ID.'">
+      <input type="hidden" id="posting_id" name="PostID" value="'.htmlentities($veiw_row['post_id']).'">
        <a href="javascript:document.getElementById(\'com\').submit()">
        <i class="fa-solid fa-comments"></i>
        </a>
@@ -220,4 +220,156 @@ function veiw_post($con, $PersonalPicture,$name)
   }
 }
 }
+function veiw_post_main($con)
+{
+  require_once 'general_ajax.php';
+  if (isset($_GET['friend_id']) == true) {
+    $user_id = $_GET['friend_id'];
+  }else {
+    $user_id = $_SESSION['user_id'];
+  }
+    $veiw_result= $con->query("SELECT * FROM posting ORDER BY id DESC LIMIT 60;");
+    $veiw_num = $con->affected_rows;
+    if($veiw_num != 0 && $veiw_result == true){
+      while ($veiw_row = $veiw_result-> fetch_assoc()) {
+        $veiw_result_friend = $con->query("SELECT * FROM friend_request WHERE my_user_id='$user_id' AND statue='friend' OR freind_user_id='$user_id' AND statue='friend' ORDER BY id DESC;");
+        $veiw_friend_num = $con->affected_rows;
+        if($veiw_friend_num != 0 && $veiw_result_friend == true){
+          while ($veiw_friend_row = $veiw_result_friend-> fetch_assoc()) {
+            if ($veiw_friend_row['my_user_id'] == $user_id) {
+              $freind_user_id = $veiw_friend_row['freind_user_id'];
+            }else {
+              $freind_user_id = $veiw_friend_row['my_user_id'];
+            }
+            if ($freind_user_id == $veiw_row['user_id']) {
+              GetMyFriendInfo($con,$freind_user_id);
+              $PersonalPicture = htmlentities($GLOBALS['row']['personal_pic']);
+              $name = htmlentities($GLOBALS['row']['name']);
+              echo '
+              <div class="designPost" id="designPost">
+               <div class="contain">
+                 <div class="box_1">
+                  <div class="image">
+                   <a href="profile.php?friend_id='.$freind_user_id.'"><img src="profile___pic/'.$PersonalPicture.'" alt="" width="50"
+                     style="border-radius: 50%;" height="50px">
+                    <span
+                     style="position: absolute; top:0px; left:0px; width:13px; height:13px;background-color:var(--main-color-success); border-radius:50%;"></span>
+                   </a>
+                   <div class="infoProfile">
+                    <div class="userName">
+                     <a href="profile.php?friend_id='.$freind_user_id.'">
+                      '.$name.'
+                     </a>
+                    </div>
+                    <div class="data">
+                     <!-- date must be changed -->
+                     <a href="">13m <i class="fa-solid fa-clock"></i></a>
+                     <i class="fas fa-user-friends"></i>
+                    </div>
+                   </div>
+                  </div>
+                  <span class="more" onClick="toggle()">
+                   <i class="fa-solid fa-angle-down" ></i>
+                   <ul id ="postList" class = " listpost">
+                    <button>Edit post</button>
+                    <button>Delete post</button>
+                   </ul>
+                  </span>
+
+                   </div>
+                  <div class="box_2" id="boxTwo">
+              ';
+        if (htmlentities($veiw_row['contain']) == 1) {
+          echo '
+             <pre>'.htmlentities($veiw_row['post_content']).'</pre>
+          ';
+        }
+        if (htmlentities($veiw_row['contain']) == 2) {
+          echo '
+             <img src="img___post/'.htmlentities($veiw_row['image']).'" alt="">
+        ';
+        }
+        if (htmlentities($veiw_row['contain']) == 3){
+          echo '
+             <video src="video___post/'.htmlentities($veiw_row['videos']).'" controls></video>
+      ';
+        }
+        if (htmlentities($veiw_row['contain']) == 4){
+          echo '
+             <pre>'.htmlentities($veiw_row['post_content']).'</pre>
+             <img src="img___post/'.htmlentities($veiw_row['image']).'" alt="">
+      ';
+        }
+        if (htmlentities($veiw_row['contain']) == 5){
+          echo '
+             <pre>'.htmlentities($veiw_row['post_content']).'</pre>
+             <video src="video___post/'.htmlentities($veiw_row['videos']).'" controls></video>
+      ';
+        }
+        $post_id = htmlentities($veiw_row['post_id']);
+        $post_like_result = $con->query("SELECT post_id FROM post_like WHERE post_id='$post_id' ORDER BY id DESC;");
+        $veiw_post_like_num = $con->affected_rows;
+        if($post_like_result == true){
+          $Post_ID = htmlentities($veiw_row['post_id']);
+          echo '
+          </div>
+          <div class="box_3">
+           <div class="box_container">
+            <div id="like">
+              <input type="hidden" id="posting_id" value="'.$Post_ID.'">
+              <a href="javascript:" class="likeNum" id="likeNum'.$Post_ID.'">'.$veiw_post_like_num.' </a>
+              ';
+              $user_id = $_SESSION['user_id'];
+              $check_like_result= $con->query("SELECT * FROM post_like WHERE post_id='$Post_ID' AND user_id='$user_id' ORDER BY id DESC LIMIT 1;");
+              if ($veiw_num = $con->affected_rows) {
+                echo '
+                <i class="fa-solid fa-thumbs-up" id="like'.htmlentities($veiw_row['post_id']).'" onClick="togglelike('.htmlentities($veiw_row['post_id']).');" style = "color: #49c4fc;"></i>
+                ';
+              }else {
+                echo '
+                <i class="fa-solid fa-thumbs-up" id="like'.htmlentities($veiw_row['post_id']).'" onClick="togglelike('.htmlentities($veiw_row['post_id']).');"></i>
+                ';
+              }
+          echo '
+            </div>
+            <div class="com" id="com">
+             <a href="comments.php?PostID='.htmlentities($veiw_row['post_id']).'">
+             <i class="fa-solid fa-comments"></i>
+             </a>
+            </div>
+            <div class="share" id="share">
+             <i class="fa-solid fa-share-nodes" onClick="toggleCopy()"></i>
+             <div class="copyPopUp">
+              <div class="box">
+                <h3>Copy & Share post</h3>
+                <button onClick="toggleCopy()">&times;</button>
+              </div>
+               <div class="copyBox ">
+                 <input type="text" placeholder="link@89ih@hhh"   class="inputclass" >
+                 <button onClick="funcCopy()">
+                 <i class="fa-solid fa-copy"></i></button>
+               </div>
+             </div>
+            </div>
+           </div>
+           <div class="save" id="save">
+            <i class="fa-solid fa-bookmark" id="saveI" onClick="togglesave()"></i>
+           </div>
+          </div>
+         </div>
+        </div>
+
+          ';
+            }
+          }
+        }
+  }
+    // else {
+    //   header("location: log_in.php");
+    //   die;
+    // }
+  }
+}
+}
+
  ?>

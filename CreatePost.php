@@ -158,8 +158,6 @@ if ($_SESSION['user_id'] === $row['user_id']){
     <!-- change design post -->
     <!-- ======================= only video==================================== -->
 
-    <?php veiw_post($con, htmlentities($row['personal_pic']), htmlentities($row['name']));?>
-
     <!--========================= only multiy image========================================== -->
     <!-- <div class="designPost" id="designPost">
      <div class="contain">

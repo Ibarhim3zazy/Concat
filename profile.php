@@ -301,9 +301,9 @@ if (isset($_GET['friend_id'])) {
 
  </div>
  <div class="middle">
-<?php
-      require 'CreatePost.php';
-?>
+<?php require 'CreatePost.php'; ?>
+<?php veiw_post($con, htmlentities($row['personal_pic']), htmlentities($row['name'])); ?>
+
  </div>
  <div class="links">
   <a href="profile.php" class="pinAccount">

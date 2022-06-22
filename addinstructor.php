@@ -17,6 +17,10 @@ $lang_category = '';
     $lang_category = htmlentities($_POST['lang_category_txt']);
   }
   if ($field_category != '' && $lang_category != '') {
+    $roadmap_link = 0;
+    if (isset($_POST['roadmap_link']) == true) {
+      $roadmap_link = htmlentities($_POST['roadmap_link']);
+    }
     if (isset($_FILES['lang_cover']['name']) == true){
       $pic_name = $_FILES['lang_cover']['name'];
       /* Choose where to save the uploaded file */
@@ -25,7 +29,7 @@ $lang_category = '';
       if ( move_uploaded_file($_FILES['lang_cover']['tmp_name'], $location) ) {
         id_generator($con);
         $language_id = $id_generated;
-        $con->query("INSERT INTO cources VALUES(NULL, '$language_id', '$field_category', '$lang_category','$pic_name',NULL);");
+        $con->query("INSERT INTO cources VALUES(NULL, '$language_id', '$field_category', '$lang_category', '$roadmap_link', '$pic_name',NULL);");
       } else {
         echo 'Failure_pic_upload';
       }

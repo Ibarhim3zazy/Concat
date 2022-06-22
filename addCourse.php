@@ -95,6 +95,11 @@
       <label for="field_category_txt">Enter Field Name</label>
       <input type="text" name="field_category_txt" id="field_category_txt">
      </div>
+     <br>
+     <div class="text-box">
+      <label for="field_category_txt">Enter roadmap link</label>
+      <input type="text" name="roadmap_link" id="roadmap_link">
+     </div>
 
     </div>
     <div class="lang sec">
@@ -218,8 +223,9 @@
       <label for="lang_category_txt">Enter Language Name</label>
       <input type="text" name="lang_category_txt" id="lang_category_txt">
      </div>
+     <br>
      <div class="text-box">
-     <label for="lang_cover">Language Cover</label>
+     <label for="lang_cover">Language Cover *required</label>
      <input type="file" name="lang_cover" id="lang_cover" accept="image/jpeg,image/x-png,image/gif">
     </div>
     </div>

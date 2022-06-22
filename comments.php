@@ -58,7 +58,7 @@
    <div class="comment-container">
     <div class="comment">
       <?php
-        $comment_post_result = $con->query("SELECT * FROM post_comment ORDER BY id DESC;");
+        $comment_post_result = $con->query("SELECT * FROM post_comment WHERE post_id='$Post_ID' ORDER BY id DESC;");
         while ($comment_post_row = $comment_post_result-> fetch_assoc()) {
           $visitor_id = $comment_post_row['user_id'];
           GetMyFriendInfo($con,$visitor_id);

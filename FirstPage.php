@@ -1,56 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="css/setting.css">
+<script type="text/javascript" src="js/send_verificationCode.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/firstPage.css">
-    <link rel="icon" href="images/bear.svg">
-    <title>Confirm Your Accont</title>
-    <script type="text/javascript" src="js/send_verificationCode.js"></script>
-</head>
 
-<body>
-    <div class="reset_pass">
-        <div class="form" id="form">
-            <h3>
-                Confirm Your Account By Your Email
-            </h3>
-            <div class="enter">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="Enter Your Email " id="email">
-                <div class="any-name">
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error Message</small>
-                </div>
-            </div>
-            <div class="enter ">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter New Password" id="password">
-                <div class="any-name">
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error Message</small>
-                </div>
-            </div>
-            <div class="enter">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Confirm Password" id="co_password">
-                <div class="any-name">
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error Message</small>
-                </div>
-            </div>
-            <input type="button" value="Next Page" id="submit" onclick="sending_verificationCode()">
-        </div>
-    </div>
-    <script src="js/firstPage.js"></script>
-</body>
+<div class="setting-container">
+ <div class="container">
+   <ul class="taps">
+     <li class="active" data-cont=".personal" onclick="entery_clear('prof')">If Professor</li>
+     <li data-cont=".newEmail" onclick="entery_clear('stud')">If Student</li>
+     <li data-cont=".password" onclick="entery_clear('user')">If User</li>
+       </ul>
+   <div class="contents">
+     <div class="personal">
+       <div class="conten">
+         <div class="box">
+           <div class="info form">
+             <div class="content">
+             <h1>Please Resume Your Data</h1>
+             <div class="min-box">
+               <h3>College-id</h3>
+               <div class="center">
+                 <input type="text" id="prof_College_id" placeholder="EX: 1234567890">
+               </div>
+             </div>
+             <div class="min-box">
+               <h3>Confirm-Email</h3>
+               <input type="email" id="prof_mail" placeholder="EX: email@email.com">
+             </div>
+               </div>
+               <div class="submit">
+                 <input type="button"  value="Cancel">
+                 <input type="button"  value="Next" class="active-btn" onclick="sending_verificationCode('prof')">
+               </div>
+           </div>
 
-</html>
+         </div>
+       </div>
+     </div>
+     <div class="newEmail">
+       <div class="conten">
+         <div class="box">
+           <div class="info form">
+             <div class="content">
+             <h1>Please Resume Your Data</h1>
+             <div class="min-box">
+               <h3>College-id</h3>
+               <div class="center">
+                 <input type="text" id="stud_College_id" placeholder="EX: 1234567890">
+               </div>
+             </div>
+             <div class="min-box">
+               <h3>Confirm-Email</h3>
+               <input type="email" id="stud_mail" placeholder="EX: email@email.com">
+             </div>
+               </div>
+               <div class="submit">
+                 <input type="button"  value="Cancel">
+                 <input type="button"  value="Next" class="active-btn" onclick="sending_verificationCode('Student')">
+               </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+     <div class="password">
+       <div class="conten">
+         <div class="box">
+           <div class="form pass">
+             <div class="content">
+               <h1>Please Confirm your mail</h1>
+               <div class="min-box">
+                 <h3>Confirm-Email</h3>
+                 <input type="email" id="user_mail" placeholder="EX: email@email.com">
+               </div>
+             </div>
+             <div class="submit">
+               <input type="button"  value="Cancel">
+               <input type="button"  value="Next" class="active-btn" onclick="sending_verificationCode('user')">
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+   </div>
+ </div>
+
+</div>
+
+<script src="js/setting.js" charset="utf-8"></script>
